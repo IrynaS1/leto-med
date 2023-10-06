@@ -1,0 +1,36 @@
+.company {
+	max-width: 200px;
+	font-family: Gotham Pro, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.company-title {
+	font-size: 20px;
+	line-height: 84.5%;
+	letter-spacing: -1.4px;
+	background: linear-gradient(90deg, #1B9183 15.52%, #22BABA 57.07%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin-bottom: 7px;
+}
+
+.company-slogan {
+	color: rgba(0, 0, 0, 0.80);
+	font-size: 15px;
+	line-height: 72%;
+	letter-spacing: -1.05px;
+}
+
+@media (min-width: 1440px) and (max-width: 1921px) {
+	.company-title {
+		font-size: 16px;
+		letter-spacing: -1.12px;
+		margin-bottom: 5px;
+	}
+
+	.company-slogan {
+		font-size: 13px;
+		letter-spacing: -0.91px;
+	}
+}
