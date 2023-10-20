@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="./img/icon.svg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@300;400;600;700&family=PT+Sans:wght@700&family=Tenor+Sans&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
+	<link rel="stylesheet" href="./normalize.css">
+	<link rel="stylesheet" href="./template_styles.css">
+	<link rel="stylesheet" href="./styles.css">
+	<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+	<!-- <script charset="utf-8" src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script> -->
+	<script src="./script.js" defer></script>
+	<title>Контакты</title>
+</head>
+
+<body>
+	<div class="container-block">
+		<header>
+			<div class="header">
+				<div class="header-menu">
+					<nav>
+						<ul class="header-menu__items">
+							<li><a href="/about/" class="header-menu__item">О компании</a></li>
+							<li><a href="/catalog/" class="header-menu__item">Каталог</a></li>
+							<li><a href="/working-conditions/" class="header-menu__item">Условия работы</a></li>
+							<li><a href="/blog/" class="header-menu__item">Новости</a></li>
+							<li><a href="/contacts/" class="header-menu__item selected">Контакты</a></li>
+							<li><a href="/personal/" class="header-menu__item">Личный кабинет</a></li>
+						</ul>
+					</nav>
+					<button class="header-menu__reg header-menu__btn">Регистрация</button>
+					<button class="header-menu__auth header-menu__btn">Вход</button>
+				</div>
+				<div class="wrap">
+					<div class="header-menu__mob">
+						<div class="header-menu__mob-company">
+							<div class="header-menu__mob-logo">
+								<a href="/main/">
+									<img src="./img/logo-s.png" alt="Логотип компании">
+								</a>
+							</div>
+							<div class="header-menu__mob-td">Торговый Дом Лето</div>
+						</div>
+						<div class="header-menu__mob-phone">+7 (495) 727-07-87</div>
+					</div>
+				</div>
+				<div class="wrap">
+					<div class="header-block">
+						<div class="header-block__left">
+							<div class="header-block__logo">
+								<a href="/main/">
+									<img src="./img/logo.png" alt="Логотип компании">
+								</a>
+							</div>
+							<div class="header-block__company company">
+								<div class="header-block__company-title company-title">Торговый Дом Лето</div>
+								<div class="header-block__company-slogan company-slogan">Расходные материалы для стоматологии
+								</div>
+							</div>
+						</div>
+						<div class="header-block__search">
+							<input type="text" class="header-block__search-input" id="s-d-input" placeholder="Что Вы ищете?">
+							<button class="header-block__search-icon search-btn"></button>
+						</div>
+						<div class="header-block__location">
+							<div class="header-block__location-city">
+								<span class="header-block__location-city-desc">Местоположение:</span>
+								<button class="header-block__location-city-name">Москва</button>
+								<div class="header-block__location-city-select header-select-city">
+									<div class="header-select-city__info header-select-city__info_font">Ваш город — Москва?</div>
+									<div class="header-select-city__confirmation">
+										<button class="header-select-city__confirm">Да</button>
+										<div class="header-select-city__info">или</div>
+										<select name="city" id="city-select" class="header-select-city__title">
+											<option value="" selected disabled>Нет, другой</option>
+											<!-- 	<option value="msk">Москва</option> -->
+											<option value="krd">Краснодар</option>
+											<option value="sip">Симферополь</option>
+										</select>
+									</div>
+									<div class="header-select-city__info">Если вашего региона нет в списке, вы можете написать
+										нам на почту с пометкой "Доставка в наш регион", и мы предложим наилучший способ доставки.
+									</div>
+								</div>
+							</div>
+							<div class="header-block__location-phone">
+								<span class="header-block__location-phone-num">+7 (495) 727-07-87</span>
+								<a href="/contacts/"><span class="header-block__location-phone-call">Заказать звонок</span></a>
+							</div>
+						</div>
+						<div class="header-block__compare">
+							<a href="/personal/favorite/">
+								<div class="header-block__compare-item header-block__compare-item_mb">
+									<span class="header-block__compare-icon header-block__compare-icon_favourites"></span>
+									<span
+										class="header-block__compare-text header-block__compare-text_favourites">Избранное</span>
+									<span class="header-block__compare-count header-block__compare-count_favourites">0</span>
+								</div>
+							</a>
+							<a href="/compare/">
+								<div class="header-block__compare-item">
+									<span class="header-block__compare-icon header-block__compare-icon_comparison"></span>
+									<span
+										class="header-block__compare-text header-block__compare-text_comparison">Сравнение</span>
+									<span class="header-block__compare-count header-block__compare-count_comparison">0</span>
+								</div>
+							</a>
+						</div>
+						<div class="header-block__cart">
+							<div class="header-block__cart-button">
+								<a href="/personal/cart/">
+									<div class="header-block__cart-btn"></div>
+								</a>
+								<div class="header-block__cart-button-count">
+									<span class="header-block__cart-button-num">6</span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"
+										fill="none">
+										<circle cx="11.5" cy="11.5" r="11.5" fill="url(#paint0_linear_104_17)" />
+										<defs>
+											<linearGradient id="paint0_linear_104_17" x1="15" y1="1.5" x2="2" y2="26.5"
+												gradientUnits="userSpaceOnUse">
+												<stop stop-color="#21B8B8" />
+												<stop offset="1" stop-color="#1B9285" />
+											</linearGradient>
+										</defs>
+									</svg>
+								</div>
+							</div>
+							<div class="header-block__cart-desc">
+								<span class="header-block__cart-desc-name">Корзина</span>
+								<span class="header-block__cart-desc-sum">32.400 руб</span>
+							</div>
+						</div>
+					</div>
+					<div class="header-block__mob">
+						<input type="text" class="header-block__mob-search" id="s-m-input"
+							placeholder="Что бы Вы хотели найти ?">
+						<button class="header-block__mob-s-icon search-mob-btn" id="s-m-btn"></button>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+
+
+	<!--                                                                                                                                            -->
+
+	<main id="main-contacts">
+		<div class="container-block">
+			<div class="wrap">
+				<div class="wrap-content">
+					<div class="breadcrumbs">
+						<ul class="breadcrumbs__items">
+							<li class="breadcrumbs__item breadcrumbs__item_not-active">
+								<a href="/main/">Главная</a>
+							</li>
+							<li class="breadcrumbs__item breadcrumbs__item_active">Контакты</li>
+						</ul>
+					</div>
+					<div class="form-contacts">
+						<div class="form-contacts__block">
+							<div class="form-contacts__title">
+								<h1 class="form-contacts__main-title">Записаться на консультацию</h1>
+								<div class="form-contact__img"></div>
+							</div>
+							<div class="form-contact__subtitle">Оставьте заявку, мы свяжемся с Вами и <span
+									class="form-contact__subtitle form-contact__subtitle_color">проконсультируем</span> по любым
+								вопросам.</div>
+						</div>
+						<div class="form-contacts__send">
+							<form class="form-contacts__form" id="contacts__form" action="/contacts/" method="POST">
+								<div class="form-contacts__form-label"><label for="user_name">Ваше имя:</label></div>
+								<input type="text" name="user_name" id="user_name" maxlength="60"
+									class="form-contacts__form-input" value required autofocus />
+								<div class="form-contacts__form-label"><label for="user_email">Почта:</label></div>
+								<input type="email" name="user_email" id="user_email" maxlength="60"
+									class="form-contacts__form-input" value required />
+								<div class="form-contacts__form-label"><label for="user_phone">Ваш номер телефона</label></div>
+								<div class="form-contacts__form-input"><input type="tel" id="user_phone" name="user_phone"
+										required /></div>
+								<div class="form-contacts__form-label"><label for="captcha_word">Введите символы с
+										картинки</label></div>
+								<input type="text" name="captcha_word" id="captcha_word" maxlength="50"
+									class="form-contacts__form-input" value required />
+								<img src="" class="form-contacts__form-captcha">
+
+								<button type="submit" class="form-contacts__btn">Оставить заявку</button>
+
+								<div class="form-contacts__form-info">Нажимая кнопку “Оставить заявку” Вы соглашаетесь с <a
+										href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh/"
+										class="form-contacts__form-info-link">политикой обработки
+										персональных данных</a></div>
+							</form>
+						</div>
+						<div class="form-contacts__operation">
+							<div class="form-contacts__operation-items">
+								<span class="form-contacts__work-text">Время работы</span>
+								<span class="form-contacts__work-mode">Понедельник - Пятница с 9:00 до 18:00</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="wrap wrap-mob-line">
+				<div class="contacts__line"></div>
+			</div>
+			<div class="wrap">
+				<div class="contacts__bottom">
+					<div class="contacts__bottom-left">
+						<div class="contacts__bottom-left-phone">+7 (929) 432-53-23</div>
+						<div class="contacts__bottom-left-mail">sale@leto-med.ru</div>
+						<div class="contacts__bottom-left-socials">
+							<a href="https://vk.com/leto_med">
+								<div class="contacts__bottom-left-icon">
+									<div class="contacts__bottom-left-img">
+										<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+											xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+											viewBox="0 0 112.196 112.196" style="enable-background:new 0 0 112.196 112.196;"
+											xml:space="preserve">
+											<g>
+												<g>
+													<circle id="XMLID_11_" style="fill: rgb(32, 114, 203);" cx="56.098" cy="56.098"
+														r="56.098" fill="#4D76A1"></circle>
+												</g>
+												<path style="fill-rule:evenodd;clip-rule:evenodd;"
+													d="M53.979,80.702h4.403c0,0,1.33-0.146,2.009-0.878 c0.625-0.672,0.605-1.934,0.605-1.934s-0.086-5.908,2.656-6.778c2.703-0.857,6.174,5.71,9.853,8.235 c2.782,1.911,4.896,1.492,4.896,1.492l9.837-0.137c0,0,5.146-0.317,2.706-4.363c-0.2-0.331-1.421-2.993-7.314-8.463 c-6.168-5.725-5.342-4.799,2.088-14.702c4.525-6.031,6.334-9.713,5.769-11.29c-0.539-1.502-3.867-1.105-3.867-1.105l-11.076,0.069 c0,0-0.821-0.112-1.43,0.252c-0.595,0.357-0.978,1.189-0.978,1.189s-1.753,4.667-4.091,8.636c-4.932,8.375-6.904,8.817-7.71,8.297 c-1.875-1.212-1.407-4.869-1.407-7.467c0-8.116,1.231-11.5-2.397-12.376c-1.204-0.291-2.09-0.483-5.169-0.514 c-3.952-0.041-7.297,0.012-9.191,0.94c-1.26,0.617-2.232,1.992-1.64,2.071c0.732,0.098,2.39,0.447,3.269,1.644 c1.135,1.544,1.095,5.012,1.095,5.012s0.652,9.554-1.523,10.741c-1.493,0.814-3.541-0.848-7.938-8.446 c-2.253-3.892-3.954-8.194-3.954-8.194s-0.328-0.804-0.913-1.234c-0.71-0.521-1.702-0.687-1.702-0.687l-10.525,0.069 c0,0-1.58,0.044-2.16,0.731c-0.516,0.611-0.041,1.875-0.041,1.875s8.24,19.278,17.57,28.993 C44.264,81.287,53.979,80.702,53.979,80.702L53.979,80.702z"
+													fill="#FFFFFF"></path>
+											</g>
+										</svg>
+									</div>
+								</div>
+							</a>
+							<a href="#">
+								<div class="contacts__bottom-left-icon">
+									<div class="contacts__bottom-left-img">
+										<svg enable-background="new 0 0 24 24" viewBox="0 0 24 24"
+											xmlns="http://www.w3.org/2000/svg">
+											<circle cx="12" cy="12" fill="#039be5" r="12" />
+											<path
+												d="m5.491 11.74 11.57-4.461c.537-.194 1.006.131.832.943l.001-.001-1.97 9.281c-.146.658-.537.818-1.084.508l-3-2.211-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953z"
+												fill="#fff" />
+										</svg>
+									</div>
+								</div>
+							</a>
+							<a href="#">
+								<div class="contacts__bottom-left-icon">
+									<div class="contacts__bottom-left-img">
+										<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+											<g id="Icons" fill="none" fill-rule="evenodd">
+												<g id="Social-Media-Collection" fill="#67d449" transform="translate(-122 -396)">
+													<g id="Whatsapp" transform="translate(122 396)">
+														<path id="Fill-232"
+															d="m39.8258 37.522c-.33.926-1.914 1.77-2.676 1.884-.682.102-1.546.144-2.496-.156-.576-.184-1.314-.428-2.258-.836-3.976-1.716-6.574-5.718-6.772-5.982s-1.618-2.148-1.618-4.098 1.024-2.91 1.388-3.306c.362-.396.792-.496 1.056-.496s.528.002.76.014c.244.012.57-.092.892.68.33.794 1.122 2.744 1.222 2.942.098.198.164.43.032.694s-.198.43-.396.662c-.198.23-.416.516-.594.694-.198.196-.406.412-.174.808s1.026 1.694 2.204 2.744c1.514 1.35 2.792 1.768 3.188 1.968.396.198.628.164.858-.1.232-.264.992-1.156 1.256-1.554.264-.396.528-.33.892-.198.362.132 2.312 1.09 2.708 1.29.396.198.66.296.76.462.098.166.098.958-.232 1.884m-7.754-18.844c-7.272 0-13.188 5.912-13.19 13.178 0 2.49.696 4.916 2.016 7.014l.314.498-1.332 4.864 4.99-1.308.48.284c2.024 1.202 4.344 1.838 6.71 1.838h.006c7.266 0 13.18-5.912 13.184-13.18 0-3.522-1.368-6.832-3.858-9.324-2.49-2.49-5.8-3.864-9.32-3.864"
+															fill="#000000" style="fill: rgb(103, 204, 20);"></path>
+														<g id="Fill-324">
+															<path id="Fill-233"
+																d="m32.066 47.724h-.006c-2.656 0-5.264-.666-7.58-1.93l-8.41 2.206 2.252-8.218c-1.388-2.404-2.12-5.132-2.118-7.928.004-8.742 7.118-15.854 15.862-15.854 4.242 0 8.226 1.652 11.22 4.65 2.994 2.996 4.644 6.98 4.642 11.218-.004 8.742-7.12 15.856-15.862 15.856m-.066-47.724c-17.674 0-32 14.326-32 32 0 17.672 14.326 32 32 32 17.672 0 32-14.328 32-32 0-17.674-14.328-32-32-32"
+																fill="#000000" style="fill: rgb(103, 204, 20);"></path>
+														</g>
+													</g>
+												</g>
+											</g>
+										</svg>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="contacts__bottom-right">
+						<div class="form-contacts__mob-operation">
+							<div class="form-contacts__operation-items">
+								<span class="form-contacts__work-text">Время работы</span>
+								<span class="form-contacts__work-mode">Понедельник - Пятница с 9:00 до 18:00</span>
+							</div>
+						</div>
+						<h3 class="contacts__bottom-right-ttile">Наши адреса:</h3>
+						<div class="contacts__bottom-item">
+							<div class="contacts__bottom-right-address">127273, г. Москва, Березовая Аллея 5А стр 5</div>
+							<div class="contacts__bottom-right-phone">Тел: +7 495 504-36-81 , +7 495 727-07-87</div>
+						</div>
+						<div class="contacts__bottom-item">
+							<div class="contacts__bottom-right-address">350012, г. Краснодар, Круговая, д 44</div>
+							<div class="contacts__bottom-right-phone">Тел: +7 (861) 203-38-60</div>
+						</div>
+						<div class="contacts__bottom-item">
+							<div class="contacts__bottom-right-address">295051 г. Симферополь улица Петропавловская улица, 3
+								(БЦ Октябрьский)</div>
+							<div class="contacts__bottom-right-phone">Тел: +7 (978) 700-80-90</div>
+						</div>
+						<div class="contacts__bottom-item">
+							<div class="contacts__bottom-right-address">Адрес для самовывоза:</div>
+							<div class="contacts__bottom-right-phone">Москва Ул. Нижегородская д. 29/33</div>
+						</div>
+					</div>
+					<div class="contacts__bottom-mob">
+						<div class="contacts__bottom-mob-item">
+							<div class="contacts__bottom-mob-text">Номер телефона</div>
+							<div class="contacts__bottom-mob-contact">+7 (929) 432-53-23</div>
+						</div>
+						<div class="contacts__bottom-mob-item">
+							<div class="contacts__bottom-mob-text">Электронная почта</div>
+							<div class="contacts__bottom-mob-contact">sale@leto-med.ru</div>
+						</div>
+						<div class="contacts__bottom-mob-socials">
+							<a href="https://vk.com/leto_med">
+								<div class="contacts__bottom-mob-icon mob-icon-vk"></div>
+							</a>
+							<a href="#">
+								<div class="contacts__bottom-mob-icon mob-icon-tg"></div>
+							</a>
+							<a href="#">
+								<div class="contacts__bottom-mob-icon mob-icon-wts"></div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!--                                                                                                                                            -->
+
+
+	<div class="container-block">
+		<footer>
+			<div class="footer-top">
+				<div class="wrap">
+					<div class="footer__block">
+						<div class="footer-nav">
+							<div class="footer-nav__caption footer-caption">Навигация</div>
+							<nav>
+								<ul class="footer-nav__items">
+									<li class="footer-nav__item">
+										<a href="/about/">О компании</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/catalog/">Каталог</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/blog/">Новости</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/contacts/">Контакты</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/personal/">Личный кабинет</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/personal/cart/">Корзина</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/personal/favorite/">Избранное</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/compare/">Сравнение</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/sitemap/">Карта сайта</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="footer-seo">
+							<div class="footer-seo__caption footer-caption">Плюсы от LETO Dental Service</div>
+							<div class="footer-seo__taps">
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_pur">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_gr">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_bl">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_gre">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_aq">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+							</div>
+						</div>
+						<div class="footer-contacts">
+							<div class="footer-contacts__caption footer-caption">Наша связь</div>
+							<div class="footer-contacts__items">
+								<div class="footer-contacts__email footer-contacts__item">
+									<a href="mailto:sale@leto-med.ru">
+										<span class="footer-contacts__email-text">sale@leto-med.ru</span>
+									</a>
+								</div>
+								<div class="footer-contacts__phone footer-contacts__item">+7 (495) 727-07-87</div>
+								<div class="footer-contacts__call">
+									<a href="/contacts/"><span class="footer-contacts__call-btn">Заказать звонок</span></a>
+								</div>
+								<div class="footer-contacts__socials">
+									<a href="https://vk.com/leto_med">
+										<div class="footer-contacts__socials-icon-vk"></div>
+									</a>
+									<a href="#">
+										<div class="footer-contacts__socials-icon-ws"></div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-line"></div>
+				<div class="wrap">
+					<div class="footer__mob">
+						<nav>
+							<ul class="footer__mob-menu-items">
+								<li class="footer__mob-menu-item">
+									<a href="/about/">О компании</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/catalog/">Каталог</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/working-conditions/">Условия работы</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/blog/">Новости</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/contacts/">Контакты</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/personal/">Личный кабинет</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/sitemap/">Карта сайта</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="footer__mob-location">
+							<div class="footer__mob-location-desc">Ваш город:</div>
+							<div class="footer__mob-location-city">Санкт-Петербург</div>
+						</div>
+						<div class="footer__mob-bottom">
+							<div class="footer__mob-bottom-copyrights">
+								<p class="footer__mob-copyrights">&#169; Все права защищены</p>
+								<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh">
+									<p class="footer__mob-soglashenie">Соглашение об использовании персональных данных</p>
+								</a>
+							</div>
+							<div class="footer__mob-bottom-socials">
+								<a href="https://vk.com/leto_med">
+									<div class="footer-contacts__socials-icon-vk"></div>
+								</a>
+								<a href="#">
+									<div class="footer-contacts__socials-icon-ws"></div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="wrap">
+				<div class="footer-bottom">
+					<div class="footer-bottom__item">
+						<div class="footer-bottom__logo">
+							<a href="/main/">
+								<img src="./img/logo.png" alt="Логотип компании">
+							</a>
+						</div>
+						<div class="footer-bottom__company company">
+							<div class="footer-bottom__company-title company-title">Торговый Дом Лето</div>
+							<div class="footer-bottom__company-slogan company-slogan">Расходные материалы для стоматологии
+							</div>
+						</div>
+					</div>
+					<div class="footer-bottom__item footer-bottom__item_text">
+						<p class="footer-bottom__copyrights">&#169; Все права защищены</p>
+						<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh/">
+							<p class="footer-bottom__soglashenie">Соглашение об использовании персональных данных</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

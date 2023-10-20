@@ -1,0 +1,27 @@
+.wrap {
+	padding: 0 190px;
+}
+
+.wrap-catalog {
+	padding: 0 119px 0 190px;
+}
+
+@media (max-width: 1921px) {
+	.wrap {
+		padding: 0 37px;
+	}
+
+	.wrap-catalog {
+		padding: 0 37px;
+	}
+}
+
+@media (max-width: 1440px) {
+	.wrap {
+		padding: 0 15px;
+	}
+
+	.wrap-catalog {
+		padding: 0 15px;
+	}
+}

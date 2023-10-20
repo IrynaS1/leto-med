@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="./img/icon.svg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@300;400;600;700&family=PT+Sans:wght@700&family=Tenor+Sans&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="./normalize.css">
+	<link rel="stylesheet" href="./global_style.css">
+	<link rel="stylesheet" href="./st.css">
+	<!-- <link rel="stylesheet" href="./template_styles.css"> -->
+	<!-- <link rel="stylesheet" href="./styles.css">-->
+	<script src="./script.js" defer></script>
+	<title>Торговый дом Лето - Расходные материалы для стоматологии</title>
+</head>
+
+<body>
+	<div class="container-block">
+		<header>
+			<div class="header">
+				<div class="header-menu">
+					<nav>
+						<ul class="header-menu__items">
+							<li><a href="/about/" class="header-menu__item">О компании</a></li>
+							<li><a href="/catalog/" class="header-menu__item">Каталог</a></li>
+							<li><a href="/working-conditions/" class="header-menu__item">Условия работы</a></li>
+							<li><a href="/blog/" class="header-menu__item">Новости</a></li>
+							<li><a href="/contacts/" class="header-menu__item">Контакты</a></li>
+							<li><a href="/personal/" class="header-menu__item">Личный кабинет</a></li>
+						</ul>
+					</nav>
+					<button class="header-menu__reg header-menu__btn">Регистрация</button>
+					<button class="header-menu__auth header-menu__btn">Вход</button>
+				</div>
+				<div class="wrap">
+					<div class="header-menu__mob">
+						<div class="header-menu__mob-company">
+							<div class="header-menu__mob-logo">
+								<a href="/main/">
+									<img src="./img/logo-s.png" alt="Логотип компании">
+								</a>
+							</div>
+							<div class="header-menu__mob-td">Торговый Дом Лето</div>
+						</div>
+						<div class="header-menu__mob-phone">+7 (495) 727-07-87</div>
+					</div>
+				</div>
+				<div class="wrap">
+					<div class="header-block">
+						<div class="header-block__left">
+							<div class="header-block__logo">
+								<a href="/main/">
+									<img src="./img/logo.png" alt="Логотип компании">
+								</a>
+							</div>
+							<div class="header-block__company company">
+								<div class="header-block__company-title company-title">Торговый Дом Лето</div>
+								<div class="header-block__company-slogan company-slogan">Расходные материалы для стоматологии
+								</div>
+							</div>
+						</div>
+						<div class="header-block__search">
+							<input type="text" class="header-block__search-input" id="s-d-input" placeholder="Что Вы ищете?">
+							<button class="header-block__search-icon search-btn"></button>
+						</div>
+						<div class="header-block__location">
+							<div class="header-block__location-city">
+								<span class="header-block__location-city-desc">Местоположение:</span>
+								<button class="header-block__location-city-name">Москва</button>
+								<div class="header-block__location-city-select header-select-city">
+									<div class="header-select-city__info header-select-city__info_font">Ваш город — Москва?</div>
+									<div class="header-select-city__confirmation">
+										<button class="header-select-city__confirm">Да</button>
+										<div class="header-select-city__info">или</div>
+										<select name="city" id="city-select" class="header-select-city__title">
+											<option value="" selected disabled>Нет, другой</option>
+											<!-- 	<option value="msk">Москва</option> -->
+											<option value="krd">Краснодар</option>
+											<option value="sip">Симферополь</option>
+										</select>
+									</div>
+									<div class="header-select-city__info">Если вашего региона нет в списке, вы можете написать
+										нам на почту с пометкой "Доставка в наш регион", и мы предложим наилучший способ доставки.
+									</div>
+								</div>
+							</div>
+							<div class="header-block__location-phone">
+								<span class="header-block__location-phone-num">+7 (495) 727-07-87</span>
+								<a href="/contacts/"><span class="header-block__location-phone-call">Заказать звонок</span></a>
+							</div>
+						</div>
+						<div class="header-block__compare">
+							<a href="/personal/favorite/">
+								<div class="header-block__compare-item header-block__compare-item_mb">
+									<span class="header-block__compare-icon header-block__compare-icon_favourites"></span>
+									<span
+										class="header-block__compare-text header-block__compare-text_favourites">Избранное</span>
+									<span class="header-block__compare-count header-block__compare-count_favourites">0</span>
+								</div>
+							</a>
+							<a href="/compare/">
+								<div class="header-block__compare-item">
+									<span class="header-block__compare-icon header-block__compare-icon_comparison"></span>
+									<span
+										class="header-block__compare-text header-block__compare-text_comparison">Сравнение</span>
+									<span class="header-block__compare-count header-block__compare-count_comparison">0</span>
+								</div>
+							</a>
+						</div>
+						<div class="header-block__cart">
+							<div class="header-block__cart-button">
+								<a href="/personal/cart/">
+									<div class="header-block__cart-btn"></div>
+								</a>
+								<div class="header-block__cart-button-count">
+									<span class="header-block__cart-button-num">6</span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"
+										fill="none">
+										<circle cx="11.5" cy="11.5" r="11.5" fill="url(#paint0_linear_104_17)" />
+										<defs>
+											<linearGradient id="paint0_linear_104_17" x1="15" y1="1.5" x2="2" y2="26.5"
+												gradientUnits="userSpaceOnUse">
+												<stop stop-color="#21B8B8" />
+												<stop offset="1" stop-color="#1B9285" />
+											</linearGradient>
+										</defs>
+									</svg>
+								</div>
+							</div>
+							<div class="header-block__cart-desc">
+								<span class="header-block__cart-desc-name">Корзина</span>
+								<span class="header-block__cart-desc-sum">32.400 руб</span>
+							</div>
+						</div>
+					</div>
+					<div class="header-block__mob">
+						<input type="text" class="header-block__mob-search" id="s-m-input"
+							placeholder="Что бы Вы хотели найти?">
+						<button class="header-block__mob-s-icon search-mob-btn" id="s-m-btn"></button>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+
+
+	<!--                                                                                                                                            -->
+
+
+	<main id="main-page">
+		<div class="container-block">
+			<div class="catalog">
+				<div class="wrap-catalog">
+					<div class="catalog-block">
+						<div class="catalog-list">
+							<div class="catalog-list__title">Каталог товаров</div>
+							<ul class="catalog-list__items">
+								<a href="/catalog/bory-i-vrashchayushchiysya-instrument/">
+									<li class="catalog-list__item catalog-list__item_child">
+										Боры и вращающийся инструмент
+									</li>
+								</a>
+								<a href="/catalog/instrumenty/">
+									<li class="catalog-list__item catalog-list__item_child-pad">
+										Инструменты
+									</li>
+								</a>
+								<a href="/catalog/plombirovochnye-materialy/">
+									<li class="catalog-list__item catalog-list__item_child-pad">
+										Пломбировочные материалы
+									</li>
+								</a>
+								<a href="/catalog/oborudovanie/">
+									<li class="catalog-list__item catalog-list__item_child-pad">
+										Оборудование
+									</li>
+								</a>
+								<a href="/catalog/materialy-odnorazovogo-ispolzovaniya/">
+									<li class="catalog-list__item catalog-list__item_child">
+										Материалы одноразового использования
+									</li>
+								</a>
+								<a href="/catalog/obrabotka-i-plombirovka-kanala/">
+									<li class="catalog-list__item catalog-list__item_child">
+										Обработка и пломбировка канала
+									</li>
+								</a>
+								<a href="/catalog/khirurgicheskie-materialy/">
+									<li class="catalog-list__item catalog-list__item_child-pad">
+										Хирургические материалы
+									</li>
+								</a>
+								<a href="/catalog/dezinfektsiya/">
+									<li class="catalog-list__item catalog-list__item_child-pad">
+										Дезинфекция
+									</li>
+								</a>
+								<a href="/catalog/ortopedicheskie-materialy/">
+									<li class="catalog-list__item catalog-list__item_child-pad">
+										Ортопедические материалы
+									</li>
+								</a>
+								<a href="/catalog/endodonticheskie-materialy-fayly-shtifty/">
+									<li class="catalog-list__item">
+										Эндодонтические материалы, файлы, штифты
+									</li>
+								</a>
+							</ul>
+						</div>
+						<div class="catalog-cards">
+							<div class="catalog-cards__promo">
+								<span class="catalog-cards__promo-item">Текущие акции</span>
+								<span class="catalog-cards__promo-item">Популярные товары</span>
+								<span class="catalog-cards__promo-item">Новинки</span>
+							</div>
+							<div class="catalog-cards__promo-button">
+								<a href="/blog/"><span class="catalog-cards__promo-btn">Показать все
+										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="8" viewBox="0 0 20 8"
+											fill="none">
+											<path
+												d="M19.3536 4.35355C19.5488 4.15829 19.5488 3.84171 19.3536 3.64645L16.1716 0.464466C15.9763 0.269204 15.6597 0.269204 15.4645 0.464466C15.2692 0.659728 15.2692 0.976311 15.4645 1.17157L18.2929 4L15.4645 6.82843C15.2692 7.02369 15.2692 7.34027 15.4645 7.53553C15.6597 7.7308 15.9763 7.7308 16.1716 7.53553L19.3536 4.35355ZM0 4.5H19V3.5H0V4.5Z"
+												fill="#D72853" />
+										</svg>
+									</span>
+								</a>
+							</div>
+							<div class="catalog-cards__goods">
+								<div class="catalog-cards__card">
+									<div class="catalog-cards__card-img">
+										<img class="catalog-cards__card-img-good" src="./img/image-test-68.png"
+											alt="Изображение товара">
+									</div>
+									<div class="catalog-cards__card-score">
+										<div class="catalog-cards__card-rating">
+											<span class="catalog-cards__card-rating-sym catalog-cards__card-rating-sym_ys"></span>
+											<span class="catalog-cards__card-rating-sym catalog-cards__card-rating-sym_ys"></span>
+											<span class="catalog-cards__card-rating-sym catalog-cards__card-rating-sym_ys"></span>
+											<span class="catalog-cards__card-rating-sym catalog-cards__card-rating-sym_ys"></span>
+											<span class="catalog-cards__card-rating-sym catalog-cards__card-rating-sym_gs"></span>
+										</div>
+										<div class="catalog-cards__card-comparison">
+											<span class="catalog-cards__card-scales scales-add"></span>
+											<span class="catalog-cards__card-favourites favourites-add"></span>
+										</div>
+									</div>
+									<div class="catalog-cards__card-line"></div>
+									<div class="catalog-cards__card-title">Перчатки Manual нитрил текстур. смотровые без
+										талька
+									</div>
+									<div class="catalog-cards__card-property">
+										<div class="catalog-cards__card-size property-dist">Размер: XL,XXL,XXXL</div>
+										<div class="catalog-cards__card-count property-dist">Количество: 200 штук</div>
+										<div class="catalog-cards__card-article property-dist">Артикул: 4234034</div>
+										<div class="catalog-cards__card-avaliable avaliable-true">В наличии</div>
+									</div>
+									<div class="catalog-cards__card-footer">
+										<div class="catalog-cards__card-price">
+											<span class="catalog-cards__card-price catalog-cards__card-price_sum">
+												490
+											</span>
+											₽
+										</div>
+										<a href="#">
+											<div class="catalog-cards__card-link">Подробнее</div>
+										</a>
+									</div>
+									<div class="catalog-cards__card-label label-bestseller">
+										<svg xmlns="http://www.w3.org/2000/svg" width="75" height="76" viewBox="0 0 75 76"
+											fill="none">
+											<path d="M75 0L0 75.5V16.5C-4.22371e-05 5.5 0 0 10.5002 0H75Z" fill="#FDC30C" />
+										</svg>
+										<span class="catalog-cards__card-label-text">Хит</span>
+									</div>
+								</div>
+
+								<div class="catalog-cards__card">
+									<div class="catalog-cards__card-img">
+										<img class="catalog-cards__card-img-good" src="./img/image-test-68.png"
+											alt="Изображение товара">
+									</div>
+									<div class="catalog-cards__card-score">
+										<div class="catalog-cards__card-rating">
+											<span class="catalog-cards__card-rating-sym catalog-cards__card-rating-sym_ys"></span>
+											<span class="catalog-cards__card-rating-sym catalog-cards__card-rating-sym_ys"></span>
+											<span class="catalog-cards__card-rating-sym catalog-cards__card-rating-sym_ys"></span>
+											<span class="catalog-cards__card-rating-sym catalog-cards__card-rating-sym_ys"></span>
+											<span class="catalog-cards__card-rating-sym catalog-cards__card-rating-sym_gs"></span>
+										</div>
+										<div class="catalog-cards__card-comparison">
+											<span class="catalog-cards__card-scales"></span>
+											<span class="catalog-cards__card-favourites"></span>
+										</div>
+									</div>
+									<div class="catalog-cards__card-line"></div>
+									<div class="catalog-cards__card-title">Перчатки Manual нитрил текстур. смотровые без
+										талька
+									</div>
+									<div class="catalog-cards__card-property">
+										<div class="catalog-cards__card-size property-dist">Размер: XL,XXL,XXXL</div>
+										<div class="catalog-cards__card-count property-dist">Количество: 200 штук</div>
+										<div class="catalog-cards__card-article property-dist">Артикул: 4234034</div>
+										<div class="catalog-cards__card-avaliable avaliable-true">В наличии</div>
+									</div>
+									<div class="catalog-cards__card-footer">
+										<div class="catalog-cards__card-price">
+											<span class="catalog-cards__card-price catalog-cards__card-price_sum">
+												490
+											</span>
+											₽
+										</div>
+										<a href="#">
+											<div class="catalog-cards__card-link">Подробнее</div>
+										</a>
+									</div>
+									<div class="catalog-cards__card-label label-new">
+										<svg xmlns="http://www.w3.org/2000/svg" width="75" height="76" viewBox="0 0 75 76"
+											fill="none">
+											<path d="M75 0L0 75.5V16.5C-4.22371e-05 5.5 0 0 10.5002 0H75Z" fill="#8CC01E" />
+										</svg>
+										<span class="catalog-cards__card-label-text">New</span>
+									</div>
+								</div>
+
+								<div class="catalog-cards__card">
+									<div class="catalog-cards__card-img">
+										<img class="catalog-cards__card-img-good" src="./img/image-68-test1.png"
+											alt="Изображение товара">
+									</div>
+									<div class="catalog-cards__card-score">
+										<div class="catalog-cards__card-rating">
+											<span class="catalog-cards__card-rating-sym catalog-cards__card-rating-sym_ys"></span>
+											<span class="catalog-cards__card-rating-sym catalog-cards__card-rating-sym_ys"></span>
+											<span class="catalog-cards__card-rating-sym catalog-cards__card-rating-sym_ys"></span>
+											<span class="catalog-cards__card-rating-sym catalog-cards__card-rating-sym_ys"></span>
+											<span class="catalog-cards__card-rating-sym catalog-cards__card-rating-sym_gs"></span>
+										</div>
+										<div class="catalog-cards__card-comparison">
+											<span class="catalog-cards__card-scales scales-add"></span>
+											<span class="catalog-cards__card-favourites favourites-add"></span>
+										</div>
+									</div>
+									<div class="catalog-cards__card-line"></div>
+									<div class="catalog-cards__card-title">Перчатки Manual нитрил текстур. смотровые без
+										талька
+									</div>
+									<div class="catalog-cards__card-property">
+										<div class="catalog-cards__card-size property-dist">Размер: XL,XXL,XXXL</div>
+										<div class="catalog-cards__card-count property-dist">Количество: 200 штук</div>
+										<div class="catalog-cards__card-article property-dist">Артикул: 4234034</div>
+										<div class="catalog-cards__card-avaliable avaliable-true">В наличии</div>
+									</div>
+									<div class="catalog-cards__card-footer">
+										<div class="catalog-cards__card-price catalog-cards__card-double-price">
+											<span
+												class="catalog-cards__card-price catalog-cards__card-double-old-price catalog-cards__card-double-old-price_sum">
+												1.200 <span class="catalog-cards__card-double-old-price">₽</span>
+											</span>
+											<span
+												class="catalog-cards__card-price catalog-cards__card-double-new-price catalog-cards__card-double-new-price_sum">
+												490 <span class="catalog-cards__card-double-new-price">₽</span>
+											</span>
+										</div>
+										<a href="#">
+											<div class="catalog-cards__card-link">Подробнее</div>
+										</a>
+									</div>
+									<div class="catalog-cards__card-label label-new-stock">
+										<span class="catalog-cards__card-label-text">Sale</span>
+									</div>
+								</div>
+
+								<div class="catalog-cards__card">
+									<div class="catalog-cards__card-img">
+										<img class="catalog-cards__card-img-good" src="./img/image-68-test1.png"
+											alt="Изображение товара">
+									</div>
+									<div class="catalog-cards__card-score">
+										<div class="catalog-cards__card-rating">
+											<span class="catalog-cards__card-rating-sym catalog-cards__card-rating-sym_ys"></span>
+											<span class="catalog-cards__card-rating-sym catalog-cards__card-rating-sym_ys"></span>
+											<span class="catalog-cards__card-rating-sym catalog-cards__card-rating-sym_ys"></span>
+											<span class="catalog-cards__card-rating-sym catalog-cards__card-rating-sym_ys"></span>
+											<span class="catalog-cards__card-rating-sym catalog-cards__card-rating-sym_gs"></span>
+										</div>
+										<div class="catalog-cards__card-comparison">
+											<span class="catalog-cards__card-scales scales-add"></span>
+											<span class="catalog-cards__card-favourites favourites-add"></span>
+										</div>
+									</div>
+									<div class="catalog-cards__card-line"></div>
+									<div class="catalog-cards__card-title">Перчатки Manual нитрил текстур. смотровые без
+										талька
+									</div>
+									<div class="catalog-cards__card-property">
+										<div class="catalog-cards__card-size property-dist">Размер: XL,XXL,XXXL</div>
+										<div class="catalog-cards__card-count property-dist">Количество: 200 штук</div>
+										<div class="catalog-cards__card-article property-dist">Артикул: 4234034</div>
+										<div class="catalog-cards__card-avaliable avaliable-false">Нет в наличии</div>
+									</div>
+									<div class="catalog-cards__card-footer">
+										<div class="catalog-cards__card-price">
+											<span class="catalog-cards__card-price catalog-cards__card-price_sum">
+												490
+											</span>
+											₽
+										</div>
+										<a href="#">
+											<div class="catalog-cards__card-link">Подробнее</div>
+										</a>
+									</div>
+									<div class="catalog-cards__card-label label-bestseller">
+										<span class="catalog-cards__card-label-text">Хит</span>
+									</div>
+								</div>
+							</div>
+							<div class="catalog-cards__goods-pag">
+								<button class="catalog-cards__goods-pag-btn catalog-cards__goods-pag-btn_left"></button>
+								<button class="catalog-cards__goods-pag-btn catalog-cards__goods-pag-btn_right"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="wrap">
+				<section>
+					<div class="advantages">
+						<div class="advantages__card">
+							<div class="advantages__item">
+								<div class="advantages__item-img-block">
+									<div class="advantages__item-img advantages__item-img_price"></div>
+								</div>
+								<div class="advantages__item-desc">
+									<h4 class="advantages__item-desc-name">Выгодные цены</h4>
+									<p class="advantages__item-desc-text">Наш интернет-магазин имеет самые привлекательные цены в
+										рунете, поскольку по каждому конкретному заказу работаем с производителями напрямую.</p>
+								</div>
+							</div>
+						</div>
+						<div class="advantages__card">
+							<div class="advantages__item">
+								<div class="advantages__item-img-block">
+									<div class="advantages__item-img advantages__item-img_quality"></div>
+								</div>
+								<div class="advantages__item-desc">
+									<h4 class="advantages__item-desc-name">Качество товара</h4>
+									<p class="advantages__item-desc-text">Мы даём гарантию на свои товары, так же если товар
+										приходит сломанный, то мы возвратим деньги.</p>
+								</div>
+							</div>
+						</div>
+						<div class="advantages__card">
+							<div class="advantages__item">
+								<div class="advantages__item-img-block">
+									<div class="advantages__item-img advantages__item-img_delivery"></div>
+								</div>
+								<div class="advantages__item-desc">
+									<h4 class="advantages__item-desc-name">Быстрая доставка</h4>
+									<p class="advantages__item-desc-text">Отправляем Ваш заказ в течении дня после после
+										оформления
+										и оплаты Вами заказа.</p>
+								</div>
+							</div>
+						</div>
+						<div class="advantages__card">
+							<div class="advantages__item">
+								<div class="advantages__item-img-block">
+									<div class="advantages__item-img advantages__item-img_time-fast"></div>
+								</div>
+								<div class="advantages__item-desc">
+									<h4 class="advantages__item-desc-name">Гибкие условия сотрудничества</h4>
+									<p class="advantages__item-desc-text">Сборка начинается сразу после оформления заказа, мы
+										сообщим Вам когда Ваш товар будет готов к отправке.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="news news-home">
+						<div class="news__caption">
+							<h3 class="news__caption-text">Новости</h3>
+							<button class="news__caption-btn block__caption-btn">
+								<span class="block__caption-btn-img arrow-up-btn"></span>
+								<span class="block__caption-btn-img arrow-down-btn arrow-to-open"></span>
+							</button>
+						</div>
+						<div class="news__block">
+							<div class="news__block-part">
+								<div class="news__block-article">
+									<h3 class="news__block-article-caption">Чувствительность зубов - причины и пути минимизации
+									</h3>
+									<p class="news__block-article-text">
+										Рано или поздно каждый человек сталкивается с гиперестезией, или, говоря простым языком,
+										повышенной чувствительностью зубов. Чаще всего она проявляется при употреблении продуктов
+										слишком низкой или высокой температуры, однако порой неприятные ощущения могут
+										спровоцировать
+										и такие, казалось бы, обыденные действия, как, например, чистка зубов или даже простое
+										вдыхание холодного воздуха ртом. Разберемся подробнее в причинах гиперестезии и путях
+										решения
+										этой небольшой, но меж тем доставляющей немало дискомфорта проблеме.Главная и основная
+										причина повышения чувствительности зуба состоит в истончении эмали – будучи основной
+										защитой
+										внутренней части зуба и его тканей от каких-либо повреждений из-за внешнего давления,
+										истончаясь эмаль открывает путь к дентину и нервным окончаниям, благодаря которым мы и
+										испытываем все неприятные ощущения, связанные с гиперестезией. Очень часто люди,
+										страдающие
+										повышенной чувствительностью зубов, с рождения обладают весьма тонкой эмалью и при этом
+										расширенными канальцами в дентине, что лишь усиливает гиперес <a
+											href="/blog/chuvstvitelnost-zubov-prichiny-i-puti-minimizatsii/"><span
+												class="news__block-article-text news__block-article-text_link">Читать
+												далее...</span></a>
+									</p>
+								</div>
+								<a href="/blog/">
+									<div class="news__block-link">
+										<span class="news__block-link-text">Все новости</span>
+										<span class="news-block__caption-link-btn">
+											<span class="news-block__caption-link-arrow">
+												<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<g id="Layer_115" data-name="Layer 115">
+														<path
+															d="m19.69 9.11-12.89-6.53a3.28 3.28 0 0 0 -3.24 0 3.32 3.32 0 0 0 -1.44 3v12.98a3.34 3.34 0 0 0 1.44 3 2.79 2.79 0 0 0 1.48.4 3.93 3.93 0 0 0 1.76-.45l12.89-6.51c1.91-1 2.19-2.24 2.19-2.92s-.28-2-2.19-2.97z"
+															fill="#000000" style="fill: rgb(27, 152, 140);"></path>
+													</g>
+												</svg></span>
+										</span>
+									</div>
+								</a>
+							</div>
+							<div class="news__block-img">
+								<img src="./img/news-test.png" class="news__block-pic" alt="Избражение">
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="about-home">
+						<div class="about-block">
+							<div class="about-block__caption about-block__caption-f-block">
+								<h3 class="about-block__caption-text">Интернет магазин всё для
+									стоматолога</h3>
+								<button class="about-block__caption-btn block__caption-btn">
+									<span class="block__caption-btn-img arrow-up-btn"></span>
+									<span class="block__caption-btn-img arrow-down-btn arrow-to-open"></span>
+								</button>
+							</div>
+							<p class="about-block__text">Каждому стоматологу в процессе работы требуется большое количество
+								инструментов и расходных материалов. При этом важно, чтобы все необходимое всегда было под
+								рукой,
+								ведь ситуации, требующие срочного вмешательства, происходят регулярно.</p>
+						</div>
+						<div class="about-block">
+							<div class="about-block__caption about-block__caption-s-block">
+								<h3 class="about-block__caption-text">Стоматологические материалы в
+									компании Leto-Med</h3>
+								<button class="about-block__caption-btn block__caption-btn">
+									<span class="block__caption-btn-img arrow-up-btn"></span>
+									<span class="block__caption-btn-img arrow-down-btn arrow-to-open"></span>
+								</button>
+							</div>
+							<div class="about-block__text">
+								<p class="about-block__text">За последние годы требования к качеству лечения
+									зубов как в Москве, так и в Краснодарском крае, Симферополе, Крыму, так и в других российских
+									городах значительно
+									выросли. Чтобы оно было эффективным и безболезненным, прежде всего нужны качественные товары,
+									и
+									найти их нетрудно в нашем стоматологическом магазине. Стоматологический интернет-магазин
+									Лето-Мед предлагает все, что нужно для выполнения хирургических и эндодонтических процедур,
+									лечения зубов и околозубных тканей:</p>
+								<ol class="about-block__text">
+									<li>Зуботехнические товары для <a href="/catalog/plombirovochnye-materialy/"
+											class="about-block__text about-block__text_link">пломбировки каналов</a>, а также
+										инструменты, необходимые для восстановления формы зуба.</li>
+									<li>Средства дезинфекции поверхностей и инструментов, которые уничтожают микроорганизмы и
+										обеспечивают соблюдение санитарных норм.</li>
+									<li>Анестетики. Любой клинике они нужны в больших количествах, ведь многие процедуры
+										достаточно болезненны.</li>
+									<li>Высококачественный шовный материал, безопасный для здоровья.</li>
+									<li>Оборудование и инструменты, без которых не обойтись в работе: скальпели, боры, наборы для
+										снятия зубных отложений, пинцеты, зеркала и многое другое.</li>
+								</ol>
+								<p class="about-block__text">Использование таких материалов в процессе работы позволяет
+									обеспечить лучший результат, что важно и для врача, и для пациента и всё это есть в нашем
+									стоматологическом интернет-магазине.</p>
+							</div>
+						</div>
+						<div class="about-block">
+							<div class="about-block__caption about-block__caption-th-block">
+								<h3 class="about-block__caption-text">Качество расходных
+									стоматологических материалов</h3>
+								<button class="about-block__caption-btn block__caption-btn">
+									<span class="block__caption-btn-img arrow-up-btn"></span>
+									<span class="block__caption-btn-img arrow-down-btn arrow-to-open"></span>
+								</button>
+							</div>
+							<div class="about-block__text">
+								<p class="about-block__text">Стоматологический магазин Leto-Med внимательно следит за качеством
+									продукции, которую реализуют лучшие поставщики. Магазин поддерживает партнерские отношения с
+									ведущими оптовыми импортерами стоматологической продукции российских и зарубежных брендов.
+								</p>
+								<br>
+								<p class="about-block__text">Здесь с гибкостью подходят к вопросам ценообразования, и клиенты
+									могут
+									быть уверены в том, что в установленный период стоимость продукции не повысится. Для удобства
+									покупателей предлагаются разные способы оплаты, а доставка в пределах Москвы и Ближнего
+									Подмосковья на сумму от <b>5.000</b> рублей осуществляется бесплатно.</p>
+								<br>
+								<p>Доставка товара по Москве, Краснодарскому краю, Симферополю Крыму краю
+									ежедневно по будням с <b>9:00</b> до <b>18:00</b>. Приём заказов до <b>16:00</b>.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</main>
+
+
+
+	<!--                                                                                                                                            -->
+
+
+	<div class="container-block">
+		<footer>
+			<div class="footer-top">
+				<div class="wrap">
+					<div class="footer__block">
+						<div class="footer-nav">
+							<div class="footer-nav__caption footer-caption">Навигация</div>
+							<nav>
+								<ul class="footer-nav__items">
+									<li class="footer-nav__item">
+										<a href="/about/">О компании</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/catalog/">Каталог</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/blog/">Новости</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/contacts/">Контакты</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/personal/">Личный кабинет</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/personal/cart/">Корзина</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/personal/favourite/">Избранное</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/compare/">Сравнение</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/sitemap/">Карта сайта</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="footer-seo">
+							<div class="footer-seo__caption footer-caption">Плюсы от LETO Dental Service</div>
+							<div class="footer-seo__taps">
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_pur">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_gr">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_bl">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_gre">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_aq">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+							</div>
+						</div>
+						<div class="footer-contacts">
+							<div class="footer-contacts__caption footer-caption">Наша связь</div>
+							<div class="footer-contacts__items">
+								<div class="footer-contacts__email footer-contacts__item">
+									<a href="mailto:sale@leto-med.ru">
+										<span class="footer-contacts__email-text">sale@leto-med.ru</span>
+									</a>
+								</div>
+								<div class="footer-contacts__phone footer-contacts__item">+7 (495) 727-07-87</div>
+								<div class="footer-contacts__call">
+									<button class="footer-contacts__call-btn">Заказать звонок</button>
+								</div>
+								<div class="footer-contacts__socials">
+									<a href="https://vk.com/leto_med">
+										<div class="footer-contacts__socials-icon-vk"></div>
+									</a>
+									<a href="#">
+										<div class="footer-contacts__socials-icon-ws"></div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-line"></div>
+				<div class="wrap">
+					<div class="footer__mob">
+						<nav>
+							<ul class="footer__mob-menu-items">
+								<li class="footer__mob-menu-item">
+									<a href="/about/">О компании</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/catalog/">Каталог</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/working-conditions/">Условия работы</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/blog/">Новости</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/contacts/">Контакты</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/personal/">Личный кабинет</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/sitemap/" target="_blanc">Карта сайта</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="footer__mob-location">
+							<div class="footer__mob-location-desc">Ваш город:</div>
+							<div class="footer__mob-location-city">Санкт-Петербург</div>
+							<div class="footer__mob-loc-modal">
+								
+							</div>
+						</div>
+						<div class="footer__mob-bottom">
+							<div class="footer__mob-bottom-copyrights">
+								<p class="footer__mob-copyrights">&#169; Все права защищены</p>
+								<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh">
+									<p class="footer__mob-soglashenie">Соглашение об использовании персональных данных</p>
+								</a>
+							</div>
+							<div class="footer__mob-bottom-socials">
+								<a href="https://vk.com/leto_med">
+									<div class="footer-contacts__socials-icon-vk"></div>
+								</a>
+								<a href="#">
+									<div class="footer-contacts__socials-icon-ws"></div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="wrap">
+				<div class="footer-bottom">
+					<div class="footer-bottom__item">
+						<div class="footer-bottom__logo">
+							<a href="/main/">
+								<img src="./img/logo.png" alt="Логотип компании">
+							</a>
+						</div>
+						<div class="footer-bottom__company company">
+							<div class="footer-bottom__company-title company-title">Торговый Дом Лето</div>
+							<div class="footer-bottom__company-slogan company-slogan">Расходные материалы для стоматологии
+							</div>
+						</div>
+					</div>
+					<div class="footer-bottom__item footer-bottom__item_text">
+						<p class="footer-bottom__copyrights">&#169; Все права защищены</p>
+						<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh/">
+							<p class="footer-bottom__soglashenie">Соглашение об использовании персональных данных</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

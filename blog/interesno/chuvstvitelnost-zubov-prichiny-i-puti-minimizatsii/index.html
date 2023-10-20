@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="./img/icon.svg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Lato:wght@400;700&family=Montserrat:wght@300;400;600;700&family=PT+Sans:wght@700&family=Tenor+Sans&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="./normalize.css">
+	<link rel="stylesheet" href="./template_styles.css">
+	<link rel="stylesheet" href="./styles.css">
+	<script charset="utf-8" src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
+	<script src="./script.js" defer></script>
+	<title>Чувствительность зубов – причины и пути минимизации</title>
+</head>
+
+<body>
+	<div class="container-block">
+		<header>
+			<div class="header">
+				<div class="header-menu">
+					<nav>
+						<ul class="header-menu__items">
+							<li><a href="/about/" class="header-menu__item">О компании</a></li>
+							<li><a href="/catalog/" class="header-menu__item">Каталог</a></li>
+							<li><a href="/working-conditions/" class="header-menu__item">Условия работы</a></li>
+							<li><a href="/blog/" class="header-menu__item selected">Новости</a></li>
+							<li><a href="/contacts/" class="header-menu__item">Контакты</a></li>
+							<li><a href="/personal/" class="header-menu__item">Личный кабинет</a></li>
+						</ul>
+					</nav>
+					<button class="header-menu__reg header-menu__btn">Регистрация</button>
+					<button class="header-menu__auth header-menu__btn">Вход</button>
+				</div>
+				<div class="wrap">
+					<div class="header-menu__mob">
+						<div class="header-menu__mob-company">
+							<div class="header-menu__mob-logo">
+								<a href="/main/">
+									<img src="./img/logo-s.png" alt="Логотип компании">
+								</a>
+							</div>
+							<div class="header-menu__mob-td">Торговый Дом Лето</div>
+						</div>
+						<div class="header-menu__mob-phone">+7 (495) 727-07-87</div>
+					</div>
+				</div>
+				<div class="wrap">
+					<div class="header-block">
+						<div class="header-block__left">
+							<div class="header-block__logo">
+								<a href="/main/">
+									<img src="./img/logo.png" alt="Логотип компании">
+								</a>
+							</div>
+							<div class="header-block__company company">
+								<div class="header-block__company-title company-title">Торговый Дом Лето</div>
+								<div class="header-block__company-slogan company-slogan">Расходные материалы для стоматологии
+								</div>
+							</div>
+						</div>
+						<div class="header-block__search">
+							<input type="text" class="header-block__search-input" id="s-d-input" placeholder="Что Вы ищете?">
+							<button class="header-block__search-icon search-btn"></button>
+						</div>
+						<div class="header-block__location">
+							<div class="header-block__location-city">
+								<span class="header-block__location-city-desc">Местоположение:</span>
+								<button class="header-block__location-city-name">Москва</button>
+								<div class="header-block__location-city-select header-select-city">
+									<div class="header-select-city__info header-select-city__info_font">Ваш город — Москва?</div>
+									<div class="header-select-city__confirmation">
+										<button class="header-select-city__confirm">Да</button>
+										<div class="header-select-city__info">или</div>
+										<select name="city" id="city-select" class="header-select-city__title">
+											<option value="" selected disabled>Нет, другой</option>
+											<!-- 	<option value="msk">Москва</option> -->
+											<option value="krd">Краснодар</option>
+											<option value="sip">Симферополь</option>
+										</select>
+									</div>
+									<div class="header-select-city__info">Если вашего региона нет в списке, вы можете написать
+										нам на почту с пометкой "Доставка в наш регион", и мы предложим наилучший способ доставки.
+									</div>
+								</div>
+							</div>
+							<div class="header-block__location-phone">
+								<span class="header-block__location-phone-num">+7 (495) 727-07-87</span>
+								<a href="/contacts/"><span class="header-block__location-phone-call">Заказать звонок</span></a>
+							</div>
+						</div>
+						<div class="header-block__compare">
+							<a href="/personal/favorite/">
+								<div class="header-block__compare-item header-block__compare-item_mb">
+									<span class="header-block__compare-icon header-block__compare-icon_favourites"></span>
+									<span
+										class="header-block__compare-text header-block__compare-text_favourites">Избранное</span>
+									<span class="header-block__compare-count header-block__compare-count_favourites">0</span>
+								</div>
+							</a>
+							<a href="/compare/">
+								<div class="header-block__compare-item">
+									<span class="header-block__compare-icon header-block__compare-icon_comparison"></span>
+									<span
+										class="header-block__compare-text header-block__compare-text_comparison">Сравнение</span>
+									<span class="header-block__compare-count header-block__compare-count_comparison">0</span>
+								</div>
+							</a>
+						</div>
+						<div class="header-block__cart">
+							<div class="header-block__cart-button">
+								<a href="/personal/cart/">
+									<div class="header-block__cart-btn"></div>
+								</a>
+								<div class="header-block__cart-button-count">
+									<span class="header-block__cart-button-num">6</span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"
+										fill="none">
+										<circle cx="11.5" cy="11.5" r="11.5" fill="url(#paint0_linear_104_17)" />
+										<defs>
+											<linearGradient id="paint0_linear_104_17" x1="15" y1="1.5" x2="2" y2="26.5"
+												gradientUnits="userSpaceOnUse">
+												<stop stop-color="#21B8B8" />
+												<stop offset="1" stop-color="#1B9285" />
+											</linearGradient>
+										</defs>
+									</svg>
+								</div>
+							</div>
+							<div class="header-block__cart-desc">
+								<span class="header-block__cart-desc-name">Корзина</span>
+								<span class="header-block__cart-desc-sum">32.400 руб</span>
+							</div>
+						</div>
+					</div>
+					<div class="header-block__mob">
+						<input type="text" class="header-block__mob-search" id="s-m-input"
+							placeholder="Что бы Вы хотели найти ?">
+						<button class="header-block__mob-s-icon search-mob-btn" id="s-m-btn"></button>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+
+
+	<!--                                                                                                                                            -->
+
+	<main id="main-blog">
+		<div class="container-block">
+			<div class="wrap">
+				<div class="wrap-content">
+					<div class="breadcrumbs">
+						<ul class="breadcrumbs__items">
+							<li class="breadcrumbs__item breadcrumbs__item_not-active">
+								<a href="/main/">Главная</a>
+							</li>
+							<li class="breadcrumbs__item breadcrumbs__item_not-active">
+								<a href="/blog/aktsii-i-novinki/">Акции и новинки</a>
+							</li>
+							<li class="breadcrumbs__item breadcrumbs__item_active">Чувствительность зубов – причины и пути
+								минимизации</li>
+						</ul>
+					</div>
+					<div class="general-section">
+						<h2 class="blog__mob-title">Акции и новинки</h2>
+						<nav>
+							<div class="left-menu">
+								<a href="/blog/novosti/">
+									<div class="left-menu__item">Новости</div>
+								</a>
+								<a href="/blog/aktsii-i-novinki/">
+									<div class="left-menu__item selected-blog">Акции и новинки</div>
+								</a>
+								<a href="/blog/interesno/">
+									<div class="left-menu__item">Интересно</div>
+								</a>
+							</div>
+						</nav>
+						<div class="article">
+							<div class="article__image">
+								<img src="./img/test-img-about.png" class="article__image-img"
+									alt="Чувствительность зубов – причины и пути минимизации">
+							</div>
+							<div class="article__content">
+								<h1 class="article__title">Чувствительность зубов – причины и пути минимизации</h1>
+								<div class="article__text">
+									<p>Рано или поздно каждый человек сталкивается с гиперестезией, или, говоря простым языком,
+										повышенной чувствительностью зубов. Чаще всего она проявляется при употреблении продуктов
+										слишком низкой или высокой температуры, однако порой неприятные ощущения могут
+										спровоцировать
+										и такие, казалось бы, обыденные действия, как, например, чистка зубов или даже простое
+										вдыхание холодного воздуха ртом. Разберемся подробнее в причинах гиперестезии и путях
+										решения
+										этой небольшой, но меж тем доставляющей немало дискомфорта проблеме.</p>
+									<p>Главная и основная причина повышения чувствительности зуба состоит в истончении эмали –
+										будучи основной защитой внутренней части зуба и его тканей от каких-либо повреждений из-за
+										внешнего давления, истончаясь эмаль открывает путь к дентину и нервным окончаниям,
+										благодаря
+										которым мы и испытываем все неприятные ощущения, связанные с гиперестезией. Очень часто
+										люди,
+										страдающие повышенной чувствительностью зубов, с рождения обладают весьма тонкой эмалью и
+										при
+										этом расширенными канальцами в дентине, что лишь усиливает гиперестезию.</p>
+									<p>В свою очередь эмаль может истончаться по разным причинам – ключевыми можно назвать
+										неправильную, слишком грубую чистку зубов (особенно, если щетка обладает жесткими
+										щетинками)
+										и различные гормональные нарушения, которые могут спровоцировать возрастные изменения, а
+										также беременность и климакс у женщин. Также жалуются на повышенную чувствительность зубов
+										люди, страдающие бруксизмом – заболевание, при котором человек непроизвольно начинает
+										скрежетать зубами во время ночного сна.</p>
+									<p>Прежде всего, в вопросе лечения гиперестезии стоматологи рекомендуют прибегнуть к смене
+										зубной щетки на мягкую или щетку среднего уровня жесткости и приобрести специальную зубную
+										пасту для чувствительных зубов, а во время чистки стараться водить щеткой максимально
+										аккуратно и осторожно, избегая сильного надавливания. Важно отметить, что категорически
+										неправильной является чистка зубов по горизонтали – производить эту гигиеническую
+										процедуру
+										необходимо выметающими движениями в вертикальном направлении. Также во время лечения
+										гиперестезии рекомендовано исключить из рациона газированные напитки, горячую и холодную
+										пищу, предпочитая ей продукты комнатной температуры.</p>
+									<p>Если вышеописанные меры оказались не слишком эффективными в вопросе лечения повышенной
+										чувствительности зубов, стоматологи рекомендуют прибегнуть к фторированию – процедуре,
+										благодаря которой можно не только снизить неприятные ощущения, но и укрепить зубную эмаль,
+										что снизит риск возникновения кариеса. Процедура фторирования абсолютно безопасна и
+										безболезненна, и осуществляется путем нанесения на зубную эмаль специальной пасты, которая
+										проникает в ткани зуба – она настолько эффективна, что способна укрепить зубную эмаль в
+										десять раз. Кстати, данную процедуру можно проводить не только взрослым, но и маленьким
+										детям.</p>
+									<p>Для пациентов с бруксизмом актуальным решением проблемы станет ношение специальной
+										пластиковой накладки на зубы под названием каппа. Каппа позволит снизить давление зубов
+										друг
+										на друга и обеспечит снижение повреждений эмали во время сна – приятным бонусом является
+										то,
+										что каппа является абсолютно прозрачной и достаточно тонкой, а значит практически
+										незаметной.</p>
+									<p>В случае, если причиной повышенной чувствительности зубов стали какие-либо гормональные
+										изменения, произошедшие на фоне взросления, беременности или наступления климактерического
+										периода, самым верным решением станет обращение к терапевту, который впоследствии назначит
+										посещение ряда специалистов, которые помогут составить грамотный план лечения и избавиться
+										от
+										неприятных ощущений, вызванных гиперестезией.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!--                                                                                                                                            -->
+
+
+	<div class="container-block">
+		<footer>
+			<div class="footer-top">
+				<div class="wrap">
+					<div class="footer__block">
+						<div class="footer-nav">
+							<div class="footer-nav__caption footer-caption">Навигация</div>
+							<nav>
+								<ul class="footer-nav__items">
+									<li class="footer-nav__item">
+										<a href="/about/">О компании</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/catalog/">Каталог</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/blog/">Новости</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/contacts/">Контакты</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/personal/">Личный кабинет</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/personal/cart/">Корзина</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/personal/favorite/">Избранное</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/compare/">Сравнение</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/sitemap/">Карта сайта</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="footer-seo">
+							<div class="footer-seo__caption footer-caption">Плюсы от LETO Dental Service</div>
+							<div class="footer-seo__taps">
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_pur">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_gr">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_bl">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_gre">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_aq">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+							</div>
+						</div>
+						<div class="footer-contacts">
+							<div class="footer-contacts__caption footer-caption">Наша связь</div>
+							<div class="footer-contacts__items">
+								<div class="footer-contacts__email footer-contacts__item">
+									<a href="mailto:sale@leto-med.ru">
+										<span class="footer-contacts__email-text">sale@leto-med.ru</span>
+									</a>
+								</div>
+								<div class="footer-contacts__phone footer-contacts__item">+7 (495) 727-07-87</div>
+								<div class="footer-contacts__call">
+									<a href="/contacts/"><span class="footer-contacts__call-btn">Заказать звонок</span></a>
+								</div>
+								<div class="footer-contacts__socials">
+									<a href="https://vk.com/leto_med">
+										<div class="footer-contacts__socials-icon-vk"></div>
+									</a>
+									<a href="#">
+										<div class="footer-contacts__socials-icon-ws"></div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-line"></div>
+				<div class="wrap">
+					<div class="footer__mob">
+						<nav>
+							<ul class="footer__mob-menu-items">
+								<li class="footer__mob-menu-item">
+									<a href="/about/">О компании</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/catalog/">Каталог</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/working-conditions/">Условия работы</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/blog/">Новости</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/contacts/">Контакты</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/personal/">Личный кабинет</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/sitemap/">Карта сайта</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="footer__mob-location">
+							<div class="footer__mob-location-desc">Ваш город:</div>
+							<div class="footer__mob-location-city">Санкт-Петербург</div>
+						</div>
+						<div class="footer__mob-bottom">
+							<div class="footer__mob-bottom-copyrights">
+								<p class="footer__mob-copyrights">&#169; Все права защищены</p>
+								<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh">
+									<p class="footer__mob-soglashenie">Соглашение об использовании персональных данных</p>
+								</a>
+							</div>
+							<div class="footer__mob-bottom-socials">
+								<a href="https://vk.com/leto_med">
+									<div class="footer-contacts__socials-icon-vk"></div>
+								</a>
+								<a href="#">
+									<div class="footer-contacts__socials-icon-ws"></div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="wrap">
+				<div class="footer-bottom">
+					<div class="footer-bottom__item">
+						<div class="footer-bottom__logo">
+							<a href="/main/">
+								<img src="./img/logo.png" alt="Логотип компании">
+							</a>
+						</div>
+						<div class="footer-bottom__company company">
+							<div class="footer-bottom__company-title company-title">Торговый Дом Лето</div>
+							<div class="footer-bottom__company-slogan company-slogan">Расходные материалы для стоматологии
+							</div>
+						</div>
+					</div>
+					<div class="footer-bottom__item footer-bottom__item_text">
+						<p class="footer-bottom__copyrights">&#169; Все права защищены</p>
+						<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh/">
+							<p class="footer-bottom__soglashenie">Соглашение об использовании персональных данных</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>
