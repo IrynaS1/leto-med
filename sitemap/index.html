@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="./img/icon.svg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@300;400;600;700&family=PT+Sans:wght@700&family=Tenor+Sans&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="./normalize.css">
+	<link rel="stylesheet" href="./template_styles.css">
+	<link rel="stylesheet" href="./styles.css">
+	<script charset="utf-8" src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
+	<script src="./script.js" defer></script>
+	<title>Карта сайта</title>
+</head>
+
+<body>
+	<div class="container-block">
+		<header>
+			<div class="header">
+				<div class="header-menu">
+					<nav>
+						<ul class="header-menu__items">
+							<li><a href="/about/" class="header-menu__item selected">О компании</a></li>
+							<li><a href="/catalog/" class="header-menu__item">Каталог</a></li>
+							<li><a href="/working-conditions/" class="header-menu__item">Условия работы</a></li>
+							<li><a href="/blog/" class="header-menu__item">Новости</a></li>
+							<li><a href="/contacts/" class="header-menu__item">Контакты</a></li>
+							<li><a href="/personal/" class="header-menu__item">Личный кабинет</a></li>
+						</ul>
+					</nav>
+					<button class="header-menu__reg header-menu__btn">Регистрация</button>
+					<button class="header-menu__auth header-menu__btn">Вход</button>
+				</div>
+				<div class="wrap">
+					<div class="header-menu__mob">
+						<div class="header-menu__mob-company">
+							<div class="header-menu__mob-logo">
+								<a href="/main/">
+									<img src="./img/logo-s.png" alt="Логотип компании">
+								</a>
+							</div>
+							<div class="header-menu__mob-td">Торговый Дом Лето</div>
+						</div>
+						<div class="header-menu__mob-phone">+7 (495) 727-07-87</div>
+					</div>
+				</div>
+				<div class="wrap">
+					<div class="header-block">
+						<div class="header-block__left">
+							<div class="header-block__logo">
+								<a href="/main/">
+									<img src="./img/logo.png" alt="Логотип компании">
+								</a>
+							</div>
+							<div class="header-block__company company">
+								<div class="header-block__company-title company-title">Торговый Дом Лето</div>
+								<div class="header-block__company-slogan company-slogan">Расходные материалы для стоматологии
+								</div>
+							</div>
+						</div>
+						<div class="header-block__search">
+							<input type="text" class="header-block__search-input" id="s-d-input" placeholder="Что Вы ищете?">
+							<button class="header-block__search-icon search-btn"></button>
+						</div>
+						<div class="header-block__location">
+							<div class="header-block__location-city">
+								<span class="header-block__location-city-desc">Местоположение:</span>
+								<button class="header-block__location-city-name">Москва</button>
+								<div class="header-block__location-city-select header-select-city">
+									<div class="header-select-city__info header-select-city__info_font">Ваш город — Москва?</div>
+									<div class="header-select-city__confirmation">
+										<button class="header-select-city__confirm">Да</button>
+										<div class="header-select-city__info">или</div>
+										<select name="city" id="city-select" class="header-select-city__title">
+											<option value="" selected disabled>Нет, другой</option>
+											<!-- 	<option value="msk">Москва</option> -->
+											<option value="krd">Краснодар</option>
+											<option value="sip">Симферополь</option>
+										</select>
+									</div>
+									<div class="header-select-city__info">Если вашего региона нет в списке, вы можете написать
+										нам на почту с пометкой "Доставка в наш регион", и мы предложим наилучший способ доставки.
+									</div>
+								</div>
+							</div>
+							<div class="header-block__location-phone">
+								<span class="header-block__location-phone-num">+7 (495) 727-07-87</span>
+								<a href="/contacts/"><span class="header-block__location-phone-call">Заказать звонок</span></a>
+							</div>
+						</div>
+						<div class="header-block__compare">
+							<a href="/personal/favorite/">
+								<div class="header-block__compare-item header-block__compare-item_mb">
+									<span class="header-block__compare-icon header-block__compare-icon_favourites"></span>
+									<span
+										class="header-block__compare-text header-block__compare-text_favourites">Избранное</span>
+									<span class="header-block__compare-count header-block__compare-count_favourites">0</span>
+								</div>
+							</a>
+							<a href="/compare/">
+								<div class="header-block__compare-item">
+									<span class="header-block__compare-icon header-block__compare-icon_comparison"></span>
+									<span
+										class="header-block__compare-text header-block__compare-text_comparison">Сравнение</span>
+									<span class="header-block__compare-count header-block__compare-count_comparison">0</span>
+								</div>
+							</a>
+						</div>
+						<div class="header-block__cart">
+							<div class="header-block__cart-button">
+								<a href="/personal/cart/">
+									<div class="header-block__cart-btn"></div>
+								</a>
+								<div class="header-block__cart-button-count">
+									<span class="header-block__cart-button-num">6</span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"
+										fill="none">
+										<circle cx="11.5" cy="11.5" r="11.5" fill="url(#paint0_linear_104_17)" />
+										<defs>
+											<linearGradient id="paint0_linear_104_17" x1="15" y1="1.5" x2="2" y2="26.5"
+												gradientUnits="userSpaceOnUse">
+												<stop stop-color="#21B8B8" />
+												<stop offset="1" stop-color="#1B9285" />
+											</linearGradient>
+										</defs>
+									</svg>
+								</div>
+							</div>
+							<div class="header-block__cart-desc">
+								<span class="header-block__cart-desc-name">Корзина</span>
+								<span class="header-block__cart-desc-sum">32.400 руб</span>
+							</div>
+						</div>
+					</div>
+					<div class="header-block__mob">
+						<input type="text" class="header-block__mob-search" id="s-m-input"
+							placeholder="Что бы Вы хотели найти ?">
+						<button class="header-block__mob-s-icon search-mob-btn" id="s-m-btn"></button>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+
+
+	<!--                                                                                                                                            -->
+
+	<main id="main-sitemap">
+		<div class="container-block">
+			<div class="wrap">
+				<div class="wrap-content">
+					<div class="breadcrumbs">
+						<ul class="breadcrumbs__items">
+							<li class="breadcrumbs__item breadcrumbs__item_not-active">
+								<a href="/main/">Главная</a>
+							</li>
+							<li class="breadcrumbs__item breadcrumbs__item_active">Карта сайта</li>
+						</ul>
+					</div>
+					<div class="general-section">
+						<h1 class="main-title">Карта сайта</h1>
+						<div class="sitemap-list">
+							<div class="sitemap-item__section"><svg class="sitemap-item__dot"
+									xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/main/" class="sitemap-item__link">Главная</a>
+							</div>
+							<div class="sitemap-item__section"><svg class="sitemap-item__dot"
+									xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/" class="sitemap-item__link">Каталог</a>
+							</div>
+							<div class="sitemap-item__subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/bory-i-vrashchayushchiysya-instrument/" class="sitemap-item__link">Боры и
+									вращающийся инструмент</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/aksessuary-dlya-borov-trimmery/" class="sitemap-item__link">Аксессуары для
+									боров, триммеры</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/bory-sswhite/" class="sitemap-item__link">Боры SSWhite</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/diski-diskoderzhateli/" class="sitemap-item__link">Диски, дискодержатели</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/nakonechniki/" class="sitemap-item__link">Наконечники</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/sistemy-izolyatsii-rabochego-polya/" class="sitemap-item__link">Системы
+									изоляции рабочего поля</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/sistemy-shlifovki-i-polirovki/" class="sitemap-item__link">Системы шлифовки и
+									полировки</a>
+							</div>
+							<div class="sitemap-item__subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/materialy-odnorazovogo-ispolzovaniya/" class="sitemap-item__link">Материалы
+									одноразового использования</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/applikatory/" class="sitemap-item__link">Аппликаторы</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/valiki-vatnye-bakhily-shapochki-stakanchiki-tabletki/"
+									class="sitemap-item__link">Валики ватные, бахилы, шапочки, стаканчики, таблетки</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/emkosti-konteynera-i-pakety/" class="sitemap-item__link">Ёмкости, контейнера и
+									пакеты</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/maski/" class="sitemap-item__link">Маски</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/materialy-dlya-rentgenografii/" class="sitemap-item__link">Материалы для
+									рентгенографии</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/odezhda/" class="sitemap-item__link">Одежда</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/ochki-i-ekrany/" class="sitemap-item__link">Очки и экраны</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/pakety-dlya-sterilizatsii/" class="sitemap-item__link">Пакеты для
+									стерилизации</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/perchatki/" class="sitemap-item__link">Перчатки</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/salfetki-dlya-obrabotki-poverkhnosti/" class="sitemap-item__link">Салфетки для
+									обработки поверхости</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/salfetki-i-fartuki-nagrudnye/" class="sitemap-item__link">Салфетки и фартуки
+									нагрудные</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/slyunootsosy-i-pyleotsosy/" class="sitemap-item__link">Слюноотсосы и
+									пылесосы</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/shpritsy-i-igly/" class="sitemap-item__link">Шприцы и иглы</a>
+							</div>
+							<div class="sitemap-item__subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/dezinfektsiya/" class="sitemap-item__link">Дезинфекция</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/dezinfektsiya-vrashchayushchegosya-instrumenta/"
+									class="sitemap-item__link">Дезинфекция вращающегося инструмента</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/dezinfektsiya-instrumenta/" class="sitemap-item__link">Дезинфекция
+									инструмента</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/dezinfektsiya-otsasyvayushchikh-sistem/"
+									class="sitemap-item__link">Дезинфекция осасывающих систем</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/dezinfektsiya-poverkhnostey/" class="sitemap-item__link">Дезинфекция
+									поверхностей</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/dezinfektsiya-ruk/" class="sitemap-item__link">Дезинфекция рук</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/zhurnaly-indikatory-i-testy/" class="sitemap-item__link">Журналы, индикаторы и
+									тесты</a>
+							</div>
+							<div class="sitemap-item__subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/instrumenty/" class="sitemap-item__link">Инструменты</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/diagnosticheskie/" class="sitemap-item__link">Диагостические</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/restavratsionnye/" class="sitemap-item__link">Реставрационные</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/khirurgiya/" class="sitemap-item__link">Хирургия</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/endodonticheskie/" class="sitemap-item__link">Эндодонтические</a>
+							</div>
+							<div class="sitemap-item__subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/obrabotka-i-plombirovka-kanala/" class="sitemap-item__link">Обработка и
+									пломбировка канала</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/devitalizatsiya-pulpy/" class="sitemap-item__link">Девитализация пульпы</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/obrabotka-i-dezinfektsiya-kanalov/" class="sitemap-item__link">Обработка и
+									дезинфекция каналов</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/plombirovka-kanalov/" class="sitemap-item__link">Пломбировка каналов</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/rasplombirovka-i-obrabotka-kornevykh-kanalov/"
+									class="sitemap-item__link">Распломбировка и обработка корневых каналов</a>
+							</div>
+							<div class="sitemap-item__subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/ortopedicheskie-materialy/" class="sitemap-item__link">Ортопедические
+									материалы</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/a-silikony-s-silikony-aksessuary/" class="sitemap-item__link">А-силиконы,
+									С-силиконы, аксессуары</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/voska/" class="sitemap-item__link">Воска</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/vremennye-koronki-materialy-aksessuary/" class="sitemap-item__link">Временные
+									коронки, материалы, аксессуары</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/gipsy-meditsinskie/" class="sitemap-item__link">Гипсы медицинские</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/materialy-dlya-shinirovaniya-zubov/" class="sitemap-item__link">Материалы для
+									шинирования зубов</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/perebazirovka-protezov/" class="sitemap-item__link">Перебазировка протезов</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/retraktsionnye-materialy-i-aksessuary/"
+									class="sitemap-item__link">Ретракционные материалы и аксессуары</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/slepochnye-massy-alginaty/" class="sitemap-item__link">Слепочные массы,
+									альгинаты</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/tsementy-dlya-vremennoy-fiksatsii-mostov-i-koronok/"
+									class="sitemap-item__link">Цементы для временной фиксации мостов и коронок</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/tsementy-dlya-postoyannoy-fiksatsii-mostov-i-koronok/"
+									class="sitemap-item__link">Цементы для постоянной фиксации мостов и коронок</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/tsementy-stekloionomernye-i-prokladochnyy-material/"
+									class="sitemap-item__link">Цементы стеклоиномерные и прокладочный материал</a>
+							</div>
+							<div class="sitemap-item__subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/plombirovochnye-materialy/" class="sitemap-item__link">Пломбировочные
+									материалы</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/aksessuary-dlya-postanovki-plomb-matritsy-klinyshki/"
+									class="sitemap-item__link">Аксессуары для постановки пломб (матрицы, клинышки)</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/bondingovye-sistemy-i-protravki-aksessuary/"
+									class="sitemap-item__link">Бондинговые системы и протравки, аксессуары</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/desensitayzery/" class="sitemap-item__link">Десенситайзеры</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/materialy-dlya-vremennykh-plomb/" class="sitemap-item__link">Материалы для
+									временных пломб</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/materialy-dlya-profilaktiki-i-lecheniya-kariesa/"
+									class="sitemap-item__link">Материалы для профилактики и лечения кариеса</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="https://www.leto-med.ru/catalog/otbelivayushchie-sistemy/"
+									class="sitemap-item__link">Отбеливающие системы</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/plombirovochnye-3m/" class="sitemap-item__link">Пломбировочные ЗМ</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/plombirovochnye-dentsply/" class="sitemap-item__link">Пломбировочные
+									DENTSPLY</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/plombirovochnye-enamel/" class="sitemap-item__link">Пломбировочные ENAMEL</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/plombirovochnye-es/" class="sitemap-item__link">Пломбировочные ES</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/plombirovochnye-gc/" class="sitemap-item__link">Пломбировочные GC</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/plombirovochnye-heraeus-kulzer/" class="sitemap-item__link">Пломбировочные
+									Heraeus Kulzer</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/plombirovochnye-kerr/" class="sitemap-item__link">Пломбировочные KERR</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/plombirovochnye-tokuyama/" class="sitemap-item__link">Пломбировочные
+									TOKUYAMA</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/plombirovochnye-materialy-tetric-ivoklyar/"
+									class="sitemap-item__link">Пломбировочные материалы Tetric (Ивокляр)</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/plombirovochnyy-voco/" class="sitemap-item__link">Пломбировочный VOCO</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/polirovochnye-pasty-i-prinadlezhnosti/"
+									class="sitemap-item__link">Пломбировочные пасты и принадлежности</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/prokladochnye-materialy/" class="sitemap-item__link">Прокладочные
+									материалы</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/registratsiya-prikusa/" class="sitemap-item__link">Регистрация прикуса</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/khimicheskie-kompozity/" class="sitemap-item__link">Химические композиты</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/tsementy-dlya-restavratsiy/" class="sitemap-item__link">Цементы для
+									реставраций</a>
+							</div>
+							<div class="sitemap-item__subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/khirurgicheskie-materialy/" class="sitemap-item__link">Хирургические
+									материалы</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/applikatsionnaya-anesteziya/" class="sitemap-item__link">Аппликационная
+									анестезия</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/materialy-dlya-parodontologii/" class="sitemap-item__link">Материалы для
+									пародонтологии</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/osteoplasticheskie-materialy/" class="sitemap-item__link">Остеопластические
+									материалы</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/skalpeli-i-lezviya/" class="sitemap-item__link">Скальпели и лезвия</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/shovnye-materialy/" class="sitemap-item__link">Шовные материалы</a>
+							</div>
+							<div class="sitemap-item__subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/endodonticheskie-materialy-fayly-shtifty/"
+									class="sitemap-item__link">Эндодонтические материалы, файлы, штифты</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/absorbery/" class="sitemap-item__link">Абсорберы</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/guttapercha/" class="sitemap-item__link">Гуттаперча</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/drili/" class="sitemap-item__link">Дрили</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/prinadlezhnosti-dlya-endodontii/" class="sitemap-item__link">Принадлежности
+									для эндодонтии</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/fayly-mashinnogo-ispolzovaniya/" class="sitemap-item__link">Файлы машинного
+									использования</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/fayly-ruchnogo-ispolzovaniya/" class="sitemap-item__link">Файлы ручного
+									использования/a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/shtifty-bezzolnye/" class="sitemap-item__link">Штифты беззольные</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/shtifty-vnutrikanalnye/" class="sitemap-item__link">Штифты внутриканальные</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/shtifty-parapulparnye/" class="sitemap-item__link">Штифты парапульпарные</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/shtifty-steklovolokonnye/" class="sitemap-item__link">Штифты
+									стекловолоконные</a>
+							</div>
+							<div class="sitemap-item__subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/oborudovanie/" class="sitemap-item__link">Оборудование</a>
+							</div>
+							<div class="sitemap-item__sub-subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/catalog/oborudovanie/" class="sitemap-item__link">Посмотреть раздел</a>
+							</div>
+							<div class="sitemap-item__section"><svg class="sitemap-item__dot"
+									xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/blog/" class="sitemap-item__link">Новости</a>
+							</div>
+							<div class="sitemap-item__section"><svg class="sitemap-item__dot"
+									xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/dostavka-i-oplata/" class="sitemap-item__link">Доставка и оплата</a>
+							</div>
+							<div class="sitemap-item__section"><svg class="sitemap-item__dot"
+									xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/contacts/" class="sitemap-item__link">Контакты</a>
+							</div>
+							<div class="sitemap-item__section"><svg class="sitemap-item__dot"
+									xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/about/" class="sitemap-item__link">О компании</a>
+							</div>
+							<div class="sitemap-item__section"><svg class="sitemap-item__dot"
+									xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/compare/" class="sitemap-item__link">Сравнение</a>
+							</div>
+							<div class="sitemap-item__section"><svg class="sitemap-item__dot"
+									xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/personal/favourite/" class="sitemap-item__link">Избранное</a>
+							</div>
+							<div class="sitemap-item__section"><svg class="sitemap-item__dot"
+									xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/personal/cart/" class="sitemap-item__link">Корзина</a>
+							</div>
+							<div class="sitemap-item__section"><svg class="sitemap-item__dot"
+									xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/personal/" class="sitemap-item__link">Личный кабинет</a>
+							</div>
+							<div class="sitemap-item__subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/personal/profile/" class="sitemap-item__link">Профиль</a>
+							</div>
+							<div class="sitemap-item__subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/personal/orderlist/" class="sitemap-item__link">Мои заказы</a>
+							</div>
+							<div class="sitemap-item__subsection">
+								<svg class="sitemap-item__dot" xmlns="http://www.w3.org/2000/svg" width="7" height="7"
+									viewBox="0 0 7 7" fill="none">
+									<circle cx="3.5" cy="3.5" r="3.5" fill="#22BABA" />
+								</svg>
+								<a href="/personal/sspetsifikatsiya/" class="sitemap-item__link">Спецификация</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</main>
+
+	<!--                                                                                                                                            -->
+
+
+	<div class="container-block">
+		<footer>
+			<div class="footer-top">
+				<div class="wrap">
+					<div class="footer__block">
+						<div class="footer-nav">
+							<div class="footer-nav__caption footer-caption">Навигация</div>
+							<nav>
+								<ul class="footer-nav__items">
+									<li class="footer-nav__item">
+										<a href="/about/">О компании</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/catalog/">Каталог</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/blog/">Новости</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/contacts/">Контакты</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/personal/">Личный кабинет</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/personal/cart/">Корзина</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/personal/favorite/">Избранное</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/compare/">Сравнение</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/sitemap/">Карта сайта</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="footer-seo">
+							<div class="footer-seo__caption footer-caption">Плюсы от LETO Dental Service</div>
+							<div class="footer-seo__taps">
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_pur">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_gr">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_bl">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_gre">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_aq">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+							</div>
+						</div>
+						<div class="footer-contacts">
+							<div class="footer-contacts__caption footer-caption">Наша связь</div>
+							<div class="footer-contacts__items">
+								<div class="footer-contacts__email footer-contacts__item">
+									<a href="mailto:sale@leto-med.ru">
+										<span class="footer-contacts__email-text">sale@leto-med.ru</span>
+									</a>
+								</div>
+								<div class="footer-contacts__phone footer-contacts__item">+7 (495) 727-07-87</div>
+								<div class="footer-contacts__call">
+									<a href="/contacts/"><span class="footer-contacts__call-btn">Заказать звонок</span></a>
+								</div>
+								<div class="footer-contacts__socials">
+									<a href="https://vk.com/leto_med">
+										<div class="footer-contacts__socials-icon-vk"></div>
+									</a>
+									<a href="#">
+										<div class="footer-contacts__socials-icon-ws"></div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-line"></div>
+				<div class="wrap">
+					<div class="footer__mob">
+						<nav>
+							<ul class="footer__mob-menu-items">
+								<li class="footer__mob-menu-item">
+									<a href="/about/">О компании</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/catalog/">Каталог</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/working-conditions/">Условия работы</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/blog/">Новости</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/contacts/">Контакты</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/personal/">Личный кабинет</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/sitemap/">Карта сайта</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="footer__mob-location">
+							<div class="footer__mob-location-desc">Ваш город:</div>
+							<div class="footer__mob-location-city">Санкт-Петербург</div>
+						</div>
+						<div class="footer__mob-bottom">
+							<div class="footer__mob-bottom-copyrights">
+								<p class="footer__mob-copyrights">&#169; Все права защищены</p>
+								<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh">
+									<p class="footer__mob-soglashenie">Соглашение об использовании персональных данных</p>
+								</a>
+							</div>
+							<div class="footer__mob-bottom-socials">
+								<a href="https://vk.com/leto_med">
+									<div class="footer-contacts__socials-icon-vk"></div>
+								</a>
+								<a href="#">
+									<div class="footer-contacts__socials-icon-ws"></div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="wrap">
+				<div class="footer-bottom">
+					<div class="footer-bottom__item">
+						<div class="footer-bottom__logo">
+							<a href="/main/">
+								<img src="./img/logo.png" alt="Логотип компании">
+							</a>
+						</div>
+						<div class="footer-bottom__company company">
+							<div class="footer-bottom__company-title company-title">Торговый Дом Лето</div>
+							<div class="footer-bottom__company-slogan company-slogan">Расходные материалы для стоматологии
+							</div>
+						</div>
+					</div>
+					<div class="footer-bottom__item footer-bottom__item_text">
+						<p class="footer-bottom__copyrights">&#169; Все права защищены</p>
+						<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh/">
+							<p class="footer-bottom__soglashenie">Соглашение об использовании персональных данных</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

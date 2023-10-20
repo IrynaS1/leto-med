@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="./img/icon.svg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@300;400;600;700&family=PT+Sans:wght@700&family=Tenor+Sans&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="./normalize.css">
+	<link rel="stylesheet" href="./template_styles.css">
+	<link rel="stylesheet" href="./styles.css">
+	<script charset="utf-8" src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
+	<script src="./script.js" defer></script>
+	<title>Интернет магазин расходных материалов для стоматологии Москва, Краснодар, Санкт-Петербург, Крыму, Симферополе
+	</title>
+</head>
+
+<body>
+	<div class="container-block">
+		<header>
+			<div class="header">
+				<div class="header-menu">
+					<nav>
+						<ul class="header-menu__items">
+							<li><a href="/about/" class="header-menu__item">О компании</a></li>
+							<li><a href="/catalog/" class="header-menu__item selected">Каталог</a></li>
+							<li><a href="/working-conditions/" class="header-menu__item">Условия работы</a></li>
+							<li><a href="/blog/" class="header-menu__item">Новости</a></li>
+							<li><a href="/contacts/" class="header-menu__item">Контакты</a></li>
+							<li><a href="/personal/" class="header-menu__item">Личный кабинет</a></li>
+						</ul>
+					</nav>
+					<button class="header-menu__reg header-menu__btn">Регистрация</button>
+					<button class="header-menu__auth header-menu__btn">Вход</button>
+				</div>
+				<div class="wrap">
+					<div class="header-menu__mob">
+						<div class="header-menu__mob-company">
+							<div class="header-menu__mob-logo">
+								<a href="/main/">
+									<img src="./img/logo-s.png" alt="Логотип компании">
+								</a>
+							</div>
+							<div class="header-menu__mob-td">Торговый Дом Лето</div>
+						</div>
+						<div class="header-menu__mob-phone">+7 (495) 727-07-87</div>
+					</div>
+				</div>
+				<div class="wrap">
+					<div class="header-block">
+						<div class="header-block__left">
+							<div class="header-block__logo">
+								<a href="/main/">
+									<img src="./img/logo.png" alt="Логотип компании">
+								</a>
+							</div>
+							<div class="header-block__company company">
+								<div class="header-block__company-title company-title">Торговый Дом Лето</div>
+								<div class="header-block__company-slogan company-slogan">Расходные материалы для стоматологии
+								</div>
+							</div>
+						</div>
+						<div class="header-block__search">
+							<input type="text" class="header-block__search-input" id="s-d-input" placeholder="Что Вы ищете?">
+							<button class="header-block__search-icon search-btn"></button>
+						</div>
+						<div class="header-block__location">
+							<div class="header-block__location-city">
+								<span class="header-block__location-city-desc">Местоположение:</span>
+								<button class="header-block__location-city-name">Москва</button>
+								<div class="header-block__location-city-select header-select-city">
+									<div class="header-select-city__info header-select-city__info_font">Ваш город — Москва?</div>
+									<div class="header-select-city__confirmation">
+										<button class="header-select-city__confirm">Да</button>
+										<div class="header-select-city__info">или</div>
+										<select name="city" id="city-select" class="header-select-city__title">
+											<option value="" selected disabled>Нет, другой</option>
+											<!-- 	<option value="msk">Москва</option> -->
+											<option value="krd">Краснодар</option>
+											<option value="sip">Симферополь</option>
+										</select>
+									</div>
+									<div class="header-select-city__info">Если вашего региона нет в списке, вы можете написать
+										нам на почту с пометкой "Доставка в наш регион", и мы предложим наилучший способ доставки.
+									</div>
+								</div>
+							</div>
+							<div class="header-block__location-phone">
+								<span class="header-block__location-phone-num">+7 (495) 727-07-87</span>
+								<a href="/contacts/"><span class="header-block__location-phone-call">Заказать звонок</span></a>
+							</div>
+						</div>
+						<div class="header-block__compare">
+							<a href="/personal/favorite/">
+								<div class="header-block__compare-item header-block__compare-item_mb">
+									<span class="header-block__compare-icon header-block__compare-icon_favourites"></span>
+									<span
+										class="header-block__compare-text header-block__compare-text_favourites">Избранное</span>
+									<span class="header-block__compare-count header-block__compare-count_favourites">0</span>
+								</div>
+							</a>
+							<a href="/compare/">
+								<div class="header-block__compare-item">
+									<span class="header-block__compare-icon header-block__compare-icon_comparison"></span>
+									<span
+										class="header-block__compare-text header-block__compare-text_comparison">Сравнение</span>
+									<span class="header-block__compare-count header-block__compare-count_comparison">0</span>
+								</div>
+							</a>
+						</div>
+						<div class="header-block__cart">
+							<div class="header-block__cart-button">
+								<a href="/personal/cart/">
+									<div class="header-block__cart-btn"></div>
+								</a>
+								<div class="header-block__cart-button-count">
+									<span class="header-block__cart-button-num">6</span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"
+										fill="none">
+										<circle cx="11.5" cy="11.5" r="11.5" fill="url(#paint0_linear_104_17)" />
+										<defs>
+											<linearGradient id="paint0_linear_104_17" x1="15" y1="1.5" x2="2" y2="26.5"
+												gradientUnits="userSpaceOnUse">
+												<stop stop-color="#21B8B8" />
+												<stop offset="1" stop-color="#1B9285" />
+											</linearGradient>
+										</defs>
+									</svg>
+								</div>
+							</div>
+							<div class="header-block__cart-desc">
+								<span class="header-block__cart-desc-name">Корзина</span>
+								<span class="header-block__cart-desc-sum">32.400 руб</span>
+							</div>
+						</div>
+					</div>
+					<div class="header-block__mob">
+						<input type="text" class="header-block__mob-search" id="s-m-input"
+							placeholder="Что бы Вы хотели найти ?">
+						<button class="header-block__mob-s-icon search-mob-btn" id="s-m-btn"></button>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+
+
+	<!--                                                                                                                                            -->
+
+	<main id="main-catalog">
+		<div class="container-block">
+			<div class="wrap">
+				<div class="wrap-content">
+					<div class="breadcrumbs">
+						<ul class="breadcrumbs__items">
+							<li class="breadcrumbs__item breadcrumbs__item_not-active">
+								<a href="/main/">Главная</a>
+							</li>
+							<li class="breadcrumbs__item breadcrumbs__item_active">Каталог</li>
+						</ul>
+					</div>
+					<div class="general-section">
+						<div class="catalog-items">
+							<div class="catalog-item">
+								<a href="/catalog/bory-i-vrashchayushchiysya-instrument/">
+									<div class="catalog-item__card">
+										<h2 class="catalog-item__title catalog-item__title_mb-one">Боры и вращающийся инструмент
+										</h2>
+										<p class="catalog-item__img">
+											<img src="./img/one-card.png" alt="Боры и вращающийся инструмент">
+										</p>
+									</div>
+								</a>
+							</div>
+							<div class="catalog-item">
+								<a href="/catalog/materialy-odnorazovogo-ispolzovaniya/">
+									<div class="catalog-item__card">
+										<h2 class="catalog-item__title catalog-item__title_mb-two">Материалы одноразового
+											использования</h2>
+										<p class="catalog-item__img">
+											<img src="./img/two-card.png" alt="Материалы одноразового использования">
+										</p>
+									</div>
+								</a>
+							</div>
+							<div class="catalog-item">
+								<a href="/catalog/dezinfektsiya/">
+									<div class="catalog-item__card">
+										<h2 class="catalog-item__title catalog-item__title_mb-three">Дезинфекция</h2>
+										<p class="catalog-item__img">
+											<img src="./img/three-card.png" alt="Дезинфекция">
+										</p>
+									</div>
+								</a>
+							</div>
+							<div class="catalog-item">
+								<a href="/catalog/instrumenty/">
+									<div class="catalog-item__card">
+										<h2 class="catalog-item__title catalog-item__title_mb-four">Инструменты</h2>
+										<div class="catalog-item__img">
+											<img src="./img/four-card.png" alt="Инструменты">
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="catalog-item">
+								<a href="/catalog/obrabotka-i-plombirovka-kanala/">
+									<div class="catalog-item__card">
+										<h2 class="catalog-item__title catalog-item__title_mb-five">Обработка и пломбировка канала
+										</h2>
+										<div class="catalog-item__img">
+											<img src="./img/five-card.png" alt="Обработка и пломбировка канала">
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="catalog-item">
+								<a href="/catalog/ortopedicheskie-materialy/">
+									<div class="catalog-item__card">
+										<h2 class="catalog-item__title catalog-item__title_mb-six">Ортопедические материалы</h2>
+										<div class="catalog-item__img">
+											<img src="./img/six-card.png" alt="Ортопедические материалы">
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="catalog-item">
+								<a href="/catalog/plombirovochnye-materialy/">
+									<div class="catalog-item__card">
+										<h2 class="catalog-item__title catalog-item__title_mb-seven">Пломбировочные материалы</h2>
+										<div class="catalog-item__img">
+											<img src="./img/seven-card.png" alt="Пломбировочные материалы">
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="catalog-item">
+								<a href="/catalog/khirurgicheskie-materialy/">
+									<div class="catalog-item__card">
+										<h2 class="catalog-item__title catalog-item__title_mb-eight">Хирургические материалы</h2>
+										<div class="catalog-item__img">
+											<img src="./img/eight-card.png" alt="Хирургические материалы">
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="catalog-item">
+								<a href="/catalog/endodonticheskie-materialy-fayly-shtifty/">
+									<div class="catalog-item__card">
+										<h2 class="catalog-item__title catalog-item__title_mb-nine">Эндодонтические материалы,
+											файлы, штифты</h2>
+										<div class="catalog-item__img">
+											<img src="./img/nine-card.png" alt="Эндодонтические материалы, файлы, штифты">
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="catalog-item">
+								<a href="/catalog/oborudovanie/">
+									<div class="catalog-item__card">
+										<h2 class="catalog-item__title catalog-item__title_mb-ten">Оборудование</h2>
+										<div class="catalog-item__img">
+											<img src="./img/ten-card.png" alt="Оборудование">
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!--                                                                                                                                            -->
+
+
+	<div class="container-block">
+		<footer>
+			<div class="footer-top">
+				<div class="wrap">
+					<div class="footer__block">
+						<div class="footer-nav">
+							<div class="footer-nav__caption footer-caption">Навигация</div>
+							<nav>
+								<ul class="footer-nav__items">
+									<li class="footer-nav__item">
+										<a href="/about/">О компании</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/catalog/">Каталог</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/blog/">Новости</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/contacts/">Контакты</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/personal/">Личный кабинет</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/personal/cart/">Корзина</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/personal/favorite/">Избранное</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/compare/">Сравнение</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/sitemap/">Карта сайта</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="footer-seo">
+							<div class="footer-seo__caption footer-caption">Плюсы от LETO Dental Service</div>
+							<div class="footer-seo__taps">
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_pur">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_gr">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_bl">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_gre">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_aq">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+							</div>
+						</div>
+						<div class="footer-contacts">
+							<div class="footer-contacts__caption footer-caption">Наша связь</div>
+							<div class="footer-contacts__items">
+								<div class="footer-contacts__email footer-contacts__item">
+									<a href="mailto:sale@leto-med.ru">
+										<span class="footer-contacts__email-text">sale@leto-med.ru</span>
+									</a>
+								</div>
+								<div class="footer-contacts__phone footer-contacts__item">+7 (495) 727-07-87</div>
+								<div class="footer-contacts__call">
+									<a href="/contacts/"><span class="footer-contacts__call-btn">Заказать звонок</span></a>
+								</div>
+								<div class="footer-contacts__socials">
+									<a href="https://vk.com/leto_med">
+										<div class="footer-contacts__socials-icon-vk"></div>
+									</a>
+									<a href="#">
+										<div class="footer-contacts__socials-icon-ws"></div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-line"></div>
+				<div class="wrap">
+					<div class="footer__mob">
+						<nav>
+							<ul class="footer__mob-menu-items">
+								<li class="footer__mob-menu-item">
+									<a href="/about/">О компании</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/catalog/">Каталог</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/working-conditions/">Условия работы</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/blog/">Новости</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/contacts/">Контакты</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/personal/">Личный кабинет</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/sitemap/">Карта сайта</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="footer__mob-location">
+							<div class="footer__mob-location-desc">Ваш город:</div>
+							<div class="footer__mob-location-city">Санкт-Петербург</div>
+						</div>
+						<div class="footer__mob-bottom">
+							<div class="footer__mob-bottom-copyrights">
+								<p class="footer__mob-copyrights">&#169; Все права защищены</p>
+								<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh">
+									<p class="footer__mob-soglashenie">Соглашение об использовании персональных данных</p>
+								</a>
+							</div>
+							<div class="footer__mob-bottom-socials">
+								<a href="https://vk.com/leto_med">
+									<div class="footer-contacts__socials-icon-vk"></div>
+								</a>
+								<a href="#">
+									<div class="footer-contacts__socials-icon-ws"></div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="wrap">
+				<div class="footer-bottom">
+					<div class="footer-bottom__item">
+						<div class="footer-bottom__logo">
+							<a href="/main/">
+								<img src="./img/logo.png" alt="Логотип компании">
+							</a>
+						</div>
+						<div class="footer-bottom__company company">
+							<div class="footer-bottom__company-title company-title">Торговый Дом Лето</div>
+							<div class="footer-bottom__company-slogan company-slogan">Расходные материалы для стоматологии
+							</div>
+						</div>
+					</div>
+					<div class="footer-bottom__item footer-bottom__item_text">
+						<p class="footer-bottom__copyrights">&#169; Все права защищены</p>
+						<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh/">
+							<p class="footer-bottom__soglashenie">Соглашение об использовании персональных данных</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>
