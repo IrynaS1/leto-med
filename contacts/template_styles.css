@@ -190,7 +190,6 @@ header {
 .header-block__location-city {
 	display: flex;
 	position: relative;
-	margin-bottom: 17px;
 }
 
 .header-block__location-city-desc {
@@ -203,7 +202,7 @@ header {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	border: none;
-	margin-top: -2px;
+	margin-top: -4px;
 }
 
 .header-block__location-city-select {
@@ -267,20 +266,6 @@ header {
 .header-select-city {
 	display: none;
 	opacity: 0;
-}
-
-.header-block__location-phone-num {
-	letter-spacing: -1.6px;
-	margin-right: 9px;
-	text-align: left;
-}
-
-.header-block__location-phone-call {
-	color: #1B9487;
-	text-decoration-line: underline;
-	border: none;
-	background-color: #fff;
-	text-align: left;
 }
 
 .header-block__compare {
@@ -543,24 +528,6 @@ header {
 	margin-bottom: 21px;
 }
 
-.footer-contacts__call {
-	margin-bottom: 26px;
-}
-
-.footer-contacts__call-btn {
-	padding: 6px 18px 7px 16px;
-	border-radius: 5px;
-	background: linear-gradient(354deg, #1B978A -63.14%, #20B3B0 59.44%);
-	box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.50);
-	border: none;
-	color: #FFF;
-	font-family: Lato, sans-serif;
-	font-size: 15px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 100.5%;
-}
-
 .footer-contacts__socials {
 	display: flex;
 }
@@ -792,15 +759,6 @@ header {
 		margin-bottom: 18px;
 	}
 
-	.footer-contacts__call {
-		margin-bottom: 15px;
-	}
-
-	.footer-contacts__call-btn {
-		padding: 6px 21px 10px 23px;
-		font-size: 20px;
-	}
-
 	.footer-bottom {
 		padding: 22px 0 17px 0;
 	}
@@ -928,11 +886,6 @@ header {
 
 	.footer-contacts__phone {
 		margin-bottom: 15px;
-	}
-
-	.footer-contacts__call-btn {
-		padding: 6px 16px 10px 16px;
-		font-size: 16px;
 	}
 }
 
