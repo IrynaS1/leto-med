@@ -160,7 +160,7 @@
 	min-height: 37px;
 }
 
-.footer__mob, 
+.footer__mob,
 .footer__mob-loc-modal {
 	display: none;
 }
@@ -343,6 +343,8 @@
 	.footer__mob-location-city {
 		color: #22BABA;
 		text-decoration: underline;
+		background-color: #fff;
+		border: none;
 	}
 
 	.footer__mob-copyrights {
@@ -375,7 +377,34 @@
 		display: flex;
 	}
 
-	.footer__mob-loc-modal {
+	.footer-mob__location-city-name {
+		background: linear-gradient(90deg, #22BABA 0%, #22BABA 112.32%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		border: none;
+		margin-top: -7px;
+	}
+
+	.mob-modal__location-city-select {
 		display: block;
+		position: fixed;
+		top:50px;
+		max-width: 390px;
+		padding: 20px;
+		background-color: #FFF;
+		border-radius: 6px;
+		box-shadow: 0 0 30px 30px rgb(154 161 177 / 15%), 0 4px 70px -8px rgb(36 40 47 / 25%), 0 4px 4px -2px rgb(91 94 105 / 15%);
+		z-index: 1;
+		opacity: 1.1;
+		color: rgba(0, 0, 0, 0.80);
+		font-family: Lato, sans-serif;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+	}
+
+	.select-city {
+		display: none;
+		opacity: 0;
 	}
 }

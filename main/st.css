@@ -1,10 +1,10 @@
 @import url('./styles/wrap.css');
 
-@import url('./styles/header-menu.css');
+/* @import url('./styles/header-menu.css');
 
 @import url('./styles/header-block.css');
 
-@import url('./styles/company.css');
+@import url('./styles/company.css'); */
 
 @import url('./styles/catalog.css');
 
@@ -14,12 +14,12 @@
 
 @import url('./styles/about-home.css');
 
-@import url('./styles/maintenance.css');
-
+/* @import url('./styles/maintenance.css');
+ */
 @import url('./styles/breadcrumbs.css');
 
-@import url('./styles/sitemap.css');
-
+/* @import url('./styles/sitemap.css'); */
+/* 
 @import url('./styles/footer-top.css');
 
-@import url('./styles/footer-bottom.css');
+@import url('./styles/footer-bottom.css'); */

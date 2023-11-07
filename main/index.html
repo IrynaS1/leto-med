@@ -12,11 +12,10 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@300;400;600;700&family=PT+Sans:wght@700&family=Tenor+Sans&display=swap"
 		rel="stylesheet">
-	<link rel="stylesheet" href="./normalize.css">
 	<link rel="stylesheet" href="./global_style.css">
 	<link rel="stylesheet" href="./st.css">
-	<!-- <link rel="stylesheet" href="./template_styles.css"> -->
-	<!-- <link rel="stylesheet" href="./styles.css">-->
+	<link rel="stylesheet" href="./template_styles.css">
+	<link rel="stylesheet" href="./styles.css">
 	<script src="./script.js" defer></script>
 	<title>Торговый дом Лето - Расходные материалы для стоматологии</title>
 </head>
@@ -44,7 +43,7 @@
 						<div class="header-menu__mob-company">
 							<div class="header-menu__mob-logo">
 								<a href="/main/">
-									<img src="./img/logo-s.png" alt="Логотип компании">
+									<img src="./img/logo.svg" alt="Логотип Торговый Дом Лето">
 								</a>
 							</div>
 							<div class="header-menu__mob-td">Торговый Дом Лето</div>
@@ -57,7 +56,7 @@
 						<div class="header-block__left">
 							<div class="header-block__logo">
 								<a href="/main/">
-									<img src="./img/logo.png" alt="Логотип компании">
+									<img src="./img/logo.svg" alt="Логотип Торговый Дом Лето" class="header-menu__mob-logo-img">
 								</a>
 							</div>
 							<div class="header-block__company company">
@@ -116,9 +115,7 @@
 						</div>
 						<div class="header-block__cart">
 							<div class="header-block__cart-button">
-								<a href="/personal/cart/">
-									<div class="header-block__cart-btn"></div>
-								</a>
+								<div class="header-block__cart-btn"></div>
 								<div class="header-block__cart-button-count">
 									<span class="header-block__cart-button-num">6</span>
 									<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"
@@ -142,7 +139,7 @@
 					</div>
 					<div class="header-block__mob">
 						<input type="text" class="header-block__mob-search" id="s-m-input"
-							placeholder="Что бы Вы хотели найти?">
+							placeholder="Что бы Вы хотели найти ?">
 						<button class="header-block__mob-s-icon search-mob-btn" id="s-m-btn"></button>
 					</div>
 				</div>
@@ -743,10 +740,11 @@
 						</nav>
 						<div class="footer__mob-location">
 							<div class="footer__mob-location-desc">Ваш город:</div>
-							<div class="footer__mob-location-city">Санкт-Петербург</div>
-							<div class="footer__mob-loc-modal">
-								
-							</div>
+							<button type="button" class="footer-mob__location-city-name btn btn-primary" data-bs-toggle="modal"
+								data-bs-target="#exampleModal">
+								Москва
+							</button>
+							<!-- <button class="footer__mob-location-city">Москва</button> -->
 						</div>
 						<div class="footer__mob-bottom">
 							<div class="footer__mob-bottom-copyrights">
