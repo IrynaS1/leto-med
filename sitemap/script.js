@@ -165,4 +165,3 @@ footerLocationBtn.addEventListener('click', function () {
 	const mobLocation = document.querySelector('.footer-block__location-city-select');
 	mobLocation.classList.toggle('footer-select-city');
 });
-
