@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="./img/icon.svg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Lato:wght@400;700&family=Montserrat:wght@300;400;600;700&family=PT+Sans:wght@700&family=Tenor+Sans&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="./normalize.css">
+	<link rel="stylesheet" href="./template_styles.css">
+	<link rel="stylesheet" href="./styles.css">
+	<script src="./script.js" defer></script>
+	<title>Моя корзина - заказ оформлен</title>
+</head>
+
+<body>
+	<div class="container-block">
+		<header>
+			<div class="header">
+				<div class="header-menu">
+					<nav>
+						<div class="header-menu__items">
+							<div class="header-menu__item"><a href="/about/">О компании</a></div>
+							<div class="header-menu__item"><a href="/catalog/">Каталог</a></div>
+							<div class="header-menu__item"><a href="/working-conditions/">Условия работы</a></div>
+							<div class="header-menu__item"><a href="/blog/">Новости</a></div>
+							<div class="header-menu__item"><a href="/contacts/">Контакты</a></div>
+							<div class="header-menu__item"><a href="/personal/">Личный кабинет</a></div>
+							<button class="header-menu__reg header-menu__btn">Регистрация</button>
+							<button class="header-menu__auth header-menu__btn">Вход</button>
+							<button class="header-menu__user-name header-menu__btn unauthorized-user">Ivan</button>
+							<button class="header-menu__logout header-menu__btn unauthorized-user">Выход</button>
+						</div>
+					</nav>
+				</div>
+				<div class="wrap">
+					<div class="header-menu__mob">
+						<div class="header-menu__mob-company">
+							<div class="header-menu__mob-logo">
+								<a href="/main/">
+									<img src="./img/logo.svg" alt="Логотип Торговый Дом Лето">
+								</a>
+							</div>
+							<div class="header-menu__mob-td">Торговый Дом Лето</div>
+						</div>
+						<div class="header-menu__mob-phone">+7 (495) 727-07-87</div>
+					</div>
+				</div>
+				<div class="overlay"></div>
+				<div class="modal modal-reg">
+					<div class="modal__title">Регистрация</div>
+					<form name="form-reg" method="post" action="" class="modal-form">
+						<div class="modal-form__data">
+							<label for="name" class="modal-form__label">ФИО</label>
+							<input type="text" class="modal-form__input" name="name" id="name">
+						</div>
+						<div class="modal-form__data">
+							<label for="email" class="modal-form__label">E-mail</label>
+							<input type="email" class="modal-form__input" name="email" id="email" required>
+						</div>
+						<div class="modal-form__data">
+							<label for="tel" class="modal-form__label">Номер телефона</label>
+							<input type="tel" class="modal-form__input" name="tel" id="tel">
+						</div>
+						<div class="modal-form__data">
+							<label for="date-birthday" class="modal-form__label">Дата рождения</label>
+							<input type="text" class="modal-form__input" name="date-birthday" id="date-birthday">
+						</div>
+						<div class="modal-form__data">
+							<label for="login" class="modal-form__label">Логин</label>
+							<input type="text" class="modal-form__input" name="login" id="login" required>
+						</div>
+						<div class="modal-form__data modal-form__data-password">
+							<label for="password" class="modal-form__label">Пароль</label>
+							<input type="password" class="modal-form__input modal-form__input-password" name="password"
+								id="password" required>
+							<button type="button" class="modal-form__password-eye"></button>
+						</div>
+						<div class="modal-form__data">
+							<label for="captcha" class="modal-form__label">Введите символы с картинки</label>
+							<input type="text" class="modal-form__input" name="captcha" id="captcha" required>
+						</div>
+						<div class="modal-form__captcha"></div>
+						<button type="submit" class="modal-form__btn">Зарегистрироваться</button>
+						<div class="modal-form__info">Нажимая кнопку, вы даете согласие на обработку
+							<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh/" class="modal-form__info-link">
+								персональных данных
+							</a>
+						</div>
+						<div class="contacts__socials modal-form__socials">
+							<a href="https://vk.com/leto_med">
+								<div class="contacts__socials-icon-vk modal-form__socials-icon modal-form__socials-icon_mr">
+								</div>
+							</a>
+							<a href="#">
+								<div class="contacts__socials-icon-ws modal-form__socials-icon"></div>
+							</a>
+						</div>
+					</form>
+				</div>
+				<div class="modal modal-auth">
+					<div class="modal__title">Вход</div>
+					<form name="form-auth" method="post" action="/personal/?login=yes" class="modal-form">
+						<div class="modal-form__data">
+							<label for="login" class="modal-form__label">Логин</label>
+							<input type="text" class="modal-form__input" name="login" id="login" required>
+						</div>
+						<div class="modal-form__data modal-form__data-password">
+							<label for="password" class="modal-form__label">Пароль</label>
+							<input type="password" class="modal-form__input modal-form__input-password" name="password"
+								id="password" required>
+							<button type="button" class="modal-form__password-eye"></button>
+						</div>
+						<div class="modal-form__checkbox">
+							<input type="checkbox" class="modal-form__checkbox-input" name="checkbox" id="checkbox">
+							<label for="checkbox" class="modal-form__checkbox-label">Запомнить меня на этом устройстве</label>
+						</div>
+						<button type="submit" class="modal-form__btn">Войти</button>
+						<div class="modal-form__link"><button type="button"
+								class="modal-form__link-mb modal-form__link-mb_a">Забыли пароль?</button></div>
+						<div class="modal-form__link"><button type="button"
+								class="modal-form__link-mb modal-form__link-mb_b">Регистрация</button></div>
+						<div class="modal-form__info modal-form__info-auth">Если Вы впервые на сайте, заполните, пожалуйста,
+							<a href="" class="modal-form__info-link modal-form__info-auth">регистрационную</a> форму.
+						</div>
+						<div class="contacts__socials modal-form__socials">
+							<a href="https://vk.com/leto_med">
+								<div class="contacts__socials-icon-vk modal-form__socials-icon modal-form__socials-icon_mr">
+								</div>
+							</a>
+							<a href="#">
+								<div class="contacts__socials-icon-ws modal-form__socials-icon"></div>
+							</a>
+						</div>
+					</form>
+				</div>
+				<div class="modal modal-recovery">
+					<div class="modal__title">Восстановление</div>
+					<form name="form-recovery" method="get" action="" class="modal-form">
+						<div class="modal-form__data">
+							<label for="login-emeil" class="modal-form__label">E-mail или Логин</label>
+							<input type="text" class="modal-form__input" name="login-emeil" id="login-emeil" required>
+						</div>
+						<div class="modal-form__data">
+							<label for="captcha" class="modal-form__label">Введите символы с картинки</label>
+							<input type="text" class="modal-form__input" name="captcha" id="captcha" required>
+						</div>
+						<div class="modal-form__captcha"></div>
+						<button type="submit" class="modal-form__btn">Отправить письмо</button>
+					</form>
+				</div>
+				<div class="wrap">
+					<div class="header-block">
+						<div class="header-block__left">
+							<div class="header-block__logo">
+								<a href="/main/">
+									<img src="./img/logo.svg" alt="Логотип Торговый Дом Лето">
+								</a>
+							</div>
+							<div class="header-block__company company">
+								<div class="header-block__company-title company-title">Торговый Дом Лето</div>
+								<div class="header-block__company-slogan company-slogan">Расходные материалы для стоматологии
+								</div>
+							</div>
+						</div>
+						<div class="header-block__search">
+							<input type="text" class="header-block__search-input" id="s-d-input" placeholder="Что Вы ищете?">
+							<button class="header-block__search-icon search-btn"></button>
+						</div>
+						<div class="header-block__location">
+							<div class="header-block__location-city">
+								<span class="header-block__location-city-desc">Местоположение:</span>
+								<button class="header-block__location-city-name">Москва</button>
+								<div class="header-block__location-city-select header-select-city">
+									<div class="header-select-city__info header-select-city__info_font">Ваш город — Москва?</div>
+									<div class="header-select-city__confirmation">
+										<button class="header-select-city__confirm">Да</button>
+										<div class="header-select-city__info">или</div>
+										<select name="city" id="city-select" class="header-select-city__title">
+											<option value="" selected disabled>Нет, другой</option>
+											<option value="krd">Краснодар</option>
+											<option value="sip">Симферополь</option>
+										</select>
+									</div>
+									<div class="header-select-city__info">Если вашего региона нет в списке, вы можете написать
+										нам на почту с пометкой "Доставка в наш регион", и мы предложим наилучший способ доставки.
+									</div>
+								</div>
+							</div>
+							<div class="header-block__location-phone">
+								<span class="header-block__location-phone-num">+7 (495) 727-07-87</span>
+								<a href="/contacts/"><span class="header-block__location-phone-call">Заказать звонок</span></a>
+							</div>
+						</div>
+						<div class="header-block__compare">
+							<a href="/personal/favorite/">
+								<div class="header-block__compare-item header-block__compare-item_mb">
+									<span class="header-block__compare-icon header-block__compare-icon_favourites"></span>
+									<span
+										class="header-block__compare-text header-block__compare-text_favourites">Избранное</span>
+									<span class="header-block__compare-count header-block__compare-count_favourites">0</span>
+								</div>
+							</a>
+							<a href="/compare/">
+								<div class="header-block__compare-item">
+									<span class="header-block__compare-icon header-block__compare-icon_comparison"></span>
+									<span
+										class="header-block__compare-text header-block__compare-text_comparison">Сравнение</span>
+									<span class="header-block__compare-count header-block__compare-count_comparison">0</span>
+								</div>
+							</a>
+						</div>
+						<div class="header-block__cart">
+							<div class="header-block__cart-button">
+								<a href="/cart/cart-with-goods/">
+									<div class="header-block__cart-btn"></div>
+								</a>
+								<div class="header-block__cart-button-count">
+									<span class="header-block__cart-button-num">6</span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"
+										fill="none">
+										<circle cx="11.5" cy="11.5" r="11.5" fill="url(#paint0_linear_104_17)" />
+										<defs>
+											<linearGradient id="paint0_linear_104_17" x1="15" y1="1.5" x2="2" y2="26.5"
+												gradientUnits="userSpaceOnUse">
+												<stop stop-color="#21B8B8" />
+												<stop offset="1" stop-color="#1B9285" />
+											</linearGradient>
+										</defs>
+									</svg>
+								</div>
+							</div>
+							<div class="header-block__cart-desc">
+								<span class="header-block__cart-desc-name">Корзина</span>
+								<span class="header-block__cart-desc-sum">32.400 руб</span>
+							</div>
+						</div>
+					</div>
+					<div class="header-block__mob">
+						<input type="text" class="header-block__mob-search" id="s-m-input"
+							placeholder="Что бы Вы хотели найти?">
+						<button class="header-block__mob-s-icon search-mob-btn" id="s-m-btn"></button>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+
+
+	<!--                                                                                                                                            -->
+
+	<main id="main-checkout-order">
+		<div class="container-block">
+			<div class="wrap">
+				<div class="wrap-content">
+					<div class="breadcrumbs">
+						<ul class="breadcrumbs__items">
+							<li class="breadcrumbs__item breadcrumbs__item_not-active">
+								<a href="/main/">Главная</a>
+							</li>
+							<li class="breadcrumbs__item breadcrumbs__item_not-active">
+								<a href="/cart/">Корзина</a>
+							</li>
+							<li class="breadcrumbs__item breadcrumbs__item_active">Оформление</li>
+						</ul>
+					</div>
+					<div class="general-section">
+						<h1 class="main-title">Заказ оформлен</h1>
+						<div class="subtitle">Номер Вашего заказа: <span
+								class="subtitle-order-number order-number">1111</span></div>
+						<div class="info">Вы можете следить за выполнением своего заказа в Персональном разделе сайта.
+							Обратите внимание, что для входа в этот раздел Вам необходимо будет ввести логин и пароль от своего
+							аккаунта.</div>
+					</div>
+				</div>
+			</div>
+			<div class="wrap wrap-line">
+				<div class="wrap-content">
+					<div class="general-section general-section__mb">
+						<div class="details-block">
+							<div class="details">Дата доставки: <span class="details-value delivery-date">06.06.2023</span>
+							</div>
+							<div class="details details__mb">Адрес доставки: <span
+									class="details-value delivery-address">Россия, Московская
+									обл, г. Мытищи, ул. Мира, д. 30</span></div>
+						</div>
+						<div class="info-second">Благодарим, что выбрали именно нас!</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!--                                                                                                                                            -->
+
+
+	<div class="container-block">
+		<footer>
+			<div class="footer-top">
+				<div class="wrap">
+					<div class="footer__block">
+						<div class="footer-nav">
+							<div class="footer-nav__caption footer-caption">Навигация</div>
+							<nav>
+								<ul class="footer-nav__items">
+									<li class="footer-nav__item">
+										<a href="/about/">О компании</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/catalog/">Каталог</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/blog/">Новости</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/contacts/">Контакты</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/personal/">Личный кабинет</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/personal/cart/">Корзина</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/personal/favorite/">Избранное</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/compare/">Сравнение</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/sitemap/">Карта сайта</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="footer-seo">
+							<div class="footer-seo__caption footer-caption">Плюсы от LETO Dental Service</div>
+							<div class="footer-seo__taps">
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_pur">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_gr">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_bl">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_gre">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_aq">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+							</div>
+						</div>
+						<div class="footer-contacts">
+							<div class="footer-contacts__caption footer-caption">Наша связь</div>
+							<div class="footer-contacts__items">
+								<div class="footer-contacts__email footer-contacts__item">
+									<a href="mailto:sale@leto-med.ru">
+										<span class="footer-contacts__email-text">sale@leto-med.ru</span>
+									</a>
+								</div>
+								<div class="footer-contacts__phone footer-contacts__item">+7 (495) 727-07-87</div>
+								<div class="footer-contacts__call">
+									<a href="/contacts/"><span class="footer-contacts__call-btn">Заказать звонок</span></a>
+								</div>
+								<div class="contacts__socials">
+									<a href="https://vk.com/leto_med">
+										<div class="contacts__socials-icon-vk"></div>
+									</a>
+									<a href="#">
+										<div class="contacts__socials-icon-ws"></div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="footer__mob">
+					<div class="footer__mob-items">
+						<div class="footer__mob-item">
+							<button class="footer__mob-item-btn footer__mob-item-btn_menu m-menu-js"></button>
+							<span class="footer__mob-item-title">Меню</span>
+						</div>
+						<div class="footer__mob-item">
+							<button class="footer__mob-item-btn footer__mob-item-btn_catalog m-catalog-js"></button>
+							<span class="footer__mob-item-title">Каталог</span>
+						</div>
+						<a href="/personal/cart/">
+							<div class="footer__mob-item">
+								<button class="footer__mob-item-btn footer__mob-item-btn_cart"></button>
+								<span class="footer__mob-item-title">Корзина</span>
+							</div>
+						</a>
+						<div class="footer__mob-item footer__mob-item-auth">
+							<button class="footer__mob-item-btn footer__mob-item-btn_auth"></button>
+							<span class="footer__mob-item-title">Войти</span>
+						</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="wrap">
+				<div class="footer-bottom">
+					<div class="footer-bottom__item">
+						<div class="footer-bottom__logo">
+							<a href="/main/">
+								<img src="./img/logo.svg" class="footer-bottom__logo" alt="Логотип компании Торговый Дом Лето">
+							</a>
+						</div>
+						<div class="footer-bottom__company company">
+							<div class="footer-bottom__company-title company-title">Торговый Дом Лето</div>
+							<div class="footer-bottom__company-slogan company-slogan">Расходные материалы для стоматологии
+							</div>
+						</div>
+					</div>
+					<div class="footer-bottom__item footer-bottom__item_text">
+						<p class="footer-bottom__copyrights">&#169; Все права защищены</p>
+						<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh/">
+							<p class="footer-bottom__soglashenie">Соглашение об использовании персональных данных</p>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="menu-mob-modal">
+				<div class="footer__mob-menu">
+					<div class="footer__mob-contacts">
+						<div class="footer__mob-contacts-line">
+							<span class="footer__mob-contacts-img footer__mob-contacts-img_phone"></span>
+							<span class="footer__mob-contacts-phone">
+								<a href="tel:+74957270787">+7 (495) 727-07-87</a>
+							</span>
+						</div>
+						<div class="footer__mob-contacts-line">
+							<span class="footer__mob-contacts-img footer__mob-contacts-img_mail"></span>
+							<span class="footer__mob-contacts-mail">
+								<a href="mailto:sale@leto-med.ru">sale@leto-med.ru</a>
+							</span>
+						</div>
+					</div>
+					<span class="footer__mob-location-img"></span>
+					<button class="footer__mob-location">Москва</button>
+					<div class="footer-block__location-city-select">
+						<div class="footer-select-city__info footer-select-city__info_font">Ваш город — Москва?</div>
+						<div class="footer-select-city__confirmation">
+							<button class="footer-select-city__confirm">Да</button>
+							<div class="footer-select-city__info">или</div>
+							<select name="city" id="mob-city-select" class="footer-select-city__title">
+								<option value="" selected disabled>Нет, другой</option>
+								<!-- 	<option value="msk">Москва</option> -->
+								<option value="krd">Краснодар</option>
+								<option value="sip">Симферополь</option>
+							</select>
+						</div>
+						<div class="footer-select-city__info">Если вашего региона нет в списке, вы можете написать
+							нам на почту с пометкой "Доставка в наш регион", и мы предложим наилучший способ доставки.
+						</div>
+					</div>
+					<nav>
+						<ul class="footer__mob-menu-items">
+							<li class="footer__mob-menu-item">
+								<a href="/main/">Главная</a>
+							</li>
+							<li class="footer__mob-menu-item">
+								<a href="/about/">О компании</a>
+							</li>
+							<li class="footer__mob-menu-item">
+								<a href="/catalog/">Каталог</a>
+							</li>
+							<li class="footer__mob-menu-item">
+								<a href="/working-conditions/">Условия работы</a>
+							</li>
+							<li class="footer__mob-menu-item">
+								<a href="/blog/">Новости</a>
+							</li>
+							<li class="footer__mob-menu-item">
+								<a href="/contacts/">Контакты</a>
+							</li>
+							<li class="footer__mob-menu-item">
+								<a href="/personal/favorite/">Избранное</a>
+							</li>
+							<li class="footer__mob-menu-item">
+								<a href="/compare/">Сравнение</a>
+							</li>
+							<li class="footer__mob-menu-item">
+								<a href="/sitemap/">Карта сайта</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<div class="catalog-mob-modal">
+				<div class="footer__mob-catalog">
+					<div class="footer__mob-catalog-top">
+						<div class="footer__mob-catalog-title">Каталог</div>
+						<button class="footer__mob-catalog-close"></button>
+					</div>
+					<nav>
+						<ul class="footer__mob-catalog-items">
+							<li class="footer__mob-catalog-item">
+								<span class="footer__mob-catalog-img catalog-img-a"></span>
+								<div class="footer__mob-catalog-caption">Боры и вращающийся инструмент</div>
+								<div class="subsection-mob-modal">
+									<div class="footer__mob-subsection">
+										<div class="footer__mob-topsection">
+											<button class="footer__mob-back mob-btn-back-js">
+												<svg xmlns="http://www.w3.org/2000/svg" width="26" height="8" viewBox="0 0 26 8"
+													fill="none">
+													<path
+														d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM26 3.5L1 3.5V4.5L26 4.5V3.5Z"
+														fill="#22BABA" />
+												</svg>
+												Ко всем категориям
+											</button>
+											<button class="footer__mob-catalog-close subsection-close-btn-js"></button>
+										</div>
+										<div class="footer__mob-subtitle">Боры и вращающийся инструмент</div>
+										<div class="footer__mob-line"></div>
+										<div class="footer__mob-subsection-content">
+											<ul>
+												<li class="footer__mob-subsection-item"><a href="/catalog/bory-sswhite/">Боры
+														SSWhite</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/sistemy-izolyatsii-rabochego-polya/">Системы изоляции рабочего
+														поля</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/sistemy-shlifovki-i-polirovki/">Системы
+														шлифовки и полировки</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/diski-diskoderzhateli/">Диски,
+														дискодержатели</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/aksessuary-dlya-borov-trimmery/">Аксессуары для боров,
+														триммеры</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/nakonechniki/">Наконечники</a></li>
+												<li class="footer__mob-subsection-item"><a href="/catalog/bory-mani/">Боры
+														"Мани"</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="footer__mob-catalog-item">
+								<span class="footer__mob-catalog-img catalog-img-b"></span>
+								<span class="footer__mob-catalog-caption">Материалы одноразового использования</span>
+								<div class="subsection-mob-modal">
+									<div class="footer__mob-subsection">
+										<div class="footer__mob-topsection">
+											<button class="footer__mob-back mob-btn-back-js">
+												<svg xmlns="http://www.w3.org/2000/svg" width="26" height="8" viewBox="0 0 26 8"
+													fill="none">
+													<path
+														d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM26 3.5L1 3.5V4.5L26 4.5V3.5Z"
+														fill="#22BABA" />
+												</svg>
+												Ко всем категориям
+											</button>
+											<button class="footer__mob-catalog-close subsection-close-btn-js"></button>
+										</div>
+										<div class="footer__mob-subtitle">Материалы одноразового использования</div>
+										<div class="footer__mob-line"></div>
+										<div class="footer__mob-subsection-content">
+											<ul>
+												<li class="footer__mob-subsection-item"><a href="/catalog/perchatki/">Перчатки</a>
+												</li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/materialy-dlya-rentgenografii/">Материалы
+														для рентгенографии</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/salfetki-i-fartuki-nagrudnye/">Салфетки и
+														фартуки нагрудные</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/valiki-vatnye-bakhily-shapochki-stakanchiki-tabletki/">Валики
+														ватные, бахилы,
+														шапочки, стаканчики,
+														таблетки</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/salfetki-dlya-obrabotki-poverkhnosti/">Салфетки для обработки
+														поверхности</a>
+												</li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/applikatory/">Аппликаторы</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/slyunootsosy-i-pyleotsosy/">Слюноотсосы и
+														пылесосы</a></li>
+												<li class="footer__mob-subsection-item"><a href="/catalog/shpritsy-i-igly/">Шприцы и
+														иглы</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/pakety-dlya-sterilizatsii/">Пакеты для
+														стерилизации</a></li>
+												<li class="footer__mob-subsection-item"><a href="/catalog/ochki-i-ekrany/">Очки и
+														экраны</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/emkosti-konteynera-i-pakety/">Емкости,
+														контейнера и пакеты</a></li>
+												<li class="footer__mob-subsection-item"><a href="/catalog/odezhda/">Одежда</a></li>
+												<li class="footer__mob-subsection-item"><a href="/catalog/maski/">Маски</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="footer__mob-catalog-item">
+								<span class="footer__mob-catalog-img catalog-img-c"></span>
+								<span class="footer__mob-catalog-caption">Дезинфекция</span>
+								<div class="subsection-mob-modal">
+									<div class="footer__mob-subsection">
+										<div class="footer__mob-topsection">
+											<button class="footer__mob-back mob-btn-back-js">
+												<svg xmlns="http://www.w3.org/2000/svg" width="26" height="8" viewBox="0 0 26 8"
+													fill="none">
+													<path
+														d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM26 3.5L1 3.5V4.5L26 4.5V3.5Z"
+														fill="#22BABA" />
+												</svg>
+												Ко всем категориям
+											</button>
+											<button class="footer__mob-catalog-close subsection-close-btn-js"></button>
+										</div>
+										<div class="footer__mob-subtitle">Дезинфекция</div>
+										<div class="footer__mob-line"></div>
+										<div class="footer__mob-subsection-content">
+											<ul>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/dezinfektsiya-instrumenta/">Дезинфекция
+														инструмента</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/dezinfektsiya-poverkhnostey/">Дезинфекция
+														поверхностей</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/dezinfektsiya-vrashchayushchegosya-instrumenta/">Дезинфекция
+														вращающегося
+														инструмента</a>
+												</li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/dezinfektsiya-otsasyvayushchikh-sistem/">Дезинфекция
+														отсасывающих систем</a>
+												</li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/zhurnaly-indikatory-i-testy/">Журналы,
+														индикаторы и тесты</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/dezinfektsiya-ruk/">Дезинфекция рук</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="footer__mob-catalog-item">
+								<span class="footer__mob-catalog-img catalog-img-d"></span>
+								<span class="footer__mob-catalog-caption">Инструменты</span>
+								<div class="subsection-mob-modal">
+									<div class="footer__mob-subsection">
+										<div class="footer__mob-topsection">
+											<button class="footer__mob-back mob-btn-back-js">
+												<svg xmlns="http://www.w3.org/2000/svg" width="26" height="8" viewBox="0 0 26 8"
+													fill="none">
+													<path
+														d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM26 3.5L1 3.5V4.5L26 4.5V3.5Z"
+														fill="#22BABA" />
+												</svg>
+												Ко всем категориям
+											</button>
+											<button class="footer__mob-catalog-close subsection-close-btn-js"></button>
+										</div>
+										<div class="footer__mob-subtitle">Инструменты</div>
+										<div class="footer__mob-line"></div>
+										<div class="footer__mob-subsection-content">
+											<ul>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/diagnosticheskie/">Диагностические</a>
+												</li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/restavratsionnye/">Реставрационные</a>
+												</li>
+												<li class="footer__mob-subsection-item"><a href="/catalog/khirurgiya/">Хирургия</a>
+												</li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/endodonticheskie/">Эндодонтические</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="footer__mob-catalog-item">
+								<span class="footer__mob-catalog-img catalog-img-e"></span>
+								<span class="footer__mob-catalog-caption">Обработка и пломбировка канала</span>
+								<div class="subsection-mob-modal">
+									<div class="footer__mob-subsection">
+										<div class="footer__mob-topsection">
+											<button class="footer__mob-back mob-btn-back-js">
+												<svg xmlns="http://www.w3.org/2000/svg" width="26" height="8" viewBox="0 0 26 8"
+													fill="none">
+													<path
+														d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM26 3.5L1 3.5V4.5L26 4.5V3.5Z"
+														fill="#22BABA" />
+												</svg>
+												Ко всем категориям
+											</button>
+											<button class="footer__mob-catalog-close subsection-close-btn-js"></button>
+										</div>
+										<div class="footer__mob-subtitle">Обработка и пломбировка канала</div>
+										<div class="footer__mob-line"></div>
+										<div class="footer__mob-subsection-content">
+											<ul>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/obrabotka-i-dezinfektsiya-kanalov/">Обработка и дезинфекция
+														каналов</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/rasplombirovka-i-obrabotka-kornevykh-kanalov/">Распломбировка и
+														обработка
+														корневых каналов</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/plombirovka-kanalov/">Пломбировка
+														каналов</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/devitalizatsiya-pulpy/">Девитализация
+														пульпы</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="footer__mob-catalog-item">
+								<span class="footer__mob-catalog-img catalog-img-f"></span>
+								<span class="footer__mob-catalog-caption">Ортопедические материалы</span>
+								<div class="subsection-mob-modal">
+									<div class="footer__mob-subsection">
+										<div class="footer__mob-topsection">
+											<button class="footer__mob-back mob-btn-back-js">
+												<svg xmlns="http://www.w3.org/2000/svg" width="26" height="8" viewBox="0 0 26 8"
+													fill="none">
+													<path
+														d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM26 3.5L1 3.5V4.5L26 4.5V3.5Z"
+														fill="#22BABA" />
+												</svg>
+												Ко всем категориям
+											</button>
+											<button class="footer__mob-catalog-close subsection-close-btn-js"></button>
+										</div>
+										<div class="footer__mob-subtitle">Ортопедические материалы</div>
+										<div class="footer__mob-line"></div>
+										<div class="footer__mob-subsection-content">
+											<ul>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/a-silikony-s-silikony-aksessuary/">А-силиконы, С-силиконы,
+														аксессуары</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/tsementy-dlya-vremennoy-fiksatsii-mostov-i-koronok/">Цементы
+														для временной
+														фиксации мостов и коронок</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/tsementy-dlya-postoyannoy-fiksatsii-mostov-i-koronok/">Цементы
+														для постоянной
+														фиксации мостов и коронок</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/tsementy-stekloionomernye-i-prokladochnyy-material/">Цементы
+														стеклоиономерные
+														и прокладочный материал</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/retraktsionnye-materialy-i-aksessuary/">Ретракционные материалы
+														и
+														аксессуары</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/vremennye-koronki-materialy-aksessuary/">Временные коронки,
+														материалы,
+														аксессуары</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/materialy-dlya-shinirovaniya-zubov/">Материалы для шинирования
+														зубов</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/slepochnye-massy-alginaty/">Слепочные
+														массы, альгинаты</a></li>
+												<li class="footer__mob-subsection-item"><a href="/catalog/gipsy-meditsinskie/">Гипсы
+														медицинские</a></li>
+												<li class="footer__mob-subsection-item"><a href="/catalog/voska/">Воска</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/perebazirovka-protezov/">Перебазировка
+														протезов</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="footer__mob-catalog-item">
+								<span class="footer__mob-catalog-img catalog-img-g"></span>
+								<span class="footer__mob-catalog-caption">Пломбировочные материалы</span>
+								<div class="subsection-mob-modal">
+									<div class="footer__mob-subsection">
+										<div class="footer__mob-topsection">
+											<button class="footer__mob-back mob-btn-back-js">
+												<svg xmlns="http://www.w3.org/2000/svg" width="26" height="8" viewBox="0 0 26 8"
+													fill="none">
+													<path
+														d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM26 3.5L1 3.5V4.5L26 4.5V3.5Z"
+														fill="#22BABA" />
+												</svg>
+												Ко всем категориям
+											</button>
+											<button class="footer__mob-catalog-close subsection-close-btn-js"></button>
+										</div>
+										<div class="footer__mob-subtitle">Пломбировочные материалы</div>
+										<div class="footer__mob-line"></div>
+										<div class="footer__mob-subsection-content">
+											<ul>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/plombirovochnye-3m/">Пломбировочные
+														3M</a>
+												</li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/plombirovochnye-dentsply/">Пломбировочные
+														DENTSPLY</a>
+												</li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/plombirovochnye-gc/">Пломбировочные
+														GC</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/plombirovochnye-heraeus-kulzer/">Пломбировочные HERAEUS
+														KULZER</a>
+												</li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/plombirovochnye-kerr/">Пломбировочные
+														KERR</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/plombirovochnye-tokuyama/">Пломбировочные
+														TOKUYAMA</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/bondingovye-sistemy-i-protravki-aksessuary/">Бондинговые
+														системы и протравки,
+														аксессуары</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/plombirovochnye-es/">Пломбировочные
+														ES</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/materialy-dlya-vremennykh-plomb/">Материалы для временных
+														пломб</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/prokladochnye-materialy/">Прокладочные
+														материалы</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/tsementy-dlya-restavratsiy/">Цементы для
+														реставраций</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/aksessuary-dlya-postanovki-plomb-matritsy-klinyshki/">Аксессуары
+														для
+														постановки пломб (матрицы, клинышки)</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/polirovochnye-pasty-i-prinadlezhnosti/">Полировочные пасты и
+														принадлежности</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/registratsiya-prikusa/">Регистрация
+														прикуса</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/materialy-dlya-profilaktiki-i-lecheniya-kariesa/">Материалы для
+														профилактики и
+														лечения кариеса</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/desensitayzery/">Десенситайзеры</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/khimicheskie-kompozity/">Химические
+														композиты</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/otbelivayushchie-sistemy/">Отбеливающие
+														системы</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/plombirovochnyy-voco/">Пломбировочный
+														VOCO</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/plombirovochnye-materialy-tetric-ivoklyar/">Пломбировочные
+														материалы TETRIC
+														(ИВОКЛЯР)</a></li>
+												<li class="footer__mob-subsection-item"><a href="/catalog/-enamel/">Пломбировочные
+														ENAMEL</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="footer__mob-catalog-item">
+								<span class="footer__mob-catalog-img catalog-img-h"></span>
+								<span class="footer__mob-catalog-caption">Хирургические материалы</span>
+								<div class="subsection-mob-modal">
+									<div class="footer__mob-subsection">
+										<div class="footer__mob-topsection">
+											<button class="footer__mob-back mob-btn-back-js">
+												<svg xmlns="http://www.w3.org/2000/svg" width="26" height="8" viewBox="0 0 26 8"
+													fill="none">
+													<path
+														d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM26 3.5L1 3.5V4.5L26 4.5V3.5Z"
+														fill="#22BABA" />
+												</svg>
+												Ко всем категориям
+											</button>
+											<button class="footer__mob-catalog-close subsection-close-btn-js"></button>
+										</div>
+										<div class="footer__mob-subtitle">Хирургические материалы</div>
+										<div class="footer__mob-line"></div>
+										<div class="footer__mob-subsection-content">
+											<ul>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/applikatsionnaya-anesteziya/">Аппликационная анестезия</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/skalpeli-i-lezviya/">Скальпели и
+														лезвия</a></li>
+												<li class="footer__mob-subsection-item"><a href="/catalog/shovnye-materialy/">Шовные
+														материалы</a>
+												</li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/materialy-dlya-parodontologii/">Материалы
+														для пародонтологии</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/osteoplasticheskie-materialy/">Остеопластические материалы</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="footer__mob-catalog-item">
+								<span class="footer__mob-catalog-img catalog-img-i"></span>
+								<span class="footer__mob-catalog-caption">Эндодонтические материалы, файлы, штифты</span>
+								<div class="subsection-mob-modal">
+									<div class="footer__mob-subsection">
+										<div class="footer__mob-topsection">
+											<button class="footer__mob-back mob-btn-back-js">
+												<svg xmlns="http://www.w3.org/2000/svg" width="26" height="8" viewBox="0 0 26 8"
+													fill="none">
+													<path
+														d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM26 3.5L1 3.5V4.5L26 4.5V3.5Z"
+														fill="#22BABA" />
+												</svg>
+												Ко всем категориям
+											</button>
+											<button class="footer__mob-catalog-close subsection-close-btn-js"></button>
+										</div>
+										<div class="footer__mob-subtitle">Эндодонтические материалы, файлы, штифты</div>
+										<div class="footer__mob-line"></div>
+										<div class="footer__mob-subsection-content">
+											<ul>
+												<li class="footer__mob-subsection-item"><a href="/catalog/absorbery/">Абсорберы</a>
+												</li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/guttapercha/">Гуттаперча</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/fayly-mashinnogo-ispolzovaniya/">Файлы
+														машинного использования</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/fayly-ruchnogo-ispolzovaniya/">Файлы
+														ручного использования</a></li>
+												<li class="footer__mob-subsection-item"><a href="/catalog/drili/">Дрили</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/prinadlezhnosti-dlya-endodontii/">Принадлежности для
+														эндодонтии</a></li>
+												<li class="footer__mob-subsection-item"><a href="/catalog/shtifty-bezzolnye/">Штифты
+														беззольные</a>
+												</li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/shtifty-vnutrikanalnye/">Штифты
+														внутриканальные</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/shtifty-parapulparnye/">Штифты
+														парапульпарные</a></li>
+												<li class="footer__mob-subsection-item"><a
+														href="/catalog/shtifty-steklovolokonnye/">Штифты
+														стекловолоконные</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="footer__mob-catalog-item">
+								<span class="footer__mob-catalog-img catalog-img-i"></span>
+								<span class="footer__mob-catalog-caption">Оборудование</span>
+								<div class="subsection-mob-modal">
+									<div class="footer__mob-subsection">
+										<div class="footer__mob-topsection">
+											<button class="footer__mob-back mob-btn-back-js">
+												<svg xmlns="http://www.w3.org/2000/svg" width="26" height="8" viewBox="0 0 26 8"
+													fill="none">
+													<path
+														d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM26 3.5L1 3.5V4.5L26 4.5V3.5Z"
+														fill="#22BABA" />
+												</svg>
+												Ко всем категориям
+											</button>
+											<button class="footer__mob-catalog-close subsection-close-btn-js"></button>
+										</div>
+										<div class="footer__mob-subtitle">Оборудование</div>
+										<div class="footer__mob-line"></div>
+										<div class="footer__mob-subsection-content">
+											<ul>
+												<li class="footer__mob-subsection-item"><a href="/catalog/oborudovanie/">Посмотреть
+														раздел</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

@@ -1,6 +1,8 @@
 @import url('./fonts/gothampro_medium.ttf');
 
 html {
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
 	position: relative;
 	box-sizing: border-box;
 	overflow: scroll;
@@ -15,9 +17,17 @@ html {
 }
 
 body {
+	font-family: Lato, sans-serif;
 	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
 	min-width: 320px;
 	min-height: 100vh;
+	margin: 0;
+}
+
+main {
+	display: block;
 }
 
 img,
@@ -25,22 +35,18 @@ svg {
 	max-width: 100%;
 	max-height: 100%;
 	height: auto;
-}
-
-button {
-	padding: 0;
-	cursor: pointer;
-}
-
-a {
-	text-decoration: none;
-	color: inherit;
+	border-style: none;
 }
 
 ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
 }
 
 h1,
@@ -56,6 +62,12 @@ iframe {
 	border: none;
 }
 
+hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+}
+
 .visually-hidden {
 	position: fixed;
 	transform: scale(0);
@@ -64,10 +76,6 @@ iframe {
 .container-block {
 	max-width: 1920px;
 	margin: 0 auto;
-}
-
-blockquote {
-	margin: 0;
 }
 
 .wrap {
@@ -100,8 +108,6 @@ blockquote {
 	color: #000;
 	font-family: Tenor Sans, sans-serif;
 	font-size: 50px;
-	font-style: normal;
-	font-weight: 400;
 	line-height: 84.5%;
 	letter-spacing: 0.75px;
 	text-align: right;
@@ -111,10 +117,7 @@ blockquote {
 .maintenance__desc-info {
 	color: rgba(0, 0, 0, 0.70);
 	text-align: right;
-	font-family: Lato, sans-serif;
 	font-size: 22px;
-	font-style: normal;
-	font-weight: 400;
 }
 
 .maintenance__desc-text_a {
@@ -145,16 +148,20 @@ blockquote {
 	flex-direction: column;
 }
 
-@media (max-width: 1920px) {
+@media (max-width: 1910px) {
 	.maintenance {
 		padding: 222px 0 0 0;
 		margin-bottom: 101px;
 	}
+
+	.maintenance__logo {
+		margin-right: 130px;
+	}
 }
 
-@media (max-width: 1440px) {
-	.maintenance__logo {
-		margin-right: 150px;
+@media (max-width: 1670px) {
+	.wrap {
+		padding: 0 37px;
 	}
 }
 
@@ -189,22 +196,7 @@ blockquote {
 @media (max-width: 1100px) {
 	.maintenance {
 		padding: 15px 0 0 0;
-	}
-
-	.maintenance__block {
-		padding: 57px 28px 48px 58px;
-	}
-
-	.maintenance__logo-img {
-		min-width: 159px;
-		min-height: 143px;
-	}
-}
-
-@media (max-width: 1100px) {
-	.maintenance {
-		padding: 15px 0 0 0;
-		margin-bottom: 182px;
+		margin-bottom: 130px;
 	}
 
 	.maintenance__block {
@@ -218,6 +210,8 @@ blockquote {
 	}
 
 	.maintenance__logo-img {
+		min-width: 159px;
+		min-height: 143px;
 		background-position: center;
 	}
 

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="./img/icon.svg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Lato:wght@400;700&family=Montserrat:wght@300;400;600;700&family=PT+Sans:wght@700&family=Tenor+Sans&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="./normalize.css">
+	<link rel="stylesheet" href="./template_styles.css">
+	<link rel="stylesheet" href="./styles.css">
+	<script src="./script.js" defer></script>
+	<title>Подробнее о заказе №43782</title>
+</head>
+
+<body>
+	<div class="container-block">
+		<header>
+			<div class="header">
+				<div class="header-menu">
+					<nav>
+						<div class="header-menu__items">
+							<div class="header-menu__item"><a href="/about/">О компании</a></div>
+							<div class="header-menu__item"><a href="/catalog/">Каталог</a></div>
+							<div class="header-menu__item"><a href="/working-conditions/">Условия работы</a></div>
+							<div class="header-menu__item"><a href="/blog/">Новости</a></div>
+							<div class="header-menu__item"><a href="/contacts/">Контакты</a></div>
+							<div class="header-menu__item selected"><a href="/personal/">Личный кабинет</a></div>
+							<!-- <button class="header-menu__reg header-menu__btn">Регистрация</button>
+							<button class="header-menu__auth header-menu__btn">Вход</button> -->
+							<button class="header-menu__user-name header-menu__btn">Ivan</button>
+							<button class="header-menu__logout header-menu__btn">Выход</button>
+						</div>
+					</nav>
+				</div>
+				<div class="wrap">
+					<div class="header-menu__mob">
+						<div class="header-menu__mob-company">
+							<div class="header-menu__mob-logo">
+								<a href="/main/">
+									<img src="./img/logo.svg" alt="Логотип Торговый Дом Лето">
+								</a>
+							</div>
+							<div class="header-menu__mob-td">Торговый Дом Лето</div>
+						</div>
+						<div class="header-menu__mob-phone">+7 (495) 727-07-87</div>
+					</div>
+				</div>
+				<div class="overlay"></div>
+				<div class="modal modal-reg">
+					<div class="modal__title">Регистрация</div>
+					<form name="form-reg" method="post" action="" class="modal-form">
+						<div class="modal-form__data">
+							<label for="name" class="modal-form__label">ФИО</label>
+							<input type="text" class="modal-form__input" name="name" id="name">
+						</div>
+						<div class="modal-form__data">
+							<label for="email" class="modal-form__label">E-mail</label>
+							<input type="email" class="modal-form__input" name="email" id="email" required>
+						</div>
+						<div class="modal-form__data">
+							<label for="tel" class="modal-form__label">Номер телефона</label>
+							<input type="tel" class="modal-form__input" name="tel" id="tel">
+						</div>
+						<div class="modal-form__data">
+							<label for="date-birthday" class="modal-form__label">Дата рождения</label>
+							<input type="text" class="modal-form__input" name="date-birthday" id="date-birthday">
+						</div>
+						<div class="modal-form__data">
+							<label for="login" class="modal-form__label">Логин</label>
+							<input type="text" class="modal-form__input" name="login" id="login" required>
+						</div>
+						<div class="modal-form__data modal-form__data-password">
+							<label for="password" class="modal-form__label">Пароль</label>
+							<input type="password" class="modal-form__input modal-form__input-password" name="password"
+								id="password" required>
+							<button type="button" class="modal-form__password-eye"></button>
+						</div>
+						<div class="modal-form__data">
+							<label for="captcha" class="modal-form__label">Введите символы с картинки</label>
+							<input type="text" class="modal-form__input" name="captcha" id="captcha" required>
+						</div>
+						<div class="modal-form__captcha"></div>
+						<button type="submit" class="modal-form__btn">Зарегистрироваться</button>
+						<div class="modal-form__info">Нажимая кнопку, вы даете согласие на обработку
+							<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh/" class="modal-form__info-link">
+								персональных данных
+							</a>
+						</div>
+						<div class="contacts__socials modal-form__socials">
+							<a href="https://vk.com/leto_med">
+								<div class="contacts__socials-icon-vk modal-form__socials-icon modal-form__socials-icon_mr">
+								</div>
+							</a>
+							<a href="#">
+								<div class="contacts__socials-icon-ws modal-form__socials-icon"></div>
+							</a>
+						</div>
+					</form>
+				</div>
+				<div class="modal modal-auth">
+					<div class="modal__title">Вход</div>
+					<form name="form-auth" method="post" action="/personal/?login=yes" class="modal-form">
+						<div class="modal-form__data">
+							<label for="login" class="modal-form__label">Логин</label>
+							<input type="text" class="modal-form__input" name="login" id="login" required>
+						</div>
+						<div class="modal-form__data modal-form__data-password">
+							<label for="password" class="modal-form__label">Пароль</label>
+							<input type="password" class="modal-form__input modal-form__input-password" name="password"
+								id="password" required>
+							<button type="button" class="modal-form__password-eye"></button>
+						</div>
+						<div class="modal-form__checkbox">
+							<input type="checkbox" class="modal-form__checkbox-input" name="checkbox" id="checkbox">
+							<label for="checkbox" class="modal-form__checkbox-label">Запомнить меня на этом устройстве</label>
+						</div>
+						<button type="submit" class="modal-form__btn">Войти</button>
+						<div class="modal-form__link"><button type="button"
+								class="modal-form__link-mb modal-form__link-mb_a">Забыли пароль?</button></div>
+						<div class="modal-form__link"><button type="button"
+								class="modal-form__link-mb modal-form__link-mb_b">Регистрация</button></div>
+						<div class="modal-form__info modal-form__info-auth">Если Вы впервые на сайте, заполните, пожалуйста,
+							<a href="" class="modal-form__info-link modal-form__info-auth">регистрационную</a> форму.
+						</div>
+						<div class="contacts__socials modal-form__socials">
+							<a href="https://vk.com/leto_med">
+								<div class="contacts__socials-icon-vk modal-form__socials-icon modal-form__socials-icon_mr">
+								</div>
+							</a>
+							<a href="#">
+								<div class="contacts__socials-icon-ws modal-form__socials-icon"></div>
+							</a>
+						</div>
+					</form>
+				</div>
+				<div class="modal modal-recovery">
+					<div class="modal__title">Восстановление</div>
+					<form name="form-recovery" method="get" action="" class="modal-form">
+						<div class="modal-form__data">
+							<label for="login-emeil" class="modal-form__label">E-mail или Логин</label>
+							<input type="text" class="modal-form__input" name="login-emeil" id="login-emeil" required>
+						</div>
+						<div class="modal-form__data">
+							<label for="captcha" class="modal-form__label">Введите символы с картинки</label>
+							<input type="text" class="modal-form__input" name="captcha" id="captcha" required>
+						</div>
+						<div class="modal-form__captcha"></div>
+						<button type="submit" class="modal-form__btn">Отправить письмо</button>
+					</form>
+				</div>
+				<div class="wrap">
+					<div class="header-block">
+						<div class="header-block__left">
+							<div class="header-block__logo">
+								<a href="/main/">
+									<img src="./img/logo.svg" alt="Логотип Торговый Дом Лето">
+								</a>
+							</div>
+							<div class="header-block__company company">
+								<div class="header-block__company-title company-title">Торговый Дом Лето</div>
+								<div class="header-block__company-slogan company-slogan">Расходные материалы для стоматологии
+								</div>
+							</div>
+						</div>
+						<div class="header-block__search">
+							<input type="text" class="header-block__search-input" id="s-d-input" placeholder="Что Вы ищете?">
+							<button class="header-block__search-icon search-btn"></button>
+						</div>
+						<div class="header-block__location">
+							<div class="header-block__location-city">
+								<span class="header-block__location-city-desc">Местоположение:</span>
+								<button class="header-block__location-city-name">Москва</button>
+								<div class="header-block__location-city-select header-select-city">
+									<div class="header-select-city__info header-select-city__info_font">Ваш город — Москва?</div>
+									<div class="header-select-city__confirmation">
+										<button class="header-select-city__confirm">Да</button>
+										<div class="header-select-city__info">или</div>
+										<select name="city" id="city-select" class="header-select-city__title">
+											<option value="" selected disabled>Нет, другой</option>
+											<option value="krd">Краснодар</option>
+											<option value="sip">Симферополь</option>
+										</select>
+									</div>
+									<div class="header-select-city__info">Если вашего региона нет в списке, вы можете написать
+										нам на почту с пометкой "Доставка в наш регион", и мы предложим наилучший способ доставки.
+									</div>
+								</div>
+							</div>
+							<div class="header-block__location-phone">
+								<span class="header-block__location-phone-num">+7 (495) 727-07-87</span>
+								<a href="/contacts/"><span class="header-block__location-phone-call">Заказать звонок</span></a>
+							</div>
+						</div>
+						<div class="header-block__compare">
+							<a href="/personal/favorite/">
+								<div class="header-block__compare-item header-block__compare-item_mb">
+									<span class="header-block__compare-icon header-block__compare-icon_favourites"></span>
+									<span
+										class="header-block__compare-text header-block__compare-text_favourites">Избранное</span>
+									<span class="header-block__compare-count header-block__compare-count_favourites">0</span>
+								</div>
+							</a>
+							<a href="/compare/">
+								<div class="header-block__compare-item">
+									<span class="header-block__compare-icon header-block__compare-icon_comparison"></span>
+									<span
+										class="header-block__compare-text header-block__compare-text_comparison">Сравнение</span>
+									<span class="header-block__compare-count header-block__compare-count_comparison">0</span>
+								</div>
+							</a>
+						</div>
+						<div class="header-block__cart">
+							<div class="header-block__cart-button">
+								<a href="/cart/">
+									<div class="header-block__cart-btn"></div>
+								</a>
+								<div class="header-block__cart-button-count">
+									<span class="header-block__cart-button-num">6</span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"
+										fill="none">
+										<circle cx="11.5" cy="11.5" r="11.5" fill="url(#paint0_linear_104_17)" />
+										<defs>
+											<linearGradient id="paint0_linear_104_17" x1="15" y1="1.5" x2="2" y2="26.5"
+												gradientUnits="userSpaceOnUse">
+												<stop stop-color="#21B8B8" />
+												<stop offset="1" stop-color="#1B9285" />
+											</linearGradient>
+										</defs>
+									</svg>
+								</div>
+							</div>
+							<div class="header-block__cart-desc">
+								<span class="header-block__cart-desc-name">Корзина</span>
+								<span class="header-block__cart-desc-sum">32.400 руб</span>
+							</div>
+						</div>
+					</div>
+					<div class="header-block__mob">
+						<input type="text" class="header-block__mob-search" id="s-m-input"
+							placeholder="Что бы Вы хотели найти?">
+						<button class="header-block__mob-s-icon search-mob-btn" id="s-m-btn"></button>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+
+
+	<!--                                                                                                                                            -->
+
+	<main id="main-order-detail">
+		<div class="container-block">
+			<div class="wrap">
+				<div class="wrap-content">
+					<div class="breadcrumbs">
+						<ul class="breadcrumbs__items">
+							<li class="breadcrumbs__item breadcrumbs__item_not-active">
+								<a href="/main/">Главная</a>
+							</li>
+							<li class="breadcrumbs__item breadcrumbs__item_active">Личный кабинет</li>
+						</ul>
+					</div>
+					<div class="general-section">
+						<h1 class="main-title">Личный кабинет</h1>
+						<div class="page-content">
+							<div class="page-content__nav">
+								<nav>
+									<a href="/personal/profile/">
+										<div class="page-content__nav-item">Профиль</div>
+									</a>
+									<a href="/personal/order/">
+										<div class="page-content__nav-item nav-item-active">История заказов</div>
+									</a>
+									<a href="/personal/spetsifikatsia/">
+										<div class="page-content__nav-item">Спецификация</div>
+									</a>
+								</nav>
+							</div>
+							<div class="page-content__notifications">
+								<h3 class="page-content__notifications-title">Уведомления</h3>
+								<div class="page-content__notifications-desc">Уведомления будут приходить на электронный
+									адрес, указанный при регистрации</div>
+								<div class="page-content__notifications-checkboxes">
+									<div class="page-content__notifications-checkbox">
+										<input type="checkbox" id="notifications-checkbox-new" name="notifications-checkbox-new"
+											class="notifications-checkbox" />
+										<label for="notifications-checkbox-new">Появившиеся товары</label>
+									</div>
+									<div class="page-content__notifications-checkbox">
+										<input type="checkbox" id="notifications-checkbox-mailing"
+											name="notifications-checkbox-mailing" class="notifications-checkbox" />
+										<label for="notifications-checkbox-mailing">Рассылки о скидках и акциях</label>
+									</div>
+									<div class="page-content__notifications-checkbox">
+										<input type="checkbox" id="notifications-checkbox-feedback"
+											name="notifications-checkbox-feedback" class="notifications-checkbox" />
+										<label for="notifications-checkbox-feedback">Ответы на мои отзывы</label>
+									</div>
+								</div>
+							</div>
+							<div class="page-content__order-blocks">
+								<div class="page-content__order">
+									<div class="page-content__order-title">
+										<h3>Заказ №<span class="order-number">43782</span></h3>
+									</div>
+									<div class="page-content__order-block page-content__details">
+										<div class="page-content__order-det page-content__order-created">Дата создания:
+											<span
+												class="page-content__order-created page-content__order-created_color order-date">13.05.2023
+												12:34</span>
+										</div>
+										<div class="page-content__order-det page-content__order-status">Статус: <span
+												class="page-content__order-status page-content__order-status_color order-status">Принят</span>
+											<span class="page-content__order-desc order-status-desc">ожидается
+												оплата от 15.05.2023 12:34</span>
+										</div>
+										<div class="page-content__order-det page-content__order-form-payment">Способ оплаты: <span
+												class="page-content__order-form-payment">Наличные</span> (<span
+												class="page-content__order-not-paid">не оплачен</span>)</div>
+										<div class="page-content__order-det page-content__order-delivery">Способ доставки: <span
+												class="page-content__order-value order-form-delivery">Доставка</span></div>
+										<div class="page-content__order-det page-content__order-payment">К оплате: <span
+												class="page-content__order-payment page-content__order-payment_color order-payment">10,838,04₽</span>
+										</div>
+									</div>
+									<div class="page-content__order-block page-content__user">
+										<div class="page-content__order-det">Учетная запись: <span
+												class="page-content__order-value account">Иванов Иван Иванович</span></div>
+										<div class="page-content__order-det">Логин: <span
+												class="page-content__order-value login">Ivan</span></div>
+										<div class="page-content__order-det">Тип плательщика: <span
+												class="page-content__order-value type-user">Юридическое лицо</span></div>
+										<div class="page-content__order-det">Название компании: <span
+												class="page-content__order-value company-name">ООО "Колумбус Тур"</span></div>
+										<div class="page-content__order-det">ИНН: <span
+												class="page-content__order-value company-tin">7714513498</span></div>
+										<div class="page-content__order-det">Контактное лицо: <span
+												class="page-content__order-value company-tin">Иванов Иван Иванович</span></div>
+										<div class="page-content__order-det">E-Mail: <span
+												class="page-content__order-value page-content__order-value_email email">ivanreg@mail.ru</span>
+										</div>
+									</div>
+									<div class="page-content__order-block page-content__delivery">
+										<div class="page-content__order-det">Адрес доставки: <span
+												class="page-content__order-value delivery-address">РОССИЯ, Московская обл, Мытищи г,
+												Мира ул, дом № 30</span></div>
+										<div class="page-content__order-det">Дата доставки: <span
+												class="page-content__order-value page-content__order-value_date-delivery delivery-date">16.05.2023</span>
+										</div>
+										<div class="page-content__order-det">Комментарий: <span
+												class="page-content__order-value user-comment">На ИП Мишин.</span></div>
+									</div>
+								</div>
+								<div class="page-content__description">
+									<div class="page-content__description-title">
+										<h3>Содержимое заказа</h3>
+									</div>
+									<div class="page-content__description-block">
+										<div class="page-content__description-goods">
+											<div class="page-content__description-good">
+												<div class="page-content__good-top">
+													<div class="page-content__good-image">
+														<img src="./img/test-img.png" class="page-content__good-img"
+															alt="Смазка твердая для турбины 6 капсул Lubrimed Bien-Air 10шт/упак">
+													</div>
+													<h4 class="page-content__good-title">Смазка твердая для турбины 6 капсул Lubrimed
+														Bien-Air 10шт/упак</h4>
+												</div>
+												<div class="page-content__good-property">Штуки/Упаковка: <span
+														class="page-content__good-property-value good-package">Упаковка</span></div>
+												<div class="page-content__good-property">Количество: <span
+														class="page-content__good-property-value good-quantity">5</span></div>
+												<div class="page-content__good-property">Скидка: <span
+														class="page-content__good-property-value good-discount">50%</span></div>
+												<div class="page-content__good-property">Цена: <span
+														class="page-content__good-property-value page-content__good-property-value_color"><span
+															class="good-price">3.000,23</span>₽</span></div>
+											</div>
+											<div class="page-content__description-good">
+												<div class="page-content__good-top">
+													<div class="page-content__good-image">
+														<img src="./img/test-img.png" class="page-content__good-img"
+															alt="Смазка твердая для турбины 6 капсул Lubrimed Bien-Air 10шт/упак">
+													</div>
+													<h4 class="page-content__good-title">Смазка твердая для турбины 6 капсул Lubrimed
+														Bien-Air 10шт/упак</h4>
+												</div>
+												<div class="page-content__good-property">Штуки/Упаковка: <span
+														class="page-content__good-property-value good-package">Упаковка</span></div>
+												<div class="page-content__good-property">Количество: <span
+														class="page-content__good-property-value good-quantity">5</span></div>
+												<div class="page-content__good-property">Скидка: <span
+														class="page-content__good-property-value good-discount">50%</span></div>
+												<div class="page-content__good-property">Цена: <span
+														class="page-content__good-property-value page-content__good-property-value_color"><span
+															class="good-price">3.000,23</span>₽</span></div>
+											</div>
+											<div class="page-content__description-good">
+												<div class="page-content__good-top">
+													<div class="page-content__good-image">
+														<img src="./img/test-img.png" class="page-content__good-img"
+															alt="Смазка твердая для турбины 6 капсул Lubrimed Bien-Air 10шт/упак">
+													</div>
+													<h4 class="page-content__good-title">Смазка твердая для турбины 6 капсул Lubrimed
+														Bien-Air 10шт/упак</h4>
+												</div>
+												<div class="page-content__good-property">Штуки/Упаковка: <span
+														class="page-content__good-property-value good-package">Упаковка</span></div>
+												<div class="page-content__good-property">Количество: <span
+														class="page-content__good-property-value good-quantity">5</span></div>
+												<div class="page-content__good-property">Скидка: <span
+														class="page-content__good-property-value good-discount">50%</span></div>
+												<div class="page-content__good-property">Цена: <span
+														class="page-content__good-property-value page-content__good-property-value_color"><span
+															class="good-price">3.000,23</span>₽</span></div>
+											</div>
+										</div>
+									</div>
+									<div class="page-content__description-footer">
+										<div class="page-content__description-total">Итого: <span
+												class="page-content__description-total page-content__description-total_color"><span
+													class="total-price">50.650,61</span> руб.</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!--                                                                                                                                            -->
+
+
+	<div class="container-block">
+		<footer>
+			<div class="footer-top">
+				<div class="wrap">
+					<div class="footer__block">
+						<div class="footer-nav">
+							<div class="footer-nav__caption footer-caption">Навигация</div>
+							<nav>
+								<ul class="footer-nav__items">
+									<li class="footer-nav__item">
+										<a href="/about/">О компании</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/catalog/">Каталог</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/blog/">Новости</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/contacts/">Контакты</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/personal/">Личный кабинет</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/personal/cart/">Корзина</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/personal/favorite/">Избранное</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/compare/">Сравнение</a>
+									</li>
+									<li class="footer-nav__item">
+										<a href="/sitemap/">Карта сайта</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="footer-seo">
+							<div class="footer-seo__caption footer-caption">Плюсы от LETO Dental Service</div>
+							<div class="footer-seo__taps">
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_pur">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_gr">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_bl">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_gre">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+								<div class="footer-seo__taps-tag footer-seo__taps-tag_aq">
+									<span class="footer-seo__taps-tag-text">Seo текст</span>
+								</div>
+							</div>
+						</div>
+						<div class="footer-contacts">
+							<div class="footer-contacts__caption footer-caption">Наша связь</div>
+							<div class="footer-contacts__items">
+								<div class="footer-contacts__email footer-contacts__item">
+									<a href="mailto:sale@leto-med.ru">
+										<span class="footer-contacts__email-text">sale@leto-med.ru</span>
+									</a>
+								</div>
+								<div class="footer-contacts__phone footer-contacts__item">+7 (495) 727-07-87</div>
+								<div class="footer-contacts__call">
+									<a href="/contacts/"><span class="footer-contacts__call-btn">Заказать звонок</span></a>
+								</div>
+								<div class="footer-contacts__socials">
+									<a href="https://vk.com/leto_med">
+										<div class="footer-contacts__socials-icon-vk"></div>
+									</a>
+									<a href="#">
+										<div class="footer-contacts__socials-icon-ws"></div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-line"></div>
+				<div class="wrap">
+					<div class="footer__mob">
+						<nav>
+							<ul class="footer__mob-menu-items">
+								<li class="footer__mob-menu-item">
+									<a href="/about/">О компании</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/catalog/">Каталог</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/working-conditions/">Условия работы</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/blog/">Новости</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/contacts/">Контакты</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/personal/">Личный кабинет</a>
+								</li>
+								<li class="footer__mob-menu-item">
+									<a href="/sitemap/">Карта сайта</a>
+								</li>
+							</ul>
+						</nav>
+						<span class="footer__mob-location-desc">Ваш город:</span>
+						<button class="footer__mob-location">Москва</button>
+						<div class="footer-block__location-city-select">
+							<div class="footer-select-city__info footer-select-city__info_font">Ваш город — Москва?</div>
+							<div class="footer-select-city__confirmation">
+								<button class="footer-select-city__confirm">Да</button>
+								<div class="footer-select-city__info">или</div>
+								<select name="city" id="mob-city-select" class="footer-select-city__title">
+									<option value="" selected disabled>Нет, другой</option>
+									<option value="krd">Краснодар</option>
+									<option value="sip">Симферополь</option>
+								</select>
+							</div>
+							<div class="footer-select-city__info">Если вашего региона нет в списке, вы можете написать
+								нам на почту с пометкой "Доставка в наш регион", и мы предложим наилучший способ доставки.
+							</div>
+						</div>
+						<div class="footer__mob-bottom">
+							<div class="footer__mob-bottom-copyrights">
+								<p class="footer__mob-copyrights">&#169; Все права защищены</p>
+								<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh">
+									<p class="footer__mob-soglashenie">Соглашение об использовании персональных данных</p>
+								</a>
+							</div>
+							<div class="footer__mob-bottom-socials">
+								<a href="https://vk.com/leto_med">
+									<div class="footer-contacts__socials-icon-vk"></div>
+								</a>
+								<a href="#">
+									<div class="footer-contacts__socials-icon-ws"></div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="wrap">
+				<div class="footer-bottom">
+					<div class="footer-bottom__item">
+						<div class="footer-bottom__logo">
+							<a href="/main/">
+								<img src="./img/logo.svg" alt="Логотип Торговый Дом Лето">
+							</a>
+						</div>
+						<div class="footer-bottom__company company">
+							<div class="footer-bottom__company-title company-title">Торговый Дом Лето</div>
+							<div class="footer-bottom__company-slogan company-slogan">Расходные материалы для стоматологии
+							</div>
+						</div>
+					</div>
+					<div class="footer-bottom__item footer-bottom__item_text">
+						<p class="footer-bottom__copyrights">&#169; Все права защищены</p>
+						<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh/">
+							<p class="footer-bottom__soglashenie">Соглашение об использовании персональных данных</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

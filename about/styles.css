@@ -210,6 +210,11 @@ blockquote {
 	overflow: auto;
 }
 
+.section-news__items {
+	scrollbar-width: thin;
+	scrollbar-color: #1B9183 rgba(217, 217, 217, 0.50);
+}
+
 .section-news__items::-webkit-scrollbar {
 	width: 2px;
 	background-color: rgba(217, 217, 217, 0.50);
