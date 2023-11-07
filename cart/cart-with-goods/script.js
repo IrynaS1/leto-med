@@ -94,6 +94,11 @@ subsections.addEventListener('click', function (e) {
 		modalOpen.classList.remove('modal--active');
 		mobOverlay.classList.toggle('mob-modal-overlay--open');
 	}
+	if (e.target.className === 'footer__mob-back mob-btn-back-js') {
+		const modalOpen = e.target.closest('.subsection-mob-modal');
+		modalOpen.classList.remove('modal--active');
+		catalog.classList.add('modal--active');
+	}
 });
 
 const regBtn = document.querySelector('.header-menu__reg'),
