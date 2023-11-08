@@ -44,6 +44,7 @@ mobCitySelect.addEventListener('change', function () {
 });
 
 const menuBtn = document.querySelector('.m-menu-js');
+const mobOverlay = document.querySelector('.mob-modal-overlay');
 const menu = document.querySelector('.menu-mob-modal');
 const catalogBtn = document.querySelector('.m-catalog-js');
 const catalog = document.querySelector('.catalog-mob-modal');
@@ -51,15 +52,24 @@ const btnCloseCatalog = document.querySelector('.footer__mob-catalog-close');
 const returnBtn = document.querySelector('.mob-btn-back-js');
 
 menuBtn.addEventListener('click', function () {
-	menu.classList.toggle('modal--active');
+	mobOverlay.classList.add('mob-modal-overlay--open');
+	menu.classList.add('modal--active');
 });
 
 catalogBtn.addEventListener('click', function () {
-	catalog.classList.toggle('modal--active');
+	mobOverlay.classList.add('mob-modal-overlay--open');
+	catalog.classList.add('modal--active');
 });
 
 btnCloseCatalog.addEventListener('click', function () {
+	mobOverlay.classList.remove('mob-modal-overlay--open');
 	catalog.classList.remove('modal--active');
+});
+
+mobOverlay.addEventListener('click', function () {
+	const openModal = document.querySelector('.modal--active');
+	openModal.classList.remove('modal--active');
+	mobOverlay.classList.toggle('mob-modal-overlay--open');
 });
 
 catalog.addEventListener('click', function (e) {
@@ -77,29 +87,26 @@ returnBtn.addEventListener('click', function (e) {
 	catalog.classList.add('modal--active');
 });
 
-//ДОДЕЛАТЬ ЗАКРЫТИ МОДАЛЬНЫХ КЛИКОМ НА ПОДЛОЖКУ
-//И ЗАКРЫТИЕ КЛИКОМ НА КРЕСТИК МОДАЛЬНЫХ С ПОДКАТЕГОРИЯМИ
-
-document.body.addEventListener('click', function (e) {
-	e.preventDefault();
-
-	if (e.target.className === 'mob-modal-overlay') {
-		console.log(e.target);
+const subsections = document.querySelector('.footer__mob-catalog-items');
+subsections.addEventListener('click', function (e) {
+	if (e.target.className === 'footer__mob-catalog-close subsection-close-btn-js') {
+		const modalOpen = e.target.closest('.subsection-mob-modal');
+		modalOpen.classList.remove('modal--active');
+		mobOverlay.classList.toggle('mob-modal-overlay--open');
 	}
-
-	if (e.target.className === 'subsection-close-btn-js') {
-		console.log(1);
-		//const modal = e.target.closest('.subsection-mob-modal');
-		//modal.classList.remove('modal--active');
+	if (e.target.className === 'footer__mob-back mob-btn-back-js') {
+		const modalOpen = e.target.closest('.subsection-mob-modal');
+		modalOpen.classList.remove('modal--active');
+		catalog.classList.add('modal--active');
 	}
 });
 
-//МОДАЛЬНОЕ ОКНО РЕГИСТРАЦИИ
 const regBtn = document.querySelector('.header-menu__reg'),
 	overlay = document.querySelector('.overlay'),
 	modalReg = document.querySelector('.modal-reg'),
 	modalAuth = document.querySelector('.modal-auth'),
-	inputPassword = document.querySelectorAll('.modal-form__input-password'),
+	modalRecovery = document.querySelector('.modal-recovery'),
+	inputsPassword = document.querySelectorAll('.modal-form__input-password'),
 	authBtn = document.querySelector('.header-menu__auth'),
 	mobAuth = document.querySelector('.footer__mob-item-btn_auth');
 
@@ -116,29 +123,42 @@ authBtn.addEventListener('click', function () {
 mobAuth.addEventListener('click', function () {
 	overlay.classList.add('overlay--open');
 	modalAuth.classList.add('modal--open');
-})
-
-const passwordEye = document.querySelectorAll('.modal-form__password-eye');
-inputPassword.addEventListener('input', function () {
-	passwordEye.classList.add('show--password');
 });
 
-passwordEye.addEventListener('click', function () {
-	passwordEye.classList.toggle('show--password');
-	passwordEye.classList.toggle('close--password');
+const recoveryBtn = document.querySelector('.recovery-password');
+recoveryBtn.addEventListener('click', function () {
+	modalAuth.classList.remove('modal--open');
+	modalRecovery.classList.add('modal--open');
+});
 
-	if (inputPassword.getAttribute('type') === 'password') {
-		inputPassword.setAttribute('type', 'text');
-	} else {
-		inputPassword.setAttribute('type', 'password');
-	}
+const registrationBtn = document.querySelector('.registration');
+registrationBtn.addEventListener('click', function () {
+	modalAuth.classList.remove('modal--open');
+	modalReg.classList.add('modal--open');
+});
+
+inputsPassword.forEach(function (el) {
+	el.addEventListener('click', function (e) {
+		const passwordEye = e.target.nextElementSibling;
+		passwordEye.classList.add('show--password');
+		passwordEye.addEventListener('click', function () {
+			passwordEye.classList.toggle('show--password');
+			passwordEye.classList.toggle('close--password');
+			if (el.getAttribute('type') === 'password') {
+				el.setAttribute('type', 'text');
+			} else {
+				el.setAttribute('type', 'password');
+			}
+		});
+	});
 });
 
 overlay.addEventListener('click', function () {
 	overlay.classList.remove('overlay--open');
 	modalReg.classList.remove('modal--open');
+	modalAuth.classList.remove('modal--open');
+	modalRecovery.classList.remove('modal--open');
 });
-
 
 const footerLocationBtn = document.querySelector('.footer__mob-location');
 footerLocationBtn.addEventListener('click', function () {
