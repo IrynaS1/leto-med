@@ -384,6 +384,9 @@ blockquote {
 		margin-bottom: 15px;
 	}
 
+	.section-content {
+		min-width: 0;
+	}
 
 	.section-block__title-line:before {
 		border-left: 3px solid #702C91;
