@@ -19,7 +19,10 @@ html {
 }
 
 body {
+	font-family: Lato, sans-serif;
 	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
 	min-width: 320px;
 	min-height: 100vh;
 }
@@ -88,11 +91,6 @@ blockquote {
 .breadcrumbs__items {
 	display: flex;
 	color: rgba(0, 0, 0, 0.30);
-	font-family: Lato, sans-serif;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
 }
 
 .breadcrumbs__item_not-active:after {
@@ -113,8 +111,6 @@ blockquote {
 	color: #000;
 	font-family: Tenor Sans, sans-serif;
 	font-size: 50px;
-	font-style: normal;
-	font-weight: 400;
 	line-height: 84.5%;
 	letter-spacing: 0.75px;
 	margin-bottom: 23px;
@@ -124,8 +120,6 @@ blockquote {
 	color: #1B9183;
 	font-family: Lato, sans-serif;
 	font-size: 18px;
-	font-style: normal;
-	font-weight: 400;
 }
 
 .sitemap-item__section {
