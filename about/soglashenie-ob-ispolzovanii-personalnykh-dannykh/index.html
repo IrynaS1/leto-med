@@ -15,7 +15,6 @@
 	<link rel="stylesheet" href="./normalize.css">
 	<link rel="stylesheet" href="./template_styles.css">
 	<link rel="stylesheet" href="./styles.css">
-	<script charset="utf-8" src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
 	<script src="./script.js" defer></script>
 	<title>О компании</title>
 </head>
@@ -26,24 +25,26 @@
 			<div class="header">
 				<div class="header-menu">
 					<nav>
-						<ul class="header-menu__items">
-							<li><a href="/about/" class="header-menu__item selected">О компании</a></li>
-							<li><a href="/catalog/" class="header-menu__item">Каталог</a></li>
-							<li><a href="/working-conditions/" class="header-menu__item">Условия работы</a></li>
-							<li><a href="/blog/" class="header-menu__item">Новости</a></li>
-							<li><a href="/contacts/" class="header-menu__item">Контакты</a></li>
-							<li><a href="/personal/" class="header-menu__item">Личный кабинет</a></li>
-						</ul>
+						<div class="header-menu__items">
+							<div class="header-menu__item selected"><a href="/about/">О компании</a></div>
+							<div class="header-menu__item"><a href="/catalog/">Каталог</a></div>
+							<div class="header-menu__item"><a href="/working-conditions/">Условия работы</a></div>
+							<div class="header-menu__item"><a href="/blog/">Новости</a></div>
+							<div class="header-menu__item"><a href="/contacts/">Контакты</a></div>
+							<div class="header-menu__item"><a href="/personal/">Личный кабинет</a></div>
+							<button class="header-menu__reg header-menu__btn">Регистрация</button>
+							<button class="header-menu__auth header-menu__btn">Вход</button>
+							<button class="header-menu__user-name header-menu__btn unauthorized-user">Ivan</button>
+							<button class="header-menu__logout header-menu__btn unauthorized-user">Выход</button>
+						</div>
 					</nav>
-					<button class="header-menu__reg header-menu__btn">Регистрация</button>
-					<button class="header-menu__auth header-menu__btn">Вход</button>
 				</div>
 				<div class="wrap">
 					<div class="header-menu__mob">
 						<div class="header-menu__mob-company">
 							<div class="header-menu__mob-logo">
 								<a href="/main/">
-									<img src="./img/logo-s.png" alt="Логотип компании">
+									<img src="./img/logo.svg" alt="Логотип компании Торговый Дом Лето">
 								</a>
 							</div>
 							<div class="header-menu__mob-td">Торговый Дом Лето</div>
@@ -51,12 +52,120 @@
 						<div class="header-menu__mob-phone">+7 (495) 727-07-87</div>
 					</div>
 				</div>
+				<div class="overlay"></div>
+				<div class="modal modal-reg">
+					<div class="modal__title">Регистрация</div>
+					<form name="form-reg" method="post" action="" class="modal-form">
+						<div class="modal-form__data">
+							<label for="reg-name" class="modal-form__label">ФИО</label>
+							<input type="text" class="modal-form__input" name="reg-name" id="reg-name">
+						</div>
+						<div class="modal-form__data">
+							<label for="reg-email" class="modal-form__label">E-mail</label>
+							<input type="email" class="modal-form__input" name="reg-email" id="reg-email" required>
+						</div>
+						<div class="modal-form__data">
+							<label for="reg-tel" class="modal-form__label">Номер телефона</label>
+							<input type="tel" class="modal-form__input" name="reg-tel" id="reg-tel">
+						</div>
+						<div class="modal-form__data">
+							<label for="reg-date-birthday" class="modal-form__label">Дата рождения</label>
+							<input type="text" class="modal-form__input" name="reg-date-birthday" id="reg-date-birthday">
+						</div>
+						<div class="modal-form__data">
+							<label for="reg-login" class="modal-form__label">Логин</label>
+							<input type="text" class="modal-form__input" name="reg-login" id="reg-login" required>
+						</div>
+						<div class="modal-form__data modal-form__data-password">
+							<label for="reg-password" class="modal-form__label">Пароль</label>
+							<input type="password" class="modal-form__input modal-form__input-password" name="reg-password"
+								id="reg-password" required>
+							<button type="button" class="modal-form__password-eye"></button>
+						</div>
+						<div class="modal-form__data">
+							<label for="reg-captcha" class="modal-form__label">Введите символы с картинки</label>
+							<input type="text" class="modal-form__input" name="reg-captcha" id="reg-captcha" required>
+						</div>
+						<div class="modal-form__captcha"></div>
+						<button type="submit" class="modal-form__btn">Зарегистрироваться</button>
+						<div class="modal-form__info">Нажимая кнопку, вы даете согласие на обработку
+							<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh/" class="modal-form__info-link">
+								персональных данных
+							</a>
+						</div>
+					</form>
+					<div class="contacts__socials modal-form__socials">
+						<a href="https://vk.com/leto_med">
+							<div class="contacts__socials-icon-vk modal-form__socials-icon modal-form__socials-icon_mr">
+							</div>
+						</a>
+						<a href="#">
+							<div class="contacts__socials-icon-ws modal-form__socials-icon"></div>
+						</a>
+					</div>
+				</div>
+				<div class="modal modal-auth">
+					<div class="modal__title">Вход</div>
+					<form name="form-auth" method="post" action="/personal/?login=yes" class="modal-form">
+						<div class="modal-form__data">
+							<label for="auth-login" class="modal-form__label">Логин</label>
+							<input type="text" class="modal-form__input" name="auth-login" id="auth-login" required>
+						</div>
+						<div class="modal-form__data modal-form__data-password">
+							<label for="auth-password" class="modal-form__label">Пароль</label>
+							<input type="password" class="modal-form__input modal-form__input-password" name="auth-password"
+								id="auth-password" required>
+							<button type="button" class="modal-form__password-eye"></button>
+						</div>
+						<div class="modal-auth__checkbox">
+							<input type="checkbox" id="modal-auth-checkbox" name="modal-auth-checkbox"
+								class="modal-auth-checkbox" />
+							<label for="modal-auth-checkbox">Ответы на мои отзывы</label>
+						</div>
+						<button type="submit" class="modal-form__btn">Войти</button>
+					</form>
+					<div class="modal-form__link"><button type="button"
+							class="modal-form__link-mb modal-form__link-mb_a recovery-password">Забыли пароль?</button></div>
+					<div class="modal-form__link"><button type="button"
+							class="modal-form__link-mb modal-form__link-mb_b registration">Регистрация</button></div>
+					<div class="modal-form__info modal-form__info-auth">Если Вы впервые на сайте, заполните, пожалуйста,
+						<a href="/personal/profile/" class="modal-form__info-link modal-form__info-auth">регистрационную</a>
+						форму.
+					</div>
+					<div class="contacts__socials modal-form__socials">
+						<a href="https://vk.com/leto_med">
+							<div class="contacts__socials-icon-vk modal-form__socials-icon modal-form__socials-icon_mr">
+							</div>
+						</a>
+						<a href="#">
+							<div class="contacts__socials-icon-ws modal-form__socials-icon"></div>
+						</a>
+					</div>
+				</div>
+				<div class="modal modal-recovery">
+					<div class="modal__title">Восстановление</div>
+					<form name="form-recovery" method="get" action="" class="modal-form">
+						<div class="modal-form__data">
+							<label for="recovery-login-emeil" class="modal-form__label">E-mail или Логин</label>
+							<input type="text" class="modal-form__input" name="recovery-login-emeil" id="recovery-login-emeil"
+								required>
+						</div>
+						<div class="modal-form__data">
+							<label for="recovery-captcha" class="modal-form__label">Введите символы с картинки</label>
+							<input type="text" class="modal-form__input" name="recovery-captcha" id="recovery-captcha"
+								required>
+						</div>
+						<div class="modal-form__captcha"></div>
+						<button type="submit" class="modal-form__btn">Отправить письмо</button>
+					</form>
+				</div>
 				<div class="wrap">
 					<div class="header-block">
 						<div class="header-block__left">
 							<div class="header-block__logo">
 								<a href="/main/">
-									<img src="./img/logo.png" alt="Логотип компании">
+									<img src="./img/logo.svg" class="header-block__logo"
+										alt="Логотип компании Торговый Дом Лето">
 								</a>
 							</div>
 							<div class="header-block__company company">
@@ -80,7 +189,6 @@
 										<div class="header-select-city__info">или</div>
 										<select name="city" id="city-select" class="header-select-city__title">
 											<option value="" selected disabled>Нет, другой</option>
-											<!-- 	<option value="msk">Москва</option> -->
 											<option value="krd">Краснодар</option>
 											<option value="sip">Симферополь</option>
 										</select>
@@ -96,7 +204,7 @@
 							</div>
 						</div>
 						<div class="header-block__compare">
-							<a href="/personal/favorite/">
+							<a href="/personal/favourite/">
 								<div class="header-block__compare-item header-block__compare-item_mb">
 									<span class="header-block__compare-icon header-block__compare-icon_favourites"></span>
 									<span
@@ -242,7 +350,7 @@
 										<a href="/personal/cart/">Корзина</a>
 									</li>
 									<li class="footer-nav__item">
-										<a href="/personal/favorite/">Избранное</a>
+										<a href="/personal/favourite/">Избранное</a>
 									</li>
 									<li class="footer-nav__item">
 										<a href="/compare/">Сравнение</a>
@@ -325,9 +433,22 @@
 								</li>
 							</ul>
 						</nav>
-						<div class="footer__mob-location">
-							<div class="footer__mob-location-desc">Ваш город:</div>
-							<div class="footer__mob-location-city">Санкт-Петербург</div>
+						<span class="footer__mob-location-desc">Ваш город:</span>
+						<button class="footer__mob-location">Москва</button>
+						<div class="footer-block__location-city-select">
+							<div class="footer-select-city__info footer-select-city__info_font">Ваш город — Москва?</div>
+							<div class="footer-select-city__confirmation">
+								<button class="footer-select-city__confirm">Да</button>
+								<div class="footer-select-city__info">или</div>
+								<select name="city" id="mob-city-select" class="footer-select-city__title">
+									<option value="" selected disabled>Нет, другой</option>
+									<option value="krd">Краснодар</option>
+									<option value="sip">Симферополь</option>
+								</select>
+							</div>
+							<div class="footer-select-city__info">Если вашего региона нет в списке, вы можете написать
+								нам на почту с пометкой "Доставка в наш регион", и мы предложим наилучший способ доставки.
+							</div>
 						</div>
 						<div class="footer__mob-bottom">
 							<div class="footer__mob-bottom-copyrights">
@@ -354,7 +475,7 @@
 					<div class="footer-bottom__item">
 						<div class="footer-bottom__logo">
 							<a href="/main/">
-								<img src="./img/logo.png" alt="Логотип компании">
+								<img src="./img/logo.svg" class="footer-bottom__logo" alt="Логотип компании">
 							</a>
 						</div>
 						<div class="footer-bottom__company company">
@@ -365,9 +486,6 @@
 					</div>
 					<div class="footer-bottom__item footer-bottom__item_text">
 						<p class="footer-bottom__copyrights">&#169; Все права защищены</p>
-						<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh/">
-							<p class="footer-bottom__soglashenie">Соглашение об использовании персональных данных</p>
-						</a>
 					</div>
 				</div>
 			</div>
