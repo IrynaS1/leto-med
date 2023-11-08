@@ -1108,6 +1108,10 @@ body .overlay--open {
 		grid-area: cart;
 	}
 
+	.header-block__cart-button-num {
+		top: 7px;
+	}
+
 	.modal {
 		width: 436px;
 		padding: 26px 32px 20px 32px;
