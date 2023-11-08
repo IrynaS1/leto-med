@@ -88,11 +88,6 @@ blockquote {
 .breadcrumbs__items {
 	display: flex;
 	color: rgba(0, 0, 0, 0.30);
-	font-family: Lato, sans-serif;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
 }
 
 .breadcrumbs__item_not-active:after {
@@ -251,6 +246,15 @@ blockquote {
 		display: none;
 	}
 
+	.cart-container {
+		padding: 27px;
+		margin-bottom: 250px;
+	}
+
+	.cart-block__image {
+		margin-right: 0;
+	}
+
 	.title-block__main-title {
 		font-size: 20px;
 		letter-spacing: 0.3px;
@@ -281,49 +285,32 @@ blockquote {
 	}
 }
 
-@media (max-width: 850px) {
+@media (max-width: 745px) {
 	.cart-container {
 		flex-direction: column;
 		padding: 27px 30px 31px 30px;
 	}
 
 	.cart-block {
-		display: grid;
-		grid-template-columns: 1fr 210px;
-		grid-template-rows: 209px 1fr;
-		grid-template-areas: "text img"
-			"text text";
-		/* 			position: relative; */
-	}
-
-	/* 	.cart-block__image {
-
-	
-		position: absolute;
-		left: 330px;
-		bottom: 180px;
-		margin-right: 0;
-	} */
-
-	.cart-block__image {
-		grid-area: img;
-		width: 210px;
-		height: 209px;
-		/* Chosen height */
-		overflow: hidden;
+		width: 100%;
+		position: relative;
 	}
 
 	.cart-block__img {
-		width: 308px;
-		/* Fits the given width of the image container */
-		height: 308px;
-		/* Reduces deterioration because the height isn't forced */
-		margin: -25px 0 0 -5px;
-		/* The minus cuts off(hides) parts of the image */
+		width: 205px;
+		height: 159px;
+		background: url("./img/cart-content-mob.svg") no-repeat;
+		position: absolute;
+		right: -30px;
+		top: -27px;
 	}
 
 	.cart-block__content {
-		grid-area: text;
+		min-width: 100%;
 	}
 
+	.cart-block__link {
+		max-width: 360px;
+		padding: 17px;
+	}
 }

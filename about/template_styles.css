@@ -21,7 +21,6 @@ body {
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
-	overflow: auto;
 }
 
 img,
@@ -1457,7 +1456,3 @@ body .overlay--open {
 		display: flex;
 	}
 }
-
-@media (max-width: 500px) {
-.footer-block__location-city-select {
-	bottom: 120px;}}
