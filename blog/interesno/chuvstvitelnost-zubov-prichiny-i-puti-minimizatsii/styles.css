@@ -15,7 +15,10 @@ html {
 }
 
 body {
+	font-family: Lato, sans-serif;
 	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
 	min-width: 320px;
 	min-height: 100vh;
 }
@@ -85,11 +88,6 @@ blockquote {
 .breadcrumbs__items {
 	display: flex;
 	color: rgba(0, 0, 0, 0.30);
-	font-family: Lato, sans-serif;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
 }
 
 .breadcrumbs__item_not-active:after {
@@ -121,7 +119,6 @@ blockquote {
 	color: #000;
 	font-family: Inter, sans-serif;
 	font-size: 18px;
-	font-style: normal;
 	font-weight: 300;
 	border: 1px solid #FFF;
 }
@@ -141,7 +138,6 @@ blockquote {
 	border-radius: 4px;
 	border: 1px solid #1DA49C;
 	box-shadow: 0px 0px 10px -1px #1DA49C;
-	transition: 0.5s;
 }
 
 .blog__mob-title {
@@ -176,7 +172,6 @@ blockquote {
 	color: #000;
 	font-family: Tenor Sans, sans-serif;
 	font-size: 50px;
-	font-style: normal;
 	font-weight: 400;
 	line-height: 84.5%;
 	letter-spacing: 0.75px;
@@ -186,10 +181,7 @@ blockquote {
 .article__text {
 	color: rgba(0, 0, 0, 0.75);
 	text-align: justify;
-	font-family: Lato, sans-serif;
 	font-size: 15px;
-	font-style: normal;
-	font-weight: 400;
 }
 
 @media (max-width: 1919px) {
@@ -217,9 +209,9 @@ blockquote {
 	.general-section {
 		padding-top: 5px;
 		display: grid;
-		grid-template-areas: 'title'
-			'left-menu'
-			'articles';
+		grid-template-areas: "title"
+			"left-menu"
+			"articles";
 		margin-bottom: 11px;
 	}
 

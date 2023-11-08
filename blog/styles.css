@@ -15,7 +15,10 @@ html {
 }
 
 body {
+	font-family: Lato, sans-serif;
 	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
 	min-width: 320px;
 	min-height: 100vh;
 }
@@ -85,10 +88,6 @@ blockquote {
 .breadcrumbs__items {
 	display: flex;
 	color: rgba(0, 0, 0, 0.30);
-	font-family: Lato, sans-serif;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
 	line-height: normal;
 }
 
@@ -105,8 +104,10 @@ blockquote {
 .general-section {
 	padding-top: 2px;
 	display: grid;
-	grid-template-areas: 'left-menu title'
-		'left-menu articles';
+	grid-template-rows: 42px 20px 1fr;
+	grid-template-areas: "left-menu title"
+		"left-menu ."
+		"left-menu articles";
 	margin-bottom: 41px;
 }
 
@@ -125,7 +126,6 @@ blockquote {
 	color: #000;
 	font-family: Inter, sans-serif;
 	font-size: 18px;
-	font-style: normal;
 	font-weight: 300;
 	border: 1px solid #FFF;
 }
@@ -145,7 +145,6 @@ blockquote {
 	border-radius: 4px;
 	border: 1px solid #1DA49C;
 	box-shadow: 0px 0px 10px -1px #1DA49C;
-	transition: 0.5s;
 }
 
 .blog__main-title {
@@ -153,17 +152,18 @@ blockquote {
 	color: #000;
 	font-family: Tenor Sans, sans-serif;
 	font-size: 50px;
-	font-style: normal;
-	font-weight: 400;
 	line-height: 84.5%;
 	letter-spacing: 0.75px;
 	margin-bottom: 20px;
 }
 
+.content-blog {
+	grid-area: articles;
+}
+
 .blog__cards {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
 }
 
 .blog__card {
@@ -173,8 +173,6 @@ blockquote {
 	border-radius: 10px;
 	background-color: #FFF;
 	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.30);
-	font-family: Lato, sans-serif;
-	font-style: normal;
 	margin: 0 19px 24px 0;
 }
 
@@ -183,7 +181,7 @@ blockquote {
 	-ms-transform: scale(1.05);
 	transform: scale(1.05);
 	box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.60);
-	transition: 1s;
+	transition: 0.5s;
 }
 
 .blog__card-img {
@@ -210,7 +208,6 @@ blockquote {
 .blog__card-description {
 	color: rgba(0, 0, 0, 0.60);
 	font-size: 13px;
-	font-weight: 400;
 	overflow-wrap: break-word;
 	display: -webkit-box;
 	-webkit-line-clamp: 4;
@@ -279,9 +276,10 @@ blockquote {
 
 	.general-section {
 		padding-top: 5px;
-		grid-template-areas: 'title'
-			'left-menu'
-			'articles';
+		grid-template-rows: 50px 146px 1fr;
+		grid-template-areas: "title"
+			"left-menu"
+			"articles";
 		margin-bottom: 11px;
 	}
 
@@ -295,7 +293,7 @@ blockquote {
 		padding-top: 0;
 		min-height: 140px;
 		min-width: 358px;
-		margin: 0 0 5px 0;
+		margin: 0 0 25px 0;
 	}
 
 	.left-menu__item {
@@ -315,6 +313,7 @@ blockquote {
 
 	.blog__cards {
 		padding-top: 16px;
+		justify-content: space-between;
 	}
 
 	.blog__card {

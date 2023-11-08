@@ -15,7 +15,10 @@ html {
 }
 
 body {
+	font-family: Lato, sans-serif;
 	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
 	min-width: 320px;
 	min-height: 100vh;
 }
@@ -85,10 +88,6 @@ blockquote {
 .breadcrumbs__items {
 	display: flex;
 	color: rgba(0, 0, 0, 0.30);
-	font-family: Lato, sans-serif;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
 	line-height: normal;
 }
 
@@ -106,8 +105,6 @@ blockquote {
 	color: #000;
 	font-family: Tenor Sans, sans-serif;
 	font-size: 50px;
-	font-style: normal;
-	font-weight: 400;
 	line-height: 84.5%;
 	letter-spacing: 0.75px;
 	margin-bottom: 19px;
@@ -129,9 +126,7 @@ blockquote {
 
 .section-block__title {
 	color: #000;
-	font-family: Lato, sans-serif;
 	font-size: 22px;
-	font-style: normal;
 	font-weight: 700;
 	line-height: 96.5%;
 	margin-bottom: 9px;
@@ -153,10 +148,7 @@ blockquote {
 
 .section-block__text {
 	color: rgba(0, 0, 0, 0.55);
-	font-family: Lato, sans-serif;
 	font-size: 15px;
-	font-style: normal;
-	font-weight: 400;
 	text-align: justify;
 }
 
@@ -167,9 +159,7 @@ blockquote {
 .section-block__subtitle {
 	position: relative;
 	color: rgba(0, 0, 0, 0.80);
-	font-family: Lato, sans-serif;
 	font-size: 18px;
-	font-style: normal;
 	font-weight: 700;
 	line-height: 96.5%;
 	margin: 0 0 7px 0;
@@ -194,8 +184,6 @@ blockquote {
 	color: #000;
 	font-family: Tenor Sans, sans-serif;
 	font-size: 50px;
-	font-style: normal;
-	font-weight: 400;
 	line-height: 84.5%;
 	letter-spacing: 0.75px;
 	margin-bottom: 30px;
@@ -252,9 +240,7 @@ blockquote {
 .section-news__item-title {
 	max-height: 42px;
 	color: #000;
-	font-family: Lato, sans-serif;
 	font-size: 15px;
-	font-style: normal;
 	font-weight: 700;
 	line-height: 96.5%;
 	overflow-wrap: break-word;
