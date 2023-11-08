@@ -209,6 +209,11 @@ blockquote {
 	margin-bottom: 21px;
 }
 
+.form-contacts__btn:hover {
+	background: linear-gradient(268deg, #1B9589 8.03%, #21B6B5 103.83%);
+	color: #FFF;
+}
+
 .form-contacts__form-info {
 	padding: 0 37px 0 61px;
 	color: rgba(0, 0, 0, 0.75);
