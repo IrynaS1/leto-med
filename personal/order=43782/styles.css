@@ -21,7 +21,6 @@ body {
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
-	overflow: auto;
 }
 
 img,
@@ -86,11 +85,6 @@ iframe {
 .breadcrumbs__items {
 	display: flex;
 	color: rgba(0, 0, 0, 0.30);
-	font-family: Lato, sans-serif;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
 }
 
 .breadcrumbs__item_not-active:after {
@@ -228,7 +222,8 @@ iframe {
 
 .page-content__order-blocks {
 	grid-area: order;
-	display: flex;
+	display: grid;
+	grid-template-columns: 400px 1fr;
 }
 
 .page-content__order,
