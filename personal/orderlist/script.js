@@ -1,3 +1,12 @@
+const actionsBtn = document.querySelectorAll('.page-content__order-actions-btn');
+actionsBtn.forEach(function (el) {
+	el.addEventListener('click', function (e) {
+		e.preventDefault();
+		const actionsItems = e.target.nextElementSibling;
+		actionsItems.classList.toggle('order-action--open');
+	});
+});
+
 const cityUserBtn = document.querySelector('.header-block__location-city-name');
 cityUserBtn.addEventListener('click', function () {
 	const tooltip = document.querySelector('.header-block__location-city-select');
@@ -42,23 +51,13 @@ mobCitySelect.addEventListener('change', function () {
 	mobTooltip.classList.add('footer-select-city');
 });
 
-const actionsBtn = document.querySelectorAll('.page-content__order-actions-btn');
-actionsBtn.forEach(function (el) {
-	el.addEventListener('click', function (e) {
-		e.preventDefault();
-		const actionsItems = e.target.nextElementSibling;
-		actionsItems.classList.toggle('order-action--open');
-	});
-});
-
-//МОДАЛЬНОЕ ОКНО РЕГИСТРАЦИИ
 const regBtn = document.querySelector('.header-menu__reg'),
 	overlay = document.querySelector('.overlay'),
 	modalReg = document.querySelector('.modal-reg'),
 	modalAuth = document.querySelector('.modal-auth'),
-	inputPassword = document.querySelectorAll('.modal-form__input-password'),
-	authBtn = document.querySelector('.header-menu__auth'),
-	mobAuth = document.querySelector('.footer__mob-item-btn_auth');
+	modalRecovery = document.querySelector('.modal-recovery'),
+	inputsPassword = document.querySelectorAll('.modal-form__input-password'),
+	authBtn = document.querySelector('.header-menu__auth');
 
 regBtn.addEventListener('click', function () {
 	overlay.classList.add('overlay--open');
@@ -70,29 +69,43 @@ authBtn.addEventListener('click', function () {
 	modalAuth.classList.add('modal--open');
 });
 
-mobAuth.addEventListener('click', function () {
-	overlay.classList.add('overlay--open');
-	modalAuth.classList.add('modal--open');
-})
-
-const passwordEye = document.querySelectorAll('.modal-form__password-eye');
-inputPassword.addEventListener('input', function () {
-	passwordEye.classList.add('show--password');
+const recoveryBtn = document.querySelector('.recovery-password');
+recoveryBtn.addEventListener('click', function () {
+	modalAuth.classList.remove('modal--open');
+	modalRecovery.classList.add('modal--open');
 });
 
-passwordEye.addEventListener('click', function () {
-	passwordEye.classList.toggle('show--password');
-	passwordEye.classList.toggle('close--password');
+const registrationBtn = document.querySelector('.registration');
+registrationBtn.addEventListener('click', function () {
+	modalAuth.classList.remove('modal--open');
+	modalReg.classList.add('modal--open');
+});
 
-	if (inputPassword.getAttribute('type') === 'password') {
-		inputPassword.setAttribute('type', 'text');
-	} else {
-		inputPassword.setAttribute('type', 'password');
-	}
+inputsPassword.forEach(function (el) {
+	el.addEventListener('click', function (e) {
+		const passwordEye = e.target.nextElementSibling;
+		passwordEye.classList.add('show--password');
+		passwordEye.addEventListener('click', function () {
+			passwordEye.classList.toggle('show--password');
+			passwordEye.classList.toggle('close--password');
+			if (el.getAttribute('type') === 'password') {
+				el.setAttribute('type', 'text');
+			} else {
+				el.setAttribute('type', 'password');
+			}
+		});
+	});
 });
 
 overlay.addEventListener('click', function () {
 	overlay.classList.remove('overlay--open');
 	modalReg.classList.remove('modal--open');
+	modalAuth.classList.remove('modal--open');
+	modalRecovery.classList.remove('modal--open');
 });
 
+const footerLocationBtn = document.querySelector('.footer__mob-location');
+footerLocationBtn.addEventListener('click', function () {
+	const mobLocation = document.querySelector('.footer-block__location-city-select');
+	mobLocation.classList.toggle('footer-select-city');
+});
