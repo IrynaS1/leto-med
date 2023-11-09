@@ -276,7 +276,7 @@ blockquote {
 	flex-shrink: 0;
 	flex-grow: 0;
 	left: 3px;
-	top: 105px;
+	top: 90px;
 	border-radius: 5px;
 	border: 1px solid rgba(121, 121, 121, 0.50);
 	background-color: #FFF;
@@ -284,7 +284,7 @@ blockquote {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 50% 50%;
-	z-index: 100;
+	z-index: 1;
 }
 
 .good-selected:checked+label:before {
@@ -950,7 +950,7 @@ blockquote {
 	}
 
 	.good-selected+label:before {
-		left: 115px;
+		left: 113px;
 		top: 18px;
 	}
 }
