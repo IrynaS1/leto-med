@@ -201,6 +201,7 @@ header {
 .header-block__location-city {
 	display: flex;
 	position: relative;
+	align-items: center;
 	margin-bottom: 17px;
 }
 
@@ -214,7 +215,6 @@ header {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	border: none;
-	margin-top: -2px;
 }
 
 .header-block__location-city-select {
@@ -762,18 +762,6 @@ body .overlay--open {
 	margin-right: 9px;
 }
 
-.modal-form__checkbox {
-	/*УДАЛИТЬ ВСе!!!!!!!*/
-	margin-bottom: 37px;
-}
-
-.modal-form__checkbox-label {
-	/*УДАЛИТЬ ВСЕ!!!!!!!*/
-	color: rgba(0, 0, 0, 0.55);
-	font-size: 18px;
-}
-
-/*ДОБАВЛЕНЫ СТИЛИ ДЛЯ ЧЕКБОКСА!!!!!!!!!!!*/
 .modal-auth__checkbox {
 	color: rgba(0, 0, 0, 0.55);
 	font-size: 18px;
@@ -817,9 +805,6 @@ body .overlay--open {
 	background: url("./img/checked-reviews.svg") no-repeat;
 }
 
-/*ДОБАВЛЕНЫ СТИЛИ ДЛЯ ЧЕКБОКСА!!!!!!!!!!!*/
-
-/*ДОБАВЛЕН СТИЛЬ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 .modal-form__link {
 	display: flex;
 	justify-content: center;
@@ -1080,7 +1065,6 @@ body .overlay--open {
 	}
 
 	.header-menu {
-		padding-right: 0;
 		font-size: 12px;
 	}
 
@@ -1120,6 +1104,10 @@ body .overlay--open {
 
 	.header-block__cart {
 		grid-area: cart;
+	}
+
+	.header-block__cart-button-num {
+		top: 7px;
 	}
 
 	.modal {
@@ -1176,6 +1164,10 @@ body .overlay--open {
 
 	.modal-form__info-auth {
 		font-size: 16px;
+	}
+
+	.modal-form__password-eye {
+		bottom: 3px;
 	}
 }
 
@@ -1359,7 +1351,6 @@ body .overlay--open {
 		flex-direction: column;
 	}
 
-
 	.footer__mob-item_cart {
 		position: relative;
 	}
@@ -1390,7 +1381,8 @@ body .overlay--open {
 		background: url("./img/cart-mob.svg") center no-repeat;
 	}
 
-	.footer__mob-item-btn_cart:hover {
+	.footer__mob-item-btn_cart:hover,
+	.mob-cart--active {
 		background: url("./img/cart-mob-h.svg") center no-repeat;
 	}
 
@@ -1494,7 +1486,7 @@ body .overlay--open {
 		right: 0;
 		bottom: 0;
 		width: 100%;
-		background-color: rgba(0, 0, 0, 0.20);
+		background-color: rgba(0, 0, 0, 0.10);
 		margin: 0;
 		overflow: auto;
 		height: 100%;
@@ -1505,6 +1497,12 @@ body .overlay--open {
 
 	.mob-modal-overlay--open {
 		display: block;
+	}
+
+	.modal-auth__checkbox {
+		color: rgba(0, 0, 0, 0.55);
+		font-size: 15px;
+		margin-bottom: 21px;
 	}
 
 	.footer__mob-menu-item:not(:last-child) {
@@ -1699,6 +1697,7 @@ body .overlay--open {
 		width: 14px;
 		height: 14px;
 		bottom: 5px;
+		background-size: contain;
 	}
 
 	.modal-form__captcha {
@@ -1739,12 +1738,6 @@ body .overlay--open {
 
 	.modal-form__link-mb_b {
 		margin-bottom: 25px;
-	}
-
-	.modal-auth__checkbox {
-		color: rgba(0, 0, 0, 0.55);
-		font-size: 15px;
-		margin-bottom: 21px;
 	}
 
 	.footer-block__location-city-select {

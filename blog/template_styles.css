@@ -1159,6 +1159,10 @@ body .overlay--open {
 	.modal-form__info-auth {
 		font-size: 16px;
 	}
+
+	.modal-form__password-eye {
+		bottom: 3px;
+	}
 }
 
 @media (max-width:1300px) {
@@ -1350,6 +1354,76 @@ body .overlay--open {
 
 	.footer__mob-menu-item:not(:last-child) {
 		margin-bottom: 6px;
+	}
+	
+	.modal {
+		width: 360px;
+		padding: 20px 26px 19px 26px;
+		top: 31px;
+	}
+
+	.modal__title {
+		font-size: 25px;
+	}
+
+	.modal-form__label {
+		font-size: 15px;
+		margin-bottom: 1px;
+	}
+
+	.modal-form__input {
+		padding: 2px 9px 2px 9px;
+	}
+
+	.modal-form__data {
+		margin-bottom: 4px;
+	}
+
+	.modal-form__password-eye {
+		width: 14px;
+		height: 14px;
+		bottom: 5px;
+		background-size: contain;
+	}
+
+	.modal-form__captcha {
+		width: 100%;
+		margin-bottom: 26px;
+	}
+
+	.modal-form__btn {
+		display: block;
+		padding: 14px 10px 15px;
+		font-size: 20px;
+		margin: 0 auto 12px auto;
+	}
+
+	.modal-form__info {
+		padding: 0 0;
+		font-size: 14px;
+	}
+
+	.modal-form__socials-icon {
+		width: 35px;
+		height: 38px;
+	}
+
+	.modal-form__checkbox-label {
+		font-size: 15px;
+	}
+
+	.modal-form__checkbox-input+label::before {
+		width: 16px;
+		height: 16px;
+		margin-right: 4px;
+	}
+
+	.modal-form__link-mb {
+		width: 100%;
+	}
+
+	.modal-form__link-mb_b {
+		margin-bottom: 25px;
 	}
 
 	.footer__mob-location {
