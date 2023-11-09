@@ -1165,6 +1165,10 @@ body .overlay--open {
 	.modal-form__info-auth {
 		font-size: 16px;
 	}
+
+	.modal-form__password-eye {
+		bottom: 3px;
+	}
 }
 
 @media (max-width:1300px) {
@@ -1377,7 +1381,8 @@ body .overlay--open {
 		background: url("./img/cart-mob.svg") center no-repeat;
 	}
 
-	.footer__mob-item-btn_cart:hover {
+	.footer__mob-item-btn_cart:hover,
+	.mob-cart--active {
 		background: url("./img/cart-mob-h.svg") center no-repeat;
 	}
 
@@ -1692,6 +1697,7 @@ body .overlay--open {
 		width: 14px;
 		height: 14px;
 		bottom: 5px;
+		background-size: contain;
 	}
 
 	.modal-form__captcha {

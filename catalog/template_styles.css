@@ -1693,6 +1693,7 @@ body .overlay--open {
 		width: 14px;
 		height: 14px;
 		bottom: 5px;
+		background-size: contain;
 	}
 
 	.modal-form__captcha {

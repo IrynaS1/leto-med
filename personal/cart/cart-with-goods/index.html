@@ -7,8 +7,6 @@
 	<link rel="icon" href="./img/icon.svg">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
 		href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@300;400;600;700&family=PT+Sans:wght@700&family=Tenor+Sans&display=swap"
 		rel="stylesheet">
@@ -24,7 +22,6 @@
 		<header>
 			<div class="header">
 				<div class="header-menu">
-					<!--      изменена навигация!!!!!!!!!!!!!!-->
 					<nav>
 						<div class="header-menu__items">
 							<div class="header-menu__item"><a href="/about/">О компании</a></div>
@@ -33,10 +30,10 @@
 							<div class="header-menu__item"><a href="/blog/">Новости</a></div>
 							<div class="header-menu__item"><a href="/contacts/">Контакты</a></div>
 							<div class="header-menu__item selected"><a href="/personal/">Личный кабинет</a></div>
-							<button class="header-menu__reg header-menu__btn">Регистрация</button>
-							<button class="header-menu__auth header-menu__btn">Вход</button>
-							<button class="header-menu__user-name header-menu__btn unauthorized-user">Ivan</button>
-							<button class="header-menu__logout header-menu__btn unauthorized-user">Выход</button>
+							<button class="header-menu__reg header-menu__btn unauthorized-user">Регистрация</button>
+							<button class="header-menu__auth header-menu__btn unauthorized-user">Вход</button>
+							<button class="header-menu__user-name header-menu__btn">Ivan</button>
+							<button class="header-menu__logout header-menu__btn">Выход</button>
 						</div>
 					</nav>
 				</div>
@@ -45,7 +42,7 @@
 						<div class="header-menu__mob-company">
 							<div class="header-menu__mob-logo">
 								<a href="/main/">
-									<img src="./img/logo.svg" alt="Логотип Торговый Дом Лето">
+									<img src="./img/logo.svg" alt="Логотип компании Торговый Дом Лето">
 								</a>
 							</div>
 							<div class="header-menu__mob-td">Торговый Дом Лето</div>
@@ -53,7 +50,6 @@
 						<div class="header-menu__mob-phone">+7 (495) 727-07-87</div>
 					</div>
 				</div>
-				<!--      добавлены модальные окна!!!!!!!!!!!!!!-->
 				<div class="overlay"></div>
 				<div class="modal modal-reg">
 					<div class="modal__title">Регистрация</div>
@@ -91,7 +87,8 @@
 						<div class="modal-form__captcha"></div>
 						<button type="submit" class="modal-form__btn">Зарегистрироваться</button>
 						<div class="modal-form__info">Нажимая кнопку, вы даете согласие на обработку
-							<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh/" class="modal-form__info-link">
+							<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh/" class="modal-form__info-link"
+								target="_blank">
 								персональных данных
 							</a>
 						</div>
@@ -122,7 +119,7 @@
 						<div class="modal-auth__checkbox">
 							<input type="checkbox" id="modal-auth-checkbox" name="modal-auth-checkbox"
 								class="modal-auth-checkbox" />
-							<label for="modal-auth-checkbox">Ответы на мои отзывы</label>
+							<label for="modal-auth-checkbox">Запомнить меня на этом компьютере</label>
 						</div>
 						<button type="submit" class="modal-form__btn">Войти</button>
 					</form>
@@ -166,7 +163,8 @@
 						<div class="header-block__left">
 							<div class="header-block__logo">
 								<a href="/main/">
-									<img src="./img/logo.svg" alt="Логотип Торговый Дом Лето" class="header-menu__mob-logo-img">
+									<img src="./img/logo.svg" class="header-block__logo-img"
+										alt="Логотип компании Торговый Дом Лето">
 								</a>
 							</div>
 							<div class="header-block__company company">
@@ -176,7 +174,7 @@
 							</div>
 						</div>
 						<div class="header-block__search">
-							<input type="search" class="header-block__search-input" id="s-d-input" placeholder="Что Вы ищете?">
+							<input type="text" class="header-block__search-input" id="s-d-input" placeholder="Что Вы ищете?">
 							<button class="header-block__search-icon search-btn"></button>
 						</div>
 						<div class="header-block__location">
@@ -190,7 +188,6 @@
 										<div class="header-select-city__info">или</div>
 										<select name="city" id="city-select" class="header-select-city__title">
 											<option value="" selected disabled>Нет, другой</option>
-											<!-- 	<option value="msk">Москва</option> -->
 											<option value="krd">Краснодар</option>
 											<option value="sip">Симферополь</option>
 										</select>
@@ -206,7 +203,7 @@
 							</div>
 						</div>
 						<div class="header-block__compare">
-							<a href="/personal/favorite/">
+							<a href="/personal/favourite/">
 								<div class="header-block__compare-item header-block__compare-item_mb">
 									<span class="header-block__compare-icon header-block__compare-icon_favourites"></span>
 									<span
@@ -225,7 +222,9 @@
 						</div>
 						<div class="header-block__cart">
 							<div class="header-block__cart-button">
-								<div class="header-block__cart-btn"></div>
+								<a href="/personal/cart/">
+									<div class="header-block__cart-btn"></div>
+								</a>
 								<div class="header-block__cart-button-count">
 									<span class="header-block__cart-button-num">6</span>
 									<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"
@@ -249,14 +248,13 @@
 					</div>
 					<div class="header-block__mob">
 						<input type="text" class="header-block__mob-search" id="s-m-input"
-							placeholder="Что бы Вы хотели найти ?">
+							placeholder="Что бы Вы хотели найти?">
 						<button class="header-block__mob-s-icon search-mob-btn" id="s-m-btn"></button>
 					</div>
 				</div>
 			</div>
 		</header>
 	</div>
-
 
 	<!--                                                                                                                                            -->
 
@@ -282,395 +280,441 @@
 						</div>
 						<div class="cart-container">
 							<div class="cart-goods">
-								<div class="cart-goods__top">
-									<div class="cart-goods__top-left">
-										<div class="cart-goods__top-checkbox">
-											<input type="checkbox" id="cart-checkbox" name="cart-checkbox"
-												class="cart-goods-checkbox" />
-											<label for="cart-checkbox">Выделить все</label>
-										</div>
-										<div class="cart-goods__top-left-btn">
-											<button class="cart-top-btn cart-top-btn__delete">Удалить выбранные</button>
-										</div>
-									</div>
-									<div class="cart-goods__top-right">
-										<span class="cart-goods__top-right-img"></span>
-										<button class="cart-top-btn cart-top-btn__print">Распечатать</button>
-									</div>
-								</div>
-								<div class="cart-goods__goods-list">
-									<div class="cart-goods__list-title">Бытовая химия</div>
-									<div class="cart-goods__good-item">
-										<div class="cart-goods__good-card">
-											<div class="cart-goods__good-image">
-												<img src="./img/test-good-img.png" class="cart-goods__good-img" alt="Щетка многоразовая Шеврон для очистки внешних поверхностей (1 шт) ЗЕЛЕНАЯ
-	ШВНМ 22">
-												<span class="cart-goods__good-label cart-goods__good-label-text">Скидка</span>
-												<span class="cart-goods__good-label cart-goods__good-label-count">-50%</span>
+								<form name="making-order" id="making-order" action="" method="post">
+									<div class="cart-goods__top">
+										<div class="cart-goods__top-left">
+											<div class="cart-goods__top-checkbox">
+												<input type="checkbox" id="selected-all-checkbox" name=selected-all-checkbox"
+													class="cart-goods-checkbox" />
+												<label for="selected-all-checkbox">Выделить все</label>
 											</div>
-											<div class="cart-goods__good-desc">
-												<h2 class="cart-goods__good-title">Щетка многоразовая Шеврон для очистки внешних
-													поверхностей (1 шт) ЗЕЛЕНАЯ
-													ШВНМ 22</h2>
-												<div class="cart-goods__good-info">
-													<div class="cart-goods__good-i-top">
-														<div class="cart-goods__good-i-article">Артикул: <span
-																class="good-article">243948322</span> <span
-																class="good-article__info">Стандартная</span></div>
-														<div class="cart-goods__quantity-stock quantity-stock-green">Осталось <span
-																class="cart-goods__quantity-stock cart-goods__quantity-stock_count">2.344</span>
-															штук</d>
+											<div class="cart-goods__top-left-btn">
+												<button class="cart-top-btn cart-top-btn__delete">Удалить выбранные</button>
+											</div>
+										</div>
+										<div class="cart-goods__top-right">
+											<span class="cart-goods__top-right-img"></span>
+											<button class="cart-top-btn cart-top-btn__print">Распечатать</button>
+										</div>
+									</div>
+									<div class="cart-goods__goods-list">
+										<div class="cart-goods__list-title">Бытовая химия</div>
+										<!-- Чтобы чекбоксы переходили в стояние checked, были добавлены каждому товару произвольные id блокам cart-goods__good-card.
+											Затем эти id были добавлены в качестве идентификаторов чекбоксов ( в id чекбокса и его лейбл) -  -->
+										<div class="cart-goods__good-item">
+											<div class="good__checkbox">
+												<input type="checkbox" id="123456-good-selected" name="good-selected"
+													class="good-selected" />
+												<label for="123456-good-selected"></label>
+											</div>
+											<div class="cart-goods__good-card" id="123456">
+												<div class="cart-goods__good-image">
+													<img src="./img/test-good-img.png" class="cart-goods__good-img" alt="Щетка многоразовая Шеврон для очистки внешних поверхностей (1 шт) ЗЕЛЕНАЯ
+	ШВНМ 22">
+													<span class="cart-goods__good-label cart-goods__good-label-text">Скидка</span>
+													<span class="cart-goods__good-label cart-goods__good-label-count">-50%</span>
+												</div>
+												<div class="cart-goods__good-desc">
+													<h2 class="cart-goods__good-title">Щетка многоразовая Шеврон для очистки внешних
+														поверхностей (1 шт) ЗЕЛЕНАЯ
+														ШВНМ 22</h2>
+													<div class="cart-goods__good-info">
+														<div class="cart-goods__good-i-top">
+															<div class="cart-goods__good-i-article">Артикул: <span
+																	class="good-article">243948322</span> <span
+																	class="good-article__info">Стандартная</span></div>
+															<div class="cart-goods__quantity-stock quantity-stock-green">Осталось <span
+																	class="cart-goods__quantity-stock cart-goods__quantity-stock_count">2.344</span>
+																штук</d>
+															</div>
 														</div>
-													</div>
-													<div class="cart-goods__good-reviews reviews">
-														<div class="cart-goods__good-reviews-imgs reviews-imgs">
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-														</div>
-														<div class="cart-goods__good-reviews-text reviews-sku">10.395 отзывов
+														<div class="cart-goods__good-reviews reviews">
+															<div class="cart-goods__good-reviews-imgs reviews-imgs">
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+															</div>
+															<div class="cart-goods__good-reviews-text reviews-sku">10.395 отзывов
+															</div>
 														</div>
 													</div>
 												</div>
+												<div class="cart-goods__units">
+													<span class="cart-goods__units-item"><input type="checkbox"
+															class="cart-goods__unit" id="quantity-unit" name="quantity-unit"
+															value="yes">
+														<label for="quantity-unit">Штук</label></span>
+													<span class="cart-goods__units-item"><input type="checkbox"
+															class="cart-goods__quantity-pack" id="quantity-pack" name="quantity-pack"
+															value="yes">
+														<label for="quantity-pack">Упаковка</label></span>
+												</div>
+												<div class="cart-goods__price">
+													<span class="cart-goods__price-value good-price-value">1.000</span> ₽
+												</div>
+												<div class="cart-goods__qt">
+													<a class="cart-goods__qt-btn cart-goods__qt-minus decr" href="'#">-</a>
+													<input type="text" class="cart-goods__qt-count" value="1">
+													<a class="cart-goods__qt-btn cart-goods__qt-plus incr" href="'#">+</a>
+												</div>
+												<div class="cart-goods__good-icons">
+													<button class="cart-goods__good-icon good-compare-added"></button>
+													<button class="cart-goods__good-icon good-favour-added"></button>
+													<button class="cart-goods__good-icon good-delete"></button>
+												</div><a
+													href="/catalog/aksessuary-dlya-borov-trimmery/shchetka_mnogorazovaya_shevron_dlya_ochistki_vneshnikh_poverkhnostey_1_sht_zelenaya_shvnm_22/"
+													class="cart-goods__good-link">
+													<div class="cart-goods__good-page-link">Подробнее</div>
+												</a>
 											</div>
-											<div class="cart-goods__units">
-												<span class="cart-goods__units-item"><input type="checkbox" class="cart-goods__unit"
-														id="quantity-unit" name="quantity-unit" value="yes">
-													<label for="quantity-unit">Штук</label></span>
-												<span class="cart-goods__units-item"><input type="checkbox"
-														class="cart-goods__quantity-pack" id="quantity-pack" name="quantity-pack"
-														value="yes">
-													<label for="quantity-pack">Упаковка</label></span>
-											</div>
-											<div class="cart-goods__price">
-												<span class="cart-goods__price-value good-price-value">1.000</span> ₽
-											</div>
-											<div class="cart-goods__qt">
-												<a class="cart-goods__qt-btn cart-goods__qt-minus decr" href="'#">-</a>
-												<input type="text" class="cart-goods__qt-count" value="1">
-												<a class="cart-goods__qt-btn cart-goods__qt-plus incr" href="'#">+</a>
-											</div>
-											<div class="cart-goods__good-icons">
-												<button class="cart-goods__good-icon good-compare-added"></button>
-												<button class="cart-goods__good-icon good-favour-added"></button>
-												<button class="cart-goods__good-icon good-delete"></button>
-											</div><a
-												href="/catalog/aksessuary-dlya-borov-trimmery/shchetka_mnogorazovaya_shevron_dlya_ochistki_vneshnikh_poverkhnostey_1_sht_zelenaya_shvnm_22/"
-												class="cart-goods__good-link">
-												<div class="cart-goods__good-page-link">Подробнее</div>
-											</a>
 										</div>
-									</div>
-									<div class="cart-goods__good-item">
-										<div class="cart-goods__good-card">
-											<div class="cart-goods__good-image">
-												<img src="./img/test-good-img.png" class="cart-goods__good-img" alt="Щетка многоразовая Шеврон для очистки внешних поверхностей (1 шт) ЗЕЛЕНАЯ
-	ШВНМ 22">
+										<div class="cart-goods__good-item">
+											<div class="good__checkbox">
+												<input type="checkbox" id="456789-good-selected" name="good-selected-a"
+													class="good-selected" />
+												<label for="456789-good-selected"></label>
 											</div>
-											<div class="cart-goods__good-desc">
-												<h2 class="cart-goods__good-title">Щетка многоразовая Шеврон для очистки внешних
-													поверхностей (1 шт) ЗЕЛЕНАЯ
-													ШВНМ 22</h2>
-												<div class="cart-goods__good-info">
-													<div class="cart-goods__good-i-top">
-														<div class="cart-goods__good-i-article">Артикул: <span
-																class="good-article">243948322</span> <span
-																class="good-article__info">Стандартная</span></div>
-														<div class="cart-goods__quantity-stock quantity-stock-orange">Осталось <span
-																class="cart-goods__quantity-stock cart-goods__quantity-stock_count">207</span>
-															штук</d>
+											<div class="cart-goods__good-card" id="456789">
+												<div class="cart-goods__good-image">
+													<img src="./img/test-good-img.png" class="cart-goods__good-img" alt="Щетка многоразовая Шеврон для очистки внешних поверхностей (1 шт) ЗЕЛЕНАЯ
+	ШВНМ 22">
+												</div>
+												<div class="cart-goods__good-desc">
+													<h2 class="cart-goods__good-title">Щетка многоразовая Шеврон для очистки внешних
+														поверхностей (1 шт) ЗЕЛЕНАЯ
+														ШВНМ 22</h2>
+													<div class="cart-goods__good-info">
+														<div class="cart-goods__good-i-top">
+															<div class="cart-goods__good-i-article">Артикул: <span
+																	class="good-article">243948322</span> <span
+																	class="good-article__info">Стандартная</span></div>
+															<div class="cart-goods__quantity-stock quantity-stock-orange">Осталось
+																<span
+																	class="cart-goods__quantity-stock cart-goods__quantity-stock_count">207</span>
+																штук</d>
+															</div>
 														</div>
-													</div>
-													<div class="cart-goods__good-reviews reviews">
-														<div class="cart-goods__good-reviews-imgs reviews-imgs">
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-														</div>
-														<div class="cart-goods__good-reviews-text reviews-sku">10.395 отзывов
+														<div class="cart-goods__good-reviews reviews">
+															<div class="cart-goods__good-reviews-imgs reviews-imgs">
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+															</div>
+															<div class="cart-goods__good-reviews-text reviews-sku">10.395 отзывов
+															</div>
 														</div>
 													</div>
 												</div>
+												<div class="cart-goods__units">
+													<span class="cart-goods__units-item"><input type="checkbox"
+															class="cart-goods__unit" id="quantity-unit" name="quantity-unit"
+															value="yes">
+														<label for="quantity-unit">Штук</label></span>
+													<span class="cart-goods__units-item"><input type="checkbox"
+															class="cart-goods__quantity-pack" id="quantity-pack" name="quantity-pack"
+															value="yes">
+														<label for="quantity-pack">Упаковка</label></span>
+												</div>
+												<div class="cart-goods__price">
+													<span class="cart-goods__price-value good-price-value">500</span>
+													₽
+												</div>
+												<div class="cart-goods__qt">
+													<a class="cart-goods__qt-btn cart-goods__qt-minus decr" href="'#">-</a>
+													<input type="text" class="cart-goods__qt-count" value="1">
+													<a class="cart-goods__qt-btn cart-goods__qt-plus incr" href="'#">+</a>
+												</div>
+												<div class="cart-goods__good-icons">
+													<button class="cart-goods__good-icon good-compare"></button>
+													<button class="cart-goods__good-icon good-favour"></button>
+													<button class="cart-goods__good-icon good-delete"></button>
+												</div><a
+													href="/catalog/aksessuary-dlya-borov-trimmery/shchetka_mnogorazovaya_shevron_dlya_ochistki_vneshnikh_poverkhnostey_1_sht_zelenaya_shvnm_22/"
+													class="cart-goods__good-link">
+													<div class="cart-goods__good-page-link">Подробнее</div>
+												</a>
 											</div>
-											<div class="cart-goods__units">
-												<span class="cart-goods__units-item"><input type="checkbox" class="cart-goods__unit"
-														id="quantity-unit" name="quantity-unit" value="yes">
-													<label for="quantity-unit">Штук</label></span>
-												<span class="cart-goods__units-item"><input type="checkbox"
-														class="cart-goods__quantity-pack" id="quantity-pack" name="quantity-pack"
-														value="yes">
-													<label for="quantity-pack">Упаковка</label></span>
-											</div>
-											<div class="cart-goods__price">
-												<span class="cart-goods__price-value good-price-value">500</span>
-												₽
-											</div>
-											<div class="cart-goods__qt">
-												<a class="cart-goods__qt-btn cart-goods__qt-minus decr" href="'#">-</a>
-												<input type="text" class="cart-goods__qt-count" value="1">
-												<a class="cart-goods__qt-btn cart-goods__qt-plus incr" href="'#">+</a>
-											</div>
-											<div class="cart-goods__good-icons">
-												<button class="cart-goods__good-icon good-compare"></button>
-												<button class="cart-goods__good-icon good-favour"></button>
-												<button class="cart-goods__good-icon good-delete"></button>
-											</div><a
-												href="/catalog/aksessuary-dlya-borov-trimmery/shchetka_mnogorazovaya_shevron_dlya_ochistki_vneshnikh_poverkhnostey_1_sht_zelenaya_shvnm_22/"
-												class="cart-goods__good-link">
-												<div class="cart-goods__good-page-link">Подробнее</div>
-											</a>
 										</div>
-									</div>
-									<div class="cart-goods__good-item">
-										<div class="cart-goods__good-card">
-											<div class="cart-goods__good-image">
-												<img src="./img/test-good-img.png" class="cart-goods__good-img" alt="Щетка многоразовая Шеврон для очистки внешних поверхностей (1 шт) ЗЕЛЕНАЯ
-	ШВНМ 22">
+										<div class="cart-goods__good-item">
+											<div class="good__checkbox">
+												<input type="checkbox" id="789456-good-selected" name="good-selected-b"
+													class="good-selected" />
+												<label for="789456-good-selected"></label>
 											</div>
-											<div class="cart-goods__good-desc">
-												<h2 class="cart-goods__good-title">Щетка многоразовая Шеврон для очистки внешних
-													поверхностей (1 шт) ЗЕЛЕНАЯ
-													ШВНМ 22</h2>
-												<div class="cart-goods__good-info">
-													<div class="cart-goods__good-i-top">
-														<div class="cart-goods__good-i-article">Артикул: <span
-																class="good-article">243948322</span> <span
-																class="good-article__info">Стандартная</span></div>
-														<div class="cart-goods__quantity-stock quantity-stock-red">Осталось <span
-																class="cart-goods__quantity-stock cart-goods__quantity-stock_count">23</span>
-															штук</d>
+											<div class="cart-goods__good-card" id="789456">
+												<div class="cart-goods__good-image">
+													<img src="./img/test-good-img.png" class="cart-goods__good-img" alt="Щетка многоразовая Шеврон для очистки внешних поверхностей (1 шт) ЗЕЛЕНАЯ
+	ШВНМ 22">
+												</div>
+												<div class="cart-goods__good-desc">
+													<h2 class="cart-goods__good-title">Щетка многоразовая Шеврон для очистки внешних
+														поверхностей (1 шт) ЗЕЛЕНАЯ
+														ШВНМ 22</h2>
+													<div class="cart-goods__good-info">
+														<div class="cart-goods__good-i-top">
+															<div class="cart-goods__good-i-article">Артикул: <span
+																	class="good-article">243948322</span> <span
+																	class="good-article__info">Стандартная</span></div>
+															<div class="cart-goods__quantity-stock quantity-stock-red">Осталось <span
+																	class="cart-goods__quantity-stock cart-goods__quantity-stock_count">23</span>
+																штук</d>
+															</div>
 														</div>
-													</div>
-													<div class="cart-goods__good-reviews reviews">
-														<div class="cart-goods__good-reviews-imgs reviews-imgs">
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-														</div>
-														<div class="cart-goods__good-reviews-text reviews-sku">10.395 отзывов
+														<div class="cart-goods__good-reviews reviews">
+															<div class="cart-goods__good-reviews-imgs reviews-imgs">
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+															</div>
+															<div class="cart-goods__good-reviews-text reviews-sku">10.395 отзывов
+															</div>
 														</div>
 													</div>
 												</div>
+												<div class="cart-goods__units">
+													<span class="cart-goods__units-item"><input type="checkbox"
+															class="cart-goods__unit" id="quantity-unit" name="quantity-unit"
+															value="yes">
+														<label for="quantity-unit">Штук</label></span>
+													<span class="cart-goods__units-item"><input type="checkbox"
+															class="cart-goods__pack" id="quantity-pack" name="quantity-pack"
+															value="yes">
+														<label for="quantity-pack">Упаковка</label></span>
+												</div>
+												<div class="cart-goods__price">
+													<span class="cart-goods__price-value good-price-value">500</span>
+													₽
+												</div>
+												<div class="cart-goods__qt">
+													<a class="cart-goods__qt-btn cart-goods__qt-minus decr" href="'#">-</a>
+													<input type="text" class="cart-goods__qt-count" value="1">
+													<a class="cart-goods__qt-btn cart-goods__qt-plus incr" href="'#">+</a>
+												</div>
+												<div class="cart-goods__good-icons">
+													<button class="cart-goods__good-icon good-compare"></button>
+													<button class="cart-goods__good-icon good-favour"></button>
+													<button class="cart-goods__good-icon good-delete"></button>
+												</div><a
+													href="/catalog/aksessuary-dlya-borov-trimmery/shchetka_mnogorazovaya_shevron_dlya_ochistki_vneshnikh_poverkhnostey_1_sht_zelenaya_shvnm_22/"
+													class="cart-goods__good-link">
+													<div class="cart-goods__good-page-link">Подробнее</div>
+												</a>
 											</div>
-											<div class="cart-goods__units">
-												<span class="cart-goods__units-item"><input type="checkbox" class="cart-goods__unit"
-														id="quantity-unit" name="quantity-unit" value="yes">
-													<label for="quantity-unit">Штук</label></span>
-												<span class="cart-goods__units-item"><input type="checkbox" class="cart-goods__pack"
-														id="quantity-pack" name="quantity-pack" value="yes">
-													<label for="quantity-pack">Упаковка</label></span>
-											</div>
-											<div class="cart-goods__price">
-												<span class="cart-goods__price-value good-price-value">500</span>
-												₽
-											</div>
-											<div class="cart-goods__qt">
-												<a class="cart-goods__qt-btn cart-goods__qt-minus decr" href="'#">-</a>
-												<input type="text" class="cart-goods__qt-count" value="1">
-												<a class="cart-goods__qt-btn cart-goods__qt-plus incr" href="'#">+</a>
-											</div>
-											<div class="cart-goods__good-icons">
-												<button class="cart-goods__good-icon good-compare"></button>
-												<button class="cart-goods__good-icon good-favour"></button>
-												<button class="cart-goods__good-icon good-delete"></button>
-											</div><a
-												href="/catalog/aksessuary-dlya-borov-trimmery/shchetka_mnogorazovaya_shevron_dlya_ochistki_vneshnikh_poverkhnostey_1_sht_zelenaya_shvnm_22/"
-												class="cart-goods__good-link">
-												<div class="cart-goods__good-page-link">Подробнее</div>
-											</a>
 										</div>
-									</div>
-									<div class="cart-goods__good-item">
-										<div class="cart-goods__good-card">
-											<div class="cart-goods__good-image">
-												<img src="./img/test-good-img.png" class="cart-goods__good-img" alt="Щетка многоразовая Шеврон для очистки внешних поверхностей (1 шт) ЗЕЛЕНАЯ
-	ШВНМ 22">
-												<span class="cart-goods__good-label cart-goods__good-label-text">Скидка</span>
-												<span class="cart-goods__good-label cart-goods__good-label-count">-50%</span>
+										<div class="cart-goods__good-item">
+											<div class="good__checkbox">
+												<input type="checkbox" id="456123-good-selected" name="good-selected"
+													class="good-selected" />
+												<label for="456123-good-selected"></label>
 											</div>
-											<div class="cart-goods__good-desc">
-												<h2 class="cart-goods__good-title">Щетка многоразовая Шеврон для очистки внешних
-													поверхностей (1 шт) ЗЕЛЕНАЯ
-													ШВНМ 22</h2>
-												<div class="cart-goods__good-info">
-													<div class="cart-goods__good-i-top">
-														<div class="cart-goods__good-i-article">Артикул: <span
-																class="good-article">243948322</span> <span
-																class="good-article__info">Стандартная</span></div>
-														<div class="cart-goods__quantity-stock quantity-stock-green">Осталось <span
-																class="cart-goods__quantity-stock cart-goods__quantity-stock_count">2.344</span>
-															штук</d>
+											<div class="cart-goods__good-card" id="456123">
+												<div class="cart-goods__good-image">
+													<img src="./img/test-good-img.png" class="cart-goods__good-img" alt="Щетка многоразовая Шеврон для очистки внешних поверхностей (1 шт) ЗЕЛЕНАЯ
+	ШВНМ 22">
+													<span class="cart-goods__good-label cart-goods__good-label-text">Скидка</span>
+													<span class="cart-goods__good-label cart-goods__good-label-count">-50%</span>
+												</div>
+												<div class="cart-goods__good-desc">
+													<h2 class="cart-goods__good-title">Щетка многоразовая Шеврон для очистки внешних
+														поверхностей (1 шт) ЗЕЛЕНАЯ
+														ШВНМ 22</h2>
+													<div class="cart-goods__good-info">
+														<div class="cart-goods__good-i-top">
+															<div class="cart-goods__good-i-article">Артикул: <span
+																	class="good-article">243948322</span> <span
+																	class="good-article__info">Стандартная</span></div>
+															<div class="cart-goods__quantity-stock quantity-stock-green">Осталось <span
+																	class="cart-goods__quantity-stock cart-goods__quantity-stock_count">2.344</span>
+																штук</d>
+															</div>
 														</div>
-													</div>
-													<div class="cart-goods__good-reviews reviews">
-														<div class="cart-goods__good-reviews-imgs reviews-imgs">
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-														</div>
-														<div class="cart-goods__good-reviews-text reviews-sku">10.395 отзывов
+														<div class="cart-goods__good-reviews reviews">
+															<div class="cart-goods__good-reviews-imgs reviews-imgs">
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+															</div>
+															<div class="cart-goods__good-reviews-text reviews-sku">10.395 отзывов
+															</div>
 														</div>
 													</div>
 												</div>
+												<div class="cart-goods__units">
+													<span class="cart-goods__units-item"><input type="checkbox"
+															class="cart-goods__unit" id="quantity-unit" name="quantity-unit"
+															value="yes">
+														<label for="quantity-unit">Штук</label></span>
+													<span class="cart-goods__units-item"><input type="checkbox"
+															class="cart-goods__pack" id="quantity-pack" name="quantity-pack"
+															value="yes">
+														<label for="quantity-pack">Упаковка</label></span>
+												</div>
+												<div class="cart-goods__price">
+													<span class="cart-goods__price-value good-price-value">1.000</span> ₽
+												</div>
+												<div class="cart-goods__qt">
+													<a class="cart-goods__qt-btn cart-goods__qt-minus decr" href="'#">-</a>
+													<input type="text" class="cart-goods__qt-count" value="1">
+													<a class="cart-goods__qt-btn cart-goods__qt-plus incr" href="'#">+</a>
+												</div>
+												<div class="cart-goods__good-icons">
+													<button class="cart-goods__good-icon good-compare-added"></button>
+													<button class="cart-goods__good-icon good-favour-added"></button>
+													<button class="cart-goods__good-icon good-delete"></button>
+												</div><a
+													href="/catalog/aksessuary-dlya-borov-trimmery/shchetka_mnogorazovaya_shevron_dlya_ochistki_vneshnikh_poverkhnostey_1_sht_zelenaya_shvnm_22/"
+													class="cart-goods__good-link">
+													<div class="cart-goods__good-page-link">Подробнее</div>
+												</a>
 											</div>
-											<div class="cart-goods__units">
-												<span class="cart-goods__units-item"><input type="checkbox" class="cart-goods__unit"
-														id="quantity-unit" name="quantity-unit" value="yes">
-													<label for="quantity-unit">Штук</label></span>
-												<span class="cart-goods__units-item"><input type="checkbox" class="cart-goods__pack"
-														id="quantity-pack" name="quantity-pack" value="yes">
-													<label for="quantity-pack">Упаковка</label></span>
-											</div>
-											<div class="cart-goods__price">
-												<span class="cart-goods__price-value good-price-value">1.000</span> ₽
-											</div>
-											<div class="cart-goods__qt">
-												<a class="cart-goods__qt-btn cart-goods__qt-minus decr" href="'#">-</a>
-												<input type="text" class="cart-goods__qt-count" value="1">
-												<a class="cart-goods__qt-btn cart-goods__qt-plus incr" href="'#">+</a>
-											</div>
-											<div class="cart-goods__good-icons">
-												<button class="cart-goods__good-icon good-compare-added"></button>
-												<button class="cart-goods__good-icon good-favour-added"></button>
-												<button class="cart-goods__good-icon good-delete"></button>
-											</div><a
-												href="/catalog/aksessuary-dlya-borov-trimmery/shchetka_mnogorazovaya_shevron_dlya_ochistki_vneshnikh_poverkhnostey_1_sht_zelenaya_shvnm_22/"
-												class="cart-goods__good-link">
-												<div class="cart-goods__good-page-link">Подробнее</div>
-											</a>
 										</div>
-									</div>
-									<div class="cart-goods__good-item">
-										<div class="cart-goods__good-card">
-											<div class="cart-goods__good-image">
-												<img src="./img/test-good-img.png" class="cart-goods__good-img" alt="Щетка многоразовая Шеврон для очистки внешних поверхностей (1 шт) ЗЕЛЕНАЯ
-	ШВНМ 22">
+										<div class="cart-goods__good-item">
+											<div class="good__checkbox">
+												<input type="checkbox" id="741258-good-selected" name="good-selected"
+													class="good-selected" />
+												<label for="741258-good-selected"></label>
 											</div>
-											<div class="cart-goods__good-desc">
-												<h2 class="cart-goods__good-title">Щетка многоразовая Шеврон для очистки внешних
-													поверхностей (1 шт) ЗЕЛЕНАЯ
-													ШВНМ 22</h2>
-												<div class="cart-goods__good-info">
-													<div class="cart-goods__good-i-top">
-														<div class="cart-goods__good-i-article">Артикул: <span
-																class="good-article">243948322</span> <span
-																class="good-article__info">Стандартная</span>я</div>
-														<div class="cart-goods__quantity-stock quantity-stock-orange">Осталось <span
-																class="cart-goods__quantity-stock cart-goods__quantity-stock_count">207</span>
-															штук</d>
+											<div class="cart-goods__good-card" id="741258">
+												<div class="cart-goods__good-image">
+													<img src="./img/test-good-img.png" class="cart-goods__good-img" alt="Щетка многоразовая Шеврон для очистки внешних поверхностей (1 шт) ЗЕЛЕНАЯ
+	ШВНМ 22">
+												</div>
+												<div class="cart-goods__good-desc">
+													<h2 class="cart-goods__good-title">Щетка многоразовая Шеврон для очистки внешних
+														поверхностей (1 шт) ЗЕЛЕНАЯ
+														ШВНМ 22</h2>
+													<div class="cart-goods__good-info">
+														<div class="cart-goods__good-i-top">
+															<div class="cart-goods__good-i-article">Артикул: <span
+																	class="good-article">243948322</span> <span
+																	class="good-article__info">Стандартная</span>я</div>
+															<div class="cart-goods__quantity-stock quantity-stock-orange">Осталось
+																<span
+																	class="cart-goods__quantity-stock cart-goods__quantity-stock_count">207</span>
+																штук</d>
+															</div>
 														</div>
-													</div>
-													<div class="cart-goods__good-reviews reviews">
-														<div class="cart-goods__good-reviews-imgs reviews-imgs">
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-														</div>
-														<div class="cart-goods__good-reviews-text reviews-sku">10.395 отзывов
+														<div class="cart-goods__good-reviews reviews">
+															<div class="cart-goods__good-reviews-imgs reviews-imgs">
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+															</div>
+															<div class="cart-goods__good-reviews-text reviews-sku">10.395 отзывов
+															</div>
 														</div>
 													</div>
 												</div>
+												<div class="cart-goods__units">
+													<span class="cart-goods__units-item"><input type="checkbox"
+															class="cart-goods__unit" id="quantity-unit" name="quantity-unit"
+															value="yes">
+														<label for="quantity-unit">Штук</label></span>
+													<span class="cart-goods__units-item"><input type="checkbox"
+															class="cart-goods__pack" id="quantity-pack" name="quantity-pack"
+															value="yes">
+														<label for="quantity-pack">Упаковка</label></span>
+												</div>
+												<div class="cart-goods__price">
+													<span class="cart-goods__price-value good-price-value">500</span>
+													₽
+												</div>
+												<div class="cart-goods__qt">
+													<a class="cart-goods__qt-btn cart-goods__qt-minus decr" href="'#">-</a>
+													<input type="text" class="cart-goods__qt-count" value="1">
+													<a class="cart-goods__qt-btn cart-goods__qt-plus incr" href="'#">+</a>
+												</div>
+												<div class="cart-goods__good-icons">
+													<button class="cart-goods__good-icon good-compare"></button>
+													<button class="cart-goods__good-icon good-favour"></button>
+													<button class="cart-goods__good-icon good-delete"></button>
+												</div><a
+													href="/catalog/aksessuary-dlya-borov-trimmery/shchetka_mnogorazovaya_shevron_dlya_ochistki_vneshnikh_poverkhnostey_1_sht_zelenaya_shvnm_22/"
+													class="cart-goods__good-link">
+													<div class="cart-goods__good-page-link">Подробнее</div>
+												</a>
 											</div>
-											<div class="cart-goods__units">
-												<span class="cart-goods__units-item"><input type="checkbox" class="cart-goods__unit"
-														id="quantity-unit" name="quantity-unit" value="yes">
-													<label for="quantity-unit">Штук</label></span>
-												<span class="cart-goods__units-item"><input type="checkbox" class="cart-goods__pack"
-														id="quantity-pack" name="quantity-pack" value="yes">
-													<label for="quantity-pack">Упаковка</label></span>
-											</div>
-											<div class="cart-goods__price">
-												<span class="cart-goods__price-value good-price-value">500</span>
-												₽
-											</div>
-											<div class="cart-goods__qt">
-												<a class="cart-goods__qt-btn cart-goods__qt-minus decr" href="'#">-</a>
-												<input type="text" class="cart-goods__qt-count" value="1">
-												<a class="cart-goods__qt-btn cart-goods__qt-plus incr" href="'#">+</a>
-											</div>
-											<div class="cart-goods__good-icons">
-												<button class="cart-goods__good-icon good-compare"></button>
-												<button class="cart-goods__good-icon good-favour"></button>
-												<button class="cart-goods__good-icon good-delete"></button>
-											</div><a
-												href="/catalog/aksessuary-dlya-borov-trimmery/shchetka_mnogorazovaya_shevron_dlya_ochistki_vneshnikh_poverkhnostey_1_sht_zelenaya_shvnm_22/"
-												class="cart-goods__good-link">
-												<div class="cart-goods__good-page-link">Подробнее</div>
-											</a>
 										</div>
-									</div>
-									<div class="cart-goods__good-item">
-										<div class="cart-goods__good-card">
-											<div class="cart-goods__good-image">
-												<img src="./img/test-good-img.png" class="cart-goods__good-img" alt="Щетка многоразовая Шеврон для очистки внешних поверхностей (1 шт) ЗЕЛЕНАЯ
-	ШВНМ 22">
+										<div class="cart-goods__good-item">
+											<div class="good__checkbox">
+												<input type="checkbox" id="963258-good-selected" name="good-selected"
+													class="good-selected" />
+												<label for="963258-good-selected"></label>
 											</div>
-											<div class="cart-goods__good-desc">
-												<h2 class="cart-goods__good-title">Щетка многоразовая Шеврон для очистки внешних
-													поверхностей (1 шт) ЗЕЛЕНАЯ
-													ШВНМ 22</h2>
-												<div class="cart-goods__good-info">
-													<div class="cart-goods__good-i-top">
-														<div class="cart-goods__good-i-article">Артикул: <span
-																class="good-article">243948322</span> <span
-																class="good-article__info">Стандартная</span></div>
-														<div class="cart-goods__quantity-stock quantity-stock-red">Осталось <span
-																class="cart-goods__quantity-stock cart-goods__quantity-stock_count">23</span>
-															штук</d>
+											<div class="cart-goods__good-card" id="963258">
+												<div class="cart-goods__good-image">
+													<img src="./img/test-good-img.png" class="cart-goods__good-img" alt="Щетка многоразовая Шеврон для очистки внешних поверхностей (1 шт) ЗЕЛЕНАЯ
+	ШВНМ 22">
+												</div>
+												<div class="cart-goods__good-desc">
+													<h2 class="cart-goods__good-title">Щетка многоразовая Шеврон для очистки внешних
+														поверхностей (1 шт) ЗЕЛЕНАЯ
+														ШВНМ 22</h2>
+													<div class="cart-goods__good-info">
+														<div class="cart-goods__good-i-top">
+															<div class="cart-goods__good-i-article">Артикул: <span
+																	class="good-article">243948322</span> <span
+																	class="good-article__info">Стандартная</span></div>
+															<div class="cart-goods__quantity-stock quantity-stock-red">Осталось <span
+																	class="cart-goods__quantity-stock cart-goods__quantity-stock_count">23</span>
+																штук</d>
+															</div>
 														</div>
-													</div>
-													<div class="cart-goods__good-reviews reviews">
-														<div class="cart-goods__good-reviews-imgs reviews-imgs">
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-															<span class="cart-goods__good-reviews-img reviews-img"></span>
-														</div>
-														<div class="cart-goods__good-reviews-text reviews-sku">10.395 отзывов
+														<div class="cart-goods__good-reviews reviews">
+															<div class="cart-goods__good-reviews-imgs reviews-imgs">
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+																<span class="cart-goods__good-reviews-img reviews-img"></span>
+															</div>
+															<div class="cart-goods__good-reviews-text reviews-sku">10.395 отзывов
+															</div>
 														</div>
 													</div>
 												</div>
+												<div class="cart-goods__units">
+													<span class="cart-goods__units-item"><input type="checkbox"
+															class="cart-goods__unit" id="quantity-unit" name="quantity-unit"
+															value="yes">
+														<label for="quantity-unit">Штук</label></span>
+													<span class="cart-goods__units-item"><input type="checkbox"
+															class="cart-goods__pack" id="quantity-pack" name="quantity-pack"
+															value="yes">
+														<label for="quantity-pack">Упаковка</label></span>
+												</div>
+												<div class="cart-goods__price">
+													<span class="cart-goods__price-value good-price-value">500</span>
+													₽
+												</div>
+												<div class="cart-goods__qt">
+													<a class="cart-goods__qt-btn cart-goods__qt-minus decr" href="'#">-</a>
+													<input type="text" class="cart-goods__qt-count" value="1">
+													<a class="cart-goods__qt-btn cart-goods__qt-plus incr" href="'#">+</a>
+												</div>
+												<div class="cart-goods__good-icons">
+													<button class="cart-goods__good-icon good-compare"></button>
+													<button class="cart-goods__good-icon good-favour"></button>
+													<button class="cart-goods__good-icon good-delete"></button>
+												</div><a
+													href="/catalog/aksessuary-dlya-borov-trimmery/shchetka_mnogorazovaya_shevron_dlya_ochistki_vneshnikh_poverkhnostey_1_sht_zelenaya_shvnm_22/"
+													class="cart-goods__good-link">
+													<div class="cart-goods__good-page-link">Подробнее</div>
+												</a>
 											</div>
-											<div class="cart-goods__units">
-												<span class="cart-goods__units-item"><input type="checkbox" class="cart-goods__unit"
-														id="quantity-unit" name="quantity-unit" value="yes">
-													<label for="quantity-unit">Штук</label></span>
-												<span class="cart-goods__units-item"><input type="checkbox" class="cart-goods__pack"
-														id="quantity-pack" name="quantity-pack" value="yes">
-													<label for="quantity-pack">Упаковка</label></span>
-											</div>
-											<div class="cart-goods__price">
-												<span class="cart-goods__price-value good-price-value">500</span>
-												₽
-											</div>
-											<div class="cart-goods__qt">
-												<a class="cart-goods__qt-btn cart-goods__qt-minus decr" href="'#">-</a>
-												<input type="text" class="cart-goods__qt-count" value="1">
-												<a class="cart-goods__qt-btn cart-goods__qt-plus incr" href="'#">+</a>
-											</div>
-											<div class="cart-goods__good-icons">
-												<button class="cart-goods__good-icon good-compare"></button>
-												<button class="cart-goods__good-icon good-favour"></button>
-												<button class="cart-goods__good-icon good-delete"></button>
-											</div><a
-												href="/catalog/aksessuary-dlya-borov-trimmery/shchetka_mnogorazovaya_shevron_dlya_ochistki_vneshnikh_poverkhnostey_1_sht_zelenaya_shvnm_22/"
-												class="cart-goods__good-link">
-												<div class="cart-goods__good-page-link">Подробнее</div>
-											</a>
 										</div>
 									</div>
-								</div>
+								</form>
 							</div>
 							<div class="cart-order">
 								<div class="cart-total">
@@ -722,10 +766,10 @@
 												5.300,61
 											</div>
 										</div>
-										<button type="submit"
+										<button type="submit" name="making-order"
 											class="cart-total__bottom-btn cart-total__bottom-btn_reg btn-reg-order">Перейти к
 											оформлению</button>
-										<button type="submit"
+										<button type="submit" name="making-order"
 											class="cart-total__bottom-btn cart-total__bottom-btn_no-reg btn-no-reg-order">Оформить
 											без
 											регистрации</button>
@@ -774,7 +818,7 @@
 										<a href="/personal/cart/">Корзина</a>
 									</li>
 									<li class="footer-nav__item">
-										<a href="/personal/favorite/">Избранное</a>
+										<a href="/personal/favourite/">Избранное</a>
 									</li>
 									<li class="footer-nav__item">
 										<a href="/compare/">Сравнение</a>
@@ -842,7 +886,7 @@
 						</div>
 						<a href="/personal/cart/">
 							<div class="footer__mob-item footer__mob-item_cart">
-								<button class="footer__mob-item-btn footer__mob-item-btn_cart"></button>
+								<button class="footer__mob-item-btn footer__mob-item-btn_cart mob-cart--active"></button>
 								<span class="footer__mob-item-title">Корзина</span>
 								<div class="footer__cart-button-count">
 									<span class="footer__cart-button-num">23</span>
@@ -874,13 +918,14 @@
 					</div>
 					<div class="footer-bottom__item footer-bottom__item_text">
 						<p class="footer-bottom__copyrights">&#169; Все права защищены</p>
-						<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh/">
+						<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh/" target="_blank">
 							<p class="footer-bottom__soglashenie">Соглашение об использовании персональных данных</p>
 						</a>
 					</div>
 				</div>
 			</div>
 
+			<div class="mob-modal-overlay"></div>
 			<div class="menu-mob-modal">
 				<div class="footer__mob-menu">
 					<div class="footer__mob-contacts">
@@ -897,10 +942,8 @@
 							</span>
 						</div>
 					</div>
-					<!--изменена кнопка location-->
 					<span class="footer__mob-location-img"></span>
 					<button class="footer__mob-location">Москва</button>
-					<!--добалено определение локации пользователя-->
 					<div class="footer-block__location-city-select">
 						<div class="footer-select-city__info footer-select-city__info_font">Ваш город — Москва?</div>
 						<div class="footer-select-city__confirmation">
@@ -908,7 +951,6 @@
 							<div class="footer-select-city__info">или</div>
 							<select name="city" id="mob-city-select" class="footer-select-city__title">
 								<option value="" selected disabled>Нет, другой</option>
-								<!-- 	<option value="msk">Москва</option> -->
 								<option value="krd">Краснодар</option>
 								<option value="sip">Симферополь</option>
 							</select>
@@ -917,7 +959,6 @@
 							нам на почту с пометкой "Доставка в наш регион", и мы предложим наилучший способ доставки.
 						</div>
 					</div>
-					<!--добалено определение локации пользователя-->
 					<nav>
 						<ul class="footer__mob-menu-items">
 							<li class="footer__mob-menu-item">
@@ -939,7 +980,7 @@
 								<a href="/contacts/">Контакты</a>
 							</li>
 							<li class="footer__mob-menu-item">
-								<a href="/personal/favorite/">Избранное</a>
+								<a href="/personal/favourite/">Избранное</a>
 							</li>
 							<li class="footer__mob-menu-item">
 								<a href="/compare/">Сравнение</a>

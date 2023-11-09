@@ -88,11 +88,6 @@ blockquote {
 .breadcrumbs__items {
 	display: flex;
 	color: rgba(0, 0, 0, 0.30);
-	font-family: Lato, sans-serif;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
 }
 
 .breadcrumbs__item_not-active:after {
@@ -142,6 +137,7 @@ blockquote {
 
 .cart-goods__top-left {
 	display: flex;
+	align-items: self-start;
 }
 
 .cart-goods__top-checkbox {
@@ -152,10 +148,12 @@ blockquote {
 }
 
 .cart-goods__top-checkbox input[type="checkbox"] {
-	display: none;
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
 }
 
-.cart-top-checkbox+label {
+.cart-goods-checkbox+label {
 	cursor: pointer;
 	display: inline-flex;
 	align-items: center;
@@ -165,53 +163,27 @@ blockquote {
 	user-select: none;
 }
 
-.cart-checkbox+label:before {
-	content: " ";
-	color: #000;
-	display: inline-block;
-	font: 20px/30px Arial;
-	margin-right: 15px;
-	position: relative;
-	text-align: center;
-	text-indent: 0px;
-	width: 30px;
-	height: 30px;
-	background: #FFF;
-	border: 1px solid #e3e3e3;
-	border-image: initial;
-	vertical-align: middle;
-}
-
-.cart-top-checkbox:checked+label:before {
-	background: url('<svg height="11px" width="11px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve"><path d="M49.001,0H10.999C4.934,0,0,4.934,0,10.999v38.003C0,55.066,4.934,60,10.999,60h38.002C55.065,60,60,55.066,60,49.001 V10.999C60,4.934,55.065,0,49.001,0z" fill="#000000" style="fill: rgb(59, 130, 246);"></path></svg>') no-repeat;
-	border-radius: 3px;
-}
-
-
-/* .cart-checkbox-label:before {
+.cart-goods-checkbox+label:before {
 	content: "";
 	display: inline-block;
-	position: absolute;
-	top:  6px;
-	left: 0px;
-	width: 20px;
-	height: 20px;
-	margin: 0px 10px 0px 10px;
-	border: 1px solid #726f6f;
-	box-sizing: border-box;
-	background: #f5f6f6;
+	position: relative;
+	width: 19px;
+	height: 19px;
+	flex-shrink: 0;
+	flex-grow: 0;
+	border-radius: 5px;
+	border: 1px solid rgba(121, 121, 121, 0.50);
+	background-color: #FFF;
+	margin-right: 0.5em;
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-size: 90% 90%;
- }
- 
- .mfilter-col-inp:checked + .mfilter-col-label::before {
-	border-color: #347a89;
-	background-color: #347a89;
- } */
+	background-size: 50% 50%;
+}
 
-
-
+.cart-goods-checkbox:checked+label:before {
+	border-radius: 3px;
+	background: url("./img/square_checked.svg") no-repeat;
+}
 
 .cart-top-btn {
 	color: rgba(0, 0, 0, 0.50);
@@ -228,7 +200,7 @@ blockquote {
 }
 
 .cart-goods__goods-list {
-	max-height: 585px;
+	max-height: 610px;
 	padding-top: 10px;
 	border-radius: 10px;
 	background-color: #FFF;
@@ -261,18 +233,63 @@ blockquote {
 	letter-spacing: 0.3px;
 }
 
+.cart-goods__good-item {
+	position: relative;
+}
+
 .cart-goods__good-item:not(:last-child) {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.20);
 }
 
 .cart-goods__good-card {
-	padding: 13px 10px 10px 13px;
+	padding: 0 12px 13px 28px;
 	display: grid;
 	grid-template-columns: 185px 113px 150px 1fr 140px;
 	grid-template-rows: 1fr 43px 37px;
 	grid-template-areas: "imgs content content content btns"
 		"imgs units price . ."
 		"imgs units counts . link";
+}
+
+.good__checkbox input[type="checkbox"] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.good-selected+label {
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.good-selected+label:before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 19px;
+	height: 19px;
+	flex-shrink: 0;
+	flex-grow: 0;
+	left: 3px;
+	top: 105px;
+	border-radius: 5px;
+	border: 1px solid rgba(121, 121, 121, 0.50);
+	background-color: #FFF;
+	margin-right: 0.5em;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 50% 50%;
+	z-index: 100;
+}
+
+.good-selected:checked+label:before {
+	background-color: #fff;
+	background: url("./img/checked-reviews.svg") no-repeat;
 }
 
 .cart-goods__good-image {
@@ -309,7 +326,7 @@ blockquote {
 
 .cart-goods__good-label-count {
 	bottom: -5px;
-	padding: 4px 5px 7px 5px;
+	padding: 4px 5px;
 	font-size: 13px;
 }
 
@@ -355,7 +372,7 @@ blockquote {
 .reviews-img {
 	width: 16px;
 	height: 15px;
-	background: url('./img/star-blue.svg') no-repeat;
+	background: url("./img/star-blue.svg") no-repeat;
 	background-size: contain;
 }
 
@@ -413,9 +430,8 @@ blockquote {
 	transition: all .2s;
 	color: rgba(0, 0, 0, 0.30);
 	font-size: 12px;
-	font-weight: 400;
 	text-align: center;
-	margin: 3px 5px 3px 0;
+	margin: 2.6px 5px 3px 0;
 }
 
 .cart-goods__units-item:hover,
@@ -539,6 +555,7 @@ blockquote {
 
 .cart-order {
 	padding-top: 40px;
+	margin-bottom: 186px;
 }
 
 .cart-total {
@@ -619,6 +636,7 @@ blockquote {
 	border-radius: 10px;
 	border: 2px solid #22BABA;
 	box-shadow: 0px 0px 11px 1px #22BABA;
+	background-color: #fff;
 	color: #22BABA;
 	font-size: 20px;
 	font-weight: 700;
@@ -652,16 +670,16 @@ blockquote {
 }
 
 @media (max-width: 1443px) {
-	.cart-goods__goods-list {
-		max-height: 580px;
-	}
-
 	.cart-goods__good-reviews {
 		margin-bottom: 2px;
 	}
 }
 
 @media (max-width: 1270px) {
+	.cart-goods__goods-list {
+		max-height: 612px;
+	}
+
 	.cart-goods__good-title {
 		white-space: wrap;
 		display: -webkit-box;
@@ -681,7 +699,7 @@ blockquote {
 
 @media (max-width: 1130px) {
 	.cart-goods__goods-list {
-		max-height: 575px;
+		max-height: 590px;
 	}
 
 	.cart-goods__good-card {
@@ -804,19 +822,23 @@ blockquote {
 		margin-bottom: 14px;
 	}
 
+	.cart-goods__goods-list {
+		max-height: 530px;
+	}
+
 	.cart-goods__list-title {
 		padding-left: 0;
 	}
 
 	.cart-goods__good-card {
-		padding: 24px 11px 13px 3px;
-		grid-template-columns: 146px 1fr 1fr 1fr 140px;
+		padding: 0 12px 13px 1px;
+		grid-template-columns: 108px 38px 70px 1fr 1fr 1fr 140px;
 		grid-template-rows: 29px 1fr 1fr 46px 36px;
-		grid-template-areas: "imgs btns btns btns btns"
-			"imgs content content content content"
-			"imgs content content content content"
-			"units units counts counts counts"
-			"price price price link link";
+		grid-template-areas: "imgs imgs btns btns btns btns btns"
+			"imgs imgs content content content content content"
+			"imgs imgs content content content content content"
+			"units units units units counts counts counts"
+			"price price price price price link link";
 	}
 
 	.cart-goods__good-image {
@@ -925,5 +947,10 @@ blockquote {
 	.cart-order {
 		padding-top: 13px;
 		max-width: 360px;
+	}
+
+	.good-selected+label:before {
+		left: 115px;
+		top: 18px;
 	}
 }
