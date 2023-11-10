@@ -7,10 +7,6 @@
 	<link rel="icon" href="./img/icon.svg">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
 		href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Lato:wght@400;700&family=Montserrat:wght@300;400;600;700&family=PT+Sans:wght@700&family=Tenor+Sans&display=swap"
 		rel="stylesheet">
@@ -27,24 +23,26 @@
 			<div class="header">
 				<div class="header-menu">
 					<nav>
-						<ul class="header-menu__items">
-							<li><a href="/about/" class="header-menu__item">О компании</a></li>
-							<li><a href="/catalog/" class="header-menu__item selected">Каталог</a></li>
-							<li><a href="/working-conditions/" class="header-menu__item">Условия работы</a></li>
-							<li><a href="/blog/" class="header-menu__item">Новости</a></li>
-							<li><a href="/contacts/" class="header-menu__item">Контакты</a></li>
-							<li><a href="/personal/" class="header-menu__item">Личный кабинет</a></li>
-						</ul>
+						<div class="header-menu__items">
+							<div class="header-menu__item"><a href="/about/">О компании</a></div>
+							<div class="header-menu__item selected"><a href="/catalog/">Каталог</a></div>
+							<div class="header-menu__item"><a href="/working-conditions/">Условия работы</a></div>
+							<div class="header-menu__item"><a href="/blog/">Новости</a></div>
+							<div class="header-menu__item"><a href="/contacts/">Контакты</a></div>
+							<div class="header-menu__item"><a href="/personal/">Личный кабинет</a></div>
+							<button class="header-menu__reg header-menu__btn">Регистрация</button>
+							<button class="header-menu__auth header-menu__btn">Вход</button>
+							<button class="header-menu__user-name header-menu__btn unauthorized-user">Ivan</button>
+							<button class="header-menu__logout header-menu__btn unauthorized-user">Выход</button>
+						</div>
 					</nav>
-					<button class="header-menu__reg header-menu__btn">Регистрация</button>
-					<button class="header-menu__auth header-menu__btn">Вход</button>
 				</div>
 				<div class="wrap">
 					<div class="header-menu__mob">
 						<div class="header-menu__mob-company">
 							<div class="header-menu__mob-logo">
 								<a href="/main/">
-									<img src="./img/logo.svg" alt="Логотип Торговый Дом Лето">
+									<img src="./img/logo.svg" alt="Логотип компании Торговый Дом Лето">
 								</a>
 							</div>
 							<div class="header-menu__mob-td">Торговый Дом Лето</div>
@@ -52,12 +50,121 @@
 						<div class="header-menu__mob-phone">+7 (495) 727-07-87</div>
 					</div>
 				</div>
+				<div class="overlay"></div>
+				<div class="modal modal-reg">
+					<div class="modal__title">Регистрация</div>
+					<form name="form-reg" method="post" action="" class="modal-form">
+						<div class="modal-form__data">
+							<label for="reg-name" class="modal-form__label">ФИО</label>
+							<input type="text" class="modal-form__input" name="reg-name" id="reg-name">
+						</div>
+						<div class="modal-form__data">
+							<label for="reg-email" class="modal-form__label">E-mail</label>
+							<input type="email" class="modal-form__input" name="reg-email" id="reg-email" required>
+						</div>
+						<div class="modal-form__data">
+							<label for="reg-tel" class="modal-form__label">Номер телефона</label>
+							<input type="tel" class="modal-form__input" name="reg-tel" id="reg-tel">
+						</div>
+						<div class="modal-form__data">
+							<label for="reg-date-birthday" class="modal-form__label">Дата рождения</label>
+							<input type="text" class="modal-form__input" name="reg-date-birthday" id="reg-date-birthday">
+						</div>
+						<div class="modal-form__data">
+							<label for="reg-login" class="modal-form__label">Логин</label>
+							<input type="text" class="modal-form__input" name="reg-login" id="reg-login" required>
+						</div>
+						<div class="modal-form__data modal-form__data-password">
+							<label for="reg-password" class="modal-form__label">Пароль</label>
+							<input type="password" class="modal-form__input modal-form__input-password" name="reg-password"
+								id="reg-password" required>
+							<button type="button" class="modal-form__password-eye"></button>
+						</div>
+						<div class="modal-form__data">
+							<label for="reg-captcha" class="modal-form__label">Введите символы с картинки</label>
+							<input type="text" class="modal-form__input" name="reg-captcha" id="reg-captcha" required>
+						</div>
+						<div class="modal-form__captcha"></div>
+						<button type="submit" class="modal-form__btn">Зарегистрироваться</button>
+						<div class="modal-form__info">Нажимая кнопку, вы даете согласие на обработку
+							<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh/" class="modal-form__info-link"
+								target="_blank">
+								персональных данных
+							</a>
+						</div>
+					</form>
+					<div class="contacts__socials modal-form__socials">
+						<a href="https://vk.com/leto_med">
+							<div class="contacts__socials-icon-vk modal-form__socials-icon modal-form__socials-icon_mr">
+							</div>
+						</a>
+						<a href="#">
+							<div class="contacts__socials-icon-ws modal-form__socials-icon"></div>
+						</a>
+					</div>
+				</div>
+				<div class="modal modal-auth">
+					<div class="modal__title">Вход</div>
+					<form name="form-auth" method="post" action="/personal/?login=yes" class="modal-form">
+						<div class="modal-form__data">
+							<label for="auth-login" class="modal-form__label">Логин</label>
+							<input type="text" class="modal-form__input" name="auth-login" id="auth-login" required>
+						</div>
+						<div class="modal-form__data modal-form__data-password">
+							<label for="auth-password" class="modal-form__label">Пароль</label>
+							<input type="password" class="modal-form__input modal-form__input-password" name="auth-password"
+								id="auth-password" required>
+							<button type="button" class="modal-form__password-eye"></button>
+						</div>
+						<div class="modal-auth__checkbox">
+							<input type="checkbox" id="modal-auth-checkbox" name="modal-auth-checkbox"
+								class="modal-auth-checkbox" />
+							<label for="modal-auth-checkbox">Запомнить меня на этом компьютере</label>
+						</div>
+						<button type="submit" class="modal-form__btn">Войти</button>
+					</form>
+					<div class="modal-form__link"><button type="button"
+							class="modal-form__link-mb modal-form__link-mb_a recovery-password">Забыли пароль?</button></div>
+					<div class="modal-form__link"><button type="button"
+							class="modal-form__link-mb modal-form__link-mb_b registration">Регистрация</button></div>
+					<div class="modal-form__info modal-form__info-auth">Если Вы впервые на сайте, заполните, пожалуйста,
+						<a href="/personal/profile/" class="modal-form__info-link modal-form__info-auth">регистрационную</a>
+						форму.
+					</div>
+					<div class="contacts__socials modal-form__socials">
+						<a href="https://vk.com/leto_med">
+							<div class="contacts__socials-icon-vk modal-form__socials-icon modal-form__socials-icon_mr">
+							</div>
+						</a>
+						<a href="#">
+							<div class="contacts__socials-icon-ws modal-form__socials-icon"></div>
+						</a>
+					</div>
+				</div>
+				<div class="modal modal-recovery">
+					<div class="modal__title">Восстановление</div>
+					<form name="form-recovery" method="get" action="" class="modal-form">
+						<div class="modal-form__data">
+							<label for="recovery-login-emeil" class="modal-form__label">E-mail или Логин</label>
+							<input type="text" class="modal-form__input" name="recovery-login-emeil" id="recovery-login-emeil"
+								required>
+						</div>
+						<div class="modal-form__data">
+							<label for="recovery-captcha" class="modal-form__label">Введите символы с картинки</label>
+							<input type="text" class="modal-form__input" name="recovery-captcha" id="recovery-captcha"
+								required>
+						</div>
+						<div class="modal-form__captcha"></div>
+						<button type="submit" class="modal-form__btn">Отправить письмо</button>
+					</form>
+				</div>
 				<div class="wrap">
 					<div class="header-block">
 						<div class="header-block__left">
 							<div class="header-block__logo">
 								<a href="/main/">
-									<img src="./img/logo.svg" alt="Логотип Торговый Дом Лето">
+									<img src="./img/logo.svg" class="header-block__logo-img"
+										alt="Логотип компании Торговый Дом Лето">
 								</a>
 							</div>
 							<div class="header-block__company company">
@@ -81,7 +188,6 @@
 										<div class="header-select-city__info">или</div>
 										<select name="city" id="city-select" class="header-select-city__title">
 											<option value="" selected disabled>Нет, другой</option>
-											<!-- 	<option value="msk">Москва</option> -->
 											<option value="krd">Краснодар</option>
 											<option value="sip">Симферополь</option>
 										</select>
@@ -97,7 +203,7 @@
 							</div>
 						</div>
 						<div class="header-block__compare">
-							<a href="/personal/favorite/">
+							<a href="/personal/favourite/">
 								<div class="header-block__compare-item header-block__compare-item_mb">
 									<span class="header-block__compare-icon header-block__compare-icon_favourites"></span>
 									<span
@@ -116,7 +222,7 @@
 						</div>
 						<div class="header-block__cart">
 							<div class="header-block__cart-button">
-								<a href="/cart/">
+								<a href="/personal/cart/">
 									<div class="header-block__cart-btn"></div>
 								</a>
 								<div class="header-block__cart-button-count">
@@ -142,14 +248,13 @@
 					</div>
 					<div class="header-block__mob">
 						<input type="text" class="header-block__mob-search" id="s-m-input"
-							placeholder="Что бы Вы хотели найти ?">
+							placeholder="Что бы Вы хотели найти?">
 						<button class="header-block__mob-s-icon search-mob-btn" id="s-m-btn"></button>
 					</div>
 				</div>
 			</div>
 		</header>
 	</div>
-
 
 	<!--                                                                                                                                            -->
 
@@ -227,7 +332,7 @@
 													<input type="range" class="filter-content__price-range-input price-range-max"
 														min="0" max="100000" value="99999">
 												</div>
-												<button class="filter-content__price-btn">Применить ( <span
+												<button class="filter-content__btn filter-content__price-btn">Применить ( <span
 														class="filter-price-count">849</span> )</button>
 											</form>
 										</div>
@@ -249,37 +354,38 @@
 													<div class="filter-content__checkbox">
 														<input type="checkbox" id="vendor-checkbox" name="vendor-checkbox"
 															class="filter-checkbox" />
-														<label for="vendor-checkbox">Все производители</label>
+														<label for="vendor-checkbox" class="filter-checkbox-label">Все
+															производители</label>
 													</div>
 													<div class="filter-content__checkbox">
 														<input type="checkbox" id="vendor-checkbox" name="vendor-checkbox"
 															class="filter-checkbox" />
-														<label for="vendor-checkbox">Bien-Air</label>
+														<label for="vendor-checkbox" class="filter-checkbox-label">Bien-Air</label>
 													</div>
 													<div class="filter-content__checkbox">
 														<input type="checkbox" id="vendor-checkbox" name="vendor-checkbox"
 															class="filter-checkbox" />
-														<label for="vendor-checkbox">Roder</label>
+														<label for="vendor-checkbox" class="filter-checkbox-label">Roder</label>
 													</div>
 													<div class="filter-content__checkbox">
 														<input type="checkbox" id="vendor-checkbox" name="vendor-checkbox"
 															class="filter-checkbox" />
-														<label for="vendor-checkbox">Bien-Air</label>
+														<label for="vendor-checkbox" class="filter-checkbox-label">Bien-Air</label>
 													</div>
 													<div class="filter-content__checkbox">
 														<input type="checkbox" id="vendor-checkbox" name="vendor-checkbox"
 															class="filter-checkbox" />
-														<label for="vendor-checkbox">Mahmud</label>
+														<label for="vendor-checkbox" class="filter-checkbox-label">Mahmud</label>
 													</div>
 													<div class="filter-content__checkbox">
 														<input type="checkbox" id="vendor-checkbox" name="vendor-checkbox"
 															class="filter-checkbox" />
-														<label for="vendor-checkbox">Lubler</label>
+														<label for="vendor-checkbox" class="filter-checkbox-label">Lubler</label>
 													</div>
 													<div class="filter-content__checkbox">
 														<input type="checkbox" id="vendor-checkbox" name="vendor-checkbox"
 															class="filter-checkbox" />
-														<label for="vendor-checkbox">Lubler</label>
+														<label for="vendor-checkbox" class="filter-checkbox-label">Lubler</label>
 													</div>
 												</div>
 											</form>
@@ -297,37 +403,42 @@
 													<div class="filter-content__checkbox">
 														<input type="checkbox" id="purpose-checkbox" name="purpose-checkbox"
 															class="filter-checkbox" />
-														<label for="purpose-checkbox">Антибактериальный уход</label>
+														<label for="purpose-checkbox" class="filter-checkbox-label">Антибактериальный
+															уход</label>
 													</div>
 													<div class="filter-content__checkbox">
 														<input type="checkbox" id="purpose-checkbox" name="purpose-checkbox"
 															class="filter-checkbox" />
-														<label for="purpose-checkbox">Для восстановления цвета</label>
+														<label for="purpose-checkbox" class="filter-checkbox-label">Для восстановления
+															цвета</label>
 													</div>
 													<div class="filter-content__checkbox">
 														<input type="checkbox" id="purpose-checkbox" name="purpose-checkbox"
 															class="filter-checkbox" />
-														<label for="purpose-checkbox">Для белого белья</label>
+														<label for="purpose-checkbox" class="filter-checkbox-label">Для белого
+															белья</label>
 													</div>
 													<div class="filter-content__checkbox">
 														<input type="checkbox" id="purpose-checkbox" name="purpose-checkbox"
 															class="filter-checkbox" />
-														<label for="purpose-checkbox">Для блеска</label>
+														<label for="purpose-checkbox" class="filter-checkbox-label">Для блеска</label>
 													</div>
 													<div class="filter-content__checkbox">
 														<input type="checkbox" id="purpose-checkbox" name="purpose-checkbox"
 															class="filter-checkbox" />
-														<label for="purpose-checkbox">Для ванны</label>
+														<label for="purpose-checkbox" class="filter-checkbox-label">Для ванны</label>
 													</div>
 													<div class="filter-content__checkbox">
 														<input type="checkbox" id="purpose-checkbox" name="purpose-checkbox"
 															class="filter-checkbox" />
-														<label for="purpose-checkbox">Для восстановления цвета</label>
+														<label for="purpose-checkbox" class="filter-checkbox-label">Для восстановления
+															цвета</label>
 													</div>
 													<div class="filter-content__checkbox">
 														<input type="checkbox" id="purpose-checkbox" name="purpose-checkbox"
 															class="filter-checkbox" />
-														<label for="purpose-checkbox">Антибактериальный уход</label>
+														<label for="purpose-checkbox" class="filter-checkbox-label">Антибактериальный
+															уход</label>
 													</div>
 												</div>
 											</form>
@@ -345,37 +456,43 @@
 													<div class="filter-content__checkbox">
 														<input type="checkbox" id="type-product-checkbox" name="type-product-checkbox"
 															class="filter-checkbox" />
-														<label for="type-product-checkbox">Бальзам</label>
+														<label for="type-product-checkbox"
+															class="filter-checkbox-label">Бальзам</label>
 													</div>
 													<div class="filter-content__checkbox">
 														<input type="checkbox" id="type-product-checkbox" name="type-product-checkbox"
 															class="filter-checkbox" />
-														<label for="type-product-checkbox">Гель</label>
+														<label for="type-product-checkbox" class="filter-checkbox-label">Гель</label>
 													</div>
 													<div class="filter-content__checkbox">
 														<input type="checkbox" id="type-product-checkbox" name="type-product-checkbox"
 															class="filter-checkbox" />
-														<label for="type-product-checkbox">Жидкость</label>
+														<label for="type-product-checkbox"
+															class="filter-checkbox-label">Жидкость</label>
 													</div>
 													<div class="filter-content__checkbox">
 														<input type="checkbox" id="type-product-checkbox" name="type-product-checkbox"
 															class="filter-checkbox" />
-														<label for="type-product-checkbox">Капсулы</label>
+														<label for="type-product-checkbox"
+															class="filter-checkbox-label">Капсулы</label>
 													</div>
 													<div class="filter-content__checkbox">
 														<input type="checkbox" id="type-product-checkbox" name="type-product-checkbox"
 															class="filter-checkbox" />
-														<label for="type-product-checkbox">Стирка</label>
+														<label for="type-product-checkbox"
+															class="filter-checkbox-label">Стирка</label>
 													</div>
 													<div class="filter-content__checkbox">
 														<input type="checkbox" id="type-product-checkbox" name="type-product-checkbox"
 															class="filter-checkbox" />
-														<label for="type-product-checkbox">Бальзам</label>
+														<label for="type-product-checkbox"
+															class="filter-checkbox-label">Бальзам</label>
 													</div>
 													<div class="filter-content__checkbox">
 														<input type="checkbox" id="type-product-checkbox" name="type-product-checkbox"
 															class="filter-checkbox" />
-														<label for="type-product-checkbox">Бальзам</label>
+														<label for="type-product-checkbox"
+															class="filter-checkbox-label">Бальзам</label>
 													</div>
 												</div>
 											</form>
@@ -404,7 +521,7 @@
 													<input type="range" class="filter-content__volume-range-input volume-range-max"
 														min="0" max="100000" value="485">
 												</div>
-												<button class="filter-content__volume-btn">Применить ( <span
+												<button class="filter-content__btn filter-content__volume-btn">Применить ( <span
 														class="filter-volume-count">342</span> )</button>
 											</form>
 										</div>
@@ -432,7 +549,7 @@
 													<input type="range" class="filter-content__weight-range-input weight-range-max"
 														min="0" max="100000" value="4">
 												</div>
-												<button class="filter-content__weight-btn">Применить ( <span
+												<button class=" filter-content__btn filter-content__weight-btn">Применить ( <span
 														class="filter-weight-count">1.492</span> )</button>
 											</form>
 										</div>
@@ -444,21 +561,23 @@
 												<div class="filter-content__checkbox">
 													<input type="checkbox" id="discount-checkbox" name="discount-checkbox"
 														class="filter-checkbox" />
-													<label for="discount-checkbox">Товары со скидкой</label>
+													<label for="discount-checkbox" class="filter-checkbox-label">Товары со
+														скидкой</label>
 												</div>
 												<div class="filter-content__checkbox">
 													<input type="checkbox" id="hint-checkbox" name="hint-checkbox"
 														class="filter-checkbox" />
-													<label for="hint-checkbox">Товары с акцией</label>
+													<label for="hint-checkbox" class="filter-checkbox-label">Товары с акцией</label>
 												</div>
 											</div>
 										</form>
 									</div>
-									<button class="filter-content__clear-btn">Очистить фильтр</button>
+									<button class="filter-content__btn filter-content__clear-btn">Очистить фильтр</button>
 								</form>
 							</div>
 						</div>
 						<div class="central-block central-block__cell">
+							<button class="central-block__mob-return-btn">Назад</button>
 							<h1 class="section-title">Боры и вращающийся инструмент</h1>
 							<div class="section-desc">
 								<p>Стоматологические боры и вращающийся инструмент применяют при препарировании твердой
@@ -501,6 +620,314 @@
 										</div>
 										<div class="goods__sort-title">Сортировка</div>
 									</div>
+									<div class="goods__mob-filters">
+										<div class="goods__mob-filters-title">Фильтры</div>
+										<button class="goods__mob-filters-btn"></button>
+										<div class="goods__filters-dropdown filters-mob-items-js">
+											<form name="filters" action="/catalog/bory-i-vrashchayushchiysya-instrument/"
+												method="GET" class="filters">
+												<div class="filter filter-price">
+													<button class="filter-top filter__blur">
+														<span class="filter-top__arrow-down"></span>
+														<h4 class="filter-top__title">Цена</h4>
+													</button>
+													<div class="filter-content">
+														<form name="price-filter"
+															action="/catalog/bory-i-vrashchayushchiysya-instrument/" method="get"
+															class="filter-price">
+															<div class="filter-content__price-inputs">
+																<input type="number"
+																	class="filter-price__price-input price-input-min filter__blur"
+																	value="999">
+																<input type="number"
+																	class="filter-price__price-input price-input-max filter__blur"
+																	value="99999">
+															</div>
+															<div class="filter-content__price-slider">
+																<div class="filter-content__price-slider-progress"></div>
+															</div>
+															<div class="filter-content__price-range-inputs">
+																<input type="range"
+																	class="filter-content__price-range-input price-range-min" min="0"
+																	max="100000" value="999">
+																<input type="range"
+																	class="filter-content__price-range-input price-range-max" min="0"
+																	max="100000" value="99999">
+															</div>
+															<button
+																class="filter-content__btn filter-content__price-btn filter__blur">Применить
+																( <span class="filter-price-count">849</span> )</button>
+														</form>
+													</div>
+												</div>
+												<div class="filter filter-vendor">
+													<button class="filter-top filter__blur">
+														<span class="filter-top__arrow-down"></span>
+														<h4 class="filter-top__title">Производитель</h4>
+													</button>
+													<div class="filter-content">
+														<form name="vendor-filter"
+															action="/catalog/bory-i-vrashchayushchiysya-instrument/" method="GET"
+															class="filter-vendor">
+															<div class="filter-content__search">
+																<input type="text" class="filter-content__search-input filter__blur"
+																	id="filter-vendor-search" placeholder="Поиск">
+																<button class="filter-content__search-btn"></button>
+															</div>
+															<div class="filter-content__checkboxes vendors-list">
+																<div class="filter-content__checkbox">
+																	<input type="checkbox" id="vendor-checkbox" name="vendor-checkbox"
+																		class="filter-checkbox" />
+																	<label for="vendor-checkbox" class="filter-checkbox-label">Все
+																		производители</label>
+																</div>
+																<div class="filter-content__checkbox">
+																	<input type="checkbox" id="vendor-checkbox" name="vendor-checkbox"
+																		class="filter-checkbox" />
+																	<label for="vendor-checkbox"
+																		class="filter-checkbox-label">Bien-Air</label>
+																</div>
+																<div class="filter-content__checkbox">
+																	<input type="checkbox" id="vendor-checkbox" name="vendor-checkbox"
+																		class="filter-checkbox" />
+																	<label for="vendor-checkbox"
+																		class="filter-checkbox-label">Roder</label>
+																</div>
+																<div class="filter-content__checkbox">
+																	<input type="checkbox" id="vendor-checkbox" name="vendor-checkbox"
+																		class="filter-checkbox" />
+																	<label for="vendor-checkbox"
+																		class="filter-checkbox-label">Bien-Air</label>
+																</div>
+																<div class="filter-content__checkbox">
+																	<input type="checkbox" id="vendor-checkbox" name="vendor-checkbox"
+																		class="filter-checkbox" />
+																	<label for="vendor-checkbox"
+																		class="filter-checkbox-label">Mahmud</label>
+																</div>
+																<div class="filter-content__checkbox">
+																	<input type="checkbox" id="vendor-checkbox" name="vendor-checkbox"
+																		class="filter-checkbox" />
+																	<label for="vendor-checkbox"
+																		class="filter-checkbox-label">Lubler</label>
+																</div>
+																<div class="filter-content__checkbox">
+																	<input type="checkbox" id="vendor-checkbox" name="vendor-checkbox"
+																		class="filter-checkbox" />
+																	<label for="vendor-checkbox"
+																		class="filter-checkbox-label">Lubler</label>
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+												<div class="filter filter-purpose">
+													<button class="filter-top filter__blur">
+														<span class="filter-top__arrow-down"></span>
+														<h4 class="filter-top__title">Назначение</h4>
+													</button>
+													<div class="filter-content">
+														<form name="purpose-filter"
+															action="/catalog/bory-i-vrashchayushchiysya-instrument/" method="GET"
+															class="filter-purpose">
+															<div class="filter-content__checkboxes purposes-list">
+																<div class="filter-content__checkbox">
+																	<input type="checkbox" id="purpose-checkbox" name="purpose-checkbox"
+																		class="filter-checkbox" />
+																	<label for="purpose-checkbox"
+																		class="filter-checkbox-label">Антибактериальный уход</label>
+																</div>
+																<div class="filter-content__checkbox">
+																	<input type="checkbox" id="purpose-checkbox" name="purpose-checkbox"
+																		class="filter-checkbox" />
+																	<label for="purpose-checkbox" class="filter-checkbox-label">Для
+																		восстановления цвета</label>
+																</div>
+																<div class="filter-content__checkbox">
+																	<input type="checkbox" id="purpose-checkbox" name="purpose-checkbox"
+																		class="filter-checkbox" />
+																	<label for="purpose-checkbox" class="filter-checkbox-label">Для
+																		белого белья</label>
+																</div>
+																<div class="filter-content__checkbox">
+																	<input type="checkbox" id="purpose-checkbox" name="purpose-checkbox"
+																		class="filter-checkbox" />
+																	<label for="purpose-checkbox" class="filter-checkbox-label">Для
+																		блеска</label>
+																</div>
+																<div class="filter-content__checkbox">
+																	<input type="checkbox" id="purpose-checkbox" name="purpose-checkbox"
+																		class="filter-checkbox" />
+																	<label for="purpose-checkbox" class="filter-checkbox-label">Для
+																		ванны</label>
+																</div>
+																<div class="filter-content__checkbox">
+																	<input type="checkbox" id="purpose-checkbox" name="purpose-checkbox"
+																		class="filter-checkbox" />
+																	<label for="purpose-checkbox" class="filter-checkbox-label">Для
+																		восстановления цвета</label>
+																</div>
+																<div class="filter-content__checkbox">
+																	<input type="checkbox" id="purpose-checkbox" name="purpose-checkbox"
+																		class="filter-checkbox" />
+																	<label for="purpose-checkbox"
+																		class="filter-checkbox-label">Антибактериальный уход</label>
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+												<div class="filter filter-type-product">
+													<button class="filter-top filter__blur">
+														<span class="filter-top__arrow-down"></span>
+														<h4 class="filter-top__title">Тип продукта</h4>
+													</button>
+													<div class="filter-content">
+														<form name="purpose-filter"
+															action="/catalog/bory-i-vrashchayushchiysya-instrument/" method="GET"
+															class="filter-type-product">
+															<div class="filter-content__checkboxes type-product-list">
+																<div class="filter-content__checkbox">
+																	<input type="checkbox" id="type-product-checkbox"
+																		name="type-product-checkbox" class="filter-checkbox" />
+																	<label for="type-product-checkbox"
+																		class="filter-checkbox-label">Бальзам</label>
+																</div>
+																<div class="filter-content__checkbox">
+																	<input type="checkbox" id="type-product-checkbox"
+																		name="type-product-checkbox" class="filter-checkbox" />
+																	<label for="type-product-checkbox"
+																		class="filter-checkbox-label">Гель</label>
+																</div>
+																<div class="filter-content__checkbox">
+																	<input type="checkbox" id="type-product-checkbox"
+																		name="type-product-checkbox" class="filter-checkbox" />
+																	<label for="type-product-checkbox"
+																		class="filter-checkbox-label">Жидкость</label>
+																</div>
+																<div class="filter-content__checkbox">
+																	<input type="checkbox" id="type-product-checkbox"
+																		name="type-product-checkbox" class="filter-checkbox" />
+																	<label for="type-product-checkbox"
+																		class="filter-checkbox-label">Капсулы</label>
+																</div>
+																<div class="filter-content__checkbox">
+																	<input type="checkbox" id="type-product-checkbox"
+																		name="type-product-checkbox" class="filter-checkbox" />
+																	<label for="type-product-checkbox"
+																		class="filter-checkbox-label">Стирка</label>
+																</div>
+																<div class="filter-content__checkbox">
+																	<input type="checkbox" id="type-product-checkbox"
+																		name="type-product-checkbox" class="filter-checkbox" />
+																	<label for="type-product-checkbox"
+																		class="filter-checkbox-label">Бальзам</label>
+																</div>
+																<div class="filter-content__checkbox">
+																	<input type="checkbox" id="type-product-checkbox"
+																		name="type-product-checkbox" class="filter-checkbox" />
+																	<label for="type-product-checkbox"
+																		class="filter-checkbox-label">Бальзам</label>
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+												<div class="filter filter-volume">
+													<button class="filter-top filter__blur">
+														<span class="filter-top__arrow-down"></span>
+														<h4 class="filter-top__title">Объём, мл</h4>
+													</button>
+													<div class="filter-content">
+														<form name="volume-filter"
+															action="/catalog/bory-i-vrashchayushchiysya-instrument/" method="get"
+															class="filter-volume">
+															<div class="filter-content__volume-inputs">
+																<input type="number"
+																	class="filter-volume__volume-input volume-input-min filter__blur"
+																	value="24">
+																<input type="number"
+																	class="filter-volume__volume-input volume-input-max filter__blur"
+																	value="485">
+															</div>
+															<div class="filter-content__volume-slider">
+																<div class="filter-content__volume-slider-progress"></div>
+															</div>
+															<div class="filter-content__volume-range-inputs">
+																<input type="range"
+																	class="filter-content__volume-range-input volume-range-min" min="0"
+																	max="10000" value="24">
+																<input type="range"
+																	class="filter-content__volume-range-input volume-range-max" min="0"
+																	max="100000" value="485">
+															</div>
+															<button
+																class="filter-content__btn filter-content__volume-btn filter__blur">Применить
+																( <span class="filter-volume-count">342</span> )</button>
+														</form>
+													</div>
+												</div>
+												<div class="filter filter-weight">
+													<button class="filter-top filter__blur">
+														<span class="filter-top__arrow-down"></span>
+														<h4 class="filter-top__title">Вес, кг</h4>
+													</button>
+													<div class="filter-content">
+														<form name="weight-filter"
+															action="/catalog/bory-i-vrashchayushchiysya-instrument/" method="get"
+															class="filter-weight">
+															<div class="filter-content__weight-inputs">
+																<input type="number"
+																	class="filter-weight__weight-input volume-input-min filter__blur"
+																	value="2">
+																<input type="number"
+																	class="filter-weight__weight-input volume-input-max filter__blur"
+																	value="4">
+															</div>
+															<div class="filter-content__weight-slider">
+																<div class="filter-content__weight-slider-progress"></div>
+															</div>
+															<div class="filter-content__weight-range-inputs">
+																<input type="range"
+																	class="filter-content__weight-range-input weight-range-min" min="0"
+																	max="10000" value="2">
+																<input type="range"
+																	class="filter-content__weight-range-input weight-range-max" min="0"
+																	max="100000" value="4">
+															</div>
+															<button
+																class=" filter-content__btn filter-content__weight-btn filter__blur">Применить
+																( <span class="filter-weight-count">1.492</span> )</button>
+														</form>
+													</div>
+												</div>
+												<div class="filter filter-hints">
+													<form name="hints-filter"
+														action="/catalog/bory-i-vrashchayushchiysya-instrument/" method="GET"
+														class="filter-hints-form">
+														<div
+															class="filter-content__checkboxes filter-content__checkboxes_hints hints-list">
+															<div class="filter-content__checkbox">
+																<input type="checkbox" id="discount-checkbox" name="discount-checkbox"
+																	class="filter-checkbox" />
+																<label for="discount-checkbox" class="filter-checkbox-label">Товары со
+																	скидкой</label>
+															</div>
+															<div class="filter-content__checkbox">
+																<input type="checkbox" id="hint-checkbox" name="hint-checkbox"
+																	class="filter-checkbox" />
+																<label for="hint-checkbox" class="filter-checkbox-label">Товары с
+																	акцией</label>
+															</div>
+														</div>
+													</form>
+												</div>
+												<button class="filter-content__btn filter-content__clear-btn filter__blur">Очистить
+													фильтр</button>
+											</form>
+										</div>
+									</div>
+									<div class="goods__mob-count-goods">183 товара</div>
 									<div class="goods__view-block">
 										<div class="goods__view-title">Виды каталога:</div>
 										<button class="goods__view view-cell">
@@ -748,268 +1175,256 @@
 								<div class="goods-cell view--active">
 									<div class="goods-cell__block">
 										<div class="good-item good-cell-item">
-											<a
-												href="/catalog/sistemy-shlifovki-i-polirovki/poroshok-rondofleks-rondoflex-27mk-1kg-1-000-5957-poroshok-stomat-abrazivnyy-kavo-rondoflex/">
-												<div class="good-card good-cell-card">
-													<div class="good-image good-image-cell">
-														<img src="./img/test-good-img-2.png" class="good-img good-img-cell" alt="Щетка многоразовая Шеврон для очистки внешних поверхностей (1 шт) ЗЕЛЕНАЯ
+											<div class="good-card good-cell-card">
+												<div class="good-image good-image-cell">
+													<img src="./img/test-good-img-2.png" class="good-img good-img-cell" alt="Щетка многоразовая Шеврон для очистки внешних поверхностей (1 шт) ЗЕЛЕНАЯ
 	ШВНМ 22">
+												</div>
+												<div class="good-desc">
+													<div class="good-i-article good-i-article-cell">Артикул: <span
+															class="good-article">243948322</span>
+														<span class="good-article__info">Стандартная</span>
 													</div>
-													<div class="good-desc">
-														<div class="good-i-article good-i-article-cell">Артикул: <span
-																class="good-article">243948322</span>
-															<span class="good-article__info">Стандартная</span>
+													<div class="good-reviews good-reviews-cell reviews">
+														<div class="good-reviews-imgs reviews-imgs">
+															<span class="good-reviews-img reviews-img reviews-img-cell"></span>
+															<span class="good-reviews-img reviews-img reviews-img-cell"></span>
+															<span class="good-reviews-img reviews-img reviews-img-cell"></span>
+															<span class="good-reviews-img reviews-img reviews-img-cell"></span>
+															<span class="good-reviews-img reviews-img reviews-img-cell"></span>
 														</div>
-														<div class="good-reviews good-reviews-cell reviews">
-															<div class="good-reviews-imgs reviews-imgs">
-																<span class="good-reviews-img reviews-img reviews-img-cell"></span>
-																<span class="good-reviews-img reviews-img reviews-img-cell"></span>
-																<span class="good-reviews-img reviews-img reviews-img-cell"></span>
-																<span class="good-reviews-img reviews-img reviews-img-cell"></span>
-																<span class="good-reviews-img reviews-img reviews-img-cell"></span>
-															</div>
-															<div class="good-reviews-text good-reviews-text-cell reviews-sku">10.395
-																отзывов
-															</div>
+														<div class="good-reviews-text good-reviews-text-cell reviews-sku">10.395
+															отзывов
 														</div>
-														<h2 class="good-title good-title-cell">Щетка многоразовая Шеврон для очистки
-															внешних
-															поверхностей (1 шт) ЗЕЛЕНАЯ ШВНМ 22</h2>
 													</div>
-													<div class="good-icons good-icons-cell">
-														<button class="good-icon good-icon-cell good-compare"></button>
-														<button class="good-icon good-icon-cell good-favour"></button>
-													</div>
-													<div class="good-cell-card__footer">
-														<div class="units units-cell">
-															<span class="units-item units-item-cell units-item-cell-unit"><input
-																	type="checkbox" class="unit" id="quantity-unit" name="quantity-unit"
-																	value="yes">
-																<label for="quantity-unit">Штук</label></span>
-															<span class="units-item units-item-cell units-item-cell-pack"><input
-																	type="checkbox" class="quantity-pack" id="quantity-pack"
-																	name="quantity-pack" value="yes">
-																<label for="quantity-pack">Упаковка</label></span>
-															<div class="qt qt-cell">
-																<a class="qt-btn qt-btn-cell qt-minus decr" href="'#">-</a>
-																<input type="text" class="qt-count qt-count-cell" value="1">
-																<a class="qt-btn qt-btn-cell qt-plus incr" href="'#">+</a>
-															</div>
-															<div class="price price-cell">
-																<span class="price-value good-price-value">500</span> ₽
-															</div>
+													<h2 class="good-title good-title-cell">Щетка многоразовая Шеврон для очистки
+														внешних
+														поверхностей (1 шт) ЗЕЛЕНАЯ ШВНМ 22</h2>
+												</div>
+												<div class="good-icons good-icons-cell">
+													<button class="good-icon good-icon-cell good-compare"></button>
+													<button class="good-icon good-icon-cell good-favour"></button>
+												</div>
+												<div class="good-cell-card__footer">
+													<div class="units units-cell">
+														<span class="units-item units-item-cell units-item-cell-unit"><input
+																type="checkbox" class="unit" id="quantity-unit" name="quantity-unit"
+																value="yes">
+															<label for="quantity-unit">Штук</label></span>
+														<span class="units-item units-item-cell units-item-cell-pack"><input
+																type="checkbox" class="quantity-pack" id="quantity-pack"
+																name="quantity-pack" value="yes">
+															<label for="quantity-pack">Упаковка</label></span>
+														<div class="qt qt-cell">
+															<a class="qt-btn qt-btn-cell qt-minus decr" href="'#">-</a>
+															<input type="text" class="qt-count qt-count-cell" value="1">
+															<a class="qt-btn qt-btn-cell qt-plus incr" href="'#">+</a>
 														</div>
-														<div class="links">
-															<a href="/catalog/aksessuary-dlya-borov-trimmery/shchetka_mnogorazovaya_shevron_dlya_ochistki_vneshnikh_poverkhnostey_1_sht_zelenaya_shvnm_22/"
-																class="good-link good-link-cell">
-																<div class="good-page-link good-page-link-cell">Подробнее</div>
-															</a>
-															<div class="good-link good-link-cell">
-																<button type="submit" class="cart-link cart-link-cell">В
-																	корзину</button>
-															</div>
+														<div class="price price-cell">
+															<span class="price-value good-price-value">500</span> ₽
+														</div>
+													</div>
+													<div class="links">
+														<a href="/catalog/aksessuary-dlya-borov-trimmery/shchetka_mnogorazovaya_shevron_dlya_ochistki_vneshnikh_poverkhnostey_1_sht_zelenaya_shvnm_22/"
+															class="good-link good-link-cell">
+															<div class="good-page-link good-page-link-cell">Подробнее</div>
+														</a>
+														<div class="good-link good-link-cell">
+															<button type="submit" class="cart-link cart-link-cell">В
+																корзину</button>
 														</div>
 													</div>
 												</div>
-											</a>
+											</div>
 										</div>
 										<div class="good-item good-cell-item">
-											<a
-												href="/catalog/sistemy-shlifovki-i-polirovki/poroshok-rondofleks-rondoflex-27mk-1kg-1-000-5957-poroshok-stomat-abrazivnyy-kavo-rondoflex/">
-												<div class="good-card good-cell-card">
-													<div class="good-image good-image-cell">
-														<img src="./img/test-good-img-2.png" class="good-img good-img-cell" alt="Щетка многоразовая Шеврон для очистки внешних поверхностей (1 шт) ЗЕЛЕНАЯ
+											<div class="good-card good-cell-card">
+												<div class="good-image good-image-cell">
+													<img src="./img/test-good-img-2.png" class="good-img good-img-cell" alt="Щетка многоразовая Шеврон для очистки внешних поверхностей (1 шт) ЗЕЛЕНАЯ
 	ШВНМ 22">
+												</div>
+												<div class="good-desc">
+													<div class="good-i-article good-i-article-cell">Артикул: <span
+															class="good-article">243948322</span>
+														<span class="good-article__info">Стандартная</span>
 													</div>
-													<div class="good-desc">
-														<div class="good-i-article good-i-article-cell">Артикул: <span
-																class="good-article">243948322</span>
-															<span class="good-article__info">Стандартная</span>
+													<div class="good-reviews good-reviews-cell reviews">
+														<div class="good-reviews-imgs reviews-imgs">
+															<span class="good-reviews-img reviews-img reviews-img-cell"></span>
+															<span class="good-reviews-img reviews-img reviews-img-cell"></span>
+															<span class="good-reviews-img reviews-img reviews-img-cell"></span>
+															<span class="good-reviews-img reviews-img reviews-img-cell"></span>
+															<span class="good-reviews-img reviews-img reviews-img-cell"></span>
 														</div>
-														<div class="good-reviews good-reviews-cell reviews">
-															<div class="good-reviews-imgs reviews-imgs">
-																<span class="good-reviews-img reviews-img reviews-img-cell"></span>
-																<span class="good-reviews-img reviews-img reviews-img-cell"></span>
-																<span class="good-reviews-img reviews-img reviews-img-cell"></span>
-																<span class="good-reviews-img reviews-img reviews-img-cell"></span>
-																<span class="good-reviews-img reviews-img reviews-img-cell"></span>
-															</div>
-															<div class="good-reviews-text good-reviews-text-cell reviews-sku">10.395
-																отзывов
-															</div>
+														<div class="good-reviews-text good-reviews-text-cell reviews-sku">10.395
+															отзывов
 														</div>
-														<h2 class="good-title good-title-cell">Щетка многоразовая Шеврон для очистки
-															внешних
-															поверхностей (1 шт) ЗЕЛЕНАЯ ШВНМ 22</h2>
 													</div>
-													<div class="good-icons good-icons-cell">
-														<button class="good-icon good-icon-cell good-compare"></button>
-														<button class="good-icon good-icon-cell good-favour"></button>
-													</div>
-													<div class="good-cell-card__footer">
-														<div class="units units-cell">
-															<span class="units-item units-item-cell units-item-cell-unit"><input
-																	type="checkbox" class="unit" id="quantity-unit" name="quantity-unit"
-																	value="yes">
-																<label for="quantity-unit">Штук</label></span>
-															<span class="units-item units-item-cell units-item-cell-pack"><input
-																	type="checkbox" class="quantity-pack" id="quantity-pack"
-																	name="quantity-pack" value="yes">
-																<label for="quantity-pack">Упаковка</label></span>
-															<div class="qt qt-cell">
-																<a class="qt-btn qt-btn-cell qt-minus decr" href="'#">-</a>
-																<input type="text" class="qt-count qt-count-cell" value="1">
-																<a class="qt-btn qt-btn-cell qt-plus incr" href="'#">+</a>
-															</div>
-															<div class="price price-cell">
-																<span class="price-value good-price-value">500</span> ₽
-															</div>
+													<h2 class="good-title good-title-cell">Щетка многоразовая Шеврон для очистки
+														внешних
+														поверхностей (1 шт) ЗЕЛЕНАЯ ШВНМ 22</h2>
+												</div>
+												<div class="good-icons good-icons-cell">
+													<button class="good-icon good-icon-cell good-compare"></button>
+													<button class="good-icon good-icon-cell good-favour"></button>
+												</div>
+												<div class="good-cell-card__footer">
+													<div class="units units-cell">
+														<span class="units-item units-item-cell units-item-cell-unit"><input
+																type="checkbox" class="unit" id="quantity-unit" name="quantity-unit"
+																value="yes">
+															<label for="quantity-unit">Штук</label></span>
+														<span class="units-item units-item-cell units-item-cell-pack"><input
+																type="checkbox" class="quantity-pack" id="quantity-pack"
+																name="quantity-pack" value="yes">
+															<label for="quantity-pack">Упаковка</label></span>
+														<div class="qt qt-cell">
+															<a class="qt-btn qt-btn-cell qt-minus decr" href="'#">-</a>
+															<input type="text" class="qt-count qt-count-cell" value="1">
+															<a class="qt-btn qt-btn-cell qt-plus incr" href="'#">+</a>
 														</div>
-														<div class="links">
-															<a href="/catalog/aksessuary-dlya-borov-trimmery/shchetka_mnogorazovaya_shevron_dlya_ochistki_vneshnikh_poverkhnostey_1_sht_zelenaya_shvnm_22/"
-																class="good-link good-link-cell">
-																<div class="good-page-link good-page-link-cell">Подробнее</div>
-															</a>
-															<div class="good-link good-link-cell">
-																<button type="submit" class="cart-link cart-link-cell">В
-																	корзину</button>
-															</div>
+														<div class="price price-cell">
+															<span class="price-value good-price-value">500</span> ₽
+														</div>
+													</div>
+													<div class="links">
+														<a href="/catalog/aksessuary-dlya-borov-trimmery/shchetka_mnogorazovaya_shevron_dlya_ochistki_vneshnikh_poverkhnostey_1_sht_zelenaya_shvnm_22/"
+															class="good-link good-link-cell">
+															<div class="good-page-link good-page-link-cell">Подробнее</div>
+														</a>
+														<div class="good-link good-link-cell">
+															<button type="submit" class="cart-link cart-link-cell">В
+																корзину</button>
 														</div>
 													</div>
 												</div>
-											</a>
+											</div>
 										</div>
 										<div class="good-item good-cell-item">
-											<a
-												href="/catalog/sistemy-shlifovki-i-polirovki/poroshok-rondofleks-rondoflex-27mk-1kg-1-000-5957-poroshok-stomat-abrazivnyy-kavo-rondoflex/">
-												<div class="good-card good-cell-card">
-													<div class="good-image good-image-cell">
-														<img src="./img/test-good-img-2.png" class="good-img good-img-cell" alt="Щетка многоразовая Шеврон для очистки внешних поверхностей (1 шт) ЗЕЛЕНАЯ
+											<div class="good-card good-cell-card">
+												<div class="good-image good-image-cell">
+													<img src="./img/test-good-img-2.png" class="good-img good-img-cell" alt="Щетка многоразовая Шеврон для очистки внешних поверхностей (1 шт) ЗЕЛЕНАЯ
 	ШВНМ 22">
+												</div>
+												<div class="good-desc">
+													<div class="good-i-article good-i-article-cell">Артикул: <span
+															class="good-article">243948322</span>
+														<span class="good-article__info">Стандартная</span>
 													</div>
-													<div class="good-desc">
-														<div class="good-i-article good-i-article-cell">Артикул: <span
-																class="good-article">243948322</span>
-															<span class="good-article__info">Стандартная</span>
+													<div class="good-reviews good-reviews-cell reviews">
+														<div class="good-reviews-imgs reviews-imgs">
+															<span class="good-reviews-img reviews-img reviews-img-cell"></span>
+															<span class="good-reviews-img reviews-img reviews-img-cell"></span>
+															<span class="good-reviews-img reviews-img reviews-img-cell"></span>
+															<span class="good-reviews-img reviews-img reviews-img-cell"></span>
+															<span class="good-reviews-img reviews-img reviews-img-cell"></span>
 														</div>
-														<div class="good-reviews good-reviews-cell reviews">
-															<div class="good-reviews-imgs reviews-imgs">
-																<span class="good-reviews-img reviews-img reviews-img-cell"></span>
-																<span class="good-reviews-img reviews-img reviews-img-cell"></span>
-																<span class="good-reviews-img reviews-img reviews-img-cell"></span>
-																<span class="good-reviews-img reviews-img reviews-img-cell"></span>
-																<span class="good-reviews-img reviews-img reviews-img-cell"></span>
-															</div>
-															<div class="good-reviews-text good-reviews-text-cell reviews-sku">10.395
-																отзывов
-															</div>
+														<div class="good-reviews-text good-reviews-text-cell reviews-sku">10.395
+															отзывов
 														</div>
-														<h2 class="good-title good-title-cell">Щетка многоразовая Шеврон для очистки
-															внешних
-															поверхностей (1 шт) ЗЕЛЕНАЯ ШВНМ 22</h2>
 													</div>
-													<div class="good-icons good-icons-cell">
-														<button class="good-icon good-icon-cell good-compare"></button>
-														<button class="good-icon good-icon-cell good-favour"></button>
-													</div>
-													<div class="good-cell-card__footer">
-														<div class="units units-cell">
-															<span class="units-item units-item-cell units-item-cell-unit"><input
-																	type="checkbox" class="unit" id="quantity-unit" name="quantity-unit"
-																	value="yes">
-																<label for="quantity-unit">Штук</label></span>
-															<span class="units-item units-item-cell units-item-cell-pack"><input
-																	type="checkbox" class="quantity-pack" id="quantity-pack"
-																	name="quantity-pack" value="yes">
-																<label for="quantity-pack">Упаковка</label></span>
-															<div class="qt qt-cell">
-																<a class="qt-btn qt-btn-cell qt-minus decr" href="'#">-</a>
-																<input type="text" class="qt-count qt-count-cell" value="1">
-																<a class="qt-btn qt-btn-cell qt-plus incr" href="'#">+</a>
-															</div>
-															<div class="price price-cell">
-																<span class="price-value good-price-value">500</span> ₽
-															</div>
+													<h2 class="good-title good-title-cell">Щетка многоразовая Шеврон для очистки
+														внешних
+														поверхностей (1 шт) ЗЕЛЕНАЯ ШВНМ 22</h2>
+												</div>
+												<div class="good-icons good-icons-cell">
+													<button class="good-icon good-icon-cell good-compare"></button>
+													<button class="good-icon good-icon-cell good-favour"></button>
+												</div>
+												<div class="good-cell-card__footer">
+													<div class="units units-cell">
+														<span class="units-item units-item-cell units-item-cell-unit"><input
+																type="checkbox" class="unit" id="quantity-unit" name="quantity-unit"
+																value="yes">
+															<label for="quantity-unit">Штук</label></span>
+														<span class="units-item units-item-cell units-item-cell-pack"><input
+																type="checkbox" class="quantity-pack" id="quantity-pack"
+																name="quantity-pack" value="yes">
+															<label for="quantity-pack">Упаковка</label></span>
+														<div class="qt qt-cell">
+															<a class="qt-btn qt-btn-cell qt-minus decr" href="'#">-</a>
+															<input type="text" class="qt-count qt-count-cell" value="1">
+															<a class="qt-btn qt-btn-cell qt-plus incr" href="'#">+</a>
 														</div>
-														<div class="links">
-															<a href="/catalog/aksessuary-dlya-borov-trimmery/shchetka_mnogorazovaya_shevron_dlya_ochistki_vneshnikh_poverkhnostey_1_sht_zelenaya_shvnm_22/"
-																class="good-link good-link-cell">
-																<div class="good-page-link good-page-link-cell">Подробнее</div>
-															</a>
-															<div class="good-link good-link-cell">
-																<button type="submit" class="cart-link cart-link-cell">В
-																	корзину</button>
-															</div>
+														<div class="price price-cell">
+															<span class="price-value good-price-value">500</span> ₽
+														</div>
+													</div>
+													<div class="links">
+														<a href="/catalog/aksessuary-dlya-borov-trimmery/shchetka_mnogorazovaya_shevron_dlya_ochistki_vneshnikh_poverkhnostey_1_sht_zelenaya_shvnm_22/"
+															class="good-link good-link-cell">
+															<div class="good-page-link good-page-link-cell">Подробнее</div>
+														</a>
+														<div class="good-link good-link-cell">
+															<button type="submit" class="cart-link cart-link-cell">В
+																корзину</button>
 														</div>
 													</div>
 												</div>
-											</a>
+											</div>
 										</div>
 										<div class="good-item good-cell-item">
-											<a
-												href="/catalog/sistemy-shlifovki-i-polirovki/poroshok-rondofleks-rondoflex-27mk-1kg-1-000-5957-poroshok-stomat-abrazivnyy-kavo-rondoflex/">
-												<div class="good-card good-cell-card">
-													<div class="good-image good-image-cell">
-														<img src="./img/test-good-img-2.png" class="good-img good-img-cell" alt="Щетка многоразовая Шеврон для очистки внешних поверхностей (1 шт) ЗЕЛЕНАЯ
+											<div class="good-card good-cell-card">
+												<div class="good-image good-image-cell">
+													<img src="./img/test-good-img-2.png" class="good-img good-img-cell" alt="Щетка многоразовая Шеврон для очистки внешних поверхностей (1 шт) ЗЕЛЕНАЯ
 	ШВНМ 22">
+												</div>
+												<div class="good-desc">
+													<div class="good-i-article good-i-article-cell">Артикул: <span
+															class="good-article">243948322</span>
+														<span class="good-article__info">Стандартная</span>
 													</div>
-													<div class="good-desc">
-														<div class="good-i-article good-i-article-cell">Артикул: <span
-																class="good-article">243948322</span>
-															<span class="good-article__info">Стандартная</span>
+													<div class="good-reviews good-reviews-cell reviews">
+														<div class="good-reviews-imgs reviews-imgs">
+															<span class="good-reviews-img reviews-img reviews-img-cell"></span>
+															<span class="good-reviews-img reviews-img reviews-img-cell"></span>
+															<span class="good-reviews-img reviews-img reviews-img-cell"></span>
+															<span class="good-reviews-img reviews-img reviews-img-cell"></span>
+															<span class="good-reviews-img reviews-img reviews-img-cell"></span>
 														</div>
-														<div class="good-reviews good-reviews-cell reviews">
-															<div class="good-reviews-imgs reviews-imgs">
-																<span class="good-reviews-img reviews-img reviews-img-cell"></span>
-																<span class="good-reviews-img reviews-img reviews-img-cell"></span>
-																<span class="good-reviews-img reviews-img reviews-img-cell"></span>
-																<span class="good-reviews-img reviews-img reviews-img-cell"></span>
-																<span class="good-reviews-img reviews-img reviews-img-cell"></span>
-															</div>
-															<div class="good-reviews-text good-reviews-text-cell reviews-sku">10.395
-																отзывов
-															</div>
+														<div class="good-reviews-text good-reviews-text-cell reviews-sku">10.395
+															отзывов
 														</div>
-														<h2 class="good-title good-title-cell">Щетка многоразовая Шеврон для очистки
-															внешних
-															поверхностей (1 шт) ЗЕЛЕНАЯ ШВНМ 22</h2>
 													</div>
-													<div class="good-icons good-icons-cell">
-														<button class="good-icon good-icon-cell good-compare"></button>
-														<button class="good-icon good-icon-cell good-favour"></button>
-													</div>
-													<div class="good-cell-card__footer">
-														<div class="units units-cell">
-															<span class="units-item units-item-cell units-item-cell-unit"><input
-																	type="checkbox" class="unit" id="quantity-unit" name="quantity-unit"
-																	value="yes">
-																<label for="quantity-unit">Штук</label></span>
-															<span class="units-item units-item-cell units-item-cell-pack"><input
-																	type="checkbox" class="quantity-pack" id="quantity-pack"
-																	name="quantity-pack" value="yes">
-																<label for="quantity-pack">Упаковка</label></span>
-															<div class="qt qt-cell">
-																<a class="qt-btn qt-btn-cell qt-minus decr" href="'#">-</a>
-																<input type="text" class="qt-count qt-count-cell" value="1">
-																<a class="qt-btn qt-btn-cell qt-plus incr" href="'#">+</a>
-															</div>
-															<div class="price price-cell">
-																<span class="price-value good-price-value">500</span> ₽
-															</div>
+													<h2 class="good-title good-title-cell">Щетка многоразовая Шеврон для очистки
+														внешних
+														поверхностей (1 шт) ЗЕЛЕНАЯ ШВНМ 22</h2>
+												</div>
+												<div class="good-icons good-icons-cell">
+													<button class="good-icon good-icon-cell good-compare"></button>
+													<button class="good-icon good-icon-cell good-favour"></button>
+												</div>
+												<div class="good-cell-card__footer">
+													<div class="units units-cell">
+														<span class="units-item units-item-cell units-item-cell-unit"><input
+																type="checkbox" class="unit" id="quantity-unit" name="quantity-unit"
+																value="yes">
+															<label for="quantity-unit">Штук</label></span>
+														<span class="units-item units-item-cell units-item-cell-pack"><input
+																type="checkbox" class="quantity-pack" id="quantity-pack"
+																name="quantity-pack" value="yes">
+															<label for="quantity-pack">Упаковка</label></span>
+														<div class="qt qt-cell">
+															<a class="qt-btn qt-btn-cell qt-minus decr" href="'#">-</a>
+															<input type="text" class="qt-count qt-count-cell" value="1">
+															<a class="qt-btn qt-btn-cell qt-plus incr" href="'#">+</a>
 														</div>
-														<div class="links">
-															<a href="/catalog/aksessuary-dlya-borov-trimmery/shchetka_mnogorazovaya_shevron_dlya_ochistki_vneshnikh_poverkhnostey_1_sht_zelenaya_shvnm_22/"
-																class="good-link good-link-cell">
-																<div class="good-page-link good-page-link-cell">Подробнее</div>
-															</a>
-															<div class="good-link good-link-cell">
-																<button type="submit" class="cart-link cart-link-cell">В
-																	корзину</button>
-															</div>
+														<div class="price price-cell">
+															<span class="price-value good-price-value">500</span> ₽
+														</div>
+													</div>
+													<div class="links">
+														<a href="/catalog/aksessuary-dlya-borov-trimmery/shchetka_mnogorazovaya_shevron_dlya_ochistki_vneshnikh_poverkhnostey_1_sht_zelenaya_shvnm_22/"
+															class="good-link good-link-cell">
+															<div class="good-page-link good-page-link-cell">Подробнее</div>
+														</a>
+														<div class="good-link good-link-cell">
+															<button type="submit" class="cart-link cart-link-cell">В
+																корзину</button>
 														</div>
 													</div>
 												</div>
-											</a>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -1228,7 +1643,6 @@
 
 	<!--                                                                                                                                            -->
 
-
 	<div class="container-block">
 		<footer>
 			<div class="footer-top">
@@ -1257,7 +1671,7 @@
 										<a href="/personal/cart/">Корзина</a>
 									</li>
 									<li class="footer-nav__item">
-										<a href="/personal/favorite/">Избранное</a>
+										<a href="/personal/favourite/">Избранное</a>
 									</li>
 									<li class="footer-nav__item">
 										<a href="/compare/">Сравнение</a>
@@ -1340,14 +1754,27 @@
 								</li>
 							</ul>
 						</nav>
-						<div class="footer__mob-location">
-							<div class="footer__mob-location-desc">Ваш город:</div>
-							<div class="footer__mob-location-city">Санкт-Петербург</div>
+						<span class="footer__mob-location-desc">Ваш город:</span>
+						<button class="footer__mob-location">Москва</button>
+						<div class="footer-block__location-city-select">
+							<div class="footer-select-city__info footer-select-city__info_font">Ваш город — Москва?</div>
+							<div class="footer-select-city__confirmation">
+								<button class="footer-select-city__confirm">Да</button>
+								<div class="footer-select-city__info">или</div>
+								<select name="city" id="mob-city-select" class="footer-select-city__title">
+									<option value="" selected disabled>Нет, другой</option>
+									<option value="krd">Краснодар</option>
+									<option value="sip">Симферополь</option>
+								</select>
+							</div>
+							<div class="footer-select-city__info">Если вашего региона нет в списке, вы можете написать
+								нам на почту с пометкой "Доставка в наш регион", и мы предложим наилучший способ доставки.
+							</div>
 						</div>
 						<div class="footer__mob-bottom">
 							<div class="footer__mob-bottom-copyrights">
 								<p class="footer__mob-copyrights">&#169; Все права защищены</p>
-								<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh">
+								<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh" target="_blank">
 									<p class="footer__mob-soglashenie">Соглашение об использовании персональных данных</p>
 								</a>
 							</div>
@@ -1369,7 +1796,7 @@
 					<div class="footer-bottom__item">
 						<div class="footer-bottom__logo">
 							<a href="/main/">
-								<img src="./img/logo.svg" alt="Логотип Торговый Дом Лето">
+								<img src="./img/logo.svg" class="footer-bottom__logo" alt="Логотип компании Торговый Дом Лето">
 							</a>
 						</div>
 						<div class="footer-bottom__company company">
@@ -1380,7 +1807,7 @@
 					</div>
 					<div class="footer-bottom__item footer-bottom__item_text">
 						<p class="footer-bottom__copyrights">&#169; Все права защищены</p>
-						<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh/">
+						<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh/" target="_blank">
 							<p class="footer-bottom__soglashenie">Соглашение об использовании персональных данных</p>
 						</a>
 					</div>
