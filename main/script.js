@@ -1,24 +1,14 @@
-/* const cityUserBtn = document.querySelector('.header-block__location-city-name');
-
-const tooltip = document.querySelector('.modal__location-city-select');
-
-const tooltipMob = document.querySelector('.mob-modal__location-city-select');
-
-
-
+const cityUserBtn = document.querySelector('.header-block__location-city-name');
 cityUserBtn.addEventListener('click', function () {
-	tooltip.classList.toggle('select-city');
+	const tooltip = document.querySelector('.header-block__location-city-select');
+	tooltip.classList.toggle('header-select-city');
 });
 
-const cityUserBtnMob = document.querySelector('.footer__mob-location-city');
-cityUserBtnMob.addEventListener('click', function () {
-	tooltipMob.classList.remove('select-city');
-});
-
-const cityConfirm = document.querySelector('.select-city__confirm');
+const cityConfirm = document.querySelector('.header-select-city__confirm');
 cityConfirm.addEventListener('click', function () {
+	const tooltip = document.querySelector('.header-block__location-city-select');
 	cityUserBtn.innerHTML = 'Москва';
-	tooltip.classList.add('select-city');
+	tooltip.classList.add('header-select-city');
 });
 
 const citySelect = document.querySelector('#city-select');
@@ -26,47 +16,109 @@ citySelect.addEventListener('change', function () {
 	let citySelectInd = citySelect.selectedIndex;
 	const citySelectText = citySelect.options[citySelectInd].text;
 	cityUserBtn.innerHTML = citySelectText;
-	tooltip.classList.add('select-city');
+	const tooltip = document.querySelector('.header-block__location-city-select');
+	tooltip.classList.add('header-select-city');
 });
 
- */
-const cityUserBtn = document.querySelector('.location-city-name');
-const citySelect = document.querySelector('#city-select');
-citySelect.addEventListener('change', function () {
-	let citySelectInd = citySelect.selectedIndex;
-	const citySelectText = citySelect.options[citySelectInd].text;
-	cityUserBtn.innerHTML = citySelectText;
-	const modal = document.querySelector('.modal');
-	modal.classList.remove('show');
+const cityMobUserBtn = document.querySelector('.footer__mob-location');
+cityMobUserBtn.addEventListener('click', function () {
+	const tooltip = document.querySelector('.footer-block__location-city-select');
+	tooltip.classList.toggle('footer-select-city');
 });
 
-const cityBtnConfirm = document.querySelector('.select-city__confirm');
-cityBtnConfirm.addEventListener('click', function () {
-	cityUserBtn.innerHTML = 'Москва';
+const cityMobConfirm = document.querySelector('.footer-select-city__confirm');
+cityMobConfirm.addEventListener('click', function () {
+	const mobTooltip = document.querySelector('.footer-block__location-city-select');
+	cityMobUserBtn.innerHTML = 'Москва';
+	mobTooltip.classList.add('footer-select-city');
+});
+
+const mobCitySelect = document.querySelector('#mob-city-select');
+mobCitySelect.addEventListener('change', function () {
+	let citySelectInd = mobCitySelect.selectedIndex;
+	const citySelectText = mobCitySelect.options[citySelectInd].text;
+	cityMobUserBtn.innerHTML = citySelectText;
+	const mobTooltip = document.querySelector('.footer-block__location-city-select');
+	mobTooltip.classList.add('footer-select-city');
+});
+
+const regBtn = document.querySelector('.header-menu__reg'),
+	overlay = document.querySelector('.overlay'),
+	modalReg = document.querySelector('.modal-reg'),
+	modalAuth = document.querySelector('.modal-auth'),
+	modalRecovery = document.querySelector('.modal-recovery'),
+	inputsPassword = document.querySelectorAll('.modal-form__input-password'),
+	authBtn = document.querySelector('.header-menu__auth');
+
+regBtn.addEventListener('click', function () {
+	overlay.classList.add('overlay--open');
+	modalReg.classList.add('modal--open');
+});
+
+authBtn.addEventListener('click', function () {
+	overlay.classList.add('overlay--open');
+	modalAuth.classList.add('modal--open');
+});
+
+const recoveryBtn = document.querySelector('.recovery-password');
+recoveryBtn.addEventListener('click', function () {
+	modalAuth.classList.remove('modal--open');
+	modalRecovery.classList.add('modal--open');
+});
+
+const registrationBtn = document.querySelector('.registration');
+registrationBtn.addEventListener('click', function () {
+	modalAuth.classList.remove('modal--open');
+	modalReg.classList.add('modal--open');
+});
+
+inputsPassword.forEach(function (el) {
+	el.addEventListener('click', function (e) {
+		const passwordEye = e.target.nextElementSibling;
+		passwordEye.classList.add('show--password');
+		passwordEye.addEventListener('click', function () {
+			passwordEye.classList.toggle('show--password');
+			passwordEye.classList.toggle('close--password');
+			if (el.getAttribute('type') === 'password') {
+				el.setAttribute('type', 'text');
+			} else {
+				el.setAttribute('type', 'password');
+			}
+		});
+	});
+});
+
+overlay.addEventListener('click', function () {
+	overlay.classList.remove('overlay--open');
+	modalReg.classList.remove('modal--open');
+	modalAuth.classList.remove('modal--open');
+	modalRecovery.classList.remove('modal--open');
+});
+
+const footerLocationBtn = document.querySelector('.footer__mob-location');
+footerLocationBtn.addEventListener('click', function () {
+	const mobLocation = document.querySelector('.footer-block__location-city-select');
+	mobLocation.classList.toggle('footer-select-city');
 });
 
 const newsUpBtn = document.querySelector('.news__caption-btn');
 newsUpBtn.addEventListener('click', function () {
-	const arrowUpNews = document.querySelector('.arrow-up-btn');
-	arrowUpNews.classList.toggle('arrow-to-close');
-	const arrowDownNews = document.querySelector('.arrow-down-btn');
-	arrowDownNews.classList.toggle('arrow-to-open');
 	const newsBlock = document.querySelector('.news__block');
 	newsBlock.classList.toggle('block-close');
 });
 
-const contentAbout = document.querySelector('.about-home');
-contentAbout.addEventListener('click', function (e) {
-	e.preventDefault();
-	console.log(e.target);
-	if (e.target.classList.contains('about-block__caption-btn') || e.target.classList.contains('block__caption-btn-img')) {
+const contentAboutBtns = document.querySelectorAll('.about-block__caption-btn');
+contentAboutBtns.forEach(function (el) {
+	el.addEventListener('click', function (e) {
+		e.preventDefault();
+		if (e.target.classList.contains('about-block__caption-btn') || e.target.classList.contains('block__caption-btn-img')) {
 
-		console.log('btn', e.target);
-	}
-	/* const arrowUpNews = document.querySelector('.arrow-up-btn');
-	arrowUpNews.classList.toggle('arrow-to-close');
-	const arrowDownNews = document.querySelector('.arrow-down-btn');
-	arrowDownNews.classList.toggle('arrow-to-open');
-	const newsBlock = document.querySelector('.news__block');
-	newsBlock.classList.toggle('block-close'); */
+			const clickedBlock = e.target.closest('.about-block__caption').nextElementSibling;
+			if (clickedBlock.classList.contains('block-close')) {
+				clickedBlock.classList.remove('block-close');
+			} else {
+				clickedBlock.classList.add('block-close');
+			}
+		}
+	});
 });

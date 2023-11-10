@@ -7,13 +7,10 @@
 	<link rel="icon" href="./img/icon.svg">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
 		href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@300;400;600;700&family=PT+Sans:wght@700&family=Tenor+Sans&display=swap"
 		rel="stylesheet">
-	<link rel="stylesheet" href="./global_style.css">
-	<link rel="stylesheet" href="./st.css">
+	<link rel="stylesheet" href="./normalize.css">
 	<link rel="stylesheet" href="./template_styles.css">
 	<link rel="stylesheet" href="./styles.css">
 	<script src="./script.js" defer></script>
@@ -26,24 +23,26 @@
 			<div class="header">
 				<div class="header-menu">
 					<nav>
-						<ul class="header-menu__items">
-							<li><a href="/about/" class="header-menu__item">О компании</a></li>
-							<li><a href="/catalog/" class="header-menu__item">Каталог</a></li>
-							<li><a href="/working-conditions/" class="header-menu__item">Условия работы</a></li>
-							<li><a href="/blog/" class="header-menu__item">Новости</a></li>
-							<li><a href="/contacts/" class="header-menu__item">Контакты</a></li>
-							<li><a href="/personal/" class="header-menu__item">Личный кабинет</a></li>
-						</ul>
+						<div class="header-menu__items">
+							<div class="header-menu__item"><a href="/about/">О компании</a></div>
+							<div class="header-menu__item"><a href="/catalog/">Каталог</a></div>
+							<div class="header-menu__item"><a href="/working-conditions/">Условия работы</a></div>
+							<div class="header-menu__item"><a href="/blog/">Новости</a></div>
+							<div class="header-menu__item"><a href="/contacts/">Контакты</a></div>
+							<div class="header-menu__item"><a href="/personal/">Личный кабинет</a></div>
+							<button class="header-menu__reg header-menu__btn">Регистрация</button>
+							<button class="header-menu__auth header-menu__btn">Вход</button>
+							<button class="header-menu__user-name header-menu__btn unauthorized-user">Ivan</button>
+							<button class="header-menu__logout header-menu__btn unauthorized-user">Выход</button>
+						</div>
 					</nav>
-					<button class="header-menu__reg header-menu__btn">Регистрация</button>
-					<button class="header-menu__auth header-menu__btn">Вход</button>
 				</div>
 				<div class="wrap">
 					<div class="header-menu__mob">
 						<div class="header-menu__mob-company">
 							<div class="header-menu__mob-logo">
 								<a href="/main/">
-									<img src="./img/logo.svg" alt="Логотип Торговый Дом Лето">
+									<img src="./img/logo.svg" alt="Логотип компании Торговый Дом Лето">
 								</a>
 							</div>
 							<div class="header-menu__mob-td">Торговый Дом Лето</div>
@@ -51,12 +50,121 @@
 						<div class="header-menu__mob-phone">+7 (495) 727-07-87</div>
 					</div>
 				</div>
+				<div class="overlay"></div>
+				<div class="modal modal-reg">
+					<div class="modal__title">Регистрация</div>
+					<form name="form-reg" method="post" action="" class="modal-form">
+						<div class="modal-form__data">
+							<label for="reg-name" class="modal-form__label">ФИО</label>
+							<input type="text" class="modal-form__input" name="reg-name" id="reg-name">
+						</div>
+						<div class="modal-form__data">
+							<label for="reg-email" class="modal-form__label">E-mail</label>
+							<input type="email" class="modal-form__input" name="reg-email" id="reg-email" required>
+						</div>
+						<div class="modal-form__data">
+							<label for="reg-tel" class="modal-form__label">Номер телефона</label>
+							<input type="tel" class="modal-form__input" name="reg-tel" id="reg-tel">
+						</div>
+						<div class="modal-form__data">
+							<label for="reg-date-birthday" class="modal-form__label">Дата рождения</label>
+							<input type="text" class="modal-form__input" name="reg-date-birthday" id="reg-date-birthday">
+						</div>
+						<div class="modal-form__data">
+							<label for="reg-login" class="modal-form__label">Логин</label>
+							<input type="text" class="modal-form__input" name="reg-login" id="reg-login" required>
+						</div>
+						<div class="modal-form__data modal-form__data-password">
+							<label for="reg-password" class="modal-form__label">Пароль</label>
+							<input type="password" class="modal-form__input modal-form__input-password" name="reg-password"
+								id="reg-password" required>
+							<button type="button" class="modal-form__password-eye"></button>
+						</div>
+						<div class="modal-form__data">
+							<label for="reg-captcha" class="modal-form__label">Введите символы с картинки</label>
+							<input type="text" class="modal-form__input" name="reg-captcha" id="reg-captcha" required>
+						</div>
+						<div class="modal-form__captcha"></div>
+						<button type="submit" class="modal-form__btn">Зарегистрироваться</button>
+						<div class="modal-form__info">Нажимая кнопку, вы даете согласие на обработку
+							<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh/" class="modal-form__info-link"
+								target="_blank">
+								персональных данных
+							</a>
+						</div>
+					</form>
+					<div class="contacts__socials modal-form__socials">
+						<a href="https://vk.com/leto_med">
+							<div class="contacts__socials-icon-vk modal-form__socials-icon modal-form__socials-icon_mr">
+							</div>
+						</a>
+						<a href="#">
+							<div class="contacts__socials-icon-ws modal-form__socials-icon"></div>
+						</a>
+					</div>
+				</div>
+				<div class="modal modal-auth">
+					<div class="modal__title">Вход</div>
+					<form name="form-auth" method="post" action="/personal/?login=yes" class="modal-form">
+						<div class="modal-form__data">
+							<label for="auth-login" class="modal-form__label">Логин</label>
+							<input type="text" class="modal-form__input" name="auth-login" id="auth-login" required>
+						</div>
+						<div class="modal-form__data modal-form__data-password">
+							<label for="auth-password" class="modal-form__label">Пароль</label>
+							<input type="password" class="modal-form__input modal-form__input-password" name="auth-password"
+								id="auth-password" required>
+							<button type="button" class="modal-form__password-eye"></button>
+						</div>
+						<div class="modal-auth__checkbox">
+							<input type="checkbox" id="modal-auth-checkbox" name="modal-auth-checkbox"
+								class="modal-auth-checkbox" />
+							<label for="modal-auth-checkbox">Запомнить меня на этом компьютере</label>
+						</div>
+						<button type="submit" class="modal-form__btn">Войти</button>
+					</form>
+					<div class="modal-form__link"><button type="button"
+							class="modal-form__link-mb modal-form__link-mb_a recovery-password">Забыли пароль?</button></div>
+					<div class="modal-form__link"><button type="button"
+							class="modal-form__link-mb modal-form__link-mb_b registration">Регистрация</button></div>
+					<div class="modal-form__info modal-form__info-auth">Если Вы впервые на сайте, заполните, пожалуйста,
+						<a href="/personal/profile/" class="modal-form__info-link modal-form__info-auth">регистрационную</a>
+						форму.
+					</div>
+					<div class="contacts__socials modal-form__socials">
+						<a href="https://vk.com/leto_med">
+							<div class="contacts__socials-icon-vk modal-form__socials-icon modal-form__socials-icon_mr">
+							</div>
+						</a>
+						<a href="#">
+							<div class="contacts__socials-icon-ws modal-form__socials-icon"></div>
+						</a>
+					</div>
+				</div>
+				<div class="modal modal-recovery">
+					<div class="modal__title">Восстановление</div>
+					<form name="form-recovery" method="get" action="" class="modal-form">
+						<div class="modal-form__data">
+							<label for="recovery-login-emeil" class="modal-form__label">E-mail или Логин</label>
+							<input type="text" class="modal-form__input" name="recovery-login-emeil" id="recovery-login-emeil"
+								required>
+						</div>
+						<div class="modal-form__data">
+							<label for="recovery-captcha" class="modal-form__label">Введите символы с картинки</label>
+							<input type="text" class="modal-form__input" name="recovery-captcha" id="recovery-captcha"
+								required>
+						</div>
+						<div class="modal-form__captcha"></div>
+						<button type="submit" class="modal-form__btn">Отправить письмо</button>
+					</form>
+				</div>
 				<div class="wrap">
 					<div class="header-block">
 						<div class="header-block__left">
 							<div class="header-block__logo">
 								<a href="/main/">
-									<img src="./img/logo.svg" alt="Логотип Торговый Дом Лето" class="header-menu__mob-logo-img">
+									<img src="./img/logo.svg" class="header-block__logo-img"
+										alt="Логотип компании Торговый Дом Лето">
 								</a>
 							</div>
 							<div class="header-block__company company">
@@ -80,7 +188,6 @@
 										<div class="header-select-city__info">или</div>
 										<select name="city" id="city-select" class="header-select-city__title">
 											<option value="" selected disabled>Нет, другой</option>
-											<!-- 	<option value="msk">Москва</option> -->
 											<option value="krd">Краснодар</option>
 											<option value="sip">Симферополь</option>
 										</select>
@@ -96,7 +203,7 @@
 							</div>
 						</div>
 						<div class="header-block__compare">
-							<a href="/personal/favorite/">
+							<a href="/personal/favourite/">
 								<div class="header-block__compare-item header-block__compare-item_mb">
 									<span class="header-block__compare-icon header-block__compare-icon_favourites"></span>
 									<span
@@ -115,7 +222,9 @@
 						</div>
 						<div class="header-block__cart">
 							<div class="header-block__cart-button">
-								<div class="header-block__cart-btn"></div>
+								<a href="/personal/cart/">
+									<div class="header-block__cart-btn"></div>
+								</a>
 								<div class="header-block__cart-button-count">
 									<span class="header-block__cart-button-num">6</span>
 									<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"
@@ -139,7 +248,7 @@
 					</div>
 					<div class="header-block__mob">
 						<input type="text" class="header-block__mob-search" id="s-m-input"
-							placeholder="Что бы Вы хотели найти ?">
+							placeholder="Что бы Вы хотели найти?">
 						<button class="header-block__mob-s-icon search-mob-btn" id="s-m-btn"></button>
 					</div>
 				</div>
@@ -147,9 +256,7 @@
 		</header>
 	</div>
 
-
 	<!--                                                                                                                                            -->
-
 
 	<main id="main-page">
 		<div class="container-block">
@@ -213,9 +320,12 @@
 						</div>
 						<div class="catalog-cards">
 							<div class="catalog-cards__promo">
-								<span class="catalog-cards__promo-item">Текущие акции</span>
-								<span class="catalog-cards__promo-item">Популярные товары</span>
-								<span class="catalog-cards__promo-item">Новинки</span>
+								<span class="catalog-cards__promo-item catalog-cards__promo-item_stock goods_stock">Текущие
+									акции</span>
+								<span
+									class="catalog-cards__promo-item catalog-cards__promo-item_popular goods-popular">Популярные
+									товары</span>
+								<span class="catalog-cards__promo-item catalog-cards__promo-item_new goods-new">Новинки</span>
 							</div>
 							<div class="catalog-cards__promo-button">
 								<a href="/blog/"><span class="catalog-cards__promo-btn">Показать все
@@ -231,8 +341,8 @@
 							<div class="catalog-cards__goods">
 								<div class="catalog-cards__card">
 									<div class="catalog-cards__card-img">
-										<img class="catalog-cards__card-img-good" src="./img/image-test-68.png"
-											alt="Изображение товара">
+										<img class="catalog-cards__card-img-good" src="./img/image-test-68.png" alt="Перчатки Manual нитрил текстур. смотровые без
+											талька">
 									</div>
 									<div class="catalog-cards__card-score">
 										<div class="catalog-cards__card-rating">
@@ -279,8 +389,8 @@
 
 								<div class="catalog-cards__card">
 									<div class="catalog-cards__card-img">
-										<img class="catalog-cards__card-img-good" src="./img/image-test-68.png"
-											alt="Изображение товара">
+										<img class="catalog-cards__card-img-good" src="./img/image-test-68.png" alt="Перчатки Manual нитрил текстур. смотровые без
+											талька">
 									</div>
 									<div class="catalog-cards__card-score">
 										<div class="catalog-cards__card-rating">
@@ -327,8 +437,8 @@
 
 								<div class="catalog-cards__card">
 									<div class="catalog-cards__card-img">
-										<img class="catalog-cards__card-img-good" src="./img/image-68-test1.png"
-											alt="Изображение товара">
+										<img class="catalog-cards__card-img-good" src="./img/image-68-test1.png" alt="Перчатки Manual нитрил текстур. смотровые без
+											талька">
 									</div>
 									<div class="catalog-cards__card-score">
 										<div class="catalog-cards__card-rating">
@@ -368,7 +478,11 @@
 											<div class="catalog-cards__card-link">Подробнее</div>
 										</a>
 									</div>
-									<div class="catalog-cards__card-label label-new-stock">
+									<div class="catalog-cards__card-label label-stock">
+										<svg xmlns="http://www.w3.org/2000/svg" width="75" height="76" viewBox="0 0 75 76"
+											fill="none">
+											<path d="M75 0L0 75.5V16.5C-4.22371e-05 5.5 0 0 10.5002 0H75Z" fill="#F74148" />
+										</svg>
 										<span class="catalog-cards__card-label-text">Sale</span>
 									</div>
 								</div>
@@ -412,14 +526,18 @@
 											<div class="catalog-cards__card-link">Подробнее</div>
 										</a>
 									</div>
-									<div class="catalog-cards__card-label label-bestseller">
-										<span class="catalog-cards__card-label-text">Хит</span>
+									<div class="catalog-cards__card-label label-stock">
+										<svg xmlns="http://www.w3.org/2000/svg" width="75" height="76" viewBox="0 0 75 76"
+											fill="none">
+											<path d="M75 0L0 75.5V16.5C-4.22371e-05 5.5 0 0 10.5002 0H75Z" fill="#F74148" />
+										</svg>
+										<span class="catalog-cards__card-label-text">Sale</span>
 									</div>
 								</div>
 							</div>
 							<div class="catalog-cards__goods-pag">
-								<button class="catalog-cards__goods-pag-btn catalog-cards__goods-pag-btn_left"></button>
 								<button class="catalog-cards__goods-pag-btn catalog-cards__goods-pag-btn_right"></button>
+								<button class="catalog-cards__goods-pag-btn catalog-cards__goods-pag-btn_left"></button>
 							</div>
 						</div>
 					</div>
@@ -487,7 +605,7 @@
 							<h3 class="news__caption-text">Новости</h3>
 							<button class="news__caption-btn block__caption-btn">
 								<span class="block__caption-btn-img arrow-up-btn"></span>
-								<span class="block__caption-btn-img arrow-down-btn arrow-to-open"></span>
+								<span class="block__caption-btn-img arrow-down-btn arrow-btn-display"></span>
 							</button>
 						</div>
 						<div class="news__block">
@@ -548,7 +666,7 @@
 									стоматолога</h3>
 								<button class="about-block__caption-btn block__caption-btn">
 									<span class="block__caption-btn-img arrow-up-btn"></span>
-									<span class="block__caption-btn-img arrow-down-btn arrow-to-open"></span>
+									<span class="block__caption-btn-img arrow-down-btn arrow-btn-display"></span>
 								</button>
 							</div>
 							<p class="about-block__text">Каждому стоматологу в процессе работы требуется большое количество
@@ -562,7 +680,7 @@
 									компании Leto-Med</h3>
 								<button class="about-block__caption-btn block__caption-btn">
 									<span class="block__caption-btn-img arrow-up-btn"></span>
-									<span class="block__caption-btn-img arrow-down-btn arrow-to-open"></span>
+									<span class="block__caption-btn-img arrow-down-btn arrow-btn-display"></span>
 								</button>
 							</div>
 							<div class="about-block__text">
@@ -597,7 +715,7 @@
 									стоматологических материалов</h3>
 								<button class="about-block__caption-btn block__caption-btn">
 									<span class="block__caption-btn-img arrow-up-btn"></span>
-									<span class="block__caption-btn-img arrow-down-btn arrow-to-open"></span>
+									<span class="block__caption-btn-img arrow-down-btn arrow-btn-display"></span>
 								</button>
 							</div>
 							<div class="about-block__text">
@@ -623,9 +741,7 @@
 	</main>
 
 
-
 	<!--                                                                                                                                            -->
-
 
 	<div class="container-block">
 		<footer>
@@ -696,7 +812,7 @@
 								</div>
 								<div class="footer-contacts__phone footer-contacts__item">+7 (495) 727-07-87</div>
 								<div class="footer-contacts__call">
-									<button class="footer-contacts__call-btn">Заказать звонок</button>
+									<a href="/contacts/"><span class="footer-contacts__call-btn">Заказать звонок</span></a>
 								</div>
 								<div class="footer-contacts__socials">
 									<a href="https://vk.com/leto_med">
@@ -734,22 +850,31 @@
 									<a href="/personal/">Личный кабинет</a>
 								</li>
 								<li class="footer__mob-menu-item">
-									<a href="/sitemap/" target="_blanc">Карта сайта</a>
+									<a href="/sitemap/">Карта сайта</a>
 								</li>
 							</ul>
 						</nav>
-						<div class="footer__mob-location">
-							<div class="footer__mob-location-desc">Ваш город:</div>
-							<button type="button" class="footer-mob__location-city-name btn btn-primary" data-bs-toggle="modal"
-								data-bs-target="#exampleModal">
-								Москва
-							</button>
-							<!-- <button class="footer__mob-location-city">Москва</button> -->
+						<span class="footer__mob-location-desc">Ваш город:</span>
+						<button class="footer__mob-location">Москва</button>
+						<div class="footer-block__location-city-select">
+							<div class="footer-select-city__info footer-select-city__info_font">Ваш город — Москва?</div>
+							<div class="footer-select-city__confirmation">
+								<button class="footer-select-city__confirm">Да</button>
+								<div class="footer-select-city__info">или</div>
+								<select name="city" id="mob-city-select" class="footer-select-city__title">
+									<option value="" selected disabled>Нет, другой</option>
+									<option value="krd">Краснодар</option>
+									<option value="sip">Симферополь</option>
+								</select>
+							</div>
+							<div class="footer-select-city__info">Если вашего региона нет в списке, вы можете написать
+								нам на почту с пометкой "Доставка в наш регион", и мы предложим наилучший способ доставки.
+							</div>
 						</div>
 						<div class="footer__mob-bottom">
 							<div class="footer__mob-bottom-copyrights">
 								<p class="footer__mob-copyrights">&#169; Все права защищены</p>
-								<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh">
+								<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh" target="_blank">
 									<p class="footer__mob-soglashenie">Соглашение об использовании персональных данных</p>
 								</a>
 							</div>
@@ -771,7 +896,7 @@
 					<div class="footer-bottom__item">
 						<div class="footer-bottom__logo">
 							<a href="/main/">
-								<img src="./img/logo.png" alt="Логотип компании">
+								<img src="./img/logo.svg" class="footer-bottom__logo" alt="Логотип компании Торговый Дом Лето">
 							</a>
 						</div>
 						<div class="footer-bottom__company company">
@@ -782,7 +907,7 @@
 					</div>
 					<div class="footer-bottom__item footer-bottom__item_text">
 						<p class="footer-bottom__copyrights">&#169; Все права защищены</p>
-						<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh/">
+						<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh/" target="_blank">
 							<p class="footer-bottom__soglashenie">Соглашение об использовании персональных данных</p>
 						</a>
 					</div>
