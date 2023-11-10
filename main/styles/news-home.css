@@ -8,7 +8,6 @@
 	margin-bottom: 26px;
 }
 
-/* похожие блоки и классы в about*/
 .block__caption-btn {
 	min-width: 40px;
 	min-height: 40px;
@@ -46,8 +45,6 @@
 .arrow-to-open {
 	display: none;
 }
-
-/* похожие блоки и классы в about*/
 
 .news__caption-text {
 	color: rgba(0, 0, 0, 0.80);
