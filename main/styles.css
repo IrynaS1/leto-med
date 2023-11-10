@@ -90,11 +90,6 @@ fieldset {
 	grid-template-areas: "list cards";
 }
 
-.catalog-block {
-	display: flex;
-	justify-content: space-between;
-}
-
 .catalog-list {
 	grid-area: list;
 }
@@ -140,8 +135,8 @@ fieldset {
 	grid-template-areas:
 		'promo arrow .'
 		'cards cards pag';
-	grid-template-rows: 1fr 91%;
-	grid-template-columns: 85% 12% 3%;
+	grid-template-rows: 1fr 507px;
+	grid-template-columns: 1fr 140px 48px;
 }
 
 .catalog-cards__promo {
@@ -232,8 +227,8 @@ fieldset {
 	position: absolute;
 	top: 0;
 	left: 0;
-	min-width: 75px;
-	min-height: 75.5px;
+	width: 75px;
+	height: 75.5px;
 }
 
 .catalog-cards__card-label-text {
@@ -560,7 +555,7 @@ fieldset {
 	width: 8px;
 	height: 8px;
 	position: absolute;
-	left: 10px;
+	left: 9px;
 	top: 1px;
 }
 
@@ -609,15 +604,6 @@ fieldset {
 	line-height: 72%;
 }
 
-.block__caption-btn {
-	min-width: 40px;
-	min-height: 40px;
-	position: relative;
-	background: linear-gradient(180deg, #20B3B0 0%, #1EA9A3 100%);
-	border: none;
-	border-radius: 50%;
-}
-
 .about-block__caption-f-block {
 	margin-bottom: 23px;
 }
@@ -654,10 +640,6 @@ li::marker {
 	display: none;
 }
 
-.arrow-btn-display {
-	display: none;
-}
-
 @media (max-width: 1920px) {
 	.wrap {
 		padding: 0 37px;
@@ -671,8 +653,11 @@ li::marker {
 		padding: 33px 0 37px 0;
 	}
 
-	.catalog-cards {
-		min-width: 1500px;
+	.catalog-block {
+		display: grid;
+		grid-template-columns: 265px 1fr;
+		grid-template-areas:
+			"list cards";
 	}
 
 	.catalog-list {
@@ -707,7 +692,8 @@ li::marker {
 		grid-template-areas:
 			'promo arrow arrow'
 			'cards cards pag';
-		grid-template-columns: 89% 9% 2%;
+		grid-template-rows: 40px 453px;
+		grid-template-columns: 1fr 80px 43px;
 	}
 
 	.catalog-cards__goods-pag-btn {
@@ -720,25 +706,56 @@ li::marker {
 		margin-bottom: 43px;
 	}
 
-	.catalog-cards__promo {
-		margin-right: 156px;
-	}
-
-	.catalog-cards__promo {
-		margin-right: 156px;
-	}
-
-	.catalog-cards__promo-item:not(:last-child) {
-		margin-right: 47px;
-	}
-
 	.catalog-cards__promo-item {
 		font-size: 22px;
 	}
 
 	.catalog-cards__goods {
-		justify-content: space-between;
+		justify-content: center;
 		margin-right: 22px;
+	}
+
+	.catalog-cards__card {
+		max-width: 243px;
+		height: 453px;
+	}
+
+	.catalog-cards__card:nth-child(-n+3) {
+		margin-right: 18px;
+	}
+
+	.catalog-cards__card-img,
+	.catalog-cards__card-img-good {
+		width: 220px;
+		height: 219px;
+	}
+
+	.catalog-cards__card-rating-sym {
+		width: 19px;
+		height: 18px;
+	}
+
+	.catalog-cards__card-line {
+		border-top: 1px solid rgba(0, 0, 0, 0.10);
+		margin-bottom: 8px;
+	}
+
+	.catalog-cards__card-title {
+		font-size: 14px;
+		margin-bottom: 3px;
+	}
+
+	.catalog-cards__card-property {
+		font-size: 13px;
+		margin-bottom: 10px;
+	}
+
+	.catalog-cards__card-link {
+		padding: 13px 20px;
+	}
+
+	.catalog-cards__card-score {
+		margin-bottom: 5px;
 	}
 
 	.news__block-part {
@@ -755,13 +772,7 @@ li::marker {
 	}
 }
 
-@media (max-width: 1850px) {
-	.catalog-cards__card:nth-child(-n+3) {
-		margin-right: 18px;
-	}
-}
-
-@media (max-width:1680px) {
+@media (max-width:1670px) {
 	.news-home {
 		padding: 22px 0 24px 0;
 	}
@@ -862,6 +873,11 @@ li::marker {
 		min-width: 34px;
 		min-height: 34px;
 	}
+
+	.arrow-up-btn {
+		bottom: 14px;
+		right: 8px;
+	}
 }
 
 @media (max-width: 1440px) {
@@ -902,9 +918,10 @@ li::marker {
 	}
 
 	.advantages {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 1fr;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		margin-bottom: 0;
 	}
 
 	.advantages__item:nth-child(-n+3) {
@@ -929,8 +946,66 @@ li::marker {
 	}
 }
 
+@media (max-width:1370px) {
+	.catalog-block {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"cards"
+			"list";
+	}
 
-@media (max-width:1300px) {
+	.catalog-list {
+		margin: 0 auto 12px auto;
+	}
+
+	.catalog-list__item {
+		display: flex;
+		align-items: center;
+		padding: 13px 20px 14px 20px;
+		width: 360px;
+		height: 62px;
+		font-size: 17px;
+	}
+
+	.catalog-list__title {
+		margin-bottom: 25px;
+	}
+
+	.catalog-list__item_child,
+	.catalog-list__item_child-pad {
+		margin-bottom: 10px;
+	}
+
+	.catalog-cards {
+		grid-template-areas:
+			"promo promo promo"
+			"cards cards pag"
+			". arrow arrow";
+		grid-template-rows: 25px 453px;
+		margin-bottom: 20px;
+	}
+
+	.catalog-cards__promo-item {
+		font-size: 12px;
+	}
+
+	.catalog-cards__promo-item {
+		width: 150px;
+	}
+
+	.catalog-cards__promo-item_popular {
+		margin-right: 30px;
+	}
+
+	.catalog-cards__promo-btn {
+		font-size: 11px;
+	}
+
+	.advantages__item-desc {
+		padding: 56px 20px 15px 18px;
+	}
+
 	.about-block__caption {
 		font-size: 30px;
 	}
@@ -947,6 +1022,92 @@ li::marker {
 }
 
 @media (max-width:1120px) {
+	.catalog-cards {
+		grid-template-columns: 1fr;
+		grid-template-rows: 25px 270px;
+	}
+
+	.catalog-cards__goods {
+		width: 100%;
+		height: 265px;
+		justify-content: flex-start;
+		overflow-x: auto;
+		margin-right: 0;
+	}
+
+	.catalog-cards__promo-btn,
+	.catalog-cards__goods-pag {
+		display: none;
+	}
+
+	.catalog-cards__card {
+		max-width: 141px;
+		height: 265px;
+		padding: 6px;
+	}
+
+	.catalog-cards__card-img,
+	.catalog-cards__card-img-good {
+		width: 129px;
+		height: 129px;
+		margin-bottom: 5px;
+	}
+
+	.catalog-cards__card-label-text {
+		top: 11px;
+		left: 4px;
+		font-size: 13px;
+	}
+
+	.catalog-cards__card-label {
+		width: 47px;
+		height: 47px;
+	}
+
+	.catalog-cards__card-score {
+		margin-bottom: 0;
+	}
+
+	.catalog-cards__card-rating-sym {
+		width: 11px;
+		height: 11px;
+	}
+
+	.catalog-cards__card-scales {
+		min-width: 12px;
+		min-height: 12px;
+		background-size: contain;
+		margin-right: 5px;
+	}
+
+	.catalog-cards__card-favourites {
+		min-width: 12px;
+		min-height: 12px;
+	}
+
+	.catalog-cards__card-title {
+		font-size: 10px;
+		margin-bottom: 2px;
+	}
+
+	.catalog-cards__card-property {
+		font-size: 8px;
+		margin-bottom: 3px;
+	}
+
+	.catalog-cards__card-price {
+		font-size: 15px;
+	}
+
+	.catalog-cards__card-link {
+		padding: 7px 10px;
+		font-size: 9px;
+	}
+
+	.catalog-cards__card-double-old-price {
+		font-size: 8px;
+	}
+
 	.news-home {
 		padding: 12px 0 13px 0;
 	}
@@ -1024,6 +1185,16 @@ li::marker {
 
 	.about-block__text {
 		font-size: 12px;
+	}
+
+	.block__caption-btn-img {
+		min-width: 19px;
+		min-height: 14px;
+	}
+
+	.arrow-up-btn {
+		bottom: 11px;
+		right: 6px;
 	}
 }
 
