@@ -1443,7 +1443,7 @@ body .overlay--open {
 		display: block;
 		position: absolute;
 		bottom: 110px;
-		left: 165px;
+		left: 140px;
 		min-width: 100px;
 		max-width: 300px;
 		padding: 10px;
@@ -1528,5 +1528,11 @@ body .overlay--open {
 
 	.footer__mob-bottom-socials {
 		display: flex;
+	}
+}
+
+@media (max-width: 428px) {
+	.footer-block__location-city-select {
+		bottom: 135px;
 	}
 }

@@ -203,7 +203,7 @@ function deleteViewRow() {
 		viewCellCardFooter.style.display = 'block';
 	}/* Поправить раскрытие карточки по наведению мыши
 	 else {                   
-		viewCellCard.addEventListener('mousemove', function () {
+		viewCellCard.addEventListener('mouseover', function () {
 			viewCellCardFooter.style.display = 'block';
 		});
 
