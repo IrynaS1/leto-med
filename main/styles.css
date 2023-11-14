@@ -956,6 +956,7 @@ li::marker {
 	}
 
 	.catalog-list {
+		width: 360px;
 		margin: 0 auto 12px auto;
 	}
 
@@ -963,7 +964,7 @@ li::marker {
 		display: flex;
 		align-items: center;
 		padding: 13px 20px 14px 20px;
-		width: 360px;
+		width: 345px;
 		height: 62px;
 		font-size: 17px;
 	}
@@ -975,6 +976,11 @@ li::marker {
 	.catalog-list__item_child,
 	.catalog-list__item_child-pad {
 		margin-bottom: 10px;
+	}
+
+	.catalog-list__item:hover {
+		width: 360px;
+		margin-left: -7px;
 	}
 
 	.catalog-cards {

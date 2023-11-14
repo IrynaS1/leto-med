@@ -1181,7 +1181,6 @@ input[type="range"]::-webkit-slider-thumb {
 
 .good-cell-card__footer {
 	display: none;
-	/* 	display: block; */
 	grid-area: footer;
 }
 
@@ -1249,12 +1248,12 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .card--open {
-position: fixed;
-height: 487px;
-z-index: 1;
-top: 50%;
-left: 50%;
-transform: translateX(-50%) translateY(-50%); 
+	position: fixed;
+	height: 487px;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
 }
 
 @media (max-width: 1921px) {

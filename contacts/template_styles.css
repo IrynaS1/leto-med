@@ -1530,3 +1530,9 @@ body .overlay--open {
 		display: flex;
 	}
 }
+
+@media (max-width: 472px) {
+	.footer-block__location-city-select {
+		bottom: 125px;
+	}
+}
