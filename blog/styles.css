@@ -1,11 +1,7 @@
 @import url('./fonts/gothampro_medium.ttf');
 
 html {
-	position: relative;
 	box-sizing: border-box;
-	overflow: scroll;
-	overflow-x: scroll;
-	scroll-behavior: smooth;
 }
 
 *,
@@ -15,12 +11,15 @@ html {
 }
 
 body {
+	min-width: 320px;
+	min-height: 100vh;
 	font-family: Lato, sans-serif;
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
-	min-width: 320px;
-	min-height: 100vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 img,
@@ -247,7 +246,7 @@ blockquote {
 	}
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1443px) {
 	.blog__card {
 		width: 240px;
 		height: 435px;
@@ -262,6 +261,10 @@ blockquote {
 
 	.blog__card-description {
 		margin-bottom: 23px;
+	}
+
+	.blog__card-view-img {
+		margin: 0 3px -2px 0;
 	}
 }
 
@@ -349,5 +352,42 @@ blockquote {
 	.blog__card-view-img {
 		width: 10px;
 		height: 9px;
+		margin: 0 3px -6px 0;
+	}
+}
+
+@media (max-width: 700px) {
+	.left-menu__item {
+		width: 95%;
+	}
+
+	.blog__card {
+		display: flex;
+		align-items: center;
+		padding: 5px;
+		width: 95%;
+		height: 75px;
+	}
+
+	.blog__card-img {
+		display: none;
+	}
+
+	.blog__card-title {
+		font-size: 12px;
+		margin-right: 7px;
+	}
+
+	.blog__card-description {
+		margin-right: 7px;
+	}
+
+	.blog__card-info {
+		display: block;
+		font-size: 10px;
+	}
+
+	.blog__card-view-img {
+		margin: 1px 3px 0 0;
 	}
 }

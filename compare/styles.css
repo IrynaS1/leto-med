@@ -1,11 +1,7 @@
 @import url('./fonts/gothampro_medium.ttf');
 
 html {
-	position: relative;
 	box-sizing: border-box;
-	overflow: scroll;
-	overflow-x: scroll;
-	scroll-behavior: smooth;
 }
 
 *,
@@ -15,12 +11,15 @@ html {
 }
 
 body {
+	min-width: 320px;
+	min-height: 100vh;
 	font-family: Lato, sans-serif;
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
-	min-width: 320px;
-	min-height: 100vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 img,
@@ -286,6 +285,8 @@ iframe {
 
 .cart-goods__good-image {
 	grid-area: imgs;
+	display: flex;
+	justify-content: center;
 	width: 171px;
 	height: 162px;
 	padding: 20px;
@@ -294,12 +295,6 @@ iframe {
 	background-color: #FFF;
 	box-shadow: 0px 0px 6px -2px #000;
 	margin-right: 13px;
-}
-
-.cart-goods__good-img {
-	width: 122px;
-	height: 122px;
-	background-size: contain;
 }
 
 .cart-goods__good-label {
@@ -447,7 +442,7 @@ iframe {
 .cart-goods__qt {
 	grid-area: counts;
 	max-width: 120px;
-	max-height: 36px;
+	max-height: 35px;
 	display: flex;
 	align-items: center;
 	border-radius: 6px;
@@ -488,35 +483,29 @@ iframe {
 }
 
 .good-compare {
-	background: url("./img/compare-icon-gray.svg") no-repeat;
-	background-position: 0 -5px;
+	background: url("./img/comp-gray.svg") no-repeat;
 }
 
 .good-compare:hover,
 .good-compare-added {
-	background: url("./img/compare-icon-blue.svg") no-repeat;
-	background-position: 0 -5px;
+	background: url("./img/comp-blue.svg") no-repeat;
 }
 
 .good-favour {
-	background: url("./img/favour-icon-gray.svg") no-repeat;
-	background-position: 0 1px;
+	background: url("./img/fav-gray.svg") no-repeat;
 }
 
 .good-favour:hover,
 .good-favour-added {
-	background: url("./img/favour-icon-red.svg") no-repeat;
-	background-position: 0 1px;
+	background: url("./img/fav-red.svg") no-repeat;
 }
 
 .good-delete {
-	background: url("./img/delete-icon-gray.svg") no-repeat;
-	background-position: 0 3px;
+	background: url("./img/del-gray.svg") no-repeat;
 }
 
 .good-delete:hover {
-	background: url("./img/delete-icon-red.svg") no-repeat;
-	background-position: 0 3px;
+	background: url("./img/del-red.svg") no-repeat;
 }
 
 .cart-goods__good-link {
@@ -669,7 +658,7 @@ iframe {
 	}
 
 	.cart-goods {
-		padding: 17px 0 0 15px;
+		padding: 17px 0 0 8px;
 		border-radius: 10px;
 		background: #FFF;
 		box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.30);
@@ -709,12 +698,12 @@ iframe {
 
 	.cart-goods__good-card {
 		padding: 0 12px 13px 1px;
-		grid-template-columns: 108px 38px 70px 1fr 1fr 1fr 140px;
-		grid-template-rows: 29px 1fr 1fr 46px 36px;
+		grid-template-columns: 108px 38px 50px 1fr 1fr 1fr 140px;
+		grid-template-rows: 29px 1fr 1fr 41px 36px;
 		grid-template-areas: "imgs imgs btns btns btns btns btns"
 			"imgs imgs content content content content content"
 			"imgs imgs content content content content content"
-			"units units units units counts counts counts"
+			"units units units counts counts counts counts"
 			"price price price price price link link";
 	}
 
@@ -723,11 +712,6 @@ iframe {
 		height: 123px;
 		padding: 15px;
 		margin-right: 15px;
-	}
-
-	.cart-goods__good-img {
-		width: 98px;
-		height: 98px;
 	}
 
 	.cart-goods__good-label {
@@ -789,16 +773,15 @@ iframe {
 	}
 
 	.cart-goods__units-item {
-		width: 104px;
-		padding: 8px 21px;
-		font-size: 13px;
-		margin: 0px 10px 13px 0;
+		width: 90px;
+		padding: 6px 10px;
+		margin: 0px 8px 10px 0;
 	}
 
 	.cart-goods__qt {
 		max-width: 103px;
-		max-height: 33px;
-		margin: 0px 0 2px 0;
+		max-height: 31px;
+		margin: 0px 0 1px 0;
 	}
 
 	.cart-goods__qt-btn {
@@ -812,6 +795,7 @@ iframe {
 
 	.cart-goods__price {
 		padding-left: 70px;
+		font-size: 23px;
 		margin-right: 20px;
 	}
 
@@ -830,5 +814,40 @@ iframe {
 @media (max-width: 620px) {
 	.cart-top-btn__add-to-cart {
 		margin-top: 10px;
+	}
+}
+
+@media (max-width: 480px) {
+	.cart-goods__good-card {
+		grid-template-columns: 108px 38px 38px 1fr 70px;
+		grid-template-rows: 29px 1fr 1fr 36px 36px;
+		grid-template-areas:
+			"imgs imgs btns btns btns"
+			"imgs imgs content content content"
+			"imgs imgs content content content"
+			"units units units counts counts"
+			"price price link link link";
+	}
+
+	.cart-goods__good-link {
+		justify-content: center;
+	}
+
+	.cart-goods__good-info {
+		display: none;
+	}
+
+	.cart-goods__qt {
+		max-height: 26px;
+	}
+
+	.cart-goods__price {
+		justify-content: center;
+		padding-left: 0;
+	}
+
+
+	.cart-goods__qt-count {
+		max-width: 40px;
 	}
 }

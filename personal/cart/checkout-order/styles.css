@@ -1,11 +1,7 @@
 @import url('./fonts/gothampro_medium.ttf');
 
 html {
-	position: relative;
 	box-sizing: border-box;
-	overflow: scroll;
-	overflow-x: scroll;
-	scroll-behavior: smooth;
 }
 
 *,
@@ -21,7 +17,9 @@ body {
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
-	overflow: auto;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 img,
@@ -55,10 +53,6 @@ p,
 figure,
 fieldset {
 	margin: 0;
-}
-
-iframe {
-	border: none;
 }
 
 .visually-hidden {
@@ -176,6 +170,19 @@ iframe {
 }
 
 @media (max-width: 1010px) {
+	/* 	body {
+		overflow-y: scroll;
+		overflow-x: hidden;
+		scroll-behavior: smooth;
+		position: relative;
+	}
+
+	footer {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	} */
+
 	.wrap-content {
 		padding-top: 5px;
 	}

@@ -1,11 +1,7 @@
 @import url('./fonts/gothampro_medium.ttf');
 
 html {
-	position: relative;
 	box-sizing: border-box;
-	overflow: scroll;
-	overflow-x: scroll;
-	scroll-behavior: smooth;
 }
 
 *,
@@ -15,12 +11,15 @@ html {
 }
 
 body {
+	min-width: 320px;
+	min-height: 100vh;
 	font-family: Lato, sans-serif;
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
-	min-width: 320px;
-	min-height: 100vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 img,
@@ -355,7 +354,6 @@ blockquote {
 
 	.section-block__subtitle-line:after {
 		content: "";
-		border-top: 2px solid rgba(112, 44, 145, 0.50);
 		width: 100%;
 		margin-left: 10px;
 	}
@@ -375,9 +373,7 @@ blockquote {
 	}
 
 	.section-block__title-line:before {
-		border-left: 3px solid #702C91;
-		margin-left: -5px;
-		top: -4px;
+		margin-left: -7px;
 	}
 
 	.section-block__text_mb {

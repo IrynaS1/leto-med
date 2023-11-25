@@ -286,7 +286,7 @@
 									</a>
 								</nav>
 							</div>
-							<div class="page-content__notifications">
+							<form action="" method="get" class="page-content__notifications">
 								<h3 class="page-content__notifications-title">Уведомления</h3>
 								<div class="page-content__notifications-desc">Уведомления будут приходить на электронный
 									адрес, указанный при регистрации</div>
@@ -307,7 +307,7 @@
 										<label for="notifications-checkbox-feedback">Ответы на мои отзывы</label>
 									</div>
 								</div>
-							</div>
+							</form>
 							<div class="page-content__order-blocks">
 								<div class="page-content__order">
 									<div class="page-content__order-title">
@@ -609,6 +609,550 @@
 						<a href="/about/soglashenie-ob-ispolzovanii-personalnykh-dannykh/" target="_blank">
 							<p class="footer-bottom__soglashenie">Соглашение об использовании персональных данных</p>
 						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer__mob-menu-line">
+				<div class="footer__mob-items">
+					<div class="footer__mob-item">
+						<button class="footer__mob-item-btn footer__mob-item-btn_menu m-menu-js"></button>
+						<span class="footer__mob-item-title">Меню</span>
+					</div>
+					<div class="footer__mob-item">
+						<button class="footer__mob-item-btn footer__mob-item-btn_catalog m-catalog-js"></button>
+						<span class="footer__mob-item-title">Каталог</span>
+					</div>
+					<a href="/personal/cart/">
+						<div class="footer__mob-item footer__mob-item_cart">
+							<button class="footer__mob-item-btn footer__mob-item-btn_cart mob-cart--active"></button>
+							<span class="footer__mob-item-title">Корзина</span>
+							<div class="footer__cart-button-count">
+								<span class="footer__cart-button-num">23</span>
+							</div>
+						</div>
+					</a>
+					<div class="footer__mob-item footer__mob-item-auth">
+						<button class="footer__mob-item-btn footer__mob-item-btn_auth"></button>
+						<span class="footer__mob-item-title unauthorized-user">Войти</span>
+						<span class="footer__mob-item-title footer__mob-item-title_user">Ivan</span>
+					</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="mob-modal-overlay"></div>
+			<div class="menu-mob-modal">
+				<div class="footer__mob-menu">
+					<div class="footer__mob-contacts">
+						<div class="footer__mob-contacts-line">
+							<span class="footer__mob-contacts-img footer__mob-contacts-img_phone"></span>
+							<span class="footer__mob-contacts-phone">
+								<a href="tel:+74957270787">+7 (495) 727-07-87</a>
+							</span>
+						</div>
+						<div class="footer__mob-contacts-line">
+							<span class="footer__mob-contacts-img footer__mob-contacts-img_mail"></span>
+							<span class="footer__mob-contacts-mail">
+								<a href="mailto:sale@leto-med.ru">sale@leto-med.ru</a>
+							</span>
+						</div>
+					</div>
+					<nav>
+						<ul class="footer__mob-menu-items">
+							<li class="footer__mob-menu-item">
+								<a href="/main/">Главная</a>
+							</li>
+							<li class="footer__mob-menu-item">
+								<a href="/about/">О компании</a>
+							</li>
+							<li class="footer__mob-menu-item">
+								<a href="/catalog/">Каталог</a>
+							</li>
+							<li class="footer__mob-menu-item">
+								<a href="/working-conditions/">Условия работы</a>
+							</li>
+							<li class="footer__mob-menu-item">
+								<a href="/blog/">Новости</a>
+							</li>
+							<li class="footer__mob-menu-item">
+								<a href="/contacts/">Контакты</a>
+							</li>
+							<li class="footer__mob-menu-item">
+								<a href="/personal/favourite/">Избранное</a>
+							</li>
+							<li class="footer__mob-menu-item">
+								<a href="/compare/">Сравнение</a>
+							</li>
+							<li class="footer__mob-menu-item">
+								<a href="/sitemap/">Карта сайта</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<div class="catalog-mob-modal">
+				<div class="footer__mob-catalog">
+					<div class="footer__mob-catalog-top">
+						<div class="footer__mob-catalog-title">Каталог</div>
+						<button class="footer__mob-catalog-close"></button>
+					</div>
+					<nav>
+						<ul class="footer__mob-catalog-items">
+							<li class="footer__mob-catalog-item">
+								<span class="footer__mob-catalog-img catalog-img-a"></span>
+								<div class="footer__mob-catalog-caption">Боры и вращающийся инструмент</div>
+							</li>
+							<li class="footer__mob-catalog-item">
+								<span class="footer__mob-catalog-img catalog-img-b"></span>
+								<span class="footer__mob-catalog-caption">Материалы одноразового использования</span>
+							</li>
+							<li class="footer__mob-catalog-item">
+								<span class="footer__mob-catalog-img catalog-img-c"></span>
+								<span class="footer__mob-catalog-caption">Дезинфекция</span>
+							</li>
+							<li class="footer__mob-catalog-item">
+								<span class="footer__mob-catalog-img catalog-img-d"></span>
+								<span class="footer__mob-catalog-caption">Инструменты</span>
+							</li>
+							<li class="footer__mob-catalog-item">
+								<span class="footer__mob-catalog-img catalog-img-e"></span>
+								<span class="footer__mob-catalog-caption">Обработка и пломбировка канала</span>
+							</li>
+							<li class="footer__mob-catalog-item">
+								<span class="footer__mob-catalog-img catalog-img-f"></span>
+								<span class="footer__mob-catalog-caption">Ортопедические материалы</span>
+							</li>
+							<li class="footer__mob-catalog-item">
+								<span class="footer__mob-catalog-img catalog-img-g"></span>
+								<span class="footer__mob-catalog-caption">Пломбировочные материалы</span>
+							</li>
+							<li class="footer__mob-catalog-item">
+								<span class="footer__mob-catalog-img catalog-img-h"></span>
+								<span class="footer__mob-catalog-caption">Хирургические материалы</span>
+							</li>
+							<li class="footer__mob-catalog-item">
+								<span class="footer__mob-catalog-img catalog-img-i"></span>
+								<span class="footer__mob-catalog-caption">Эндодонтические материалы, файлы, штифты</span>
+							</li>
+							<li class="footer__mob-catalog-item">
+								<span class="footer__mob-catalog-img catalog-img-i"></span>
+								<span class="footer__mob-catalog-caption">Оборудование</span>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<div class="subsection-mob-modal">
+				<div class="footer__mob-subsection">
+					<div class="footer__mob-topsection">
+						<button class="footer__mob-back mob-btn-back-js">
+							<svg xmlns="http://www.w3.org/2000/svg" width="26" height="8" viewBox="0 0 26 8" fill="none">
+								<path
+									d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM26 3.5L1 3.5V4.5L26 4.5V3.5Z"
+									fill="#22BABA" />
+							</svg>
+							Ко всем категориям
+						</button>
+						<button class="footer__mob-catalog-close subsection-close-btn-js"></button>
+					</div>
+					<div class="footer__mob-subtitle">Боры и вращающийся инструмент</div>
+					<div class="footer__mob-line"></div>
+					<div class="footer__mob-subsection-content">
+						<ul>
+							<li class="footer__mob-subsection-item"><a href="/catalog/bory-sswhite/">Боры
+									SSWhite</a></li>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/sistemy-izolyatsii-rabochego-polya/">Системы изоляции рабочего
+									поля</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/sistemy-shlifovki-i-polirovki/">Системы
+									шлифовки и полировки</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/diski-diskoderzhateli/">Диски,
+									дискодержатели</a></li>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/aksessuary-dlya-borov-trimmery/">Аксессуары для боров,
+									триммеры</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/nakonechniki/">Наконечники</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/bory-mani/">Боры
+									"Мани"</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="subsection-mob-modal">
+				<div class="footer__mob-subsection">
+					<div class="footer__mob-topsection">
+						<button class="footer__mob-back mob-btn-back-js">
+							<svg xmlns="http://www.w3.org/2000/svg" width="26" height="8" viewBox="0 0 26 8" fill="none">
+								<path
+									d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM26 3.5L1 3.5V4.5L26 4.5V3.5Z"
+									fill="#22BABA" />
+							</svg>
+							Ко всем категориям
+						</button>
+						<button class="footer__mob-catalog-close subsection-close-btn-js"></button>
+					</div>
+					<div class="footer__mob-subtitle">Материалы одноразового использования</div>
+					<div class="footer__mob-line"></div>
+					<div class="footer__mob-subsection-content">
+						<ul>
+							<li class="footer__mob-subsection-item"><a href="/catalog/perchatki/">Перчатки</a>
+							</li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/materialy-dlya-rentgenografii/">Материалы
+									для рентгенографии</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/salfetki-i-fartuki-nagrudnye/">Салфетки и
+									фартуки нагрудные</a></li>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/valiki-vatnye-bakhily-shapochki-stakanchiki-tabletki/">Валики
+									ватные, бахилы,
+									шапочки, стаканчики,
+									таблетки</a></li>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/salfetki-dlya-obrabotki-poverkhnosti/">Салфетки для обработки
+									поверхности</a>
+							</li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/applikatory/">Аппликаторы</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/slyunootsosy-i-pyleotsosy/">Слюноотсосы и
+									пылесосы</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/shpritsy-i-igly/">Шприцы и
+									иглы</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/pakety-dlya-sterilizatsii/">Пакеты для
+									стерилизации</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/ochki-i-ekrany/">Очки и
+									экраны</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/emkosti-konteynera-i-pakety/">Емкости,
+									контейнера и пакеты</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/odezhda/">Одежда</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/maski/">Маски</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="subsection-mob-modal">
+				<div class="footer__mob-subsection">
+					<div class="footer__mob-topsection">
+						<button class="footer__mob-back mob-btn-back-js">
+							<svg xmlns="http://www.w3.org/2000/svg" width="26" height="8" viewBox="0 0 26 8" fill="none">
+								<path
+									d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM26 3.5L1 3.5V4.5L26 4.5V3.5Z"
+									fill="#22BABA" />
+							</svg>
+							Ко всем категориям
+						</button>
+						<button class="footer__mob-catalog-close subsection-close-btn-js"></button>
+					</div>
+					<div class="footer__mob-subtitle">Дезинфекция</div>
+					<div class="footer__mob-line"></div>
+					<div class="footer__mob-subsection-content">
+						<ul>
+							<li class="footer__mob-subsection-item"><a href="/catalog/dezinfektsiya-instrumenta/">Дезинфекция
+									инструмента</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/dezinfektsiya-poverkhnostey/">Дезинфекция
+									поверхностей</a></li>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/dezinfektsiya-vrashchayushchegosya-instrumenta/">Дезинфекция
+									вращающегося
+									инструмента</a>
+							</li>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/dezinfektsiya-otsasyvayushchikh-sistem/">Дезинфекция
+									отсасывающих систем</a>
+							</li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/zhurnaly-indikatory-i-testy/">Журналы,
+									индикаторы и тесты</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/dezinfektsiya-ruk/">Дезинфекция рук</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="subsection-mob-modal">
+				<div class="footer__mob-subsection">
+					<div class="footer__mob-topsection">
+						<button class="footer__mob-back mob-btn-back-js">
+							<svg xmlns="http://www.w3.org/2000/svg" width="26" height="8" viewBox="0 0 26 8" fill="none">
+								<path
+									d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM26 3.5L1 3.5V4.5L26 4.5V3.5Z"
+									fill="#22BABA" />
+							</svg>
+							Ко всем категориям
+						</button>
+						<button class="footer__mob-catalog-close subsection-close-btn-js"></button>
+					</div>
+					<div class="footer__mob-subtitle">Инструменты</div>
+					<div class="footer__mob-line"></div>
+					<div class="footer__mob-subsection-content">
+						<ul>
+							<li class="footer__mob-subsection-item"><a href="/catalog/diagnosticheskie/">Диагностические</a>
+							</li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/restavratsionnye/">Реставрационные</a>
+							</li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/khirurgiya/">Хирургия</a>
+							</li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/endodonticheskie/">Эндодонтические</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="subsection-mob-modal">
+				<div class="footer__mob-subsection">
+					<div class="footer__mob-topsection">
+						<button class="footer__mob-back mob-btn-back-js">
+							<svg xmlns="http://www.w3.org/2000/svg" width="26" height="8" viewBox="0 0 26 8" fill="none">
+								<path
+									d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM26 3.5L1 3.5V4.5L26 4.5V3.5Z"
+									fill="#22BABA" />
+							</svg>
+							Ко всем категориям
+						</button>
+						<button class="footer__mob-catalog-close subsection-close-btn-js"></button>
+					</div>
+					<div class="footer__mob-subtitle">Обработка и пломбировка канала</div>
+					<div class="footer__mob-line"></div>
+					<div class="footer__mob-subsection-content">
+						<ul>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/obrabotka-i-dezinfektsiya-kanalov/">Обработка и дезинфекция
+									каналов</a></li>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/rasplombirovka-i-obrabotka-kornevykh-kanalov/">Распломбировка и
+									обработка
+									корневых каналов</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/plombirovka-kanalov/">Пломбировка
+									каналов</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/devitalizatsiya-pulpy/">Девитализация
+									пульпы</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="subsection-mob-modal">
+				<div class="footer__mob-subsection">
+					<div class="footer__mob-topsection">
+						<button class="footer__mob-back mob-btn-back-js">
+							<svg xmlns="http://www.w3.org/2000/svg" width="26" height="8" viewBox="0 0 26 8" fill="none">
+								<path
+									d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM26 3.5L1 3.5V4.5L26 4.5V3.5Z"
+									fill="#22BABA" />
+							</svg>
+							Ко всем категориям
+						</button>
+						<button class="footer__mob-catalog-close subsection-close-btn-js"></button>
+					</div>
+					<div class="footer__mob-subtitle">Ортопедические материалы</div>
+					<div class="footer__mob-line"></div>
+					<div class="footer__mob-subsection-content">
+						<ul>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/a-silikony-s-silikony-aksessuary/">А-силиконы, С-силиконы,
+									аксессуары</a></li>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/tsementy-dlya-vremennoy-fiksatsii-mostov-i-koronok/">Цементы
+									для временной
+									фиксации мостов и коронок</a></li>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/tsementy-dlya-postoyannoy-fiksatsii-mostov-i-koronok/">Цементы
+									для постоянной
+									фиксации мостов и коронок</a></li>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/tsementy-stekloionomernye-i-prokladochnyy-material/">Цементы
+									стеклоиономерные
+									и прокладочный материал</a></li>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/retraktsionnye-materialy-i-aksessuary/">Ретракционные материалы
+									и
+									аксессуары</a></li>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/vremennye-koronki-materialy-aksessuary/">Временные коронки,
+									материалы,
+									аксессуары</a></li>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/materialy-dlya-shinirovaniya-zubov/">Материалы для шинирования
+									зубов</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/slepochnye-massy-alginaty/">Слепочные
+									массы, альгинаты</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/gipsy-meditsinskie/">Гипсы
+									медицинские</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/voska/">Воска</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/perebazirovka-protezov/">Перебазировка
+									протезов</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="subsection-mob-modal">
+				<div class="footer__mob-subsection">
+					<div class="footer__mob-topsection">
+						<button class="footer__mob-back mob-btn-back-js">
+							<svg xmlns="http://www.w3.org/2000/svg" width="26" height="8" viewBox="0 0 26 8" fill="none">
+								<path
+									d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM26 3.5L1 3.5V4.5L26 4.5V3.5Z"
+									fill="#22BABA" />
+							</svg>
+							Ко всем категориям
+						</button>
+						<button class="footer__mob-catalog-close subsection-close-btn-js"></button>
+					</div>
+					<div class="footer__mob-subtitle">Пломбировочные материалы</div>
+					<div class="footer__mob-line"></div>
+					<div class="footer__mob-subsection-content">
+						<ul>
+							<li class="footer__mob-subsection-item"><a href="/catalog/plombirovochnye-3m/">Пломбировочные
+									3M</a>
+							</li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/plombirovochnye-dentsply/">Пломбировочные
+									DENTSPLY</a>
+							</li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/plombirovochnye-gc/">Пломбировочные
+									GC</a></li>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/plombirovochnye-heraeus-kulzer/">Пломбировочные HERAEUS
+									KULZER</a>
+							</li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/plombirovochnye-kerr/">Пломбировочные
+									KERR</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/plombirovochnye-tokuyama/">Пломбировочные
+									TOKUYAMA</a></li>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/bondingovye-sistemy-i-protravki-aksessuary/">Бондинговые
+									системы и протравки,
+									аксессуары</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/plombirovochnye-es/">Пломбировочные
+									ES</a></li>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/materialy-dlya-vremennykh-plomb/">Материалы для временных
+									пломб</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/prokladochnye-materialy/">Прокладочные
+									материалы</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/tsementy-dlya-restavratsiy/">Цементы для
+									реставраций</a></li>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/aksessuary-dlya-postanovki-plomb-matritsy-klinyshki/">Аксессуары
+									для
+									постановки пломб (матрицы, клинышки)</a></li>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/polirovochnye-pasty-i-prinadlezhnosti/">Полировочные пасты и
+									принадлежности</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/registratsiya-prikusa/">Регистрация
+									прикуса</a></li>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/materialy-dlya-profilaktiki-i-lecheniya-kariesa/">Материалы для
+									профилактики и
+									лечения кариеса</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/desensitayzery/">Десенситайзеры</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/khimicheskie-kompozity/">Химические
+									композиты</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/otbelivayushchie-sistemy/">Отбеливающие
+									системы</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/plombirovochnyy-voco/">Пломбировочный
+									VOCO</a></li>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/plombirovochnye-materialy-tetric-ivoklyar/">Пломбировочные
+									материалы TETRIC
+									(ИВОКЛЯР)</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/-enamel/">Пломбировочные
+									ENAMEL</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="subsection-mob-modal">
+				<div class="footer__mob-subsection">
+					<div class="footer__mob-topsection">
+						<button class="footer__mob-back mob-btn-back-js">
+							<svg xmlns="http://www.w3.org/2000/svg" width="26" height="8" viewBox="0 0 26 8" fill="none">
+								<path
+									d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM26 3.5L1 3.5V4.5L26 4.5V3.5Z"
+									fill="#22BABA" />
+							</svg>
+							Ко всем категориям
+						</button>
+						<button class="footer__mob-catalog-close subsection-close-btn-js"></button>
+					</div>
+					<div class="footer__mob-subtitle">Хирургические материалы</div>
+					<div class="footer__mob-line"></div>
+					<div class="footer__mob-subsection-content">
+						<ul>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/applikatsionnaya-anesteziya/">Аппликационная анестезия</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/skalpeli-i-lezviya/">Скальпели и
+									лезвия</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/shovnye-materialy/">Шовные
+									материалы</a>
+							</li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/materialy-dlya-parodontologii/">Материалы
+									для пародонтологии</a></li>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/osteoplasticheskie-materialy/">Остеопластические материалы</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="subsection-mob-modal">
+				<div class="footer__mob-subsection">
+					<div class="footer__mob-topsection">
+						<button class="footer__mob-back mob-btn-back-js">
+							<svg xmlns="http://www.w3.org/2000/svg" width="26" height="8" viewBox="0 0 26 8" fill="none">
+								<path
+									d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM26 3.5L1 3.5V4.5L26 4.5V3.5Z"
+									fill="#22BABA" />
+							</svg>
+							Ко всем категориям
+						</button>
+						<button class="footer__mob-catalog-close subsection-close-btn-js"></button>
+					</div>
+					<div class="footer__mob-subtitle">Эндодонтические материалы, файлы, штифты</div>
+					<div class="footer__mob-line"></div>
+					<div class="footer__mob-subsection-content">
+						<ul>
+							<li class="footer__mob-subsection-item"><a href="/catalog/absorbery/">Абсорберы</a>
+							</li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/guttapercha/">Гуттаперча</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/fayly-mashinnogo-ispolzovaniya/">Файлы
+									машинного использования</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/fayly-ruchnogo-ispolzovaniya/">Файлы
+									ручного использования</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/drili/">Дрили</a></li>
+							<li class="footer__mob-subsection-item"><a
+									href="/catalog/prinadlezhnosti-dlya-endodontii/">Принадлежности для
+									эндодонтии</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/shtifty-bezzolnye/">Штифты
+									беззольные</a>
+							</li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/shtifty-vnutrikanalnye/">Штифты
+									внутриканальные</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/shtifty-parapulparnye/">Штифты
+									парапульпарные</a></li>
+							<li class="footer__mob-subsection-item"><a href="/catalog/shtifty-steklovolokonnye/">Штифты
+									стекловолоконные</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="subsection-mob-modal">
+				<div class="footer__mob-subsection">
+					<div class="footer__mob-topsection">
+						<button class="footer__mob-back mob-btn-back-js">
+							<svg xmlns="http://www.w3.org/2000/svg" width="26" height="8" viewBox="0 0 26 8" fill="none">
+								<path
+									d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM26 3.5L1 3.5V4.5L26 4.5V3.5Z"
+									fill="#22BABA" />
+							</svg>
+							Ко всем категориям
+						</button>
+						<button class="footer__mob-catalog-close subsection-close-btn-js"></button>
+					</div>
+					<div class="footer__mob-subtitle">Оборудование</div>
+					<div class="footer__mob-line"></div>
+					<div class="footer__mob-subsection-content">
+						<ul>
+							<li class="footer__mob-subsection-item"><a href="/catalog/oborudovanie/">Посмотреть
+									раздел</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
