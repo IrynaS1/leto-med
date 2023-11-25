@@ -3,9 +3,6 @@
 html {
 	position: relative;
 	box-sizing: border-box;
-	overflow: scroll;
-	overflow-x: scroll;
-	scroll-behavior: smooth;
 }
 
 *,
@@ -15,9 +12,15 @@ html {
 }
 
 body {
-	font-size: 16px;
 	min-width: 320px;
 	min-height: 100vh;
+	font-family: Lato, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 img,
@@ -85,11 +88,6 @@ blockquote {
 .breadcrumbs__items {
 	display: flex;
 	color: rgba(0, 0, 0, 0.30);
-	font-family: Lato, sans-serif;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
 }
 
 .breadcrumbs__item_not-active:after {
@@ -126,8 +124,6 @@ blockquote {
 	color: #000;
 	font-family: Tenor Sans, sans-serif;
 	font-size: 80px;
-	font-style: normal;
-	font-weight: 400;
 	line-height: 84.5%;
 	letter-spacing: 1.2px;
 	margin-bottom: 47px;
@@ -145,10 +141,7 @@ blockquote {
 .form-contact__subtitle {
 	max-width: 475px;
 	color: rgba(0, 0, 0, 0.75);
-	font-family: Lato, sans-serif;
 	font-size: 25px;
-	font-style: normal;
-	font-weight: 400;
 }
 
 .form-contact__subtitle_color {
@@ -163,10 +156,7 @@ blockquote {
 
 .form-contacts__form {
 	color: rgba(0, 0, 0, 0.75);
-	font-family: Lato, sans-serif;
 	font-size: 19px;
-	font-style: normal;
-	font-weight: 400;
 }
 
 .form-contacts__form-label {
@@ -198,9 +188,7 @@ blockquote {
 	width: 100%;
 	padding: 12px 0 17px 0;
 	color: #22BABA;
-	font-family: Lato, sans-serif;
 	font-size: 37px;
-	font-style: normal;
 	font-weight: 700;
 	border-radius: 10px;
 	border: 2px solid #22BABA;
@@ -218,10 +206,7 @@ blockquote {
 	padding: 0 37px 0 61px;
 	color: rgba(0, 0, 0, 0.75);
 	text-align: center;
-	font-family: Lato, sans-serif;
 	font-size: 15px;
-	font-style: normal;
-	font-weight: 400;
 }
 
 .form-contacts__form-info-link {
@@ -239,10 +224,7 @@ blockquote {
 	display: flex;
 	flex-direction: column;
 	color: rgba(0, 0, 0, 0.75);
-	font-family: Lato, sans-serif;
 	font-size: 25px;
-	font-style: normal;
-	font-weight: 400;
 }
 
 .form-contacts__work-mode {
@@ -260,8 +242,6 @@ blockquote {
 	display: flex;
 	justify-content: space-between;
 	color: rgba(0, 0, 0, 0.75);
-	font-family: Lato, sans-serif;
-	font-style: normal;
 	margin-bottom: 36px;
 }
 
@@ -480,11 +460,11 @@ blockquote {
 		background: url('./img/img-arrow-mob.svg');
 		position: absolute;
 		top: 20%;
-		left: 125%;
+		left: 117%;
 	}
 
 	.form-contact__subtitle {
-		max-width: 340px;
+		max-width: 320px;
 		margin-bottom: 10px;
 	}
 
@@ -580,9 +560,17 @@ blockquote {
 	}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 430px) {
 	.form-contacts__send {
 		min-width: 0;
-		max-width: 360px;
+		max-width: 330px;
+	}
+
+	.form-contacts__main-title {
+		max-width: 100px;
+	}
+
+	.form-contact__img {
+		left: 70%;
 	}
 }

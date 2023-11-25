@@ -1,11 +1,7 @@
 @import url('./fonts/gothampro_medium.ttf');
 
 html {
-	position: relative;
 	box-sizing: border-box;
-	overflow: scroll;
-	overflow-x: scroll;
-	scroll-behavior: smooth;
 }
 
 *,
@@ -15,12 +11,15 @@ html {
 }
 
 body {
+	min-width: 320px;
+	min-height: 100vh;
 	font-family: Lato, sans-serif;
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
-	min-width: 320px;
-	min-height: 100vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 img,
@@ -493,25 +492,21 @@ iframe {
 }
 
 .good-compare {
-	background: url("./img/compare-icon-gray.svg") no-repeat;
-	background-position: 0 -3px;
+	background: url("./img/comp-gray.svg") no-repeat;
 }
 
 .good-compare:hover,
 .good-compare-added {
-	background: url("./img/compare-icon-blue.svg") no-repeat;
-	background-position: 0 -3px;
+	background: url("./img/comp-blue.svg") no-repeat;
 }
 
 .good-favour {
-	background: url("./img/favour-icon-gray.svg") no-repeat;
-	background-position: 0 4px;
+	background: url("./img/fav-gray.svg") no-repeat;
 }
 
 .good-favour:hover,
 .good-favour-added {
-	background: url("./img/favour-icon-red.svg") no-repeat;
-	background-position: 0 2px;
+	background: url("./img/fav-red.svg") no-repeat;
 }
 
 .links {
@@ -658,6 +653,8 @@ iframe {
 
 .right-block__good-image {
 	grid-area: imgs;
+	display: flex;
+	justify-content: center;
 	width: 103px;
 	height: 103px;
 	padding: 8px;
@@ -665,11 +662,6 @@ iframe {
 	background: #FFF;
 	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.20);
 	margin: 0 9px 7px 0;
-}
-
-.right-block__good-img {
-	width: 84px;
-	height: 83px;
 }
 
 .right-block__good-icons {
@@ -689,37 +681,29 @@ iframe {
 
 .right-block__good-compare {
 	grid-area: compare;
-	background: url("./img/compare-icon-gray.svg") no-repeat;
-	background-size: contain;
+	background: url("./img/comp-gray.svg") no-repeat;
 }
 
 .right-block__good-compare:hover {
-	background: url("./img/compare-icon-blue.svg") no-repeat;
-	background-size: contain;
+	background: url("./img/comp-blue.svg") no-repeat;
 }
 
 .right-block__good-favour {
 	grid-area: favour;
-	width: 16px;
-	height: 17px;
-	background: url("./img/favour-icon-gray.svg") no-repeat;
-	background-size: contain;
-	margin-top: 4px;
+	background: url("./img/fav-gray.svg") no-repeat;
 }
 
 .right-block__good-favour:hover {
-	background: url("./img/favour-icon-red.svg") no-repeat;
-	background-size: contain;
+	background: url("./img/fav-red.svg") no-repeat;
 }
 
 .right-block__good-delete {
 	grid-area: delete;
-	background: url("./img/delete-icon-gray.svg") no-repeat;
-	margin-top: 4px;
+	background: url("./img/del-gray.svg") no-repeat;
 }
 
 .right-block__good-delete:hover {
-	background: url("./img/delete-icon-red.svg") no-repeat;
+	background: url("./img/del-red.svg") no-repeat;
 }
 
 .right-block__good-title {
@@ -769,6 +753,7 @@ iframe {
 	transition: all .2s;
 	color: rgba(0, 0, 0, 0.30);
 	text-align: center;
+	border: 1px solid #FFF;
 	margin: 3px 5px 3px 0;
 }
 
@@ -784,7 +769,7 @@ iframe {
 	display: flex;
 	align-items: center;
 	max-width: 52px;
-	max-height: 18px;
+	max-height: 17px;
 	border-radius: 3px;
 	background-color: #FFF;
 	box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.40);
@@ -1137,17 +1122,14 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .good-image-cell {
+	display: flex;
+	justify-content: center;
 	width: 182px;
 	height: 168px;
 	padding: 10px 18px 9px 23px;
 	background-color: #FFF;
 	box-shadow: none;
 	margin: 0 0 9px 0;
-}
-
-.good-img-cell {
-	width: 141px;
-	height: 149px;
 }
 
 .good-i-article-cell {
@@ -1241,7 +1223,7 @@ input[type="range"]::-webkit-slider-thumb {
 	display: block;
 }
 
-.central-block__mob-return-btn,
+.central-block__mob-return-link,
 .goods__mob-filters,
 .goods__mob-count-goods {
 	display: none;
@@ -1422,23 +1404,9 @@ input[type="range"]::-webkit-slider-thumb {
 		height: 168px;
 	}
 
-	.good-img-cell {
-		width: 126px;
-		height: 151px;
-	}
-
 	.good-icon-cell {
 		width: 20px;
 		height: 21px;
-	}
-
-	.good-favour {
-		background-position: 0 2px;
-	}
-
-	.good-favour:hover,
-	.good-favour-added {
-		background-position: -1px 2px;
 	}
 
 	.good-i-article-cell {
@@ -1532,11 +1500,10 @@ input[type="range"]::-webkit-slider-thumb {
 		;
 	}
 
-	.central-block__mob-return-btn {
+	.central-block__mob-return-link {
 		display: flex;
 		grid-area: back-btn;
 		width: 44px;
-		border: none;
 		background-color: #fff;
 		color: rgba(0, 0, 0, 0.90);
 		font-size: 15px;
@@ -1545,7 +1512,7 @@ input[type="range"]::-webkit-slider-thumb {
 		letter-spacing: 0.225px;
 	}
 
-	.central-block__mob-return-btn:hover {
+	.central-block__mob-return-link:hover {
 		color: #22BABA;
 	}
 
@@ -1632,6 +1599,10 @@ input[type="range"]::-webkit-slider-thumb {
 		letter-spacing: 0.325px;
 	}
 
+	.filters__mob {
+		width: 165px;
+	}
+
 	.filter {
 		padding: 6px 0 0 0;
 	}
@@ -1706,28 +1677,6 @@ input[type="range"]::-webkit-slider-thumb {
 		width: 17px;
 		height: 18px;
 		background-size: contain;
-	}
-
-	.good-favour {
-		width: 14px;
-		height: 15px;
-		background-position: 0 1px;
-	}
-
-	.good-compare:hover,
-	.good-compare-added {
-		background: url("./img/compare-icon-blue.svg") no-repeat;
-		background-position: 0 -3px;
-		background-size: contain;
-	}
-
-	.good-favour:hover,
-	.good-favour-added {
-		width: 14px;
-		height: 16px;
-		background: url("./img/favour-icon-red.svg") no-repeat;
-		background-size: cover;
-		background-position: -1px 0;
 	}
 
 	.good-icon-cell:not(:last-child) {
