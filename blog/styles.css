@@ -61,6 +61,8 @@ iframe {
 .visually-hidden {
 	position: fixed;
 	transform: scale(0);
+	-webkit-transform:scale(0);
+	-ms-transform: scale(0);
 }
 
 .container-block {
@@ -86,6 +88,9 @@ blockquote {
 
 .breadcrumbs__items {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	color: rgba(0, 0, 0, 0.30);
 	line-height: normal;
 }
@@ -103,7 +108,9 @@ blockquote {
 .general-section {
 	padding-top: 2px;
 	display: grid;
+	display: -ms-grid;
 	grid-template-rows: 42px 20px 1fr;
+	-ms-grid-rows:42px 20px 1fr;
 	grid-template-areas: "left-menu title"
 		"left-menu ."
 		"left-menu articles";
@@ -162,7 +169,11 @@ blockquote {
 
 .blog__cards {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
 }
 
 .blog__card {
@@ -217,7 +228,11 @@ blockquote {
 
 .blog__card-info {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	justify-content: space-between;
+	-webkit-justify-content:space-between;
 	color: rgba(0, 0, 0, 0.70);
 	font-size: 15px;
 	font-weight: 300;
@@ -226,7 +241,11 @@ blockquote {
 
 .blog__card-view {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	align-items: center;
+	-webkit-align-items: center;
 }
 
 .blog__card-view-img {
@@ -280,6 +299,7 @@ blockquote {
 	.general-section {
 		padding-top: 5px;
 		grid-template-rows: 50px 146px 1fr;
+		-ms-grid-rows:50px 146px 1fr;
 		grid-template-areas: "title"
 			"left-menu"
 			"articles";
@@ -317,6 +337,7 @@ blockquote {
 	.blog__cards {
 		padding-top: 16px;
 		justify-content: space-between;
+		-webkit-justify-content:space-between;
 	}
 
 	.blog__card {
@@ -363,7 +384,11 @@ blockquote {
 
 	.blog__card {
 		display: flex;
+		display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 		align-items: center;
+		-webkit-align-items: center;
 		padding: 5px;
 		width: 95%;
 		height: 75px;

@@ -58,6 +58,8 @@ fieldset {
 .visually-hidden {
 	position: fixed;
 	transform: scale(0);
+	-webkit-transform: scale(0);
+		-ms-transform: scale(0);
 }
 
 .container-block {
@@ -84,6 +86,9 @@ fieldset {
 
 .breadcrumbs__items {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	color: rgba(0, 0, 0, 0.30);
 	font-size: 16px;
 }
@@ -170,19 +175,6 @@ fieldset {
 }
 
 @media (max-width: 1010px) {
-	/* 	body {
-		overflow-y: scroll;
-		overflow-x: hidden;
-		scroll-behavior: smooth;
-		position: relative;
-	}
-
-	footer {
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-	} */
-
 	.wrap-content {
 		padding-top: 5px;
 	}

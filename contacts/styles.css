@@ -62,6 +62,8 @@ iframe {
 .visually-hidden {
 	position: fixed;
 	transform: scale(0);
+	-webkit-transform: scale(0);
+		-ms-transform:scale(0);
 }
 
 .container-block {
@@ -87,6 +89,9 @@ blockquote {
 
 .breadcrumbs__items {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	color: rgba(0, 0, 0, 0.30);
 }
 
@@ -103,8 +108,11 @@ blockquote {
 .form-contacts {
 	padding-right: 155px;
 	display: grid;
+	display: -ms-grid;
 	grid-template-columns: repeat(2, 1fr);
+	-ms-grid-columns:repeat(2, 1fr);
 	grid-template-rows: repeat(2, 1fr);
+	-ms-grid-rows:repeat(2, 1fr);
 	grid-template-areas: 'title form'
 		'operation form';
 	margin-bottom: 17px;
@@ -217,12 +225,20 @@ blockquote {
 .form-contacts__operation {
 	grid-area: operation;
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	align-items: end;
+	-webkit-align-items:end;
 }
 
 .form-contacts__operation-items {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	flex-direction: column;
+	-webkit-flex-direction: column;
 	color: rgba(0, 0, 0, 0.75);
 	font-size: 25px;
 }
@@ -240,7 +256,11 @@ blockquote {
 .contacts__bottom {
 	padding-top: 21px;
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	justify-content: space-between;
+	-webkit-justify-content:space-between;
 	color: rgba(0, 0, 0, 0.75);
 	margin-bottom: 36px;
 }
@@ -260,6 +280,9 @@ blockquote {
 
 .contacts__bottom-left-socials {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 }
 
 .contacts__bottom-left-icon {
@@ -435,8 +458,10 @@ blockquote {
 
 	.form-contacts {
 		grid-template-columns: 1fr;
+		-ms-grid-columns:1fr;
 		grid-template-rows: 150px;
-		grid-template-areas: 'title'
+		150px;
+		-ms-grid-rows:grid-template-areas: 'title'
 			'form';
 		margin-bottom: 17px;
 	}
@@ -471,6 +496,7 @@ blockquote {
 	.contacts__bottom {
 		padding-top: 5px;
 		flex-direction: column;
+		-webkit-flex-direction: column;
 		margin-bottom: 15px;
 	}
 
@@ -537,6 +563,9 @@ blockquote {
 
 	.contacts__bottom-mob-socials {
 		display: flex;
+		display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	}
 
 	.mob-icon-vk {

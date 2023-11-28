@@ -68,6 +68,8 @@ fieldset {
 .visually-hidden {
 	position: fixed;
 	transform: scale(0);
+	-webkit-transform:scale(0); 
+		-ms-transform: scale(0);
 }
 
 .container-block {
@@ -89,6 +91,9 @@ fieldset {
 
 .breadcrumbs__items {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	color: rgba(0, 0, 0, 0.30);
 	font-size: 16px;
 }
@@ -118,7 +123,11 @@ fieldset {
 
 .form-order {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	justify-content: space-between;
+	-webkit-justify-content: space-between;
 }
 
 .page-content__left {
@@ -164,6 +173,9 @@ fieldset {
 
 .page-content__center {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	margin: 0 50px 18px 0;
 }
 
@@ -306,6 +318,7 @@ fieldset {
 @media (max-width: 1390px) {
 	.form-order {
 		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
 	}
 }
 

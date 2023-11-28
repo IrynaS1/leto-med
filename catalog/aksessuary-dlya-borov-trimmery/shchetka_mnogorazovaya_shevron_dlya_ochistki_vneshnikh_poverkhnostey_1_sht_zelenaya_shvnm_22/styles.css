@@ -63,6 +63,8 @@ iframe {
 .visually-hidden {
 	position: fixed;
 	transform: scale(0);
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
 }
 
 .container-block {
@@ -88,6 +90,9 @@ blockquote {
 
 .breadcrumbs__items {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	color: rgba(0, 0, 0, 0.30);
 }
 
@@ -103,7 +108,9 @@ blockquote {
 
 .general-section {
 	display: grid;
+	display: -ms-grid;
 	grid-template-columns: 670px 1fr 408px;
+	-ms-grid-columns: 670px 1fr 408px;
 	grid-template-areas: "main-title main-title ."
 		"info info info"
 		"line line line"
@@ -131,13 +138,21 @@ blockquote {
 .good__info {
 	grid-area: info;
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	justify-content: space-between;
+	-webkit-justify-content: space-between;
 	margin-bottom: 6px;
 }
 
 .good__info-items {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	align-items: center;
+	-webkit-align-items: center;
 }
 
 .good__info-text {
@@ -152,11 +167,18 @@ blockquote {
 
 .good__info-btns {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 }
 
 .good__info-btn {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	align-items: center;
+	-webkit-align-items: center;
 	border: none;
 	background-color: #fff;
 	margin-right: 19px;
@@ -164,7 +186,11 @@ blockquote {
 
 .good__info-item {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	align-items: center;
+	-webkit-align-items: center;
 	margin-right: 19px;
 }
 
@@ -219,6 +245,9 @@ blockquote {
 .good__block-imgs {
 	grid-area: images;
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	width: 650px;
 	height: 539px;
 	margin: 0 20px 20px 0;
@@ -226,7 +255,11 @@ blockquote {
 
 .good__block-slider {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	flex-direction: column;
+	-webkit-flex-direction: column;
 	padding: 10px 0;
 	margin-right: 20px;
 }
@@ -244,14 +277,23 @@ blockquote {
 
 .good__block-slider-items {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	flex-direction: column;
+	-webkit-flex-direction: column;
 	justify-content: center;
+	-webkit-align-items: center;
 	margin-bottom: 13px;
 }
 
 .good__block-slider-img {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	justify-content: center;
+	-webkit-justify-content: center;
 	width: 90px;
 	height: 90px;
 	padding: 8px 11px;
@@ -296,7 +338,11 @@ blockquote {
 .good__feature {
 	width: 100%;
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	justify-content: space-between;
+	-webkit-justify-content: space-between;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.10);
 }
 
@@ -436,14 +482,22 @@ blockquote {
 
 .good__quantity-block {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	align-items: center;
+	-webkit-align-items: center;
 	margin-bottom: 18px;
 }
 
 .good__quantity-qt {
 	max-width: 150px;
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	align-items: center;
+	-webkit-align-items: center;
 	border-radius: 6px;
 	border: 1px solid rgba(0, 0, 0, 0.20);
 	background-color: #FFF;
@@ -532,8 +586,13 @@ blockquote {
 .good-rating__top {
 	max-height: 59px;
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	justify-content: space-between;
+	-webkit-justify-content: space-between;
 	align-items: center;
+	-webkit-align-items: center;
 	margin-bottom: 20px;
 }
 
@@ -566,7 +625,12 @@ blockquote {
 
 .good-rating__progress-block {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	align-items: last baseline;
+	-webkit-align-items: last baseline;
+
 }
 
 .good-rating__progress-stars {
@@ -633,14 +697,21 @@ blockquote {
 .good-reviews__top {
 	width: 97%;
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	align-items: first baseline;
-
+	-webkit-align-items: first baseline;
 	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .good-reviews__top-title-block {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	margin-right: 20px;
 }
 
@@ -657,8 +728,13 @@ blockquote {
 
 .good-reviews__form {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	align-items: center;
+	-webkit-align-items: center;
 	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
 }
 
 .reviews-sort {
@@ -684,6 +760,9 @@ blockquote {
 
 .good-reviews__form-checkbox {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	color: #423D3D;
 	font-family: Inter, sans-serif;
 	font-size: 17px;
@@ -699,7 +778,11 @@ blockquote {
 .reviews-checkbox+label {
 	cursor: pointer;
 	display: inline-flex;
+	display: -webkit-inline-flex;
+	display: -moz-inline-flex;
+	display: -ms-inline-flex;
 	align-items: center;
+	-webkit-align-items: center;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -713,7 +796,9 @@ blockquote {
 	width: 19px;
 	height: 19px;
 	flex-shrink: 0;
+	-webkit-flex-shrink: 0;
 	flex-grow: 0;
+	-webkit-flex-grow: 0;
 	border-radius: 5px;
 	border: 1px solid rgba(121, 121, 121, 0.50);
 	background-color: #FFF;
@@ -733,7 +818,9 @@ blockquote {
 
 .good-reviews__comment-top {
 	display: grid;
+	display: -ms-grid;
 	grid-template-columns: 80px 60% 350px;
+	-ms-grid-columns: 80px 60% 350px;
 	grid-template-areas: "user-ava user-name date-review"
 		"user-ava check-consumer date-review"
 		". review-d ."
@@ -784,8 +871,13 @@ blockquote {
 .comment__user-rate {
 	grid-area: date-review;
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	align-items: center;
+	-webkit-align-items: center;
 	justify-content: flex-end;
+	-webkit-justify-content: flex-end;
 }
 
 .comment__date {
@@ -879,7 +971,9 @@ blockquote {
 .comment__review-answer {
 	padding: 13px 26px 22px 20px;
 	display: grid;
+	display: -ms-grid;
 	grid-template-columns: 70px;
+	-ms-grid-columns: 70px;
 	grid-template-areas: "logo comp ans-date"
 		"logo answer-to ans-date"
 		"answer-c answer-c answer-c";
@@ -952,8 +1046,13 @@ blockquote {
 .comment__review-answer-date {
 	grid-area: ans-date;
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	justify-self: end;
+	-webkit-justify-self: end;
 	align-items: center;
+	-webkit-align-items: center;
 	color: rgba(0, 0, 0, 0.60);
 	font-size: 18px;
 }
@@ -1006,12 +1105,14 @@ blockquote {
 
 	.good-reviews__comment-top {
 		grid-template-columns: 80px 68% 350px;
+		-ms-grid-columns: 80px 68% 350px;
 	}
 }
 
 @media (max-width: 1880px) {
 	.good-reviews__comment-top {
 		grid-template-columns: 80px 1fr 150px;
+		-ms-grid-columns: 80px 1fr 150px;
 		grid-template-areas: "user-ava user-name check-consumer"
 			"user-ava date-review ."
 			". review-d review-d"
@@ -1020,13 +1121,19 @@ blockquote {
 
 	.comment__check-consumer {
 		display: flex;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
 		justify-self: end;
+		-webkit-justify-self: end;
 		align-items: center;
+		-webkit-align-items: center;
 		margin-bottom: 0;
 	}
 
 	.comment__user-rate {
 		justify-content: flex-start;
+		-webkit-justify-content: flex-start;
 		margin-bottom: 20px;
 	}
 }
@@ -1038,6 +1145,7 @@ blockquote {
 
 	.breadcrumbs__items {
 		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
 	}
 
 	.general-section {
@@ -1164,6 +1272,7 @@ blockquote {
 @media (max-width: 1443px) {
 	.general-section {
 		grid-template-columns: 770px 1fr 408px;
+		-ms-grid-columns: 770px 1fr 408px;
 		grid-template-areas:
 			'main-title main-title main-title'
 			'info info info'
@@ -1202,6 +1311,7 @@ blockquote {
 @media (max-width: 1320px) {
 	.general-section {
 		grid-template-columns: 700px 1fr 408px;
+		-ms-grid-columns: 700px 1fr 408px;
 	}
 
 	.good__block-imgs {
@@ -1212,6 +1322,7 @@ blockquote {
 @media (max-width: 1180px) {
 	.general-section {
 		grid-template-columns: 1fr 450px;
+		-ms-grid-columns: 700px 1fr 408px;
 		grid-template-areas:
 			"main-title main-title"
 			"info info"
@@ -1227,7 +1338,11 @@ blockquote {
 	.good__block-imgs {
 		width: 100%;
 		display: flex;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
 		justify-content: center;
+		-webkit-justify-content: center;
 		margin: 0 0 20px 0;
 	}
 
@@ -1255,6 +1370,7 @@ blockquote {
 
 	.general-section {
 		grid-template-columns: 1fr;
+		-ms-grid-columns: 1fr;
 		grid-template-areas:
 			"images"
 			"info"
@@ -1267,13 +1383,16 @@ blockquote {
 			"reviews"
 			"add-review";
 		justify-items: center;
+		-webkit-justify-items: center;
 		margin-bottom: 0;
 	}
 
 	.good__block-imgs {
 		flex-direction: column;
-		align-items: center;
+		-webkit-flex-direction: column align-items: center;
+		-webkit-align-items: center;
 		justify-content: flex-start;
+		-webkit-justify-content: flex-start;
 		height: 360px;
 		margin: 0 0 13px 0;
 	}
@@ -1290,7 +1409,9 @@ blockquote {
 	}
 
 	.good__block-slider-mob {
-		display: flex;
+		display: display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
 	}
 
 	.good__block-slider-dot {
@@ -1310,6 +1431,7 @@ blockquote {
 
 	.good__info {
 		align-items: center;
+		-webkit-align-items: center;
 		margin-bottom: 11px;
 	}
 
@@ -1341,7 +1463,11 @@ blockquote {
 
 	.good__info-mob-btns {
 		display: flex;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
 		justify-content: end;
+		-webkit-justify-content: end;
 	}
 
 	.good-compar {
@@ -1375,6 +1501,7 @@ blockquote {
 
 	.good__add-cart {
 		justify-self: start;
+		-webkit-justify-self: start;
 		padding: 0 0;
 		border-radius: 0;
 		background-color: #FFF;
@@ -1384,6 +1511,7 @@ blockquote {
 
 	.good__form-add-cart {
 		display: grid;
+		display: -ms-grid;
 		max-width: 360px;
 		grid-template-areas: "quantity prices"
 			"quantity prices"
@@ -1394,6 +1522,7 @@ blockquote {
 	.good__quantity {
 		grid-area: quantity;
 		display: grid;
+		display: -ms-grid;
 		grid-template-areas: "title"
 			"qt"
 			"units";
@@ -1426,8 +1555,13 @@ blockquote {
 	.good__prices {
 		grid-area: prices;
 		display: flex;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
 		flex-direction: column;
+		-webkit-flex-direction: column;
 		justify-content: center;
+		-webkit-justify-content: center;
 		padding-top: 20px;
 	}
 
@@ -1464,7 +1598,11 @@ blockquote {
 
 	.good__delivery-info {
 		display: flex;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
 		align-items: center;
+		-webkit-align-items: center;
 		width: 100%;
 		padding: 8px 71px 9px 10px;
 		border-radius: 10px;
@@ -1543,6 +1681,7 @@ blockquote {
 
 	.good-reviews__top {
 		display: grid;
+		display: -ms-grid;
 		border-bottom: none;
 	}
 
@@ -1640,6 +1779,7 @@ blockquote {
 
 	.comment__review-answer-date {
 		align-self: flex-start;
+		-webkit-align-self: flex-start;
 		font-size: 15px;
 	}
 
@@ -1662,6 +1802,7 @@ blockquote {
 @media (max-width: 470px) {
 	.general-section {
 		align-items: center;
+		-webkit-align-items: center;
 	}
 
 	.good__block-imgs {
@@ -1682,12 +1823,15 @@ blockquote {
 	.good__info {
 		width: 100%;
 		flex-direction: row;
+		-webkit-flex-direction: row;
 		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
 	}
 
 	.good__add-cart {
 		min-width: 0;
 		align-self: center;
+		-webkit-align-self: center;
 	}
 
 	.good-reviews__comment-top {

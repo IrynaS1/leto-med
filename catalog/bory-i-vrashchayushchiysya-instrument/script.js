@@ -269,17 +269,8 @@ function deleteViewRow() {
 		optionsBlock.style.display = 'none';
 		goodsBlockRow.classList.remove('view--active');
 		goodsBlockCell.classList.add('view--active');
-		viewCellCardFooter.style.display = 'block';
-	}/* Поправить раскрытие карточки по наведению мыши
-	 else {                   
-		viewCellCard.addEventListener('mouseover', function () {
-			viewCellCardFooter.style.display = 'block';
-		});
-
-		viewCellCard.addEventListener('mouseleave', function () {
-			viewCellCardFooter.style.display = 'none';
-		});
-	} */
+		viewCellCardFooter.style.display = 'grid';
+	}
 }
 
 window.addEventListener('resize', function () {

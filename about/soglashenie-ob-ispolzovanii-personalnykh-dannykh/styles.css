@@ -61,6 +61,7 @@ iframe {
 .visually-hidden {
 	position: fixed;
 	transform: scale(0);
+	-webkit-transform:scale(0);
 }
 
 .container {
