@@ -61,6 +61,8 @@ iframe {
 .visually-hidden {
 	position: fixed;
 	transform: scale(0);
+	-webkit-transform: scale(0);
+		-ms-transform: scale(0);
 }
 
 .container-block {
@@ -86,6 +88,9 @@ blockquote {
 
 .breadcrumbs__items {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	color: rgba(0, 0, 0, 0.30);
 }
 
@@ -102,8 +107,13 @@ blockquote {
 .catalog-items {
 	padding-top: 15px;
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
 	justify-content: space-between;
+	-webkit-justify-content: space-between;
 	margin-bottom: 40px;
 }
 
@@ -204,6 +214,7 @@ blockquote {
 @media (max-width: 1450px) {
 	.catalog-items {
 		justify-content: center;
+		-webkit-justify-content: center;
 	}
 
 	.catalog-item {
@@ -258,6 +269,9 @@ blockquote {
 		width: 360px;
 		height: 100px;
 		display: flex;
+		display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	}
 
 	.catalog-item__title {

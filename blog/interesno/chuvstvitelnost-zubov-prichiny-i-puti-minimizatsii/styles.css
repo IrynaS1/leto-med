@@ -62,6 +62,8 @@ iframe {
 .visually-hidden {
 	position: fixed;
 	transform: scale(0);
+	-webkit-transform: scale(0);
+		-ms-transform:scale(0);
 }
 
 .container-block {
@@ -87,6 +89,9 @@ blockquote {
 
 .breadcrumbs__items {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	color: rgba(0, 0, 0, 0.30);
 }
 
@@ -103,6 +108,9 @@ blockquote {
 .general-section {
 	padding-top: 5px;
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	margin-bottom: 35px;
 }
 
@@ -146,6 +154,9 @@ blockquote {
 
 .article {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 }
 
 .article__image {
@@ -209,6 +220,7 @@ blockquote {
 	.general-section {
 		padding-top: 5px;
 		display: grid;
+		display: -ms-grid;
 		grid-template-areas: "title"
 			"left-menu"
 			"articles";
@@ -241,7 +253,9 @@ blockquote {
 
 	.article {
 		flex-direction: column;
+		-webkit-flex-direction: column;	
 		align-items: center;
+		-webkit-align-items: center;
 	}
 
 	.article__content {

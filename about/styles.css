@@ -61,6 +61,7 @@ iframe {
 .visually-hidden {
 	position: fixed;
 	transform: scale(0);
+	-webkit-transform: scale(0);
 }
 
 .container-block {
@@ -86,6 +87,9 @@ blockquote {
 
 .breadcrumbs__items {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	color: rgba(0, 0, 0, 0.30);
 	line-height: normal;
 }
@@ -111,6 +115,9 @@ blockquote {
 
 .general-section {
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	margin-bottom: 36px;
 }
 
@@ -193,7 +200,11 @@ blockquote {
 	min-width: 513px;
 	max-height: 700px;
 	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
 	overflow: auto;
 }
 
