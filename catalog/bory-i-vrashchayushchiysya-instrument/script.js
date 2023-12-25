@@ -276,11 +276,3 @@ function deleteViewRow() {
 window.addEventListener('resize', function () {
 	deleteViewRow();
 });
-
-const goodsCards = document.querySelectorAll('.good-cell-item');
-goodsCards.forEach(function (el) {
-	el.addEventListener('click', function () {
-		el.classList.add('card--open');
-		viewCellCardFooter.style.display = 'block';
-	})
-});
