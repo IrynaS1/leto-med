@@ -192,3 +192,13 @@ contentAboutBtns.forEach(function (el) {
 		}
 	});
 });
+
+//Карусель будет реализована на стороне Битрикса, код добавлен для тестирования
+const carousel = document.querySelector('.catalog-cards__goods');
+document.querySelectorAll('.catalog-cards__goods-pag-btn').forEach(function (btn) {
+	btn.addEventListener('click', function () {
+		const firstCardWidth = carousel.querySelector('.catalog-cards__card').offsetWidth;
+
+		carousel.scrollLeft += btn.id === 'cards-pagination-next' ? -firstCardWidth : firstCardWidth;
+	})
+});
